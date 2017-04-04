@@ -1,0 +1,15 @@
+LL bigMod(LL m,LL n) //(m^n)%mod
+{
+    LL sum;
+    if(n==0) return 1;
+    if(n%2==0)
+    {
+        sum=bigMod(m,n/2);
+        return ((sum%mod)*(sum%mod))%mod;
+    }
+    else
+    {
+        sum=bigMod(m,n-1);
+        return ((m%mod)*(sum%mod))%mod;
+    }
+}

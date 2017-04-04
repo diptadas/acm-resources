@@ -1,0 +1,241 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+#define LL         long long
+#define pll        pair<LL,LL>
+#define mp         make_pair
+#define fr         first
+#define sc         second
+#define pb         push_back
+
+#define read(n)    scanf("%lld",&n)
+#define mset(a,s)  memset(a,s,sizeof(a))
+#define all(a)     a.begin(),a.end()
+
+#define PI         acos(-1.0)
+#define EPS        1e-9
+#define MOD        1000000007
+#define INF        1e9
+#define NN         35000
+
+#define root 0
+#define LN 16
+
+vector <LL> G[NN];
+LL baseArray[NN], ptr, value[NN];
+LL chainNo, chainInd[NN], chainHead[NN], posInBase[NN];
+LL depth[NN], par[NN][LN], subsize[NN];
+LL tree[NN];
+
+void update_tree(LL idx,LL value,LL MAX)
+{
+    while(idx<=MAX)
+    {
+        tree[idx] += value;
+        idx += (idx&-idx);
+    }
+}
+
+LL get(LL idx)
+{
+    LL sum=0;
+    while(idx>0)
+    {
+        sum += tree[idx];
+        idx -= (idx & -idx);
+    }
+    return sum;
+}
+
+LL get_range(LL u,LL v)
+{
+    return get(v)-get(u-1);
+}
+
+LL query_up(LL u, LL v) //v is an ancestor of u
+{
+    LL uchain, vchain = chainInd[v], ans = 0;
+    // uchain and vchain are chain numbers of u and v
+
+    while(1)
+    {
+        uchain = chainInd[u];
+        if(uchain == vchain)
+        {
+            ans+=get_range(posInBase[v], posInBase[u]);
+            break;
+        }
+        ans+=get_range(posInBase[chainHead[uchain]], posInBase[u]);
+        u = chainHead[uchain]; // move u to u's chainHead
+        u = par[u][0]; //Then move to its parent, that means we changed chains
+    }
+    return ans;
+}
+
+LL LCA(LL u, LL v)
+{
+    if(depth[u]<depth[v]) swap(u,v);
+
+    LL diff=depth[u]-depth[v];
+
+    for(LL i=0; i<LN; i++)
+    {
+        if((diff>>i)&1) u=par[u][i];
+    }
+
+    if(u==v) return u;
+
+    for(LL i=LN-1; i>=0; i--)
+    {
+        if(par[u][i] != par[v][i])
+        {
+            u=par[u][i];
+            v=par[v][i];
+        }
+    }
+    return par[u][0];
+}
+
+void HLD(LL curNode, LL prev)
+{
+    if(chainHead[chainNo] == -1)
+    {
+        chainHead[chainNo] = curNode; // Assign chain head
+    }
+
+    chainInd[curNode] = chainNo;
+    posInBase[curNode] = ptr; // Position of this node in baseArray which we will use in Segtree
+    baseArray[ptr++] = value[curNode];
+
+    LL sc = -1, ncost;
+
+    // Loop to find special child
+    for(LL i=0; i<G[curNode].size(); i++)
+    {
+        if(G[curNode][i] != prev)
+        {
+            if(sc == -1 || subsize[sc] < subsize[G[curNode][i]])
+            {
+                sc = G[curNode][i];
+            }
+        }
+    }
+
+    if(sc != -1)
+    {
+        // Expand the chain
+        HLD(sc, curNode);
+    }
+
+    for(LL i=0; i<G[curNode].size(); i++)
+    {
+        if(G[curNode][i] != prev)
+        {
+            if(sc != G[curNode][i])
+            {
+                // New chains at each normal node
+                chainNo++;
+                HLD(G[curNode][i], curNode);
+            }
+        }
+    }
+}
+
+void dfs(LL cur, LL prev, LL _depth=0)
+{
+    par[cur][0] = prev;
+    depth[cur] = _depth;
+    subsize[cur] = 1;
+    for(LL i=0; i<G[cur].size(); i++)
+    {
+        if(G[cur][i] != prev)
+        {
+            dfs(G[cur][i], cur, _depth+1);
+            subsize[cur] += subsize[G[cur][i]];
+        }
+    }
+}
+
+LL query(LL u, LL v)
+{
+    LL lca = LCA(u,v);
+    return query_up(u,lca) + query_up(v,lca) - query_up(lca,lca);
+}
+
+void update(LL u, LL val)
+{
+    update_tree(posInBase[u],val,ptr);
+}
+
+void init_HLD(LL n)
+{
+    ptr = 1;
+    chainNo = 0;
+    dfs(root, -1);
+    HLD(root, -1);
+
+    for(int i=0; i<n; i++)
+    {
+        update(i,value[i]);
+    }
+
+    //Dynamic programming code is for LCA.
+    for(LL lev=1; lev<=LN-1; lev++)
+    {
+        for(LL i=0; i<n; i++)
+        {
+            if(par[i][lev-1]!=-1)
+                par[i][lev] = par[par[i][lev-1]][lev-1];
+        }
+    }
+}
+
+int main()
+{
+    LL tc,t,n,i,j,q,ch,u,v;
+
+    scanf("%lld",&tc);
+
+    for(t=1; t<=tc; t++)
+    {
+        scanf("%lld",&n);
+
+        // Reset
+        for(i=0; i<=n; i++)
+        {
+            G[i].clear();
+            chainHead[i] = -1;
+            tree[i]=0;
+            for(j=0; j<LN; j++) par[i][j] = -1;
+        }
+
+        for(i=0; i<n; i++) read(value[i]);
+
+        for(i=1; i<n; i++)
+        {
+            scanf("%lld %lld",&u,&v);
+
+            G[u].push_back(v);
+            G[v].push_back(u);
+        }
+
+        init_HLD(n);
+
+        scanf("%lld",&q);
+        printf("Case %lld:\n",t);
+
+        while(q--)
+        {
+            scanf("%lld %lld %lld",&ch,&u,&v);
+
+            if(ch==0) printf("%lld\n",query(u,v));
+            else
+            {
+                update(u,v-value[u]);
+                value[u]=v;
+            }
+        }
+    }
+
+    return 0;
+}

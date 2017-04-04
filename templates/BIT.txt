@@ -1,0 +1,71 @@
+//Dipta Das CUET CSE-11
+
+#include <bits/stdc++.h>
+using namespace std;
+
+#define mset(a,s) memset(a,s,sizeof(a))
+
+/*
+1 base indexing
+
+(I) Point Update, Range Query:
+    Add v at point x : update(x,v)
+    Sum[a,b] = query(b) - query(a-1)
+
+(II) Range Update, Point Query:
+     Add v at range [a,b] : update(a,v), update(b+1,-v)
+     Value at point x = query(X)
+
+(III) Range Update, Range Query:
+      We have to use 2 BIT
+      Add v at range [a,b] : update(a,v), update(b+1,-v), update2(a,v*(a-1)), update2(b+1,-v*b)
+      Sum[0,x] = x*query(x) - query2(x)
+      Sum[a,b] = Sum[0,b] - Sum[0,a-1]
+*/
+
+int tree[10005];
+
+void update(int idx,int value,int mx)
+{
+    while(idx<=mx)
+    {
+        tree[idx] += value;
+        idx += (idx&-idx);
+    }
+}
+
+int get(int idx)
+{
+    int sum=0;
+    while(idx > 0)
+    {
+        sum += tree[idx];
+        idx -= (idx & -idx);
+    }
+    return sum;
+}
+
+int get_single(int idx)
+{
+    int sum = tree[idx];
+    if(idx > 0)
+    {
+        int z = idx - (idx & -idx);
+        idx--;
+        while (idx != z)
+        {
+            sum -= tree[idx];
+            idx -= (idx & -idx);
+        }
+    }
+    return sum;
+}
+
+int main()
+{
+    mset(tree,0);
+    int a[5]= {10,20,30,40,50};
+    for(int i=0; i<5; i++) update(i+1,a[i],5+1);
+    cout<<get(3);
+    return 0;
+}

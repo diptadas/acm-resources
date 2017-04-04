@@ -1,0 +1,55 @@
+struct p //point
+{
+    double x,y,z;
+    p(double x=0,double y=0,double z=0)
+    {
+        this->x=x;
+        this->y=y;
+        this->z=z;
+    }
+};
+
+p mv(p a,p b) //make vector
+{
+    return p(b.x-a.x,b.y-a.y,b.z-a.z);
+}
+
+double dp(p a,p b) //dot product
+{
+    return a.x*b.x+a.y*b.y+a.z*b.z;
+}
+
+double value(p a) //value of a vector
+{
+    return sqrt(dp(a,a));
+}
+
+double cp(p a,p b) //cross product
+{
+    return value(p(a.y*b.z-b.y*a.z,a.z*b.x-a.x*b.z,a.x*b.y-a.y*b.x));
+}
+
+
+p add(p a,p b) //two vector add
+{
+    return p(a.x+b.x,a.y+b.y,a.z+b.z);
+}
+
+p lv(p a,double l) //l th time of a vector
+{
+    double v=value(a);
+    return p((a.x*l)/v,(a.y*l)/v,(a.z*l)/v);
+}
+
+p pointseg(p a,p b,p c) //min distance point of a,b segment from point c
+{
+    if(dp(mv(a,b),mv(a,c))<0) return a;
+    if(dp(mv(b,a),mv(b,c))<0) return b;
+    double l=(dp(mv(a,b),mv(a,c)))/value(mv(a,b));
+    return add(a,lv(mv(a,b),l));
+}
+
+double dis(p a,p b) //distance of two point
+{
+    return sqrt((a.x-b.x)*(a.x-b.x)+(a.y-b.y)*(a.y-b.y)+(a.z-b.z)*(a.z-b.z));
+}

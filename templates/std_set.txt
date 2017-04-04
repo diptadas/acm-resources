@@ -1,0 +1,45 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+/*
+set contains unique elements in sorted order
+
+1.
+insert(value): O(log n)
+insert(iterator,value): O(1) if hint is correct
+returns a pair
+first: iterator pointing inserted number, second: true(inserted) or false(already exists)
+
+2.
+erase(iterator): O(1)
+erase(value): O(log n)
+erase(first,last): O(distance)
+
+3.
+find(value): O(log n)
+if found returns iterator pointing the number
+else returns set::end
+*/
+
+int main ()
+{
+    int myints[] = {10,20,30,30,20,10,10,20};
+    set<int> myset(myints,myints+8); //10 20 30
+
+    pair<set<int>::iterator,bool> ret;
+    ret = myset.insert(25); //10 20 25 30
+
+    set<int>::iterator it = ret.first; //10 20 25* 30
+
+    myset.insert(it,26); //correct hint given  //10 20 25* 26 30
+
+    myset.insert(it,24); //wrong hint given  //10 20 24 25* 26 30
+
+    it--; //10 20 24* 25 26 30
+    myset.erase(it); //remove 24
+
+    for(it=myset.begin(); it!=myset.end(); it++)
+        cout<<*it<<" "; //10 20 25 26 30
+
+    return 0;
+}

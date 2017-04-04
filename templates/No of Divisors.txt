@@ -1,0 +1,43 @@
+bool flag[NN];
+int primes[NN],total;
+
+void sieve()
+{
+    for(int i=4; i<NN; i+=2) flag[i]=1;
+
+    for(int i=3; i*i<NN; i+=2)
+    {
+        if(flag[i]==0)
+        {
+            for(int j=i*i; j<NN; j+=2*i) flag[j]=1;
+        }
+    }
+
+    total=0;
+
+	for(int i=2; i<NN; i++)
+		if(!flag[i]) primes[total++]=i;
+}
+
+LL no_of_divisor(LL n)
+{
+    LL i,cnt,ans=1;
+
+    for(i=0; i<total && primes[i]*primes[i]<=n && n!=1; i++)
+    {
+        if(n%primes[i]==0)
+        {
+            cnt=0;
+            while(n%primes[i]==0)
+            {
+                n/=primes[i];
+                cnt++;
+            }
+            ans*=(cnt+1);
+        }
+    }
+
+    if(n>1) ans*=2;
+
+    return ans;
+}

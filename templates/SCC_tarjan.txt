@@ -1,0 +1,61 @@
+/*
+SCC (Tarjan) in O(|v| + |e|)
+Input:
+G[] is a input directed graph with n nodes in range [1,n]
+Output:
+belong[i] holds the component id to which node i belongs
+scc: total number of components in the graph
+*/
+
+#include <bits/stdc++.h>
+using namespace std;
+
+#define mset(a,s) memset(a,s,sizeof(a))
+#define MAX 1000000
+
+int Stack[MAX],Onstack[MAX],Index[MAX],Lowlink[MAX];
+int idx,top,scc,belong[MAX];
+vector<int> G[MAX];
+
+void tarjan(int u)
+{
+    int v,i;
+    Index[u]=Lowlink[u]=idx++;
+    Stack[top++]=u;
+    Onstack[u]=1;
+    for(i=0; i<G[u].size(); i++)
+    {
+        v=G[u][i];
+        if(Index[v]==-1)
+        {
+            tarjan(v);
+            Lowlink[u]=min(Lowlink[u],Lowlink[v]);
+        }
+        else if(Onstack[v]) Lowlink[u]=min(Lowlink[u],Index[v]);
+    }
+    if(Lowlink[u]==Index[u])
+    {
+        scc++;
+        do
+        {
+            v=Stack[--top];
+            Onstack[v]=0;
+            belong[v]=scc;
+        }
+        while(u!=v);
+    }
+}
+
+void findSCC(int n)
+{
+    scc=top=idx=0;
+    mset(Index,-1);
+    mset(Onstack,0);
+    mset(Lowlink,0x3f);
+    for(int i=1; i<=n; i++) if(Index[i]==-1) tarjan(i);
+}
+
+int main()
+{
+    return 0;
+}

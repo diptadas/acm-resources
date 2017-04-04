@@ -1,0 +1,54 @@
+//Dipta Das CUET CSE-11
+
+#include <bits/stdc++.h>
+using namespace std;
+
+
+void failure(string s,int next[])
+{
+    int p=0,k;
+    next[0]=0;
+
+    for(int i=1; i<s.size(); i++)
+    {
+        while(p>0 && s[i]!=s[p]) p=next[p-1];
+
+        if(s[p]==s[i]) p++;
+
+        next[i]=p;
+    }
+}
+
+int kmp(string txt, string s)
+{
+    int p=0,k,n=txt.size(),m=s.size();
+
+    int next[m];
+    failure(s,next);
+
+    for(int i=0; i<n; i++)
+    {
+        while(p>0 && txt[i]!=s[p]) p=next[p-1];
+
+        if(s[p]==txt[i]) p++;
+
+        if(p==m)
+        {
+            p=next[p-1];
+            return (i-m+1);
+        }
+    }
+    return -1;
+}
+
+int main()
+{
+    string txt="bacbabababacaab",s="ababaca";
+
+    int ans=kmp(txt,s);
+
+    if(ans==-1) cout<<"Pattern Not Found"<<endl;
+    else cout<<"Pattern Found At Index "<<ans<<endl;
+
+    return 0;
+}

@@ -1,0 +1,49 @@
+//Dipta Das CUET CSE-11
+
+#include <bits/stdc++.h>
+using namespace std;
+
+#define mset(a,s) memset(a,s,sizeof(a))
+
+//1 base indexing
+
+int max_x=10,max_y=10,tree[1000][1000]];
+
+void update(int x,int y,int val)
+{
+    int y1;
+    while(x <= max_x)
+    {
+        y1 = y;
+        while(y1 <= max_y)
+        {
+            tree[x][y1] += val;
+            y1 += (y1 & -y1);
+        }
+        x += (x & -x);
+    }
+}
+
+int get(int x,int y)
+{
+    int sum=0,y1;
+    while(x)
+    {
+        y1 = y;
+        while(y1)
+        {
+            sum += tree[x][y1];
+            y1 -= (y1 & -y1);
+        }
+        x -= (x & -x);
+    }
+    return sum;
+}
+
+int main()
+{
+    mset(tree,0);
+    update(1,1,5);
+    cout<<get(2,2);
+    return 0;
+}

@@ -1,0 +1,70 @@
+//Dipta Das CUET CSE-11
+
+#include <bits/stdc++.h>
+using namespace std;
+
+#define mset(a,s) memset(a,s,sizeof(a))
+#define NN 100000
+
+vector<int> v;
+vector<int> g[NN];
+vector<int> g2[NN]; //transpose graph
+int visit[NN];
+
+void dfs1(int u)
+{
+    visit[u]=true;
+    for(int i=0; i<g[u].size(); i++)
+    {
+        int v=g[u][i];
+        if(!visit[v]) dfs1(v);
+    }
+    v.push_back(u);
+}
+
+void dfs2(int u,int flag)
+{
+    visit[u]=flag;
+    for(int i=0; i<g2[u].size(); i++)
+    {
+        int v=g2[u][i];
+        if(!visit[v]) dfs2(v,flag);
+    }
+}
+
+int scc(int n)
+{
+    mset(visit,0);
+
+    for(int i=0; i<n; i++)
+    {
+        if(!visit[i]) dfs1(i);
+    }
+
+    reverse(v.begin(),v.end());
+
+    int r=0;
+    mset(visit,0);
+
+    for(int i=0; i<v.size(); i++)
+    {
+        if(!visit[v[i]]) dfs2(v[i],++r);
+    }
+
+    v.clear();
+    return r;
+}
+
+int main()
+{
+    int n,m,u,v;
+    cin>>n>>m;
+    for(int i=0; i<m; i++)
+    {
+        cin>>u>>v;
+        g[u].push_back(v);
+        g2[v].push_back(u);
+    }
+    cout<<scc(n);
+    return 0;
+}

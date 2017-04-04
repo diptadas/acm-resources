@@ -1,0 +1,29 @@
+#define NN         100000009 //10^8
+#define SQ         10001 //sqrt(NN)
+
+unsigned flag[NN>>6];
+int primes[NN/10],total;
+
+#define Check(n) (flag[n>>6]&(1<<((n>>1)&31)))
+#define Set(n) (flag[n>>6]|=(1<<((n>>1)&31)))
+
+void sieve()
+{
+    unsigned i,j,k;
+
+    for(i=3; i<SQ; i+=2)
+    {
+        if(!Check(i))
+        {
+            for(j=i*i, k=i<<1; j<NN; j+=k)
+                Set(j);
+        }
+    }
+
+    total=0;
+
+    primes[total++]=2;
+
+    for(i=3; i<NN; i+=2)
+        if(!Check(i)) primes[total++]=i;
+}

@@ -1,0 +1,28 @@
+// (a/b)%m = ((a%m)*mod_inv(b,m))%m
+
+typedef pair<int,int> pr;
+#define x first
+#define y second
+
+int gcd_euclid(int a, int b)
+{
+    if(b==0) return a;
+    else return gcd_euclid(b,a%b);
+}
+
+pr ex_euclid(int a, int b)
+{
+    if(b == 0) return pr(1,0);
+    else
+    {
+        pr p=ex_euclid(b,a%b);
+        return pr(p.y, p.x - p.y * (a/b));
+    }
+}
+
+int mod_inv(int a, int n)
+{
+    pr p=ex_euclid(a,n);
+    return ((p.x % n) + n) % n;
+}
+

@@ -1,0 +1,101 @@
+//Dipta Das CUET CSE-11
+
+#include <bits/stdc++.h>
+using namespace std;
+
+#define mset(a,s) memset(a,s,sizeof(a))
+
+int n,m,src,dest,d[100],par[100];
+vector<int> g[100],cost[100];
+
+struct node
+{
+    int u,w;
+    node(int a,int b)
+    {
+        u=a;
+        w=b;
+    }
+    bool operator < (const node &p) const
+    {
+        return w>p.w;
+    }
+};
+
+void dijkstra()
+{
+    for(int i=1; i<=n; i++) d[i]=Inf;
+    d[src]=0;
+
+    priority_queue<node> q;
+    q.push(node(src,0));
+
+    while(!q.empty())
+    {
+        int u=q.top().u;
+        q.pop();
+
+        //if(u==dest) return;
+
+        for(int i=0; i<g[u].size(); i++)
+        {
+            int v=g[u][i];
+            if(d[v]>d[u]+cost[u][i])
+            {
+                d[v]=d[u]+cost[u][i];
+                par[v]=u;
+                q.push(node(v,d[v]));
+            }
+        }
+    }
+}
+
+int main()
+{
+    int u,v,w;
+    cin>>n>>m;
+
+    for(int i=0; i<m; i++)
+    {
+        cin>>u>>v>>w;
+        g[u].push_back(v);
+        cost[u].push_back(w);
+
+        //undirected
+        //g[v].push_back(u);
+        //cost[v].push_back(w);
+    }
+
+    src=5,dest=2;
+
+    dijkstra();
+
+    for(int i=1; i<=n; i++) cout<<i<<"  "<<d[i]<<endl; //shortest distance of all node from source
+
+    //print shortest path from source to destination
+
+    int x=dest;
+    while(x!=src)
+    {
+        cout<<x<<" ";
+        x=par[x];
+    }
+    cout<<src<<endl;
+
+    return 0;
+}
+
+/*
+8 11
+2 1 300
+3 2 800
+3 1 1000
+8 1 1700
+4 3 1200
+5 4 1500
+6 4 1000
+5 6 250
+6 8 1400
+6 7 900
+7 8 1000
+*/

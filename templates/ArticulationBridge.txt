@@ -1,0 +1,42 @@
+/*
+Articulation Bridge :
+G[][]: undirected graph
+finds all the bridges in a connected graph and
+adds those edges to the bridge[] vector
+*/
+
+#include <bits/stdc++.h>
+using namespace std;
+
+#define mset(a,s) memset(a,s,sizeof(a))
+#define MAX 20005
+
+vector<int> G[MAX];
+vector< pair<int,int> > bridge;
+int low[MAX],vis[MAX],dfstime;
+
+void dfs(int u,int par=-1)
+{
+    int i,v;
+    vis[u]=low[u]=++dfstime;
+    for(i=0; i<G[u].size(); i++)
+    {
+        v=G[u][i];
+        if(v==par) continue;
+        if(vis[v]) low[u]=min(low[u],vis[v]);
+        else
+        {
+            dfs(v,u);
+            low[u]=min(low[u],low[v]);
+            if(low[v]>vis[u]) bridge.push_back(make_pair(u,v));
+        }
+    }
+}
+
+int main()
+{
+    mset(vis,0);
+    dfstime=0;
+    bridge.clear();
+    return 0;
+}

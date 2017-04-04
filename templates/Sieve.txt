@@ -1,0 +1,20 @@
+bool flag[NN];
+int primes[NN],total;
+
+void sieve()
+{
+    for(int i=4; i<NN; i+=2) flag[i]=1;
+
+    for(int i=3; i*i<NN; i+=2)
+    {
+        if(flag[i]==0)
+        {
+            for(int j=i*i; j<NN; j+=2*i) flag[j]=1;
+        }
+    }
+
+    total=0;
+
+	for(int i=2; i<NN; i++)
+		if(!flag[i]) primes[total++]=i;
+}

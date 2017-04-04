@@ -1,0 +1,107 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+/*
+Dictionary contains n words.
+Search if a string exists in dictionary or not.
+*/
+
+struct trie
+{
+    bool endmark;
+    int next[26];
+    trie()
+    {
+        endmark=0;
+        for(int i=0; i<26; i++)
+            next[i]=-1;
+    }
+};
+
+vector<trie>tree;
+
+void Insert(string arr,int start)
+{
+
+    int node=0;
+    for(int i=start; i<arr.size(); i++)
+    {
+        int id=arr[i]-'a';
+
+        if(tree[node].next[id]==-1)
+        {
+            tree[node].next[id]=(int)tree.size();
+            tree.push_back(trie());
+        }
+        node=tree[node].next[id];
+    }
+    tree[node].endmark=1;
+}
+
+bool Search(string arr)
+{
+
+    int node=0;
+    for(int i=0; i<arr.size(); i++)
+    {
+        int id=arr[i]-'a';
+        if(tree[node].next[id]==-1)
+            return false;
+        node=tree[node].next[id];
+    }
+    return tree[node].endmark;
+}
+
+int main()
+{
+    char str[100];
+    int n,m;
+
+    tree.push_back(trie()); //create Root node
+
+    scanf("%d",&n); //no of word in dictionary
+
+    while(n--)
+    {
+        scanf("%s",str);
+        Insert(str,0); //insert str into dictionary
+    }
+
+    scanf("%d",&m); //no of queries.
+
+    while(m--)
+    {
+        scanf("%s",str);
+
+        if(Search(str)) puts("Yes");
+        else puts("No");
+    }
+
+    tree.clear(); //Delete The Memory.
+
+    return 0;
+}
+
+/*
+Input:
+3
+aaa
+asdasd
+sssssss
+6
+aaa
+aa
+aaaa
+asdasd
+sssssss
+ssasd
+
+Output:
+Yes
+No
+No
+Yes
+Yes
+No
+*/
+

@@ -1,0 +1,26 @@
+long long a[MAX+7];
+
+void phiSieve(void)
+{
+    int i,j;
+
+    for(i=2; i<MAX; i++) a[i]=i;
+
+    for(i=2; i<MAX; i+=2)
+    {
+        a[i]*=(2-1);
+        a[i]/=2;
+    }
+
+    for(i=3; i<MAX; i+=2)
+    {
+        if(a[i]==i)
+        {
+            for(j=i; j<MAX; j+=i)
+            {
+                a[j]*=(i-1);
+                a[j]/=i;
+            }
+        }
+    }
+}
