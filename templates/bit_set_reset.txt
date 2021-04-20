@@ -1,0 +1,11 @@
+int set(int x, int p) {
+	return x | (1 << p);
+}
+
+int reset(int x, int p) {
+	return x & ~(1 << p);
+}
+
+bool check(int x, int p) {
+	return x & (1 << p);
+}
