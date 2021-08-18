@@ -1,0 +1,15 @@
+Case 1: Fake News
+Case 2: Not Fake News
+Case 3: Not Fake News
+Case 4: Fake News
+Case 5: Not Fake News
+Case 6: Fake News
+Case 7: Fake News
+Case 8: Not Fake News
+Case 9: Not Fake News
+Case 10: Fake News
+Case 11: Fake News
+Case 12: Not Fake News
+Case 13: Fake News
+Case 14: Not Fake News
+Case 15: Not Fake News
