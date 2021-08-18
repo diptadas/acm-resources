@@ -1,0 +1,2846 @@
+From: <Saved by Mozilla 5.0 (Windows)>
+Subject: Pollard's rho algorithm - Wikipedia, the free encyclopedia
+Date: Wed, 29 Apr 2015 00:50:50 +0600
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----=_NextPart_000_0000_5C44D950.B12B202B"
+X-MAF-Information: Produced By MAF V3.1.0
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0000_5C44D950.B12B202B
+Content-Type: text/html;
+	charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://en.wikipedia.org/wiki/Pollard%27s_rho_algorithm
+
+<!DOCTYPE html><html dir=3D"ltr" class=3D"client-js ve-not-available" lang=
+=3D"en"><head>
+<meta http-equiv=3D"content-type" content=3D"text/html; charset=3DUTF-8">
+<meta charset=3D"UTF-8">
+<title>Pollard's rho algorithm - Wikipedia, the free encyclopedia</title>
+<meta name=3D"generator" content=3D"MediaWiki 1.26wmf2">
+<link rel=3D"alternate" href=3D"android-app://org.wikipedia/http/en.m.wikip=
+edia.org/wiki/Pollard%27s_rho_algorithm">
+<link rel=3D"alternate" type=3D"application/x-wiki" title=3D"Edit this page=
+" href=3D"http://en.wikipedia.org/w/index.php?title=3DPollard%27s_rho_algor=
+ithm&amp;action=3Dedit">
+<link rel=3D"edit" title=3D"Edit this page" href=3D"http://en.wikipedia.org=
+/w/index.php?title=3DPollard%27s_rho_algorithm&amp;action=3Dedit">
+<link rel=3D"apple-touch-icon" href=3D"urn:not-loaded:http://bits.wikimedia=
+.org/apple-touch/wikipedia.png">
+<link rel=3D"shortcut icon" href=3D"http://bits.wikimedia.org/favicon/wikip=
+edia.ico">
+<link rel=3D"search" type=3D"application/opensearchdescription+xml" href=3D=
+"http://en.wikipedia.org/w/opensearch_desc.php" title=3D"Wikipedia (en)">
+<link rel=3D"EditURI" type=3D"application/rsd+xml" href=3D"http://en.wikipe=
+dia.org/w/api.php?action=3Drsd">
+<link rel=3D"alternate" hreflang=3D"x-default" href=3D"#">
+<link rel=3D"copyright" href=3D"http://creativecommons.org/licenses/by-sa/3=
+.0/">
+<link rel=3D"alternate" type=3D"application/atom+xml" title=3D"Wikipedia At=
+om feed" href=3D"http://en.wikipedia.org/w/index.php?title=3DSpecial:Recent=
+Changes&amp;feed=3Datom">
+<link rel=3D"canonical" href=3D"#">
+<link rel=3D"stylesheet" href=3D"urn:snapshot-8D016E02:http://bits.wikimedi=
+a.org/en.wikipedia.org/load.php?debug=3Dfalse&amp;lang=3Den&amp;modules=3De=
+xt.gadget.DRN-wizard%2CReferenceTooltips%2Ccharinsert%2Cfeatured-articles-l=
+inks%2CrefToolbar%2Cswitcher%2Cteahouse%7Cext.geshi.language.cpp%7Cext.gesh=
+i.local%7Cext.math.styles%7Cext.rtlcite%2Cwikihiero%2CwikimediaBadges%7Cext=
+.uls.nojs%7Cext.visualEditor.viewPageTarget.noscript%7Cmediawiki.legacy.com=
+monPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.interface%=
+7Cmediawiki.ui.button%7Cskins.vector.styles%7Cwikibase.client.init&amp;only=
+=3Dstyles&amp;skin=3Dvector&amp;*">
+<style><!--
+
+/* Effective stylesheet produced by snapshot save */
+
+@keyframes centralAuthPPersonalAnimation {
+
+  0% { opacity: 0; transform: translateY(-20px); }
+
+  100% { opacity: 1; transform: translateY(0px); }
+
+}
+
+@keyframes centralAuthPPersonalAnimation {
+
+  0% { opacity: 0; transform: translateY(-20px); }
+
+  100% { opacity: 1; transform: translateY(0px); }
+
+}
+
+.ve-activated #toc, .ve-activated #siteNotice, .ve-activated .mw-indicators=
+, .ve-active #bodyContent > :not(#siteSub):not(#contentSub):not(.ve-ui-mwTo=
+cWidget), .ve-activated #t-print, .ve-activated #t-permalink, .ve-activated=
+ #p-coll-print_export, .ve-activated #t-cite, .ve-activating .ve-ui-surface=
+, .ve-deactivating .ve-ui-surface { display: none; }
+
+.mw-editsection { white-space: nowrap; unicode-bidi: -moz-isolate; }
+
+@media print {
+
+  #centralNotice { display: none; }
+
+}
+
+.cite-accessibility-label { position: absolute ! important; top: -99999px;=
+ clip: rect(1px, 1px, 1px, 1px); padding: 0px ! important; border: 0px none=
+ ! important; height: 1px ! important; width: 1px ! important; overflow: hi=
+dden; }
+
+.mw-cite-backlink, .cite-accessibility-label { -moz-user-select: none; }
+
+ol.references li:target, sup.reference:target { background-color: rgba(0,=
+ 127, 255, 0.133); }
+
+@media print {
+
+  .mw-cite-backlink { display: none; }
+
+}
+
+.suggestions { overflow: hidden; position: absolute; top: 0px; left: 0px;=
+ width: 0px; border: medium none; z-index: 1099; padding: 0px; margin: -1px=
+ 0px 0px; }
+
+.suggestions-special { position: relative; background-color: white; cursor:=
+ pointer; border: 1px solid rgb(170, 170, 170); margin: -2px 0px 0px; displ=
+ay: none; padding: 0.25em; line-height: 1.25em; }
+
+.suggestions-results { background-color: white; cursor: pointer; border: 1p=
+x solid rgb(170, 170, 170); padding: 0px; margin: 0px; }
+
+.referencetooltip > li + li::after { content: ""; border-top: 8px solid rgb=
+(247, 247, 247); border-right: 5px solid transparent; border-left: 5px soli=
+d transparent; margin-top: -12px; margin-left: -5px; z-index: 1; height: 0p=
+x; width: 0px; display: block; }
+
+.referencetooltip.RTflipped li + li::after { border-top: 0px none; border-b=
+ottom: 8px solid rgb(247, 247, 247); position: absolute; margin-top: 7px;=
+ }
+
+#p-lang .uls-settings-trigger { background-color: transparent; background-r=
+epeat: no-repeat; background-attachment: scroll; background-position: right=
+ top; background-clip: border-box; background-origin: padding-box; backgrou=
+nd-size: auto auto; background-image: linear-gradient(transparent, transpar=
+ent), url("data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D=
+%22UTF-8%22%3F%3E%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%2=
+2%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20width%3D=
+%2214%22%20height%3D%2232%22%3E%3Cdefs%3E%3Cpath%20d%3D%22M14%209.3V6.73l-1=
+.575-.264c-.117-.44-.292-.848-.496-1.2l.93-1.285-1.81-1.84-1.31.908c-.38-.2=
+05-.79-.38-1.196-.497L8.284%201H5.716l-.263%201.578c-.437.117-.816.293-1.19=
+6.497L2.975%202.17%201.137%203.98l.934%201.287c-.2.38-.376.79-.493%201.228L=
+0%206.73V9.3l1.575.264c.117.438.292.818.496%201.198l-.93%201.315L2.95%2013.=
+89l1.312-.938c.38.205.787.38%201.224.497L5.746%2015h2.566l.263-1.578c.408-.=
+117.817-.293%201.196-.497l1.315.935%201.81-1.812-.935-1.315c.203-.38.38-.76=
+.495-1.2L14%209.303zm-7%201.404c-1.488%200-2.683-1.2-2.683-2.69S5.542%205.3=
+27%207%205.327c1.458%200%202.683%201.198%202.683%202.69%200%201.49-1.195%20=
+2.688-2.683%202.688z%22%20id%3D%22a%22%2F%3E%3C%2Fdefs%3E%3Cuse%20xlink%3Ah=
+ref%3D%22%23a%22%20fill%3D%22%23808080%22%2F%3E%3Cuse%20transform%3D%22tran=
+slate%280%2016%29%22%20xlink%3Ahref%3D%22%23a%22%20fill%3D%22%23555%22%2F%3=
+E%3C%2Fsvg%3E%0A"); height: 16px; width: 14px; float: right; cursor: pointe=
+r; }
+
+.skin-vector #p-lang .uls-settings-trigger { margin-top: 3px; }
+
+#p-lang .uls-settings-trigger:hover { background-position: right -16px; }
+
+--></style><style><!--
+
+/* Effective stylesheet produced by snapshot save */
+
+--></style><style><!--
+
+/* Effective stylesheet produced by snapshot save */
+
+table.jquery-tablesorter th.headerSort { background-image: url("data:image/=
+gif;base64,R0lGODlhFQAJAIABAAAAAAAAACH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2lu=
+PSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp=
+4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4wLWMwNjAgNjEuMT=
+M0Nzc3LCAyMDEwLzAyLzEyLTE3OjMyOjAwICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9I=
+mh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2Ny=
+aXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXA=
+vMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS=
+9SZXNvdXJjZVJlZiMiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIge=
+G1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOjAxODAxMTc0MDcyMDY4MTE4OEM2REYy=
+N0ExMDhBNDJFIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjdCNTAyODcwMEY4NjExRTBBMzk=
+yQzAyM0E1RDk3RDc3IiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjdCNTAyODZGMEY4NjExRT=
+BBMzkyQzAyM0E1RDk3RDc3IiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDUzUgT=
+WFjaW50b3NoIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6=
+MDE4MDExNzQwNzIwNjgxMTg4QzZERjI3QTEwOEE0MkUiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5=
+kaWQ6MDE4MDExNzQwNzIwNjgxMTg4QzZERjI3QTEwOEE0MkUiLz4gPC9yZGY6RGVzY3JpcHRpb2=
+4+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4B//79/Pv6+fj39=
+vX08/Lx8O/u7ezr6uno5+bl5OPi4eDf3t3c29rZ2NfW1dTT0tHQz87NzMvKycjHxsXEw8LBwL++=
+vby7urm4t7a1tLOysbCvrq2sq6qpqKempaSjoqGgn56dnJuamZiXlpWUk5KRkI+OjYyLiomIh4a=
+FhIOCgYB/fn18e3p5eHd2dXRzcnFwb25tbGtqaWhnZmVkY2JhYF9eXVxbWllYV1ZVVFNSUVBPTk=
+1MS0pJSEdGRURDQkFAPz49PDs6OTg3NjU0MzIxMC8uLSwrKikoJyYlJCMiISAfHh0cGxoZGBcWF=
+RQTEhEQDw4NDAsKCQgHBgUEAwIBAAAh+QQBAAABACwAAAAAFQAJAAACF4yPgMsJ2mJ4VDKKrd4G=
+Vz5lYPeMiVUAADs=3D"); cursor: pointer; background-repeat: no-repeat; backgr=
+ound-position: right center; padding-right: 21px; }
+
+--></style><meta name=3D"ResourceLoaderDynamicStyles" content=3D"">
+<link rel=3D"stylesheet" href=3D"urn:snapshot-02CC273D:http://bits.wikimedi=
+a.org/en.wikipedia.org/load.php?debug=3Dfalse&amp;lang=3Den&amp;modules=3Ds=
+ite&amp;only=3Dstyles&amp;skin=3Dvector&amp;*">
+<style><!--
+
+/* Effective stylesheet produced by snapshot save */
+
+a:lang(ar), a:lang(kk-arab), a:lang(mzn), a:lang(ps), a:lang(ur) { text-dec=
+oration: none; }
+
+--></style>
+<script src=3D"urn:snapshot-34F3BDCD:http://bits.wikimedia.org/en.wikipedia=
+.org/load.php?debug=3Dfalse&amp;lang=3Den&amp;modules=3Dstartup&amp;only=3D=
+scripts&amp;skin=3Dvector&amp;*"></script><script src=3D"urn:snapshot-CC730=
+FB8:http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=3Dfalse&amp;l=
+ang=3Den&amp;modules=3Djquery%2Cmediawiki&amp;only=3Dscripts&amp;skin=3Dvec=
+tor&amp;version=3D20150422T225207Z"></script>
+<script><!--
+
+/* Script removed by snapshot save */
+
+--></script><script><!--
+
+/* Script removed by snapshot save */
+
+--></script>
+<script><!--
+
+/* Script removed by snapshot save */
+
+--></script>
+<link rel=3D"dns-prefetch" href=3D"http://meta.wikimedia.org/">
+<!--[if lt IE 7]><style type=3D"text/css">body{behavior:url("/w/static-1.26=
+wmf2/skins/Vector/csshover.min.htc")}</style><![endif]-->
+</head>
+<body class=3D"mediawiki ltr sitedir-ltr ns-0 ns-subject page-Pollard_s_rho=
+_algorithm skin-vector action-view">
+		<div id=3D"mw-page-base" class=3D"noprint"></div>
+		<div id=3D"mw-head-base" class=3D"noprint"></div>
+		<div id=3D"content" class=3D"mw-body" role=3D"main">
+			<a id=3D"top"></a>
+
+							<div id=3D"siteNotice"><div id=3D"centralNotice"></div><!-- CentralN=
+otice --></div>
+						<div class=3D"mw-indicators">
+</div>
+			<h1 id=3D"firstHeading" class=3D"firstHeading" lang=3D"en">Pollard's rho=
+ algorithm</h1>
+						<div id=3D"bodyContent" class=3D"mw-body-content">
+									<div id=3D"siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id=3D"contentSub"></div>
+												<div id=3D"jump-to-nav" class=3D"mw-jump">
+					Jump to:					<a href=3D"#mw-head">navigation</a>, 					<a href=3D"#p-s=
+earch">search</a>
+				</div>
+				<div id=3D"mw-content-text" dir=3D"ltr" class=3D"mw-content-ltr" lang=
+=3D"en"><div class=3D"hatnote">This article is about the integer factorizat=
+ion algorithm.  For the discrete logarithm algorithm, see <a href=3D"http:/=
+/en.wikipedia.org/wiki/Pollard%27s_rho_algorithm_for_logarithms" title=3D"P=
+ollard's rho algorithm for logarithms">Pollard's rho algorithm for logarith=
+ms</a>.</div>
+<p><b>Pollard's rho algorithm</b> is a general-purpose <a href=3D"http://en=
+.wikipedia.org/wiki/Integer_factorization" title=3D"Integer factorization">=
+integer factorization</a> <a href=3D"http://en.wikipedia.org/wiki/Algorithm=
+" title=3D"Algorithm">algorithm</a>. It was invented by <a href=3D"http://e=
+n.wikipedia.org/wiki/John_Pollard_%28mathematician%29" title=3D"John Pollar=
+d (mathematician)">John Pollard</a> in 1975.<sup id=3D"cite_ref-1" class=3D=
+"reference"><a href=3D"#cite_note-1"><span>[</span>1<span>]</span></a></sup=
+> It is particularly effective for a <a href=3D"http://en.wikipedia.org/wik=
+i/Composite_number" title=3D"Composite number">composite number</a> having=
+ a small prime factor.</p>
+<p></p>
+<div id=3D"toc" class=3D"toc">
+<div id=3D"toctitle">
+<h2>Contents</h2>
+<span class=3D"toctoggle">=C2=A0[<a href=3D"#" id=3D"togglelink">hide</a>]=
+=C2=A0</span></div>
+<ul>
+<li class=3D"toclevel-1 tocsection-1"><a href=3D"#Core_ideas"><span class=
+=3D"tocnumber">1</span> <span class=3D"toctext">Core ideas</span></a></li>
+<li class=3D"toclevel-1 tocsection-2"><a href=3D"#Algorithm"><span class=3D=
+"tocnumber">2</span> <span class=3D"toctext">Algorithm</span></a></li>
+<li class=3D"toclevel-1 tocsection-3"><a href=3D"#Variants"><span class=3D"=
+tocnumber">3</span> <span class=3D"toctext">Variants</span></a></li>
+<li class=3D"toclevel-1 tocsection-4"><a href=3D"#Application"><span class=
+=3D"tocnumber">4</span> <span class=3D"toctext">Application</span></a></li>
+<li class=3D"toclevel-1 tocsection-5"><a href=3D"#Example_factorization"><s=
+pan class=3D"tocnumber">5</span> <span class=3D"toctext">Example factorizat=
+ion</span></a></li>
+<li class=3D"toclevel-1 tocsection-6"><a href=3D"#The_Example_n_.3D_10403_.=
+3D_101_._103"><span class=3D"tocnumber">6</span> <span class=3D"toctext">Th=
+e Example n =3D 10403 =3D 101 . 103</span></a>
+<ul>
+<li class=3D"toclevel-2 tocsection-7"><a href=3D"#C.2B.2B_Pseudocode"><span=
+ class=3D"tocnumber">6.1</span> <span class=3D"toctext">C++ Pseudocode</spa=
+n></a></li>
+<li class=3D"toclevel-2 tocsection-8"><a href=3D"#The_Results"><span class=
+=3D"tocnumber">6.2</span> <span class=3D"toctext">The Results</span></a></l=
+i>
+</ul>
+</li>
+<li class=3D"toclevel-1 tocsection-9"><a href=3D"#Complexity"><span class=
+=3D"tocnumber">7</span> <span class=3D"toctext">Complexity</span></a></li>
+<li class=3D"toclevel-1 tocsection-10"><a href=3D"#References"><span class=
+=3D"tocnumber">8</span> <span class=3D"toctext">References</span></a></li>
+<li class=3D"toclevel-1 tocsection-11"><a href=3D"#Additional_reading"><spa=
+n class=3D"tocnumber">9</span> <span class=3D"toctext">Additional reading</=
+span></a></li>
+<li class=3D"toclevel-1 tocsection-12"><a href=3D"#External_links"><span cl=
+ass=3D"tocnumber">10</span> <span class=3D"toctext">External links</span></=
+a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class=3D"mw-headline" id=3D"Core_ideas">Core ideas</span><span cl=
+ass=3D"mw-editsection"><span class=3D"mw-editsection-bracket">[</span><a hr=
+ef=3D"http://en.wikipedia.org/w/index.php?title=3DPollard%27s_rho_algorithm=
+&amp;action=3Dedit&amp;section=3D1" title=3D"Edit section: Core ideas">edit=
+</a><span class=3D"mw-editsection-bracket">]</span></span></h2>
+<p>The =CF=81 algorithm is based on <a href=3D"http://en.wikipedia.org/wiki=
+/Floyd%27s_cycle-finding_algorithm" title=3D"Floyd's cycle-finding algorith=
+m" class=3D"mw-redirect">Floyd's cycle-finding algorithm</a> and on the obs=
+ervation that (as in the <a href=3D"http://en.wikipedia.org/wiki/Birthday_p=
+roblem" title=3D"Birthday problem">birthday problem</a>) t random numbers=
+ <i>x<sub>1</sub></i>, <i>x<sub>2</sub>, ... ,</i> x<sub>t</sub> in the ran=
+ge [1, n] will contain a repetition with probability P &gt; 0.5 if t &gt;=
+ 1.177n<sup>1/2</sup>. The constant 1.177 comes from the more general resul=
+t that if P is the probability that t random numbers in the range [1, n] co=
+ntain a repetition, then P &gt; 1 - exp{ - t<sup>2</sup>/2n }. Thus P &gt;=
+ 0.5 provided 1/2 &lt; exp{ - t<sup>2</sup>/2n }, or t<sup>2</sup> &gt; 2nl=
+n 2, or t<sup>2</sup> &gt; 2n ln 2, or t &gt; (2ln 2)<sup>1/2</sup>n<sup>1/=
+2</sup> =3D 1.177n<sup>1/2</sup>.</p>
+<p>The =CF=81 algorithm uses g(x). a polynomial modulo <i>n</i> as a genera=
+tor of a <a href=3D"http://en.wikipedia.org/wiki/Pseudo-random_sequence" ti=
+tle=3D"Pseudo-random sequence" class=3D"mw-redirect">pseudo-random sequence=
+</a>. (The most commonly used function is g(x) =3D x<sup>2</sup> mod n.) Le=
+t's assume n =3D pq. The algorithm generates the sequence x<sub>1</sub> =3D=
+ g(2), x<sub>2</sub> =3D g(g(2)), x<sub>3</sub> =3D g(g(g(2))), and so on.=
+ Two different sequences will in effect be running at the same time--the se=
+quence {x<sub>k</sub>} and the sequence {x<sub>k</sub> mod p}. Since p &lt;=
+ n<sup>1/2</sup>, the latter sequence is likely to repeat earlier than the=
+ former sequence. The repetition of the mod p sequence will be detected by=
+ the fact that gcd(x<sub>k</sub> mod p - x<sub>m</sub> mod p, n) =3D p, whe=
+re k &lt; m. Once a repetition occurs, the sequence will cycle, because eac=
+h term depends only on the previous one. The name <b>=CF=81 algorithm</b>=
+ derives from the similarity in appearance between the Greek letter =CF=81=
+ and the <a href=3D"http://en.wikipedia.org/wiki/Directed_graph" title=3D"D=
+irected graph">directed graph</a> formed by the values in the sequence and=
+ their successors. Once it is cycling, Floyd's cycle-finding algorithm will=
+ eventually detect a repetition. The algorithm succeeds whenever the sequen=
+ce {x<sub>k</sub> mod p} repeats before the sequence {x<sub>k</sub>}. The=
+ randomizing function g(x) must be a polynomial modulo n, so that it will=
+ work both modulo p and modulo n. That is, so that g(x mod p) =E2=89=A1 g(x=
+) (mod p).</p>
+<h2><span class=3D"mw-headline" id=3D"Algorithm">Algorithm</span><span clas=
+s=3D"mw-editsection"><span class=3D"mw-editsection-bracket">[</span><a href=
+=3D"http://en.wikipedia.org/w/index.php?title=3DPollard%27s_rho_algorithm&a=
+mp;action=3Dedit&amp;section=3D2" title=3D"Edit section: Algorithm">edit</a=
+><span class=3D"mw-editsection-bracket">]</span></span></h2>
+<p>The algorithm takes as its inputs <i>n</i>, the integer to be factored;=
+ and <i>g(x)</i>, a polynomial p(x) computed modulo n. This will ensure tha=
+t if p|n, and x =E2=89=A1 y mod p, then g(x) =E2=89=A1 g(y) mod p. In the=
+ original algorithm, g(x) =3D x<sup>2</sup> - 1 mod n, but nowadays it is=
+ more common to use g(x) =3D x<sup>2</sup> + 1 mod n. The output is either=
+ a non-trivial factor of n, or failure. It performs the following steps:<su=
+p id=3D"cite_ref-2" class=3D"reference"><a href=3D"#cite_note-2"><span>[</s=
+pan>2<span>]</span></a></sup></p>
+<ol>
+<li>x =E2=86=90 2; y =E2=86=90 2; d =E2=86=90 1;</li>
+<li>While d =3D 1:
+<ol>
+<li>x =E2=86=90 g(x)</li>
+<li>y =E2=86=90 g(g(y))</li>
+<li>d =E2=86=90 gcd(|x - y|, n)</li>
+</ol>
+</li>
+<li>If d =3D n, return failure.</li>
+<li>Else, return d.</li>
+</ol>
+<p>Note that this algorithm may fail to find a nontrivial factor even when=
+ n is composite. In that case, you can try again, using a starting value ot=
+her than 2 or a different g(x). The name <b>=CF=81 algorithm</b> comes from=
+ the fact that the values of x (mod d) eventually repeat with period d, res=
+ulting in a =CF=81 shape when you graph the values.</p>
+<h2><span class=3D"mw-headline" id=3D"Variants">Variants</span><span class=
+=3D"mw-editsection"><span class=3D"mw-editsection-bracket">[</span><a href=
+=3D"http://en.wikipedia.org/w/index.php?title=3DPollard%27s_rho_algorithm&a=
+mp;action=3Dedit&amp;section=3D3" title=3D"Edit section: Variants">edit</a>=
+<span class=3D"mw-editsection-bracket">]</span></span></h2>
+<p>In 1980, <a href=3D"http://en.wikipedia.org/wiki/Richard_Brent_%28scient=
+ist%29" title=3D"Richard Brent (scientist)" class=3D"mw-redirect">Richard=
+ Brent</a> published a faster variant of the rho algorithm. He used the sam=
+e core ideas as Pollard but a different method of cycle detection, replacin=
+g <a href=3D"http://en.wikipedia.org/wiki/Floyd%27s_cycle-finding_algorithm=
+" title=3D"Floyd's cycle-finding algorithm" class=3D"mw-redirect">Floyd's=
+ cycle-finding algorithm</a> with the related <a href=3D"http://en.wikipedi=
+a.org/wiki/Cycle_detection#Brent.27s_algorithm" title=3D"Cycle detection">B=
+rent's cycle finding method</a>.<sup id=3D"cite_ref-3" class=3D"reference">=
+<a href=3D"#cite_note-3"><span>[</span>3<span>]</span></a></sup></p>
+<p>A further improvement was made by Pollard and Brent. They observed that=
+ if <img class=3D"mwe-math-fallback-image-inline tex" alt=3D"\gcd (a,n) &gt=
+;1" src=3D"http://upload.wikimedia.org/math/b/a/4/ba4067e49f198318891a5a4b4=
+2f64702.png">, then also <img class=3D"mwe-math-fallback-image-inline tex"=
+ alt=3D"\gcd (ab,n)&gt;1" src=3D"http://upload.wikimedia.org/math/3/3/7/337=
+07bbc509eff04e06b5d1ce19dccb5.png"> for any positive integer <i>b</i>. In=
+ particular, instead of computing <img class=3D"mwe-math-fallback-image-inl=
+ine tex" alt=3D"\gcd (|x-y|,n)" src=3D"http://upload.wikimedia.org/math/1/7=
+/4/1740ab87a28b46edcca864d348977082.png"> at every step, it suffices to def=
+ine <i>z</i> as the product of 100 consecutive <img class=3D"mwe-math-fallb=
+ack-image-inline tex" alt=3D"|x-y|" src=3D"http://upload.wikimedia.org/math=
+/c/7/a/c7af85340f0d27afe0ae93575c67d2e1.png"> terms modulo <i>n</i>, and th=
+en compute a single <img class=3D"mwe-math-fallback-image-inline tex" alt=
+=3D"\gcd (z,n)" src=3D"http://upload.wikimedia.org/math/e/8/b/e8b807cb7de15=
+213e603dc68505d12d7.png">. A major speed up results as 100 <i>gcd</i> steps=
+ are replaced with 99 multiplications modulo <i>n</i> and a single <i>gcd</=
+i>. Occasionally it may cause the algorithm to fail by introducing a repeat=
+ed factor, for instance when <i>n</i> is a square. But it then suffices to=
+ go back to the previous gcd term, where <img class=3D"mwe-math-fallback-im=
+age-inline tex" alt=3D"\gcd(z,n)=3D1" src=3D"http://upload.wikimedia.org/ma=
+th/7/7/5/7753483958b9d080e26f8eec7f7baf7d.png">, and use the regular =CF=81=
+ algorithm from there.</p>
+<h2><span class=3D"mw-headline" id=3D"Application">Application</span><span=
+ class=3D"mw-editsection"><span class=3D"mw-editsection-bracket">[</span><a=
+ href=3D"http://en.wikipedia.org/w/index.php?title=3DPollard%27s_rho_algori=
+thm&amp;action=3Dedit&amp;section=3D4" title=3D"Edit section: Application">=
+edit</a><span class=3D"mw-editsection-bracket">]</span></span></h2>
+<p>The algorithm is very fast for numbers with small factors, but slower in=
+ cases where all factors are large. The =CF=81 algorithm's most remarkable=
+ success was the factorization of the eighth <a href=3D"http://en.wikipedia=
+.org/wiki/Fermat_number" title=3D"Fermat number">Fermat number</a>, <i>F</i=
+><sub>8</sub> =3D 1238926361552897 * 93461639715357977769163558199606896584=
+051237541638188580280321. The =CF=81 algorithm was a good choice for F<sub>=
+8</sub> because the prime factor p =3D 12389263661552897 is much smaller th=
+an the other factor. The factorization took 2 hours on a <a href=3D"http://=
+en.wikipedia.org/wiki/UNIVAC" title=3D"UNIVAC">UNIVAC</a> <a href=3D"http:/=
+/en.wikipedia.org/wiki/UNIVAC_1110" title=3D"UNIVAC 1110" class=3D"mw-redir=
+ect">1100/42</a>.</p>
+<h2><span class=3D"mw-headline" id=3D"Example_factorization">Example factor=
+ization</span><span class=3D"mw-editsection"><span class=3D"mw-editsection-=
+bracket">[</span><a href=3D"http://en.wikipedia.org/w/index.php?title=3DPol=
+lard%27s_rho_algorithm&amp;action=3Dedit&amp;section=3D5" title=3D"Edit sec=
+tion: Example factorization">edit</a><span class=3D"mw-editsection-bracket"=
+>]</span></span></h2>
+<p>Let <i>n</i> =3D 8051 and <i>g</i>(<i>x</i>) =3D (<i>x</i><sup>2</sup>=
+ + 1) mod 8051.</p>
+<table class=3D"wikitable">
+<tbody><tr>
+<th width=3D"30"><i>i</i></th>
+<th width=3D"60"><i>x</i><sub><i>i</i></sub></th>
+<th width=3D"60"><i>y</i><sub><i>i</i></sub></th>
+<th>GCD(|<i>x</i><sub><i>i</i></sub> =E2=88=92 <i>y</i><sub><i>i</i></sub>|=
+, 8051)</th>
+</tr>
+<tr>
+<td>1</td>
+<td>5</td>
+<td>26</td>
+<td>1</td>
+</tr>
+<tr>
+<td>2</td>
+<td>26</td>
+<td>7474</td>
+<td>1</td>
+</tr>
+<tr>
+<td>3</td>
+<td>677</td>
+<td>871</td>
+<td>97</td>
+</tr>
+</tbody></table>
+<p>97 is a non-trivial factor of 8051. Starting values other than x =3D y=
+ =3D 2 may give the cofactor (83) instead of 97.</p>
+<h2><span class=3D"mw-headline" id=3D"The_Example_n_.3D_10403_.3D_101_._103=
+">The Example n =3D 10403 =3D 101 . 103</span><span class=3D"mw-editsection=
+"><span class=3D"mw-editsection-bracket">[</span><a href=3D"http://en.wikip=
+edia.org/w/index.php?title=3DPollard%27s_rho_algorithm&amp;action=3Dedit&am=
+p;section=3D6" title=3D"Edit section: The Example n =3D 10403 =3D 101 . 103=
+">edit</a><span class=3D"mw-editsection-bracket">]</span></span></h2>
+<p>Here we introduce another variant, where only a single sequence is compu=
+ted, and the gcd is computed inside the loop that detects the cycle.</p>
+<h3><span class=3D"mw-headline" id=3D"C.2B.2B_Pseudocode">C++ Pseudocode</s=
+pan><span class=3D"mw-editsection"><span class=3D"mw-editsection-bracket">[=
+</span><a href=3D"http://en.wikipedia.org/w/index.php?title=3DPollard%27s_r=
+ho_algorithm&amp;action=3Dedit&amp;section=3D7" title=3D"Edit section: C++=
+ Pseudocode">edit</a><span class=3D"mw-editsection-bracket">]</span></span>=
+</h3>
+<p>The following pseudocode finds the factor 101 of 10403 with a starting=
+ value of x =3D 2.</p>
+<div dir=3D"ltr" class=3D"mw-geshi mw-code mw-content-ltr">
+<div class=3D"cpp source-cpp">
+<pre class=3D"de1"><span class=3D"kw4">int</span> g <span class=3D"br0">(</=
+span>x<span class=3D"br0">)</span> <span class=3D"br0">{</span>
+	<span class=3D"kw1">return</span> <span class=3D"br0">(</span>x <span clas=
+s=3D"sy2">*</span> x <span class=3D"sy2">+</span> <span class=3D"nu0">1</sp=
+an><span class=3D"br0">)</span> <span class=3D"sy2">%</span> n<span class=
+=3D"sy4">;</span>
+<span class=3D"br0">}</span>
+=20
+<span class=3D"kw4">int</span> main <span class=3D"br0">(</span><span class=
+=3D"br0">)</span> <span class=3D"br0">{</span>
+=20
+	<span class=3D"kw4">int</span> n <span class=3D"sy1">=3D</span> <span clas=
+s=3D"nu0">10403</span><span class=3D"sy4">;</span>
+	<span class=3D"kw4">int</span> x_fixed <span class=3D"sy1">=3D</span> <spa=
+n class=3D"nu0">2</span><span class=3D"sy4">;</span>
+	<span class=3D"kw4">int</span> cycle_size <span class=3D"sy1">=3D</span>=
+ <span class=3D"nu0">2</span><span class=3D"sy4">;</span>
+	<span class=3D"kw4">int</span> x <span class=3D"sy1">=3D</span> <span clas=
+s=3D"nu0">2</span><span class=3D"sy4">;</span>
+	<span class=3D"kw4">int</span> h <span class=3D"sy1">=3D</span> <span clas=
+s=3D"nu0">1</span><span class=3D"sy4">;</span>
+=20
+	<span class=3D"kw1">while</span> <span class=3D"br0">(</span>h <span class=
+=3D"sy1">=3D=3D</span> <span class=3D"nu0">1</span><span class=3D"br0">)</s=
+pan> <span class=3D"br0">{</span>
+		<span class=3D"kw4">int</span> count <span class=3D"sy1">=3D</span> <span=
+ class=3D"nu0">1</span><span class=3D"sy4">;</span>
+=20
+		<span class=3D"kw1">while</span> <span class=3D"br0">(</span>count <span=
+ class=3D"sy1">&lt;=3D</span> cycle_size <span class=3D"sy3">&amp;&amp;</sp=
+an> h <span class=3D"sy1">=3D=3D</span> <span class=3D"nu0">1</span><span=
+ class=3D"br0">)</span> <span class=3D"br0">{</span>
+			x <span class=3D"sy1">=3D</span> g<span class=3D"br0">(</span>x<span cla=
+ss=3D"br0">)</span><span class=3D"sy4">;</span>
+			count <span class=3D"sy1">=3D</span> count <span class=3D"sy2">+</span>=
+ <span class=3D"nu0">1</span><span class=3D"sy4">;</span>
+			h <span class=3D"sy1">=3D</span> gcd<span class=3D"br0">(</span>x <span=
+ class=3D"sy2">-</span> x_fixed, n<span class=3D"br0">)</span><span class=
+=3D"sy4">;</span>
+		<span class=3D"br0">}</span>
+=20
+		<span class=3D"kw1">if</span> <span class=3D"br0">(</span>h <span class=
+=3D"sy3">!</span><span class=3D"sy1">=3D</span> <span class=3D"nu0">1</span=
+><span class=3D"br0">)</span>
+			<span class=3D"kw1">break</span><span class=3D"sy4">;</span>
+=20
+		cycle_size <span class=3D"sy1">=3D</span> <span class=3D"nu0">2</span> <s=
+pan class=3D"sy2">*</span> cycle_size<span class=3D"sy4">;</span>
+		x_fixed <span class=3D"sy1">=3D</span> x<span class=3D"sy4">;</span>
+	<span class=3D"br0">}</span>
+	<span class=3D"kw3">cout</span> <span class=3D"sy1">&lt;&lt;</span> <span=
+ class=3D"st0">"<span class=3D"es1">\n</span>The factor is  "</span> <span=
+ class=3D"sy1">&lt;&lt;</span> h<span class=3D"sy4">;</span>
+<span class=3D"br0">}</span>
+</pre></div>
+</div>
+<h3><span class=3D"mw-headline" id=3D"The_Results">The Results</span><span=
+ class=3D"mw-editsection"><span class=3D"mw-editsection-bracket">[</span><a=
+ href=3D"http://en.wikipedia.org/w/index.php?title=3DPollard%27s_rho_algori=
+thm&amp;action=3Dedit&amp;section=3D8" title=3D"Edit section: The Results">=
+edit</a><span class=3D"mw-editsection-bracket">]</span></span></h3>
+<p>In the following table the second and fourth columns contain secret info=
+rmation not known to the person trying to factor pq =3D 10403. They are inc=
+luded to show how the algorithm works. If we start with x =3D 2 and follow=
+ the algorithm, we get the following numbers:</p>
+<table class=3D"wikitable sortable jquery-tablesorter">
+<thead><tr>
+<th title=3D"Sort ascending" role=3D"columnheader button" tabindex=3D"0" cl=
+ass=3D"headerSort">x</th>
+<th title=3D"Sort ascending" role=3D"columnheader button" tabindex=3D"0" cl=
+ass=3D"headerSort">x<sub>fixed</sub></th>
+<th title=3D"Sort ascending" role=3D"columnheader button" tabindex=3D"0" cl=
+ass=3D"headerSort">x mod 101</th>
+<th title=3D"Sort ascending" role=3D"columnheader button" tabindex=3D"0" cl=
+ass=3D"headerSort">x<sub>fixed</sub> mod 101</th>
+<th title=3D"Sort ascending" role=3D"columnheader button" tabindex=3D"0" cl=
+ass=3D"headerSort">step</th>
+</tr></thead><tbody>
+<tr>
+<td>2</td>
+<td>2</td>
+<td>2</td>
+<td>2</td>
+<td>0</td>
+</tr>
+<tr>
+<td>5</td>
+<td>2</td>
+<td>5</td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr>
+<td>26</td>
+<td>2</td>
+<td>26</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>677</td>
+<td>26</td>
+<td>71</td>
+<td>26</td>
+<td>3</td>
+</tr>
+<tr>
+<td>598</td>
+<td>26</td>
+<td>93</td>
+<td>26</td>
+<td>4</td>
+</tr>
+<tr>
+<td>3903</td>
+<td>26</td>
+<td>65</td>
+<td>26</td>
+<td>5</td>
+</tr>
+<tr>
+<td>3418</td>
+<td>26</td>
+<td>85</td>
+<td>26</td>
+<td>6</td>
+</tr>
+<tr>
+<td>156</td>
+<td>3418</td>
+<td>55</td>
+<td>85</td>
+<td>7</td>
+</tr>
+<tr>
+<td>3531</td>
+<td>3418</td>
+<td><b>97&lt;--</b></td>
+<td>85</td>
+<td>8</td>
+</tr>
+<tr>
+<td>5168</td>
+<td>3418</td>
+<td>17</td>
+<td>85</td>
+<td>9</td>
+</tr>
+<tr>
+<td>3724</td>
+<td>3418</td>
+<td>88</td>
+<td>85</td>
+<td>10</td>
+</tr>
+<tr>
+<td>978</td>
+<td>3418</td>
+<td>69</td>
+<td>85</td>
+<td>11</td>
+</tr>
+<tr>
+<td>9812</td>
+<td>3418</td>
+<td>15</td>
+<td>85</td>
+<td>12</td>
+</tr>
+<tr>
+<td>5983</td>
+<td>3418</td>
+<td>24</td>
+<td>85</td>
+<td>13</td>
+</tr>
+<tr>
+<td>9970</td>
+<td>3418</td>
+<td>72</td>
+<td>85</td>
+<td>14</td>
+</tr>
+<tr>
+<td>236</td>
+<td>9970</td>
+<td>34</td>
+<td>72</td>
+<td>15</td>
+</tr>
+<tr>
+<td>3682</td>
+<td>9970</td>
+<td>46</td>
+<td>72</td>
+<td>16</td>
+</tr>
+<tr>
+<td>2016</td>
+<td>9970</td>
+<td><b>97&lt;--</b></td>
+<td>72</td>
+<td>17</td>
+</tr>
+<tr>
+<td>10289</td>
+<td>9970</td>
+<td>88</td>
+<td>72</td>
+<td>18</td>
+</tr>
+<tr>
+<td>2594</td>
+<td>9970</td>
+<td>69</td>
+<td>72</td>
+<td>19</td>
+</tr>
+<tr>
+<td>8499</td>
+<td>9970</td>
+<td>15</td>
+<td>72</td>
+<td>20</td>
+</tr>
+<tr>
+<td>4973</td>
+<td>9970</td>
+<td>24</td>
+<td>72</td>
+<td>21</td>
+</tr>
+<tr>
+<td>2799</td>
+<td>9970</td>
+<td><b>72&lt;--</b></td>
+<td><b>72</b></td>
+<td>22</td>
+</tr>
+</tbody><tfoot></tfoot></table>
+<p>The first repetition modulo 101 is 97 which occurs in step 17. The repet=
+ition is not detected until step 22, when x =3D x<sub>fixed</sub> (mod 101)=
+. This causes gcd(x - x_fixed, n) =3D gcd(2799 - 9970, n) to be p =3D 101,=
+ and a factor is found.</p>
+<h2><span class=3D"mw-headline" id=3D"Complexity">Complexity</span><span cl=
+ass=3D"mw-editsection"><span class=3D"mw-editsection-bracket">[</span><a hr=
+ef=3D"http://en.wikipedia.org/w/index.php?title=3DPollard%27s_rho_algorithm=
+&amp;action=3Dedit&amp;section=3D9" title=3D"Edit section: Complexity">edit=
+</a><span class=3D"mw-editsection-bracket">]</span></span></h2>
+<p>If the pseudorandom number x =3D g(x) occurring in the Pollard =CF=81 al=
+gorithm were an actual random number, it would follow that success would be=
+ achieved half the time, by the <a href=3D"http://en.wikipedia.org/wiki/Bir=
+thday_paradox" title=3D"Birthday paradox" class=3D"mw-redirect">Birthday pa=
+radox</a> in <img class=3D"mwe-math-fallback-image-inline tex" alt=3D"O(\sq=
+rt p)\le O(n^{1/4})" src=3D"http://upload.wikimedia.org/math/3/1/6/316f23f0=
+774640ddac57516c81e1550b.png"> iterations. It is believed that the same ana=
+lysis applies as well to the actual rho algorithm, but this is a heuristic=
+ claim, and rigorous analysis of the algorithm remains open.<sup id=3D"cite=
+_ref-4" class=3D"reference"><a href=3D"#cite_note-4"><span>[</span>4<span>]=
+</span></a></sup></p>
+<h2><span class=3D"mw-headline" id=3D"References">References</span><span cl=
+ass=3D"mw-editsection"><span class=3D"mw-editsection-bracket">[</span><a hr=
+ef=3D"http://en.wikipedia.org/w/index.php?title=3DPollard%27s_rho_algorithm=
+&amp;action=3Dedit&amp;section=3D10" title=3D"Edit section: References">edi=
+t</a><span class=3D"mw-editsection-bracket">]</span></span></h2>
+<div class=3D"reflist" style=3D"list-style-type: decimal;">
+<ol class=3D"references">
+<li id=3D"cite_note-1"><span class=3D"mw-cite-backlink"><b><a href=3D"#cite=
+_ref-1"><span class=3D"cite-accessibility-label">Jump up </span>^</a></b></=
+span> <span class=3D"reference-text"><span id=3D"CITEREFPollard1975" class=
+=3D"citation">Pollard, J. M. (1975), "A Monte Carlo method for factorizatio=
+n", <i>BIT Numerical Mathematics</i> <b>15</b> (3): 331=E2=80=93334, <a hre=
+f=3D"http://en.wikipedia.org/wiki/Digital_object_identifier" title=3D"Digit=
+al object identifier">doi</a>:<a rel=3D"nofollow" class=3D"external text"=
+ href=3D"http://dx.doi.org/10.1007%2Fbf01933667">10.1007/bf01933667</a></sp=
+an><span title=3D"ctx_ver=3DZ39.88-2004&amp;rfr_id=3Dinfo%3Asid%2Fen.wikipe=
+dia.org%3APollard%27s+rho+algorithm&amp;rft.atitle=3DA+Monte+Carlo+method+f=
+or+factorization&amp;rft.aufirst=3DJ.+M.&amp;rft.aulast=3DPollard&amp;rft.a=
+u=3DPollard%2C+J.+M.&amp;rft.date=3D1975&amp;rft.genre=3Darticle&amp;rft_id=
+=3Dinfo%3Adoi%2F10.1007%2Fbf01933667&amp;rft.issue=3D3&amp;rft.jtitle=3DBIT=
++Numerical+Mathematics&amp;rft.pages=3D331-334&amp;rft_val_fmt=3Dinfo%3Aofi=
+%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.volume=3D15" class=3D"Z3988"><span sty=
+le=3D"display:none;">=C2=A0</span></span></span></li>
+<li id=3D"cite_note-2"><span class=3D"mw-cite-backlink"><b><a href=3D"#cite=
+_ref-2"><span class=3D"cite-accessibility-label">Jump up </span>^</a></b></=
+span> <span class=3D"reference-text"><span id=3D"CITEREFCormenLeisersonRive=
+stStein2001" class=3D"citation"><a href=3D"http://en.wikipedia.org/wiki/Tho=
+mas_H._Cormen" title=3D"Thomas H. Cormen">Cormen, Thomas H.</a>; <a href=3D=
+"http://en.wikipedia.org/wiki/Charles_E._Leiserson" title=3D"Charles E. Lei=
+serson">Leiserson, Charles E.</a>; <a href=3D"http://en.wikipedia.org/wiki/=
+Ronald_L._Rivest" title=3D"Ronald L. Rivest" class=3D"mw-redirect">Rivest,=
+ Ronald L.</a> &amp; <a href=3D"http://en.wikipedia.org/wiki/Clifford_Stein=
+" title=3D"Clifford Stein">Stein, Clifford</a> (2001), "Section 31.9: Integ=
+er factorization", <i><a href=3D"http://en.wikipedia.org/wiki/Introduction_=
+to_Algorithms" title=3D"Introduction to Algorithms">Introduction to Algorit=
+hms</a></i> (Second ed.), Cambridge, MA: MIT Press, pp.=C2=A0896=E2=80=9390=
+1, <a href=3D"http://en.wikipedia.org/wiki/International_Standard_Book_Numb=
+er" title=3D"International Standard Book Number">ISBN</a>=C2=A0<a href=3D"h=
+ttp://en.wikipedia.org/wiki/Special:BookSources/0-262-03293-7" title=3D"Spe=
+cial:BookSources/0-262-03293-7">0-262-03293-7</a></span><span title=3D"ctx_=
+ver=3DZ39.88-2004&amp;rfr_id=3Dinfo%3Asid%2Fen.wikipedia.org%3APollard%27s+=
+rho+algorithm&amp;rft.atitle=3DSection+31.9%3A+Integer+factorization&amp;rf=
+t.au=3DCormen%2C+Thomas+H.&amp;rft.aufirst=3DThomas+H.&amp;rft.aulast=3DCor=
+men&amp;rft.au=3DLeiserson%2C+Charles+E.&amp;rft.au=3DRivest%2C+Ronald+L.&a=
+mp;rft.au=3DStein%2C+Clifford&amp;rft.btitle=3DIntroduction+to+Algorithms&a=
+mp;rft.date=3D2001&amp;rft.edition=3DSecond&amp;rft.genre=3Dbookitem&amp;rf=
+t.isbn=3D0-262-03293-7&amp;rft.pages=3D896-901&amp;rft.place=3DCambridge%2C=
++MA&amp;rft.pub=3DMIT+Press&amp;rft_val_fmt=3Dinfo%3Aofi%2Ffmt%3Akev%3Amtx%=
+3Abook" class=3D"Z3988"><span style=3D"display:none;">=C2=A0</span></span>=
+ (this section discusses only Pollard's rho algorithm).</span></li>
+<li id=3D"cite_note-3"><span class=3D"mw-cite-backlink"><b><a href=3D"#cite=
+_ref-3"><span class=3D"cite-accessibility-label">Jump up </span>^</a></b></=
+span> <span class=3D"reference-text"><span id=3D"CITEREFBrent1980" class=3D=
+"citation"><a href=3D"http://en.wikipedia.org/wiki/Richard_Brent_%28scienti=
+st%29" title=3D"Richard Brent (scientist)" class=3D"mw-redirect">Brent, Ric=
+hard P.</a> (1980), <a rel=3D"nofollow" class=3D"external text" href=3D"htt=
+p://maths-people.anu.edu.au/%7Ebrent/pub/pub051.html">"An Improved Monte Ca=
+rlo Factorization Algorithm"</a>, <i>BIT</i> <b>20</b>: 176=E2=80=93184, <a=
+ href=3D"http://en.wikipedia.org/wiki/Digital_object_identifier" title=3D"D=
+igital object identifier">doi</a>:<a rel=3D"nofollow" class=3D"external tex=
+t" href=3D"http://dx.doi.org/10.1007%2FBF01933190">10.1007/BF01933190</a></=
+span><span title=3D"ctx_ver=3DZ39.88-2004&amp;rfr_id=3Dinfo%3Asid%2Fen.wiki=
+pedia.org%3APollard%27s+rho+algorithm&amp;rft.atitle=3DAn+Improved+Monte+Ca=
+rlo+Factorization+Algorithm&amp;rft.au=3DBrent%2C+Richard+P.&amp;rft.aufirs=
+t=3DRichard+P.&amp;rft.aulast=3DBrent&amp;rft.date=3D1980&amp;rft.genre=3Da=
+rticle&amp;rft_id=3Dhttp%3A%2F%2Fmaths-people.anu.edu.au%2F~brent%2Fpub%2Fp=
+ub051.html&amp;rft_id=3Dinfo%3Adoi%2F10.1007%2FBF01933190&amp;rft.jtitle=3D=
+BIT&amp;rft.pages=3D176-184&amp;rft_val_fmt=3Dinfo%3Aofi%2Ffmt%3Akev%3Amtx%=
+3Ajournal&amp;rft.volume=3D20" class=3D"Z3988"><span style=3D"display:none;=
+">=C2=A0</span></span></span></li>
+<li id=3D"cite_note-4"><span class=3D"mw-cite-backlink"><b><a href=3D"#cite=
+_ref-4"><span class=3D"cite-accessibility-label">Jump up </span>^</a></b></=
+span> <span class=3D"reference-text"><span id=3D"CITEREFGalbraith2012" clas=
+s=3D"citation">Galbraith, Steven D. (2012), "14.2.5 Towards a rigorous anal=
+ysis of Pollard rho", <a rel=3D"nofollow" class=3D"external text" href=3D"h=
+ttp://books.google.com/books?id=3Dowd76BElvosC&amp;pg=3DPA272"><i>Mathemati=
+cs of Public Key Cryptography</i></a>, Cambridge University Press, pp.=C2=
+=A0272=E2=80=93273, <a href=3D"http://en.wikipedia.org/wiki/International_S=
+tandard_Book_Number" title=3D"International Standard Book Number">ISBN</a>=
+=C2=A0<a href=3D"http://en.wikipedia.org/wiki/Special:BookSources/978110701=
+3926" title=3D"Special:BookSources/9781107013926">9781107013926</a></span><=
+span title=3D"ctx_ver=3DZ39.88-2004&amp;rfr_id=3Dinfo%3Asid%2Fen.wikipedia.=
+org%3APollard%27s+rho+algorithm&amp;rft.atitle=3D14.2.5+Towards+a+rigorous+=
+analysis+of+Pollard+rho&amp;rft.aufirst=3DSteven+D.&amp;rft.au=3DGalbraith%=
+2C+Steven+D.&amp;rft.aulast=3DGalbraith&amp;rft.btitle=3DMathematics+of+Pub=
+lic+Key+Cryptography&amp;rft.date=3D2012&amp;rft.genre=3Dbookitem&amp;rft_i=
+d=3Dhttp%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3Dowd76BElvosC%26pg%3DPA272&=
+amp;rft.isbn=3D9781107013926&amp;rft.pages=3D272-273&amp;rft.pub=3DCambridg=
+e+University+Press&amp;rft_val_fmt=3Dinfo%3Aofi%2Ffmt%3Akev%3Amtx%3Abook"=
+ class=3D"Z3988"><span style=3D"display:none;">=C2=A0</span></span>.</span>=
+</li>
+</ol>
+</div>
+<h2><span class=3D"mw-headline" id=3D"Additional_reading">Additional readin=
+g</span><span class=3D"mw-editsection"><span class=3D"mw-editsection-bracke=
+t">[</span><a href=3D"http://en.wikipedia.org/w/index.php?title=3DPollard%2=
+7s_rho_algorithm&amp;action=3Dedit&amp;section=3D11" title=3D"Edit section:=
+ Additional reading">edit</a><span class=3D"mw-editsection-bracket">]</span=
+></span></h2>
+<ul>
+<li><span id=3D"CITEREFKatzLindell2007" class=3D"citation">Katz, Jonathan;=
+ Lindell, Yehuda (2007), "Chapter 8", <i>Introduction to Modern Cryptograph=
+y</i>, CRC Press</span><span title=3D"ctx_ver=3DZ39.88-2004&amp;rfr_id=3Din=
+fo%3Asid%2Fen.wikipedia.org%3APollard%27s+rho+algorithm&amp;rft.atitle=3DCh=
+apter+8&amp;rft.aufirst=3DJonathan&amp;rft.au=3DKatz%2C+Jonathan&amp;rft.au=
+last=3DKatz&amp;rft.au=3DLindell%2C+Yehuda&amp;rft.btitle=3DIntroduction+to=
++Modern+Cryptography&amp;rft.date=3D2007&amp;rft.genre=3Dbookitem&amp;rft.p=
+ub=3DCRC+Press&amp;rft_val_fmt=3Dinfo%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class=
+=3D"Z3988"><span style=3D"display:none;">=C2=A0</span></span></li>
+</ul>
+<h2><span class=3D"mw-headline" id=3D"External_links">External links</span>=
+<span class=3D"mw-editsection"><span class=3D"mw-editsection-bracket">[</sp=
+an><a href=3D"http://en.wikipedia.org/w/index.php?title=3DPollard%27s_rho_a=
+lgorithm&amp;action=3Dedit&amp;section=3D12" title=3D"Edit section: Externa=
+l links">edit</a><span class=3D"mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><span class=3D"citation mathworld" id=3D"Reference-Mathworld-Pollard_rh=
+o_Factorization_Method"><a href=3D"http://en.wikipedia.org/wiki/Eric_W._Wei=
+sstein" title=3D"Eric W. Weisstein">Weisstein, Eric W.</a>, <a rel=3D"nofol=
+low" class=3D"external text" href=3D"http://mathworld.wolfram.com/PollardRh=
+oFactorizationMethod.html">"Pollard rho Factorization Method"</a>, <i><a hr=
+ef=3D"http://en.wikipedia.org/wiki/MathWorld" title=3D"MathWorld">MathWorld=
+</a></i>.</span></li>
+<li><a rel=3D"nofollow" class=3D"external text" href=3D"http://www.cs.princ=
+eton.edu/introcs/78crypto/PollardRho.java.html">Java Implementation</a></li>
+</ul>
+<table class=3D"navbox" style=3D"border-spacing:0">
+<tbody><tr>
+<td style=3D"padding:2px">
+<table id=3D"collapsibleTable0" class=3D"nowraplinks collapsible uncollapse=
+d navbox-inner" style=3D"border-spacing:0;background:transparent;color:inhe=
+rit">
+<tbody><tr>
+<th scope=3D"col" class=3D"navbox-title" colspan=3D"2"><span class=3D"colla=
+pseButton">[<a href=3D"#" id=3D"collapseButton0">hide</a>]</span>
+<div class=3D"plainlinks hlist navbar mini">
+<ul>
+<li class=3D"nv-view"><a href=3D"http://en.wikipedia.org/wiki/Template:Numb=
+er-theoretic_algorithms" title=3D"Template:Number-theoretic algorithms"><sp=
+an title=3D"View this template" style=3D";;background:none transparent;bord=
+er:none;">v</span></a></li>
+<li class=3D"nv-talk"><a href=3D"http://en.wikipedia.org/w/index.php?title=
+=3DTemplate_talk:Number-theoretic_algorithms&amp;action=3Dedit&amp;redlink=
+=3D1" class=3D"new" title=3D"Template talk:Number-theoretic algorithms (pag=
+e does not exist)"><span title=3D"Discuss this template" style=3D";;backgro=
+und:none transparent;border:none;">t</span></a></li>
+<li class=3D"nv-edit"><a class=3D"external text" href=3D"http://en.wikipedi=
+a.org/w/index.php?title=3DTemplate:Number-theoretic_algorithms&amp;action=
+=3Dedit"><span title=3D"Edit this template" style=3D";;background:none tran=
+sparent;border:none;">e</span></a></li>
+</ul>
+</div>
+<div style=3D"font-size:110%"><a href=3D"http://en.wikipedia.org/wiki/Numbe=
+r_theory" title=3D"Number theory">Number-theoretic</a> <a href=3D"http://en=
+.wikipedia.org/wiki/Algorithm" title=3D"Algorithm">algorithms</a></div>
+</th>
+</tr>
+<tr style=3D"height:2px">
+<td colspan=3D"2"></td>
+</tr>
+<tr>
+<th scope=3D"row" class=3D"navbox-group"><a href=3D"http://en.wikipedia.org=
+/wiki/Primality_test" title=3D"Primality test">Primality tests</a></th>
+<td class=3D"navbox-list navbox-odd hlist" style=3D"text-align:left;border-=
+left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style=3D"padding:0em 0.25em">
+<ul>
+<li><span class=3D"smallcaps" style=3D"font-variant:small-caps;"><a href=3D=
+"http://en.wikipedia.org/wiki/AKS_primality_test" title=3D"AKS primality te=
+st">AKS test</a></span></li>
+<li><span class=3D"smallcaps" style=3D"font-variant:small-caps;"><a href=3D=
+"http://en.wikipedia.org/wiki/Adleman%E2%80%93Pomerance%E2%80%93Rumely_prim=
+ality_test" title=3D"Adleman=E2=80=93Pomerance=E2=80=93Rumely primality tes=
+t">APR test</a></span></li>
+<li><a href=3D"http://en.wikipedia.org/wiki/Baillie%E2%80%93PSW_primality_t=
+est" title=3D"Baillie=E2=80=93PSW primality test">Baillie=E2=80=93PSW</a></=
+li>
+<li><span class=3D"smallcaps" style=3D"font-variant:small-caps;"><a href=3D=
+"http://en.wikipedia.org/wiki/Elliptic_curve_primality_proving" title=3D"El=
+liptic curve primality proving" class=3D"mw-redirect">ECPP test</a></span><=
+/li>
+<li><a href=3D"http://en.wikipedia.org/wiki/Elliptic_curve_primality" title=
+=3D"Elliptic curve primality">Elliptic curve</a></li>
+<li><a href=3D"http://en.wikipedia.org/wiki/Pocklington_primality_test" tit=
+le=3D"Pocklington primality test">Pocklington</a></li>
+<li><a href=3D"http://en.wikipedia.org/wiki/Fermat_primality_test" title=3D=
+"Fermat primality test">Fermat</a></li>
+<li><a href=3D"http://en.wikipedia.org/wiki/Lucas_primality_test" title=3D"=
+Lucas primality test">Lucas</a></li>
+<li><span class=3D"smallcaps" style=3D"font-variant:small-caps;"><i><a href=
+=3D"http://en.wikipedia.org/wiki/Lucas%E2%80%93Lehmer_primality_test" title=
+=3D"Lucas=E2=80=93Lehmer primality test">Lucas=E2=80=93Lehmer</a></i></span=
+></li>
+<li><span class=3D"smallcaps" style=3D"font-variant:small-caps;"><i><a href=
+=3D"http://en.wikipedia.org/wiki/Lucas%E2%80%93Lehmer%E2%80%93Riesel_test"=
+ title=3D"Lucas=E2=80=93Lehmer=E2=80=93Riesel test">Lucas=E2=80=93Lehmer=E2=
+=80=93Riesel</a></i></span></li>
+<li><span class=3D"smallcaps" style=3D"font-variant:small-caps;"><i><a href=
+=3D"http://en.wikipedia.org/wiki/Proth%27s_theorem" title=3D"Proth's theore=
+m">Proth's theorem</a></i></span></li>
+<li><span class=3D"smallcaps" style=3D"font-variant:small-caps;"><i><a href=
+=3D"http://en.wikipedia.org/wiki/P%C3%A9pin%27s_test" title=3D"P=C3=A9pin's=
+ test">P=C3=A9pin's</a></i></span></li>
+<li><a href=3D"http://en.wikipedia.org/wiki/Quadratic_Frobenius_test" title=
+=3D"Quadratic Frobenius test">Quadratic Frobenius test</a></li>
+<li><a href=3D"http://en.wikipedia.org/wiki/Solovay%E2%80%93Strassen_primal=
+ity_test" title=3D"Solovay=E2=80=93Strassen primality test">Solovay=E2=80=
+=93Strassen</a></li>
+<li><a href=3D"http://en.wikipedia.org/wiki/Miller%E2%80%93Rabin_primality_=
+test" title=3D"Miller=E2=80=93Rabin primality test">Miller=E2=80=93Rabin</a=
+></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style=3D"height:2px">
+<td colspan=3D"2"></td>
+</tr>
+<tr>
+<th scope=3D"row" class=3D"navbox-group"><a href=3D"http://en.wikipedia.org=
+/wiki/Generating_primes" title=3D"Generating primes">Prime-generating</a></=
+th>
+<td class=3D"navbox-list navbox-even hlist" style=3D"text-align:left;border=
+-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style=3D"padding:0em 0.25em">
+<ul>
+<li><a href=3D"http://en.wikipedia.org/wiki/Sieve_of_Atkin" title=3D"Sieve=
+ of Atkin">Sieve of Atkin</a></li>
+<li><a href=3D"http://en.wikipedia.org/wiki/Sieve_of_Eratosthenes" title=3D=
+"Sieve of Eratosthenes">Sieve of Eratosthenes</a></li>
+<li><a href=3D"http://en.wikipedia.org/wiki/Sieve_of_Sundaram" title=3D"Sie=
+ve of Sundaram">Sieve of Sundaram</a></li>
+<li><a href=3D"http://en.wikipedia.org/wiki/Wheel_factorization" title=3D"W=
+heel factorization">Wheel factorization</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style=3D"height:2px">
+<td colspan=3D"2"></td>
+</tr>
+<tr>
+<th scope=3D"row" class=3D"navbox-group"><a href=3D"http://en.wikipedia.org=
+/wiki/Integer_factorization" title=3D"Integer factorization">Integer factor=
+ization</a></th>
+<td class=3D"navbox-list navbox-odd hlist" style=3D"text-align:left;border-=
+left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style=3D"padding:0em 0.25em">
+<ul>
+<li><a href=3D"http://en.wikipedia.org/wiki/Continued_fraction_factorizatio=
+n" title=3D"Continued fraction factorization">Continued fraction (CFRAC)</a=
+></li>
+<li><a href=3D"http://en.wikipedia.org/wiki/Dixon%27s_factorization_method"=
+ title=3D"Dixon's factorization method">Dixon's</a></li>
+<li><a href=3D"http://en.wikipedia.org/wiki/Lenstra_elliptic_curve_factoriz=
+ation" title=3D"Lenstra elliptic curve factorization">Lenstra elliptic curv=
+e (ECM)</a></li>
+<li><a href=3D"http://en.wikipedia.org/wiki/Euler%27s_factorization_method"=
+ title=3D"Euler's factorization method">Euler's</a></li>
+<li><strong class=3D"selflink">Pollard's rho</strong></li>
+<li><a href=3D"http://en.wikipedia.org/wiki/Pollard%27s_p_%E2%88%92_1_algor=
+ithm" title=3D"Pollard's p =E2=88=92 1 algorithm"><i>p</i> =E2=88=92 1</a><=
+/li>
+<li><a href=3D"http://en.wikipedia.org/wiki/Williams%27_p_%2B_1_algorithm"=
+ title=3D"Williams' p + 1 algorithm"><i>p</i> + 1</a></li>
+<li><a href=3D"http://en.wikipedia.org/wiki/Quadratic_sieve" title=3D"Quadr=
+atic sieve">Quadratic sieve (QS)</a></li>
+<li><a href=3D"http://en.wikipedia.org/wiki/General_number_field_sieve" tit=
+le=3D"General number field sieve">General number field sieve (GNFS)</a></li>
+<li><i><a href=3D"http://en.wikipedia.org/wiki/Special_number_field_sieve"=
+ title=3D"Special number field sieve">Special number field sieve (SNFS)</a>=
+</i></li>
+<li><a href=3D"http://en.wikipedia.org/wiki/Rational_sieve" title=3D"Ration=
+al sieve">Rational sieve</a></li>
+<li><a href=3D"http://en.wikipedia.org/wiki/Fermat%27s_factorization_method=
+" title=3D"Fermat's factorization method">Fermat's</a></li>
+<li><a href=3D"http://en.wikipedia.org/wiki/Shanks%27_square_forms_factoriz=
+ation" title=3D"Shanks' square forms factorization">Shanks' square forms</a=
+></li>
+<li><a href=3D"http://en.wikipedia.org/wiki/Trial_division" title=3D"Trial=
+ division">Trial division</a></li>
+<li><a href=3D"http://en.wikipedia.org/wiki/Shor%27s_algorithm" title=3D"Sh=
+or's algorithm">Shor's</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style=3D"height:2px">
+<td colspan=3D"2"></td>
+</tr>
+<tr>
+<th scope=3D"row" class=3D"navbox-group"><a href=3D"http://en.wikipedia.org=
+/wiki/Multiplication_algorithm" title=3D"Multiplication algorithm">Multipli=
+cation</a></th>
+<td class=3D"navbox-list navbox-even hlist" style=3D"text-align:left;border=
+-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style=3D"padding:0em 0.25em">
+<ul>
+<li><a href=3D"http://en.wikipedia.org/wiki/Ancient_Egyptian_multiplication=
+" title=3D"Ancient Egyptian multiplication">Ancient Egyptian</a></li>
+<li><a href=3D"http://en.wikipedia.org/wiki/Long_multiplication" title=3D"L=
+ong multiplication" class=3D"mw-redirect">Long</a></li>
+<li><a href=3D"http://en.wikipedia.org/wiki/Karatsuba_algorithm" title=3D"K=
+aratsuba algorithm">Karatsuba</a></li>
+<li><a href=3D"http://en.wikipedia.org/wiki/Toom%E2%80%93Cook_multiplicatio=
+n" title=3D"Toom=E2=80=93Cook multiplication">Toom=E2=80=93Cook</a></li>
+<li><a href=3D"http://en.wikipedia.org/wiki/Sch%C3%B6nhage%E2%80%93Strassen=
+_algorithm" title=3D"Sch=C3=B6nhage=E2=80=93Strassen algorithm">Sch=C3=B6nh=
+age=E2=80=93Strassen</a></li>
+<li><a href=3D"http://en.wikipedia.org/wiki/F%C3%BCrer%27s_algorithm" title=
+=3D"F=C3=BCrer's algorithm">F=C3=BCrer's</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style=3D"height:2px">
+<td colspan=3D"2"></td>
+</tr>
+<tr>
+<th scope=3D"row" class=3D"navbox-group"><a href=3D"http://en.wikipedia.org=
+/wiki/Discrete_logarithm" title=3D"Discrete logarithm">Discrete logarithm</=
+a></th>
+<td class=3D"navbox-list navbox-odd hlist" style=3D"text-align:left;border-=
+left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style=3D"padding:0em 0.25em">
+<ul>
+<li><span class=3D"smallcaps" style=3D"font-variant:small-caps;"><a href=3D=
+"http://en.wikipedia.org/wiki/Baby-step_giant-step" title=3D"Baby-step gian=
+t-step">Baby-step giant-step</a></span></li>
+<li><a href=3D"http://en.wikipedia.org/wiki/Pollard%27s_rho_algorithm_for_l=
+ogarithms" title=3D"Pollard's rho algorithm for logarithms">Pollard rho</a>=
+</li>
+<li><a href=3D"http://en.wikipedia.org/wiki/Pollard%27s_kangaroo_algorithm"=
+ title=3D"Pollard's kangaroo algorithm">Pollard kangaroo</a></li>
+<li><span class=3D"smallcaps" style=3D"font-variant:small-caps;"><a href=3D=
+"http://en.wikipedia.org/wiki/Pohlig%E2%80%93Hellman_algorithm" title=3D"Po=
+hlig=E2=80=93Hellman algorithm">Pohlig=E2=80=93Hellman</a></span></li>
+<li><a href=3D"http://en.wikipedia.org/wiki/Index_calculus_algorithm" title=
+=3D"Index calculus algorithm">Index calculus</a></li>
+<li><a href=3D"http://en.wikipedia.org/wiki/Function_field_sieve" title=3D"=
+Function field sieve">Function field sieve</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style=3D"height:2px">
+<td colspan=3D"2"></td>
+</tr>
+<tr>
+<th scope=3D"row" class=3D"navbox-group"><a href=3D"http://en.wikipedia.org=
+/wiki/Greatest_common_divisor" title=3D"Greatest common divisor">Greatest=
+ common divisor</a></th>
+<td class=3D"navbox-list navbox-even hlist" style=3D"text-align:left;border=
+-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style=3D"padding:0em 0.25em">
+<ul>
+<li><a href=3D"http://en.wikipedia.org/wiki/Binary_GCD_algorithm" title=3D"=
+Binary GCD algorithm">Binary</a></li>
+<li><a href=3D"http://en.wikipedia.org/wiki/Euclidean_algorithm" title=3D"E=
+uclidean algorithm">Euclidean</a></li>
+<li><a href=3D"http://en.wikipedia.org/wiki/Extended_Euclidean_algorithm"=
+ title=3D"Extended Euclidean algorithm">Extended Euclidean</a></li>
+<li><a href=3D"http://en.wikipedia.org/wiki/Lehmer%27s_GCD_algorithm" title=
+=3D"Lehmer's GCD algorithm">Lehmer's</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style=3D"height:2px">
+<td colspan=3D"2"></td>
+</tr>
+<tr>
+<th scope=3D"row" class=3D"navbox-group"><a href=3D"http://en.wikipedia.org=
+/wiki/Quadratic_residue" title=3D"Quadratic residue">Modular square root</a=
+></th>
+<td class=3D"navbox-list navbox-odd hlist" style=3D"text-align:left;border-=
+left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style=3D"padding:0em 0.25em">
+<ul>
+<li><a href=3D"http://en.wikipedia.org/wiki/Cipolla%27s_algorithm" title=3D=
+"Cipolla's algorithm">Cipolla</a></li>
+<li><a href=3D"http://en.wikipedia.org/wiki/Pocklington%27s_algorithm" titl=
+e=3D"Pocklington's algorithm">Pocklington's</a></li>
+<li><a href=3D"http://en.wikipedia.org/wiki/Tonelli%E2%80%93Shanks_algorith=
+m" title=3D"Tonelli=E2=80=93Shanks algorithm">Tonelli=E2=80=93Shanks</a></l=
+i>
+</ul>
+</div>
+</td>
+</tr>
+<tr style=3D"height:2px">
+<td colspan=3D"2"></td>
+</tr>
+<tr>
+<th scope=3D"row" class=3D"navbox-group">Other algorithms</th>
+<td class=3D"navbox-list navbox-even hlist" style=3D"text-align:left;border=
+-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style=3D"padding:0em 0.25em">
+<ul>
+<li><a href=3D"http://en.wikipedia.org/wiki/Chakravala_method" title=3D"Cha=
+kravala method">Chakravala</a></li>
+<li><a href=3D"http://en.wikipedia.org/wiki/Cornacchia%27s_algorithm" title=
+=3D"Cornacchia's algorithm">Cornacchia</a></li>
+<li><a href=3D"http://en.wikipedia.org/wiki/Integer_relation_algorithm" tit=
+le=3D"Integer relation algorithm">Integer relation</a></li>
+<li><a href=3D"http://en.wikipedia.org/wiki/Integer_square_root" title=3D"I=
+nteger square root">Integer square root</a></li>
+<li><a href=3D"http://en.wikipedia.org/wiki/Modular_exponentiation" title=
+=3D"Modular exponentiation">Modular exponentiation</a></li>
+<li><a href=3D"http://en.wikipedia.org/wiki/Schoof%27s_algorithm" title=3D"=
+Schoof's algorithm">Schoof's</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style=3D"height:2px">
+<td colspan=3D"2"></td>
+</tr>
+<tr>
+<td class=3D"navbox-abovebelow hlist" colspan=3D"2">
+<div>
+<ul>
+<li><i>Italics</i> indicate that algorithm is for numbers of special forms<=
+/li>
+<li><span class=3D"smallcaps" style=3D"font-variant:small-caps;">Smallcaps<=
+/span> indicate a <a href=3D"http://en.wikipedia.org/wiki/Deterministic_alg=
+orithm" title=3D"Deterministic algorithm">deterministic algorithm</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+
+
+<!--=20
+NewPP limit report
+Parsed by mw1095
+CPU time usage: 0.221 seconds
+Real time usage: 0.274 seconds
+Preprocessor visited node count: 690/1000000
+Preprocessor generated node count: 0/1500000
+Post=E2=80=90expand include size: 35281/2097152 bytes
+Template argument size: 902/2097152 bytes
+Highest expansion depth: 7/40
+Expensive parser function count: 0/500
+Lua time usage: 0.053/10.000 seconds
+Lua memory usage: 1.94 MB/50 MB
+-->
+
+<!--=20
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  188.979      1 - -total
+ 32.94%   62.249      1 - Template:Reflist
+ 26.59%   50.256      5 - Template:Citation
+ 25.48%   48.150      1 - Template:About
+ 21.44%   40.513      1 - Template:Hatnote
+ 17.17%   32.452      1 - Template:Number_theoretic_algorithms
+ 14.06%   26.569      1 - Template:Navbox
+  7.39%   13.957      1 - Template:Namespace_detect
+  1.38%    2.607     10 - Template:Smallcaps
+  1.34%    2.540      1 - Template:MathWorld
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:580668-0!*!0!!en!*=
+!*!math=3D0 and timestamp 20150422175332 and revision id 658580729
+ -->
+<noscript><img src=3D"//en.wikipedia.org/wiki/Special:CentralAutoLogin/star=
+t?type=3D1x1" alt=3D"" title=3D"" width=3D"1" height=3D"1" style=3D"border:=
+ none; position: absolute;" /></noscript></div>									<div class=3D"print=
+footer">
+						Retrieved from "<a dir=3D"ltr" href=3D"http://en.wikipedia.org/w/inde=
+x.php?title=3DPollard%27s_rho_algorithm&amp;oldid=3D658580729">http://en.wi=
+kipedia.org/w/index.php?title=3DPollard%27s_rho_algorithm&amp;oldid=3D65858=
+0729</a>"					</div>
+													<div id=3D"catlinks" class=3D"catlinks"><div id=3D"mw-normal-c=
+atlinks" class=3D"mw-normal-catlinks"><a href=3D"http://en.wikipedia.org/wi=
+ki/Help:Category" title=3D"Help:Category">Categories</a>: <ul><li><a href=
+=3D"http://en.wikipedia.org/wiki/Category:Integer_factorization_algorithms"=
+ title=3D"Category:Integer factorization algorithms">Integer factorization=
+ algorithms</a></li></ul></div></div>												<div class=3D"visualClear"=
+></div>
+							</div>
+		</div>
+		<div id=3D"mw-navigation">
+			<h2>Navigation menu</h2>
+
+			<div id=3D"mw-head">
+									<div id=3D"p-personal" role=3D"navigation" class=3D"" aria-labelle=
+dby=3D"p-personal-label">
+						<h3 id=3D"p-personal-label">Personal tools</h3>
+						<ul>
+							<li id=3D"pt-createaccount"><a href=3D"http://en.wikipedia.org/w/ind=
+ex.php?title=3DSpecial:UserLogin&amp;returnto=3DPollard%27s+rho+algorithm&a=
+mp;type=3Dsignup" title=3D"You are encouraged to create an account and log=
+ in; however, it is not mandatory">Create account</a></li><li id=3D"pt-logi=
+n"><a href=3D"http://en.wikipedia.org/w/index.php?title=3DSpecial:UserLogin=
+&amp;returnto=3DPollard%27s+rho+algorithm" title=3D"You're encouraged to lo=
+g in; however, it's not mandatory. [Alt+Shift+o]" accesskey=3D"o">Log in</a=
+></li>						</ul>
+					</div>
+									<div id=3D"left-navigation">
+										<div id=3D"p-namespaces" role=3D"navigation" class=3D"vectorTabs"=
+ aria-labelledby=3D"p-namespaces-label">
+						<h3 id=3D"p-namespaces-label">Namespaces</h3>
+						<ul>
+															<li id=3D"ca-nstab-main" class=3D"selected"><span><a href=3D=
+"#" title=3D"View the content page [Alt+Shift+c]" accesskey=3D"c">Article</=
+a></span></li>
+															<li id=3D"ca-talk"><span><a href=3D"http://en.wikipedia.org/=
+wiki/Talk:Pollard%27s_rho_algorithm" title=3D"Discussion about the content=
+ page [Alt+Shift+t]" accesskey=3D"t">Talk</a></span></li>
+													</ul>
+					</div>
+										<div id=3D"p-variants" role=3D"navigation" class=3D"vectorMenu em=
+ptyPortlet" aria-labelledby=3D"p-variants-label">
+												<h3 tabindex=3D"0" id=3D"p-variants-label"><span>Variants</span=
+><a tabindex=3D"-1" href=3D"#"></a></h3>
+
+						<div class=3D"menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id=3D"right-navigation">
+										<div id=3D"p-views" role=3D"navigation" class=3D"vectorTabs" aria=
+-labelledby=3D"p-views-label">
+						<h3 id=3D"p-views-label">Views</h3>
+						<ul>
+															<li id=3D"ca-view" class=3D"selected"><span><a href=3D"#">Re=
+ad</a></span></li>
+															<li id=3D"ca-edit"><span><a href=3D"http://en.wikipedia.org/=
+w/index.php?title=3DPollard%27s_rho_algorithm&amp;action=3Dedit" title=3D"Y=
+ou can edit this page. Please use the preview button before saving [Alt+Shi=
+ft+e]" accesskey=3D"e">Edit</a></span></li>
+															<li id=3D"ca-history" class=3D"collapsible"><span><a href=3D=
+"http://en.wikipedia.org/w/index.php?title=3DPollard%27s_rho_algorithm&amp;=
+action=3Dhistory" title=3D"Past versions of this page [Alt+Shift+h]" access=
+key=3D"h">View history</a></span></li>
+													</ul>
+					</div>
+										<div style=3D"" id=3D"p-cactions" role=3D"navigation" class=3D"ve=
+ctorMenu emptyPortlet" aria-labelledby=3D"p-cactions-label">
+						<h3 tabindex=3D"0" id=3D"p-cactions-label"><span>More</span><a tabind=
+ex=3D"-1" href=3D"#"></a></h3>
+
+						<div class=3D"menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id=3D"p-search" role=3D"search">
+						<h3>
+							<label for=3D"searchInput">Search</label>
+						</h3>
+
+						<form action=3D"http://en.wikipedia.org/w/index.php" id=3D"searchform=
+">
+														<div id=3D"simpleSearch">
+															<input autocomplete=3D"off" tabindex=3D"1" name=3D"search"=
+ placeholder=3D"Search" title=3D"Search Wikipedia [Alt+Shift+f]" accesskey=
+=3D"f" id=3D"searchInput" type=3D"search"><input value=3D"Special:Search"=
+ name=3D"title" type=3D"hidden"><input name=3D"go" value=3D"Go" title=3D"Go=
+ to a page with this exact name if one exists" id=3D"searchButton" class=3D=
+"searchButton" type=3D"submit">								</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id=3D"mw-panel">
+				<div id=3D"p-logo" role=3D"banner"><a class=3D"mw-wiki-logo" href=3D"ht=
+tp://en.wikipedia.org/wiki/Main_Page" title=3D"Visit the main page"></a></d=
+iv>
+						<div class=3D"portal" role=3D"navigation" id=3D"p-navigation" aria-la=
+belledby=3D"p-navigation-label">
+			<h3 id=3D"p-navigation-label">Navigation</h3>
+
+			<div class=3D"body">
+									<ul>
+													<li id=3D"n-mainpage-description"><a href=3D"http://en.wikiped=
+ia.org/wiki/Main_Page" title=3D"Visit the main page [Alt+Shift+z]" accesske=
+y=3D"z">Main page</a></li>
+													<li id=3D"n-contents"><a href=3D"http://en.wikipedia.org/wiki/=
+Portal:Contents" title=3D"Guides to browsing Wikipedia">Contents</a></li>
+													<li id=3D"n-featuredcontent"><a href=3D"http://en.wikipedia.or=
+g/wiki/Portal:Featured_content" title=3D"Featured content =E2=80=93 the bes=
+t of Wikipedia">Featured content</a></li>
+													<li id=3D"n-currentevents"><a href=3D"http://en.wikipedia.org/=
+wiki/Portal:Current_events" title=3D"Find background information on current=
+ events">Current events</a></li>
+													<li id=3D"n-randompage"><a href=3D"http://en.wikipedia.org/wik=
+i/Special:Random" title=3D"Load a random article [Alt+Shift+x]" accesskey=
+=3D"x">Random article</a></li>
+													<li id=3D"n-sitesupport"><a href=3D"https://donate.wikimedia.o=
+rg/wiki/Special:FundraiserRedirector?utm_source=3Ddonate&amp;utm_medium=3Ds=
+idebar&amp;utm_campaign=3DC13_en.wikipedia.org&amp;uselang=3Den" title=3D"S=
+upport us">Donate to Wikipedia</a></li>
+													<li id=3D"n-shoplink"><a href=3D"http://shop.wikimedia.org/"=
+ title=3D"Visit the Wikimedia Shop">Wikipedia store</a></li>
+											</ul>
+							</div>
+		</div>
+			<div class=3D"portal" role=3D"navigation" id=3D"p-interaction" aria-labe=
+lledby=3D"p-interaction-label">
+			<h3 id=3D"p-interaction-label">Interaction</h3>
+
+			<div class=3D"body">
+									<ul>
+													<li id=3D"n-help"><a href=3D"http://en.wikipedia.org/wiki/Help=
+:Contents" title=3D"Guidance on how to use and edit Wikipedia">Help</a></li>
+													<li id=3D"n-aboutsite"><a href=3D"http://en.wikipedia.org/wiki=
+/Wikipedia:About" title=3D"Find out about Wikipedia">About Wikipedia</a></l=
+i>
+													<li id=3D"n-portal"><a href=3D"http://en.wikipedia.org/wiki/Wi=
+kipedia:Community_portal" title=3D"About the project, what you can do, wher=
+e to find things">Community portal</a></li>
+													<li id=3D"n-recentchanges"><a href=3D"http://en.wikipedia.org/=
+wiki/Special:RecentChanges" title=3D"A list of recent changes in the wiki=
+ [Alt+Shift+r]" accesskey=3D"r">Recent changes</a></li>
+													<li id=3D"n-contactpage"><a href=3D"http://en.wikipedia.org/wi=
+ki/Wikipedia:Contact_us">Contact page</a></li>
+											</ul>
+							</div>
+		</div>
+			<div class=3D"portal" role=3D"navigation" id=3D"p-tb" aria-labelledby=3D=
+"p-tb-label">
+			<h3 id=3D"p-tb-label">Tools</h3>
+
+			<div class=3D"body">
+									<ul>
+													<li id=3D"t-whatlinkshere"><a href=3D"http://en.wikipedia.org/=
+wiki/Special:WhatLinksHere/Pollard%27s_rho_algorithm" title=3D"List of all=
+ English Wikipedia pages containing links to this page [Alt+Shift+j]" acces=
+skey=3D"j">What links here</a></li>
+													<li id=3D"t-recentchangeslinked"><a href=3D"http://en.wikipedi=
+a.org/wiki/Special:RecentChangesLinked/Pollard%27s_rho_algorithm" title=3D"=
+Recent changes in pages linked from this page [Alt+Shift+k]" accesskey=3D"k=
+">Related changes</a></li>
+													<li id=3D"t-upload"><a href=3D"http://en.wikipedia.org/wiki/Wi=
+kipedia:File_Upload_Wizard" title=3D"Upload files [Alt+Shift+u]" accesskey=
+=3D"u">Upload file</a></li>
+													<li id=3D"t-specialpages"><a href=3D"http://en.wikipedia.org/w=
+iki/Special:SpecialPages" title=3D"A list of all special pages [Alt+Shift+q=
+]" accesskey=3D"q">Special pages</a></li>
+													<li id=3D"t-permalink"><a href=3D"http://en.wikipedia.org/w/in=
+dex.php?title=3DPollard%27s_rho_algorithm&amp;oldid=3D658580729" title=3D"P=
+ermanent link to this revision of the page">Permanent link</a></li>
+													<li id=3D"t-info"><a href=3D"http://en.wikipedia.org/w/index.p=
+hp?title=3DPollard%27s_rho_algorithm&amp;action=3Dinfo" title=3D"More infor=
+mation about this page">Page information</a></li>
+													<li id=3D"t-wikibase"><a href=3D"http://www.wikidata.org/wiki/=
+Q946489" title=3D"Link to connected data repository item [Alt+Shift+g]" acc=
+esskey=3D"g">Wikidata item</a></li>
+						<li id=3D"t-cite"><a href=3D"http://en.wikipedia.org/w/index.php?titl=
+e=3DSpecial:CiteThisPage&amp;page=3DPollard%27s_rho_algorithm&amp;id=3D6585=
+80729" title=3D"Information on how to cite this page">Cite this page</a></l=
+i>					</ul>
+							</div>
+		</div>
+			<div class=3D"portal" role=3D"navigation" id=3D"p-coll-print_export" ari=
+a-labelledby=3D"p-coll-print_export-label">
+			<h3 id=3D"p-coll-print_export-label">Print/export</h3>
+
+			<div class=3D"body">
+									<ul>
+													<li id=3D"coll-create_a_book"><a href=3D"http://en.wikipedia.o=
+rg/w/index.php?title=3DSpecial:Book&amp;bookcmd=3Dbook_creator&amp;referer=
+=3DPollard%27s+rho+algorithm">Create a book</a></li>
+													<li id=3D"coll-download-as-rdf2latex"><a href=3D"http://en.wik=
+ipedia.org/w/index.php?title=3DSpecial:Book&amp;bookcmd=3Drender_article&am=
+p;arttitle=3DPollard%27s+rho+algorithm&amp;oldid=3D658580729&amp;writer=3Dr=
+df2latex">Download as PDF</a></li>
+													<li id=3D"t-print"><a href=3D"http://en.wikipedia.org/w/index.=
+php?title=3DPollard%27s_rho_algorithm&amp;printable=3Dyes" title=3D"Printab=
+le version of this page [Alt+Shift+p]" accesskey=3D"p">Printable version</a=
+></li>
+											</ul>
+							</div>
+		</div>
+			<div class=3D"portal" role=3D"navigation" id=3D"p-lang" aria-labelledby=
+=3D"p-lang-label"><span original-title=3D"Language settings" aria-haspopup=
+=3D"true" role=3D"button" tabindex=3D"0" class=3D"uls-settings-trigger"></s=
+pan>
+			<h3 id=3D"p-lang-label">Languages</h3>
+
+			<div class=3D"body">
+									<ul>
+													<li class=3D"interlanguage-link interwiki-ca"><a href=3D"http:=
+//ca.wikipedia.org/wiki/Algorisme_rho_de_Pollard" title=3D"Algorisme rho de=
+ Pollard =E2=80=93 Catalan" hreflang=3D"ca" lang=3D"ca">Catal=C3=A0</a></li>
+													<li class=3D"interlanguage-link interwiki-de"><a href=3D"http:=
+//de.wikipedia.org/wiki/Pollard-Rho-Methode" title=3D"Pollard-Rho-Methode=
+ =E2=80=93 German" hreflang=3D"de" lang=3D"de">Deutsch</a></li>
+													<li class=3D"interlanguage-link interwiki-es"><a href=3D"http:=
+//es.wikipedia.org/wiki/Algoritmo_rho_de_Pollard" title=3D"Algoritmo rho de=
+ Pollard =E2=80=93 Spanish" hreflang=3D"es" lang=3D"es">Espa=C3=B1ol</a></l=
+i>
+													<li class=3D"interlanguage-link interwiki-fa"><a href=3D"http:=
+//fa.wikipedia.org/wiki/%D8%A7%D9%84%DA%AF%D9%88%D8%B1%DB%8C%D8%AA%D9%85_%D=
+8%B1%D9%88_%D9%BE%D9%88%D9%84%D8%A7%D8%B1%D8%AF" title=3D"=D8=A7=D9=84=DA=
+=AF=D9=88=D8=B1=DB=8C=D8=AA=D9=85 =D8=B1=D9=88 =D9=BE=D9=88=D9=84=D8=A7=D8=
+=B1=D8=AF =E2=80=93 Persian" hreflang=3D"fa" lang=3D"fa">=D9=81=D8=A7=D8=B1=
+=D8=B3=DB=8C</a></li>
+													<li class=3D"interlanguage-link interwiki-fr"><a href=3D"http:=
+//fr.wikipedia.org/wiki/Algorithme_rho_de_Pollard" title=3D"Algorithme rho=
+ de Pollard =E2=80=93 French" hreflang=3D"fr" lang=3D"fr">Fran=C3=A7ais</a>=
+</li>
+													<li class=3D"interlanguage-link interwiki-it"><a href=3D"http:=
+//it.wikipedia.org/wiki/Algoritmo_rho_di_Pollard" title=3D"Algoritmo rho di=
+ Pollard =E2=80=93 Italian" hreflang=3D"it" lang=3D"it">Italiano</a></li>
+													<li class=3D"interlanguage-link interwiki-he"><a href=3D"http:=
+//he.wikipedia.org/wiki/%D7%90%D7%9C%D7%92%D7%95%D7%A8%D7%99%D7%AA%D7%9D_rh=
+o_%D7%A9%D7%9C_%D7%A4%D7%95%D7%9C%D7%A8%D7%93" title=3D"=D7=90=D7=9C=D7=92=
+=D7=95=D7=A8=D7=99=D7=AA=D7=9D rho =D7=A9=D7=9C =D7=A4=D7=95=D7=9C=D7=A8=D7=
+=93 =E2=80=93 Hebrew" hreflang=3D"he" lang=3D"he">=D7=A2=D7=91=D7=A8=D7=99=
+=D7=AA</a></li>
+													<li class=3D"interlanguage-link interwiki-nl"><a href=3D"http:=
+//nl.wikipedia.org/wiki/Pollards_rho-algoritme" title=3D"Pollards rho-algor=
+itme =E2=80=93 Dutch" hreflang=3D"nl" lang=3D"nl">Nederlands</a></li>
+													<li class=3D"interlanguage-link interwiki-ja"><a href=3D"http:=
+//ja.wikipedia.org/wiki/%E3%83%9D%E3%83%A9%E3%83%BC%E3%83%89%E3%83%BB%E3%83=
+%AD%E3%83%BC%E7%B4%A0%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3%E6%B3%95" title=
+=3D"=E3=83=9D=E3=83=A9=E3=83=BC=E3=83=89=E3=83=BB=E3=83=AD=E3=83=BC=E7=B4=
+=A0=E5=9B=A0=E6=95=B0=E5=88=86=E8=A7=A3=E6=B3=95 =E2=80=93 Japanese" hrefla=
+ng=3D"ja" lang=3D"ja">=E6=97=A5=E6=9C=AC=E8=AA=9E</a></li>
+													<li class=3D"interlanguage-link interwiki-pl"><a href=3D"http:=
+//pl.wikipedia.org/wiki/Algorytm_faktoryzacji_rho_Pollarda" title=3D"Algory=
+tm faktoryzacji rho Pollarda =E2=80=93 Polish" hreflang=3D"pl" lang=3D"pl">=
+Polski</a></li>
+													<li class=3D"interlanguage-link interwiki-ru"><a href=3D"http:=
+//ru.wikipedia.org/wiki/%CE%A1-%D0%B0%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D=
+0%BC_%D0%9F%D0%BE%D0%BB%D0%BB%D0%B0%D1%80%D0%B4%D0%B0" title=3D"=CE=A1-=D0=
+=B0=D0=BB=D0=B3=D0=BE=D1=80=D0=B8=D1=82=D0=BC =D0=9F=D0=BE=D0=BB=D0=BB=D0=
+=B0=D1=80=D0=B4=D0=B0 =E2=80=93 Russian" hreflang=3D"ru" lang=3D"ru">=D0=A0=
+=D1=83=D1=81=D1=81=D0=BA=D0=B8=D0=B9</a></li>
+													<li class=3D"interlanguage-link interwiki-th"><a href=3D"http:=
+//th.wikipedia.org/wiki/%E0%B8%82%E0%B8%B1%E0%B9%89%E0%B8%99%E0%B8%95%E0%B8=
+%AD%E0%B8%99%E0%B8%A7%E0%B8%B4%E0%B8%98%E0%B8%B5%E0%B9%82%E0%B8%A3%E0%B8%AB=
+%E0%B9%8C%E0%B8%82%E0%B8%AD%E0%B8%87%E0%B8%9E%E0%B8%AD%E0%B8%A5%E0%B8%A5%E0=
+%B8%B2%E0%B8%A3%E0%B9%8C%E0%B8%94" title=3D"=E0=B8=82=E0=B8=B1=E0=B9=89=E0=
+=B8=99=E0=B8=95=E0=B8=AD=E0=B8=99=E0=B8=A7=E0=B8=B4=E0=B8=98=E0=B8=B5=E0=B9=
+=82=E0=B8=A3=E0=B8=AB=E0=B9=8C=E0=B8=82=E0=B8=AD=E0=B8=87=E0=B8=9E=E0=B8=AD=
+=E0=B8=A5=E0=B8=A5=E0=B8=B2=E0=B8=A3=E0=B9=8C=E0=B8=94 =E2=80=93 Thai" href=
+lang=3D"th" lang=3D"th">=E0=B9=84=E0=B8=97=E0=B8=A2</a></li>
+													<li class=3D"interlanguage-link interwiki-uk"><a href=3D"http:=
+//uk.wikipedia.org/wiki/P-%D0%B0%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC_=
+%D0%9F%D0%BE%D0%BB%D0%B0%D1%80%D0%B4%D0%B0" title=3D"P-=D0=B0=D0=BB=D0=B3=
+=D0=BE=D1=80=D0=B8=D1=82=D0=BC =D0=9F=D0=BE=D0=BB=D0=B0=D1=80=D0=B4=D0=B0=
+ =E2=80=93 Ukrainian" hreflang=3D"uk" lang=3D"uk">=D0=A3=D0=BA=D1=80=D0=B0=
+=D1=97=D0=BD=D1=81=D1=8C=D0=BA=D0=B0</a></li>
+													<li class=3D"interlanguage-link interwiki-vi"><a href=3D"http:=
+//vi.wikipedia.org/wiki/Thu%E1%BA%ADt_to%C3%A1n_RHO" title=3D"Thu=E1=BA=ADt=
+ to=C3=A1n RHO =E2=80=93 Vietnamese" hreflang=3D"vi" lang=3D"vi">Ti=E1=BA=
+=BFng Vi=E1=BB=87t</a></li>
+												=09
+											</ul>
+				<div class=3D"after-portlet after-portlet-lang"><span class=3D"wb-langl=
+inks-edit wb-langlinks-link"><a href=3D"http://www.wikidata.org/wiki/Q94648=
+9#sitelinks-wikipedia" title=3D"Edit interlanguage links" class=3D"wbc-edit=
+page">Edit links</a></span></div>			</div>
+		</div>
+				</div>
+		</div>
+		<div id=3D"footer" role=3D"contentinfo">
+							<ul id=3D"footer-info">
+											<li id=3D"footer-info-lastmod"> This page was last modified on=
+ 22 April 2015, at 17:52.</li>
+											<li id=3D"footer-info-copyright">Text is available under the <a=
+ rel=3D"license" href=3D"http://en.wikipedia.org/wiki/Wikipedia:Text_of_Cre=
+ative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons=
+ Attribution-ShareAlike License</a><a rel=3D"license" href=3D"http://creati=
+vecommons.org/licenses/by-sa/3.0/" style=3D"display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href=
+=3D"http://wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and=
+ <a href=3D"http://wikimediafoundation.org/wiki/Privacy_policy">Privacy Pol=
+icy</a>. Wikipedia=C2=AE is a registered trademark of the <a href=3D"http:/=
+/www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit=
+ organization.</li>
+									</ul>
+							<ul id=3D"footer-places">
+											<li id=3D"footer-places-privacy"><a href=3D"http://wikimediafoun=
+dation.org/wiki/Privacy_policy" title=3D"wikimedia:Privacy policy">Privacy=
+ policy</a></li>
+											<li id=3D"footer-places-about"><a href=3D"http://en.wikipedia.or=
+g/wiki/Wikipedia:About" title=3D"Wikipedia:About">About Wikipedia</a></li>
+											<li id=3D"footer-places-disclaimer"><a href=3D"http://en.wikiped=
+ia.org/wiki/Wikipedia:General_disclaimer" title=3D"Wikipedia:General discla=
+imer">Disclaimers</a></li>
+											<li id=3D"footer-places-contact"><a href=3D"http://en.wikipedia.=
+org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+											<li id=3D"footer-places-developers"><a href=3D"https://www.media=
+wiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id=3D"footer-places-mobileview"><a href=3D"http://en.m.wikip=
+edia.org/w/index.php?title=3DPollard%27s_rho_algorithm&amp;mobileaction=3Dt=
+oggle_view_mobile" class=3D"noprint stopMobileRedirectToggle">Mobile view</=
+a></li>
+									</ul>
+										<ul id=3D"footer-icons" class=3D"noprint">
+											<li id=3D"footer-copyrightico">
+															<a href=3D"http://wikimediafoundation.org/"><img src=3D"http=
+://bits.wikimedia.org/images/wikimedia-button.png" srcset=3D"//bits.wikimed=
+ia.org/images/wikimedia-button-1.5x.png 1.5x, //bits.wikimedia.org/images/w=
+ikimedia-button-2x.png 2x" alt=3D"Wikimedia Foundation" height=3D"31" width=
+=3D"88"></a>
+													</li>
+											<li id=3D"footer-poweredbyico">
+															<a href=3D"http://www.mediawiki.org/"><img src=3D"http://bit=
+s.wikimedia.org/static-1.26wmf2/resources/assets/poweredby_mediawiki_88x31.=
+png" alt=3D"Powered by MediaWiki" srcset=3D"//bits.wikimedia.org/static-1.2=
+6wmf2/resources/assets/poweredby_mediawiki_132x47.png 1.5x, //bits.wikimedi=
+a.org/static-1.26wmf2/resources/assets/poweredby_mediawiki_176x62.png 2x"=
+ height=3D"31" width=3D"88"></a>
+													</li>
+									</ul>
+						<div style=3D"clear:both"></div>
+		</div>
+		<script><!--
+
+/* Script removed by snapshot save */
+
+--></script><script><!--
+
+/* Script removed by snapshot save */
+
+--></script>
+<script><!--
+
+/* Script removed by snapshot save */
+
+--></script>
+<script><!--
+
+/* Script removed by snapshot save */
+
+--></script><script src=3D"urn:snapshot-77EAE3CC:http://bits.wikimedia.org/=
+en.wikipedia.org/load.php?debug=3Dfalse&amp;lang=3Den&amp;modules=3Dsite&am=
+p;only=3Dscripts&amp;skin=3Dvector&amp;*"></script><div class=3D"suggestion=
+s" style=3D"display: none; font-size: 13px;"><div class=3D"suggestions-resu=
+lts"></div><div class=3D"suggestions-special"></div></div>
+<script><!--
+
+/* Script removed by snapshot save */
+
+--></script>
+=09
+
+</body></html>
+------=_NextPart_000_0000_5C44D950.B12B202B
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: http://upload.wikimedia.org/math/b/a/4/ba4067e49f198318891a5a4b42f64702.png
+
+iVBORw0KGgoAAAANSUhEUgAAAG4AAAAVBAMAAABVkMbKAAAAMFBMVEX///8wMDAWFhZQUFDm5uYi
+IiLMzMwEBAS2trYMDAyenp6KiopiYmJAQEB0dHQAAACROnB2AAAAAXRSTlMAQObYZgAAAgpJREFU
+OBGtkUFo02AUx/9t0rRNXDbUw0DQgBdRkZFtt+EiWkURNvAiO6XqxUOxiAzEwwKic4dBURDxlJPX
+hR30JlWHF7tRBoqMIZ1etzFBh2yivvd9TRO+jZ180O/9/v/3/l/TBvgPZTyiS96rF9mB6qi66zZg
+RaqLg6qjNxXHBcqKRXKHNTWqLFGuV7FIZkL2zvMh6oy7S85pD1PN7GFRSm7M7MzZzVQgxg0B5aux
+Frm1+ddLqDTmoC+vu8hFNLzfeCdWrDfWOv8px2WgMiY7OGfVCtWHhXGs4KavP0Y2IMsx/ogNO/8Z
+B4gOt/fPnpDAuVwT28j24SOOAovIe8AtH5ti4cVIhCtE/XId2HdKEOe6RilHc+jbgItuGuyHWZWb
+M8A9onmp6HwVMnKucMeqYYakuSVyHvAbGg24BmH8oNbJzQ4IW+S+rSL1fXkfxhaydTHHSWgO0bJU
++DongXO2T1xswsQT/n3FAPomRsKW2PiFYqsOHBICb6Upn9P6dI4edhyXMekZd5Gh2XMMXwouEpgb
+6L5B/RmodDfixpVx6Jj4+9NH+UMLxpeF4WP83iur2mlcoBkJrUErNfrgQcgnl3bk+wBKgX69KjWf
+uthhavEhyuqLKdXXiJ+m9FLMUQzI+R1M4JoH00kkSm02wo453aEUGEONoZSEWZfKSsyeBPegl+rM
+9lSH9D/mT3NIJHD4wwAAAABJRU5ErkJggg==
+------=_NextPart_000_0000_5C44D950.B12B202B
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: http://upload.wikimedia.org/math/3/3/7/33707bbc509eff04e06b5d1ce19dccb5.png
+
+iVBORw0KGgoAAAANSUhEUgAAAHYAAAAVBAMAAABh6QfWAAAAMFBMVEX///8wMDAWFhZQUFDm5uYi
+IiLMzMwEBAS2trYMDAyenp6KiopiYmJAQEB0dHQAAACROnB2AAAAAXRSTlMAQObYZgAAAj1JREFU
+OBGtkktoE1EUhv8kk0kykyZBXQiiDggiKhLGuit2RKMoQgNuxNXEx8JFMIgURNAB8bUQg4IUV7Ny
+2+DC7iRqEcSpBEGRUmTUbVMiaCmtr3PuzTyqwZUXMuf7/3P+m5s7Af7TUm/SRi8GbVZwBrlxb+g8
+oLekc+ZHvIN1qxQJpfOHYwK1wFoJQNTQDtxb1YD6lbLr+5j9uqqXcFkeDL195oCs0W/nm+Ecg1bi
+ZyXYGUj8nS10eIZWOgAp0RO1drwvZbY782QWdW8aytyCiXSLmle95yh6XYvn9Kf6Al/UdhZA/YSs
+Iqs3s43r2XF8xFlbuYukQ+OG+hN3yvkSjxUy77GW6iYWtPbvkJXPTGdbQbKMt9gCvEHGAs7ZWMRL
+6OKYD8daOEbju2UEyO8SxNmhKmWpD4VeiokiNdZAa2Aj8iKLSeASmTNBFlMuI2ezF/QmJklqyyJr
+Ad+RquIyEgZ47YHKryvMPhoWtsh+nkfsezM21GUk28oSim0xtBMpg2BOCODTtATOFmziXAca7vHv
+zTlQFjHm+j1MyaEl5Pw2sEGqZ76s8p7fHaCDj+MobljqRSSo9wCjR5ytygQOk9B6KJ6mOsEZxaSL
+kSthUL3y65uN2isf6ofXo9v4v1GfT+1FvWvjEPXJSHk01qQPrrn85JXa/GUYFUc51ZCan4qYCbQf
+APRyiBF0Ce9HErMxRisUaTvECE5a0IxIohJj1Q3F7ZBioI54IzEJrR0pPcJShP+gx4N6BWuA+xvR
+0YRf37dG8wAAAABJRU5ErkJggg==
+------=_NextPart_000_0000_5C44D950.B12B202B
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: http://upload.wikimedia.org/math/1/7/4/1740ab87a28b46edcca864d348977082.png
+
+iVBORw0KGgoAAAANSUhEUgAAAHgAAAAVBAMAAAB/IDdlAAAAMFBMVEX///8wMDAWFhZQUFDm5uYi
+IiLMzMwEBAS2trYMDAyenp6KiopiYmJAQEB0dHQAAACROnB2AAAAAXRSTlMAQObYZgAAAhdJREFU
+OBGtk01oE0EUx39JNptkN9lUFFEUCfQifkCo1VPBPdiTooJ4n2oRFMQiIkgPRg9+HMSgIJ6kJ/HW
+nDxKquLFtCyCIqWEiD22pYcqxR70zSTd3dgIOfhO7/3f/zc7b2YW/lfYD2SlD6T8fy04HGt4lVgh
+aeE6uDUSqluOqp1RCjviheRDMEa/sDi7QuBdfcOJqS5Wf7nUN+wM/A17Qd8wq7A8+2aeq433WAsr
+Q6RrBraXgrmuhe2ZCk3aB+bOuCv6tA7gVrMT97I3+cZlZT0hWTHwac6fXIvvKlUI2OjAXuYr26W5
+j7QWk2U+MwifyPgGrkul4vCrXD271oFfnqlxTppHKJwVWCqsDX1VRRHlnn1+GfSSjnGdXlP5agdm
+GiZFmiV7w60yPQWO2AX2DYwjpwH2Nh17dfpW77HzSI5i65kE/r5E7MsZ1YZTJenGY5BibRM+hGkv
+4Cmx5AIcnuqZcxUDq2RgySixmOSxvwmvk2vVYQ/ulxMgp32K+759i0RLw87Pu+V8jJT0ILsR2Hoh
+A65SHBffc7j9+4di7GMLuzl3fH/7kdjNxeZiN3yncdjA8u+IJ9WQbpXRinVxIvJZ1fbMkRJm6xrG
+C2u3zLIUz0IB5nvD6XK+ZGA39KYVF3wckcMY7Q0n1UPfwFdC5yO5ypHGSFhL4tT1I9kS7rth0WTb
+0R0MbDHBa1Kqh2ykY7GG5/MHDal+fZz5j8UAAAAASUVORK5CYII=
+------=_NextPart_000_0000_5C44D950.B12B202B
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: http://upload.wikimedia.org/math/c/7/a/c7af85340f0d27afe0ae93575c67d2e1.png
+
+iVBORw0KGgoAAAANSUhEUgAAADUAAAAUBAMAAADfOGjQAAAAMFBMVEX///8EBAQMDAy2traenp4W
+FhaKiooiIiJAQEBiYmJ0dHTMzMwwMDDm5uZQUFAAAACC5/aNAAAAAXRSTlMAQObYZgAAAL1JREFU
+KBVjeMuAA/BdYDiNQ4qBZ8NAyO2awbkGxUU7DzNwLAC7hXcBe23+BWTJBx0M/AlgOU4G1gfcyFIs
+BpoM9hcg+hj4HUBS3LtBAGQA92+GSTD/+YOkGPacAYEJQBZnAEMFTO4pWA5BsD5g+AaR42aIYLiG
+kACyGBOY/0Lk/DfHMYBMQgDWBB4FiNyOVTdWoXiBgfnk1AaYfQgdMBa/AS65OoapDLjkopl1ccpl
+vgPaDwyX1zAr0Gm+DQDkCEgcavHWKAAAAABJRU5ErkJggg==
+------=_NextPart_000_0000_5C44D950.B12B202B
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: http://upload.wikimedia.org/math/e/8/b/e8b807cb7de15213e603dc68505d12d7.png
+
+iVBORw0KGgoAAAANSUhEUgAAAEoAAAAVBAMAAAATJmVgAAAAMFBMVEX///8wMDAWFhZQUFDm5uYi
+IiLMzMwEBAS2trYMDAyenp6KiopiYmJAQEB0dHQAAACROnB2AAAAAXRSTlMAQObYZgAAAZ5JREFU
+KBWVkD1II0EYhh91s0l2zCqchSBIwCtELELELuAWJyIICnZW609zxYGKCHLFpVJBhODBYRksbBUE
+KxFFsTFKEBRRkZUrrjnF4g5EC/12LllvY+UHM9/7PvPOMDPw7jLnZctB5TY7GyaJSVDrYSauoYKk
+YbgCia1Ekmp8m6rKh5mkkmHiO6s+zNLYxTDR7h5uj7Yv+FLYx7i6SxPxL//rY61eVbvqzr96GyoX
+G5+NTXPDZ9dYojoLscu9IZ2yo+d8ENVMpMgT1SlOaYETog4YKE+nVvvXGRTVQWJAUuIwniBNnV7e
+0jOswVeRR8SmVI61vLzkUaccobYnk1+dmH+kSernb/47K+oKPZahq52apIgrbFdavIjFd/9e8aw+
+akGg1ANxbweaUGef5FXT9DHnmDNUebBS2BigV4R1T92Y9GX49vzXZfjQw7w+7mr1fzWVmHDoScqh
+RWoKQI7urDE6LqpURq6svLJApbgV8yMAcFHW8jmliriMOFjJspfeXdJmPoCLYGYKmcCLsHb+OfUK
+619loDYDVRK2wwvXAF7pRr9ECwAAAABJRU5ErkJggg==
+------=_NextPart_000_0000_5C44D950.B12B202B
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: http://upload.wikimedia.org/math/7/7/5/7753483958b9d080e26f8eec7f7baf7d.png
+
+iVBORw0KGgoAAAANSUhEUgAAAG4AAAAVBAMAAABVkMbKAAAAMFBMVEX///8wMDAWFhZQUFDm5uYi
+IiLMzMwEBAS2trYMDAyenp6KiopiYmJAQEB0dHQAAACROnB2AAAAAXRSTlMAQObYZgAAAd5JREFU
+OBGtUT1II0EYfTGbTbJjNgGvEAQN/sBxWISonXArKCIIBuys1p/GQtDjEMTCVP4gQvDgsAxXXGtA
+sBJRFBujBEGRGGTlims0RPDg0ML7Zk534his/GBm3nvfe/OzC7xD6Yu0yYG6kZlUFZWHvgAso6r4
+oCpaTlHiwLAiEX0lLSUUE+VqFYmoJ/1S64pXyEVfejgzIormeZ0zc4qH05KiidzN0XYeE9l9aIVi
+HL4MeX43Vwsn22VF/lE+VcixVGByPjCNK4zb2iqqkkDgYm9IOE3/OWoI1dMINfJqETo/z5fDA6pi
+OEUTcAK/BWhgjuj/HMhgkFCbYHLiuVCCctSH9gDEERbdrSfPOjBL8EhGBOK5wFeWwnqavtq9yFnU
+MR2aeHVAv6OlYu7XNcrO89vkO6YhqhXeKIECDfV9pk1iMAcD3/j7gklx3DKJVH8RdHaAOkHkxO/J
+zrrpstPox4Klz8DjAD+yGwn0ETBKCI/RuiYjAnmitMw9/rExfOhAvzz+/JH/91hoykIv9Yh4s2RJ
+0Sgrb8NtO3qS2uikFDXX47gii7lQghuC3yVF/hlnngF8tgslGLFgRCVFzxPW06644qIyoHdmO8so
+jJ3/jEkxIuEbaFPtmZaqEP8HuthnUnaI4JIAAAAASUVORK5CYII=
+------=_NextPart_000_0000_5C44D950.B12B202B
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: http://upload.wikimedia.org/math/3/1/6/316f23f0774640ddac57516c81e1550b.png
+
+iVBORw0KGgoAAAANSUhEUgAAAJIAAAAaBAMAAACuthgIAAAAMFBMVEX///8iIiJAQEB0dHQWFhaK
+iooMDAzMzMwEBAS2trYwMDDm5uZiYmJQUFCenp4AAADG+azRAAAAAXRSTlMAQObYZgAAAAlwSFlz
+AAAOxAAADsQBlSsOGwAAAvRJREFUOBGtVEtoE1EUPWmSTjKTTOJKXJlFwYWlHVQKKmgFPyAowRa6
+UVqoLlwI48aFLlIE0eXgSkRwqgiKIiOKC1EcutCCKc2idmPF4AdEKq2WUmhFPfdNZvKpu3gg9557
+37l33tz3JkC70Lx2O4T1HSFpy29kNTtlnba6sPjEZZo9wNe2O0E6uTB2tHR6HW4x94dY3BmG632k
+ZCetgkzCiQe9vpenPCBZDEs+KqIz1wJzrvyOqbqSnbI2hhIO7ov0mY80U+ejskOKaW6UwLyixgPg
+mt2oZJkOo8hOUq2dopkB7oWFphuwh2ECg1sUPcddZ/sblDKnL4iXJ3ugV4GnFcoWbFASIMbHCr4F
+Dujbqphxhs5cQV0pnQpMdjqQx98lRakYL4gXXA8ccjX/SmZD6GM02jLqyvlVyygAxjS3v4j0L65j
+2Ipx6wE24ZM78BZIVCU2Zn1xxE2fJrkEUR53B3Z5kqwdGnAUHdwuMF3l1AKk8/D32SkbuiWJWWWF
+9do0md8QpXXR0SuS1MUIbiM1Jn6zl/LEE7qjOZfQaSErUuOwrbI0V4TE1kCleWEZMdXpebj6Hrk8
+ubEaTQVnOYw15HxkCqJKb3DEET/EvHSV0lxEqihxhImgU3YFOY8ND3CB04uPoFStdYI2XmWWUJ0+
+2EqZzaPEggZMIDHCsGSBg8GNk9xPP1+wgEl+5D5XCK0rePpB4UtQyoQvV7AR3Uhy4nJTeCeAvQ46
+qtQWMcp+QQMuz1hSM2wHl0+UOQejGUlGuAOMA59Zo04qlccTrpX8jFvrHSinxOl5mPL6olwAVh4H
+azV7mjeke+oNI3XfOC9eJPTNb6ftrGkid6w85zEQ5TZgzo8WhIxEkSHU+Gn0093ij/9jyq43Stma
+TlbqmR6hvS/4ojIkQv5a/wmlbFkJP1ZJPxJT6qLR1LVPFySh7RccERpBKaMoIFcbYtNnEOMpY3DV
+oY2+A/JmKGVzCm5jPMQgPRZldkdsHRFlM+JyFP8LfwEqy7FK4ZgK9QAAAABJRU5ErkJggg==
+------=_NextPart_000_0000_5C44D950.B12B202B
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: http://bits.wikimedia.org/images/wikimedia-button.png
+
+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
+------=_NextPart_000_0000_5C44D950.B12B202B
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: http://bits.wikimedia.org/static-1.26wmf2/resources/assets/poweredby_mediawiki_88x31.png
+
+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
+------=_NextPart_000_0000_5C44D950.B12B202B
+Content-Type: image/vnd.microsoft.icon
+Content-Transfer-Encoding: base64
+Content-Location: http://bits.wikimedia.org/favicon/wikipedia.ico
+
+AAABAAMAMDAQAAEABABoBgAANgAAACAgEAABAAQA6AIAAJ4GAAAQEBAAAQAEACgBAACGCQAAKAAA
+ADAAAABgAAAAAQAEAAAAAAAABgAAAAAAAAAAAAAQAAAAAAAAAAEBAQAXFxcAMDAwAEdHRwBYWFgA
+Z2dnAHZ2dgCHh4cAlZWVAKmpqQC3t7cAx8fHANfX1wDo6OgA/v7+AAAAAAD////+7u7u7u7u7u7u
+7u7u7u7u7u///////+7u7u7u7u7u7u7u7u7u7u7u7u7u/////u7u7u7u7u7u7u7u7u7u7u7u7u7u
+7///7u7u7u7u7u7u7u7u7u7u7u7u7u7u7v/+7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u/+7u7u7u7u
+7u7u7u7u7u7u7u7u7u7u7u/+7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u/u7u7u7u7u7u7u7u7u7u7u
+7u7u7u7u7u7u7u7u7u7u7sa+7u7u7u1b7u7u7u7u7u7u7u7u7u7u7p9u7u7u7ugG7u7u7u7u7u7u
+7u7u7u7u7TAa7u7u7tQBzu7u7u7u7u7u7u7u7u7u6wAF7u7u7pAAju7u7u7u7u7u7u7u7u7u1AAA
+ru7u7U//Le7u7u7u7u7u7u7u7u7uz/8RPe7u6gAB+e7u7u7u7u7u7u7u7u7ubw94Ce7u1QAIIu7u
+7u7u7u7u7u7u7u7tH/G+Mt7usAAtcL7u7u7u7u7u7u7u7u7n8ATun47uQACO0T7u7u7u7u7u7u7u
+7u7hDxnu4x3sAPLO5Qzu7u7u7u7u7u7u7u6P/z7u6wXk/wfu7ATu7u7u7u7u7u7u7u4QAY7u7kCQ
+ADzu7kDO7u7u7u7u7u7u7uoA8u7u7sAAAG7u7r9e7u7u7u7u7u7u7uIPB+7u7uUAAs7u7uMd7u7u
+7u7u7u7u7rEAHe7u7uQABu7u7un37u7u7u7u7u7u7kAAXu7u7sAPHe7u7u4S3u7u7u7u7u7u7BAA
+3u7u7k8AHO7u7u6Aju7u7u7u7u7u5g/07u7u7B8BBe7u7u7RLu7u7u7u7u7u0v/87u7u5QAGQa7u
+7u7nCe7u7u7u7u7ugAA+7u7uwQ8dsE7u7u7rBO7u7u7u7u7tP/++7u7uYAB+5Qnu7u7tQa7u7u7u
+7u7pH/Lu7u7sLwHe6xPe7u7ur27u7u7u7u7V//ru7u7mAAju7n+e7u7u0yvu7u7u7u6h8C3u7u6y
+AB3u7rEs7u7u6Pfu7u7u7u1AAE7u7u5g/27u7tQG3u7u6QHO7u7u7tbwAB3u7ukfAH7u7sIAju7u
+5wA97u7utiAAAAF76lAA/wWeyDAA84zqUAABfO7uMiNERDIm4iNERDIrkiNEQybiI0RDJO7u7u7u
+7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u
+7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u
+7u7+7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u/+7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u/+7u7u7u7u
+7u7u7u7u7u7u7u7u7u7u7u//7u7u7u7u7u7u7u7u7u7u7u7u7u7u7v///u7u7u7u7u7u7u7u7u7u
+7u7u7u7u7////+7u7u7u7u7u7u7u7u7u7u7u7u7u///////+7u7u7u7u7u7u7u7u7u7u7u/////+
+AAAAAH8AAPAAAAAADwAA4AAAAAAHAADAAAAAAAMAAIAAAAAAAQAAgAAAAAABAACAAAAAAAEAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAABAACAAAAAAAEA
+AIAAAAAAAQAAwAAAAAADAADgAAAAAAcAAPAAAAAADwAA/gAAAAB/AAAoAAAAIAAAAEAAAAABAAQA
+AAAAAIACAAAAAAAAAAAAABAAAAAAAAAAAQEBABYWFgAnJycANTU1AEdHRwBZWVkAZWVlAHh4eACI
+iIgAmZmZAK6urgDMzMwA19fXAOnp6QD+/v4AAAAAAP//7u7u7u7u7u7u7u7u////7u7u7u7u7u7u
+7u7u7u7//u7u7u7u7u7u7u7u7u7u7/7u7u7u7u7u7u7u7u7u7u/u7u7u7u7u7u7u7u7u7u7u7u7u
+7u7X3u7u7I7u7u7u7u7u7u7uYF7u7uIK7u7u7u7u7u7u7QAM7u6vBO7u7u7u7u7u7ucABe7uMA/O
+7u7u7u7u7u7R8q/O6gCEbu7u7u7u7u7ukAnibuTx6g3u7u7u7u7u7hAe6gzP+O4Y7u7u7u7u7urw
+ju4mXx7uge7u7u7u7u7jAd7uoACO7tCe7u7u7u7uoPfu7uEB3u7mPu7u7u7u7k8N7u7QBu7u6wru
+7u7u7uwAXu7ufwbu7u407u7u7u7lAM7u7RBQzu7ur87u7u7u0ATu7ucA0l7u7uFu7u7u7n/67u7R
+B+oL7u7nHe7u7u0fPu7ucA3uJO7u7Qju7u7o/67u7Q9u7q+u7u5R3u7u0Q/e7ub/vu7PLO7uX13u
+4w//Be4v/xnoH/+ekv//Xu7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u
+7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7+7u7u7u7u7u7u7u7u7u7v/u7u7u7u7u7u7u7u7u7u7//u
+7u7u7u7u7u7u7u7u7v///+7u7u7u7u7u7u7u7v//8AAAD8AAAAOAAAABgAAAAQAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAGAAAABwAAAA/AAAA8oAAAAEAAAACAAAAAB
+AAQAAAAAAMAAAAAAAAAAAAAAABAAAAAAAAAAAQEBABcXFwAnJycAOzs7AElJSQBpaWkAeXl5AIaG
+hgCVlZUApqamALOzswDMzMwA2dnZAObm5gD+/v4AAAAAAP/u7u7u7u7//u7u7u7u7u/u7uzu7t7u
+7u7u4Y7lTu7u7u6QTtA77u7u7iaoctXu7u7qDOQZ5d7u7uRO5R7rbu7uv77iLu5O7u5D7pGn7pju
+7QrtKOTe4+6z+OT40z2RTO7u7u7u7u7u7u7u7u7u7u7+7u7u7u7u7//u7u7u7u7/wAMAD4ABAA8A
+AAAPAAAADwAAAA8AAAAPAAAADwAAAA8AAAAPAAAADwAAAA8AAAAPAAAADwAAAA+AAQAPwAMADw==
+
+------=_NextPart_000_0000_5C44D950.B12B202B
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: urn:snapshot-8D016E02:http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&lang=en&modules=ext.gadget.DRN-wizard%2CReferenceTooltips%2Ccharinsert%2Cfeatured-articles-links%2CrefToolbar%2Cswitcher%2Cteahouse%7Cext.geshi.language.cpp%7Cext.geshi.local%7Cext.math.styles%7Cext.rtlcite%2Cwikihiero%2CwikimediaBadges%7Cext.uls.nojs%7Cext.visualEditor.viewPageTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.interface%7Cmediawiki.ui.button%7Cskins.vector.styles%7Cwikibase.client.init&only=styles&skin=vector&*
+
+/* Effective stylesheet produced by snapshot save */
+.referencetooltip > li + li::after { content: ""; border-top: 8px solid rgb=
+(247, 247, 247); border-right: 5px solid transparent; border-left: 5px soli=
+d transparent; margin-top: -12px; margin-left: -5px; z-index: 1; height: 0p=
+x; width: 0px; display: block; }
+.referencetooltip.RTflipped li + li::after { border-top: 0px none; border-b=
+ottom: 8px solid rgb(247, 247, 247); position: absolute; margin-top: 7px;=
+ }
+.source-cpp { line-height: normal; }
+.source-cpp li, .source-cpp pre { line-height: normal; border: 0px none whi=
+te; }
+.cpp.source-cpp .de1, .cpp.source-cpp .de2 { font: 1em/1.2em monospace,mono=
+space; margin: 0px; padding: 0px; background: none repeat scroll 0% 0% tran=
+sparent; vertical-align: top; }
+.cpp.source-cpp { font-family: monospace,monospace; }
+.cpp.source-cpp .kw1 { color: rgb(0, 0, 255); }
+.cpp.source-cpp .kw3 { color: rgb(0, 0, 221); }
+.cpp.source-cpp .kw4 { color: rgb(0, 0, 255); }
+.cpp.source-cpp .es1 { color: rgb(0, 0, 153); font-weight: bold; }
+.cpp.source-cpp .br0 { color: rgb(0, 128, 0); }
+.cpp.source-cpp .sy1 { color: rgb(0, 0, 128); }
+.cpp.source-cpp .sy2 { color: rgb(0, 0, 64); }
+.cpp.source-cpp .sy3 { color: rgb(0, 0, 64); }
+.cpp.source-cpp .sy4 { color: rgb(0, 128, 128); }
+.cpp.source-cpp .st0 { color: rgb(255, 0, 0); }
+.cpp.source-cpp .nu0 { color: rgb(0, 0, 221); }
+.mwe-math-fallback-image-inline { display: inline-block; vertical-align: mi=
+ddle; }
+sup.reference { unicode-bidi: -moz-isolate; }
+.client-js .mw-content-ltr .mw-editsection-bracket:first-of-type, .client-j=
+s .mw-content-rtl .mw-editsection-bracket:not(:first-of-type) { margin-righ=
+t: 0.25em; color: rgb(85, 85, 85); }
+.client-js .mw-content-rtl .mw-editsection-bracket:first-of-type, .client-j=
+s .mw-content-ltr .mw-editsection-bracket:not(:first-of-type) { margin-left=
+: 0.25em; color: rgb(85, 85, 85); }
+.client-js.ve-not-available .mw-content-ltr .mw-editsection-bracket, .clien=
+t-js.ve-not-available .mw-content-rtl .mw-editsection-bracket { margin-left=
+: 0px; margin-right: 0px; }
+@media print {
+  .noprint, div#jump-to-nav, .mw-jump, div.top, div#column-one, #colophon,=
+ .mw-editsection, .mw-editsection-like, .toctoggle, #toc.tochidden, div#f-p=
+oweredbyico, div#f-copyrightico, li#about, li#disclaimer, li#mobileview, li=
+#privacy, #footer-places, .mw-hidden-catlinks, tr.mw-metadata-show-hide-ext=
+ended, span.mw-filepage-other-resolutions, #filetoc, .usermessage, .patroll=
+ink, .ns-0 .mw-redirectedfrom, #mw-navigation, #siteNotice { display: none;=
+ }
+  .wikitable, .thumb, img { page-break-inside: avoid; }
+  h2, h3, h4, h5, h6 { page-break-after: avoid; }
+  p { widows: 3; orphans: 3; }
+  body { background: none repeat scroll 0% 0% white; color: black; margin:=
+ 0px; padding: 0px; }
+  ul { list-style-type: square; }
+  h1, h2, h3, h4, h5, h6 { font-weight: bold; }
+  p { margin: 1em 0px; line-height: 1.2em; }
+  pre, .mw-code { border: 1pt dashed black; white-space: pre; font-size: 8p=
+t; overflow: auto; padding: 1em 0px; background: none repeat scroll 0% 0%=
+ white; color: black; }
+  .mw-body { background: none repeat scroll 0% 0% white; border: medium non=
+e ! important; padding: 0px ! important; margin: 0px ! important; direction=
+: ltr; color: black; }
+  #toc { border: 1px solid rgb(170, 170, 170); background-color: rgb(249,=
+ 249, 249); padding: 5px; display: table; }
+  #footer { background: none repeat scroll 0% 0% white; color: black; margi=
+n-top: 1em; border-top: 1px solid rgb(170, 170, 170); direction: ltr; }
+  img { border: medium none; vertical-align: middle; }
+  a.stub, a.new { color: rgb(186, 0, 0); text-decoration: none; }
+  a { color: black ! important; background: none repeat scroll 0% 0% transp=
+arent ! important; padding: 0px ! important; }
+  a:link, a:visited { color: rgb(85, 34, 0); background: none repeat scroll=
+ 0% 0% transparent; text-decoration: underline; }
+  .mw-body a.external.text::after, .mw-body a.external.autonumber::after {=
+ content: " (" attr(href) ")"; }
+  .mw-body a.external.text[href^=3D"//"]::after, .mw-body a.external.autonu=
+mber[href^=3D"//"]::after { content: " (https:" attr(href) ")"; }
+  a, a.external, a.new, a.stub { color: black ! important; text-decoration:=
+ none ! important; }
+  a, a.external, a.new, a.stub { color: inherit ! important; text-decoratio=
+n: inherit ! important; }
+  table.wikitable, table.mw_metadata { margin: 1em 0px; border: 1px solid=
+ rgb(170, 170, 170); background: none repeat scroll 0% 0% white; border-col=
+lapse: collapse; }
+  table.wikitable > tr > th, table.wikitable > tr > td, table.wikitable >=
+ * > tr > th, table.wikitable > * > tr > td, .mw_metadata th, .mw_metadata=
+ td { border: 1px solid rgb(170, 170, 170); padding: 0.2em; }
+  table.wikitable > tr > th, table.wikitable > * > tr > th, .mw_metadata th=
+ { text-align: center; background: none repeat scroll 0% 0% white; font-wei=
+ght: bold; }
+  .catlinks ul { display: inline; margin: 0px; padding: 0px; list-style: ou=
+tside none none; }
+  .catlinks li { display: inline-block; line-height: 1.15em; padding: 0px=
+ 0.4em; border-left: 1px solid rgb(170, 170, 170); margin: 0.1em 0px; }
+  .catlinks li:first-child { padding-left: 0.2em; border-left: medium none;=
+ }
+  .printfooter { padding: 1em 0px; }
+}
+@media screen {
+  .mw-content-ltr { direction: ltr; }
+  .sitedir-ltr textarea, .sitedir-ltr input { direction: ltr; }
+  input[type=3D"submit"], input[type=3D"button"], input[type=3D"reset"], in=
+put[type=3D"file"] { direction: ltr; }
+  img.tex { vertical-align: middle; }
+  .mw-icon-question:lang(ar), .mw-icon-question:lang(fa), .mw-icon-question=
+:lang(ur) { transform: scaleX(-1); }
+  #catlinks { text-align: left; }
+  .catlinks ul { display: inline; margin: 0px; padding: 0px; list-style: ou=
+tside none none; }
+  .catlinks li { display: inline-block; line-height: 1.25em; border-left:=
+ 1px solid rgb(170, 170, 170); margin: 0.125em 0px; padding: 0px 0.5em; }
+  .catlinks li:first-child { padding-left: 0.25em; border-left: medium none=
+; }
+  a.new { color: rgb(186, 0, 0); }
+  .plainlinks a.external { background: none repeat scroll 0% 0% transparent=
+ ! important; padding: 0px ! important; }
+  table.wikitable { margin: 1em 0px; background-color: rgb(249, 249, 249);=
+ border: 1px solid rgb(170, 170, 170); border-collapse: collapse; color: bl=
+ack; }
+  table.wikitable > tr > th, table.wikitable > tr > td, table.wikitable >=
+ * > tr > th, table.wikitable > * > tr > td { border: 1px solid rgb(170, 17=
+0, 170); padding: 0.2em 0.4em; }
+  table.wikitable > tr > th, table.wikitable > * > tr > th { background-col=
+or: rgb(242, 242, 242); text-align: center; }
+  .visualClear { clear: both; }
+  .mw-content-ltr ul, .mw-content-rtl .mw-content-ltr ul { margin: 0.3em 0p=
+x 0px 1.6em; padding: 0px; }
+  .mw-content-ltr ol, .mw-content-rtl .mw-content-ltr ol { margin: 0.3em 0p=
+x 0px 3.2em; padding: 0px; }
+  h1:lang(anp), h1:lang(as), h1:lang(bh), h1:lang(bho), h1:lang(bn), h1:lan=
+g(gu), h1:lang(hi), h1:lang(kn), h1:lang(ks), h1:lang(ml), h1:lang(mr), h1:=
+lang(my), h1:lang(mai), h1:lang(ne), h1:lang(new), h1:lang(or), h1:lang(pa)=
+, h1:lang(pi), h1:lang(sa), h1:lang(ta), h1:lang(te) { line-height: 1.6em=
+ ! important; }
+  h2:lang(anp), h3:lang(anp), h4:lang(anp), h5:lang(anp), h6:lang(anp), h2:=
+lang(as), h3:lang(as), h4:lang(as), h5:lang(as), h6:lang(as), h2:lang(bho),=
+ h3:lang(bho), h4:lang(bho), h5:lang(bho), h6:lang(bho), h2:lang(bh), h3:la=
+ng(bh), h4:lang(bh), h5:lang(bh), h6:lang(bh), h2:lang(bn), h3:lang(bn), h4=
+:lang(bn), h5:lang(bn), h6:lang(bn), h2:lang(gu), h3:lang(gu), h4:lang(gu),=
+ h5:lang(gu), h6:lang(gu), h2:lang(hi), h3:lang(hi), h4:lang(hi), h5:lang(h=
+i), h6:lang(hi), h2:lang(kn), h3:lang(kn), h4:lang(kn), h5:lang(kn), h6:lan=
+g(kn), h2:lang(ks), h3:lang(ks), h4:lang(ks), h5:lang(ks), h6:lang(ks), h2:=
+lang(ml), h3:lang(ml), h4:lang(ml), h5:lang(ml), h6:lang(ml), h2:lang(mr),=
+ h3:lang(mr), h4:lang(mr), h5:lang(mr), h6:lang(mr), h2:lang(my), h3:lang(m=
+y), h4:lang(my), h5:lang(my), h6:lang(my), h2:lang(mai), h3:lang(mai), h4:l=
+ang(mai), h5:lang(mai), h6:lang(mai), h2:lang(ne), h3:lang(ne), h4:lang(ne)=
+, h5:lang(ne), h6:lang(ne), h2:lang(new), h3:lang(new), h4:lang(new), h5:la=
+ng(new), h6:lang(new), h2:lang(or), h3:lang(or), h4:lang(or), h5:lang(or),=
+ h6:lang(or), h2:lang(pa), h3:lang(pa), h4:lang(pa), h5:lang(pa), h6:lang(p=
+a), h2:lang(pi), h3:lang(pi), h4:lang(pi), h5:lang(pi), h6:lang(pi), h2:lan=
+g(sa), h3:lang(sa), h4:lang(sa), h5:lang(sa), h6:lang(sa), h2:lang(ta), h3:=
+lang(ta), h4:lang(ta), h5:lang(ta), h6:lang(ta), h2:lang(te), h3:lang(te),=
+ h4:lang(te), h5:lang(te), h6:lang(te) { line-height: 1.2em; }
+  ol:lang(bcc) li, ol:lang(bgn) li, ol:lang(bqi) li, ol:lang(fa) li, ol:lan=
+g(glk) li, ol:lang(kk-arab) li, ol:lang(lrc) li, ol:lang(mzn) li, ol:lang(s=
+dh) li { list-style-type: persian; }
+  ol:lang(ckb) li { list-style-type: arabic-indic; }
+  ol:lang(hi) li, ol:lang(mr) li { list-style-type: devanagari; }
+  ol:lang(as) li, ol:lang(bn) li { list-style-type: bengali; }
+  ol:lang(or) li { list-style-type: oriya; }
+  #toc ul, .toc ul { margin: 0.3em 0px; }
+  .mw-content-ltr .toc ul, .mw-content-ltr #toc ul, .mw-content-rtl .mw-con=
+tent-ltr .toc ul, .mw-content-rtl .mw-content-ltr #toc ul { text-align: lef=
+t; }
+  .mw-content-ltr .toc ul ul, .mw-content-ltr #toc ul ul, .mw-content-rtl=
+ .mw-content-ltr .toc ul ul, .mw-content-rtl .mw-content-ltr #toc ul ul {=
+ margin: 0px 0px 0px 2em; }
+  #toc #toctitle, .toc #toctitle, #toc .toctitle, .toc .toctitle { directio=
+n: ltr; }
+  .mw-jump, #jump-to-nav { overflow: hidden; height: 0px; }
+  .printfooter { display: none; }
+  .mw-editsection, .toctoggle, .tochidden, #jump-to-nav { -moz-user-select:=
+ none; }
+  .mw-editsection, .mw-editsection-like { font-size: small; font-weight: no=
+rmal; margin-left: 1em; vertical-align: baseline; line-height: 1em; display=
+: inline-block; }
+  .mw-content-ltr .mw-editsection, .mw-content-rtl .mw-content-ltr .mw-edit=
+section { margin-left: 1em; }
+  sup, sub { line-height: 1; }
+}
+@media screen {
+  a { text-decoration: none; color: rgb(6, 69, 173); background: none repea=
+t scroll 0% 0% transparent; }
+  a:visited { color: rgb(11, 0, 128); }
+  a:active { color: rgb(250, 167, 0); }
+  a:hover, a:focus { text-decoration: underline; }
+  a.new, #p-personal a.new { color: rgb(186, 0, 0); }
+  a.new:visited, #p-personal a.new:visited { color: rgb(165, 88, 88); }
+  .mw-body a.external { color: rgb(51, 102, 187); }
+  .mw-body a.external:visited { color: rgb(102, 51, 102); }
+  .mw-body a.external:active { color: rgb(187, 102, 51); }
+  img { border: medium none; vertical-align: middle; }
+  h1, h2, h3, h4, h5, h6 { color: black; background: none repeat scroll 0%=
+ 0% transparent; font-weight: normal; margin: 0px; overflow: hidden; paddin=
+g-top: 0.5em; padding-bottom: 0.17em; border-bottom: 1px solid rgb(170, 170=
+, 170); }
+  h1 { font-size: 188%; }
+  h2 { font-size: 150%; }
+  h3, h4, h5, h6 { border-bottom: medium none; font-weight: bold; }
+  h3 { font-size: 128%; }
+  h1, h2 { margin-bottom: 0.6em; }
+  h3, h4, h5 { margin-bottom: 0.3em; }
+  p { margin: 0.4em 0px 0.5em; line-height: 1.5em; }
+  p img { margin: 0px; }
+  ul { line-height: 1.5em; list-style-type: square; margin: 0.3em 0px 0px=
+ 1.6em; padding: 0px; }
+  ol { line-height: 1.5em; margin: 0.3em 0px 0px 3.2em; padding: 0px; list-=
+style-image: none; }
+  li { margin-bottom: 0.1em; }
+  pre, code, tt, kbd, samp, .mw-code { font-family: monospace,Courier; }
+  pre, .mw-code { color: black; background-color: rgb(249, 249, 249); borde=
+r: 1px solid rgb(221, 221, 221); padding: 1em; }
+  table { font-size: 100%; }
+  form { border: medium none; margin: 0px; }
+  #toc, .toc, .mw-warning, .toccolours { border: 1px solid rgb(170, 170, 17=
+0); background-color: rgb(249, 249, 249); padding: 5px; font-size: 95%; }
+  #toc, .toc { display: table; padding: 7px; }
+  #toc h2, .toc h2 { display: inline; border: medium none; padding: 0px; fo=
+nt-size: 100%; font-weight: bold; }
+  #toc #toctitle, .toc #toctitle, #toc .toctitle, .toc .toctitle { text-ali=
+gn: center; }
+  #toc ul, .toc ul { list-style-type: none; list-style-image: none; margin-=
+left: 0px; padding: 0px; text-align: left; }
+  #toc ul ul, .toc ul ul { margin: 0px 0px 0px 2em; }
+  #toc .toctoggle, .toc .toctoggle { font-size: 94%; }
+  .catlinks { border: 1px solid rgb(170, 170, 170); background-color: rgb(2=
+49, 249, 249); padding: 5px; margin-top: 1em; clear: both; }
+  #siteNotice { position: relative; text-align: center; margin: 0px; }
+  .firstHeading { margin-bottom: 0.1em; line-height: 1.2em; padding-bottom:=
+ 0px; }
+  #siteSub { display: none; }
+  #jump-to-nav { margin-top: -1.4em; margin-bottom: 1.4em; }
+  #contentSub, #contentSub2 { font-size: 84%; line-height: 1.2em; margin:=
+ 0px 0px 1.4em 1em; color: rgb(84, 84, 84); width: auto; }
+}
+.mw-wiki-logo { background-image: url("http://upload.wikimedia.org/wikipedi=
+a/en/b/bc/Wiki.png"); }
+@media not all, (min--moz-device-pixel-ratio: 1.5), (min-resolution: 1.5dpp=
+x), (min-resolution: 144dpi) {
+  .mw-wiki-logo { background-image: url("urn:not-loaded:http://upload.wikim=
+edia.org/wikipedia/commons/thumb/b/b3/Wikipedia-logo-v2-en.svg/204px-Wikipe=
+dia-logo-v2-en.svg.png"); background-size: 135px auto; }
+}
+@media not all, (min--moz-device-pixel-ratio: 2), (min-resolution: 2dppx),=
+ (min-resolution: 192dpi) {
+  .mw-wiki-logo { background-image: url("urn:not-loaded:http://upload.wikim=
+edia.org/wikipedia/commons/thumb/b/b3/Wikipedia-logo-v2-en.svg/270px-Wikipe=
+dia-logo-v2-en.svg.png"); background-size: 135px auto; }
+}
+.mw-ui-button:focus::-moz-focus-inner { border-color: transparent; }
+.mw-ui-button.mw-ui-progressive:focus::-moz-focus-inner, .mw-ui-button.mw-u=
+i-primary:focus::-moz-focus-inner { border-color: transparent; }
+.mw-ui-button.mw-ui-constructive:focus::-moz-focus-inner { border-color: tr=
+ansparent; }
+.mw-ui-button.mw-ui-destructive:focus::-moz-focus-inner { border-color: tra=
+nsparent; }
+.mw-ui-button-group > :first-child { border-top-left-radius: 2px; border-bo=
+ttom-left-radius: 2px; }
+.mw-ui-button-group > :not(:first-child) { border-left: medium none; }
+.mw-ui-button-group > :last-child { border-top-right-radius: 2px; border-bo=
+ttom-right-radius: 2px; }
+@media screen {
+  html { font-size: 100%; }
+  html, body { height: 100%; margin: 0px; padding: 0px; font-family: sans-s=
+erif; }
+  body { background-color: rgb(246, 246, 246); }
+  .mw-body { margin-left: 10em; padding: 1em; border-width: 1px 0px 1px 1px=
+; border-style: solid; border-color: rgb(167, 215, 249); -moz-border-top-co=
+lors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none=
+; -moz-border-left-colors: none; border-image: none; margin-top: -1px; back=
+ground-color: rgb(255, 255, 255); color: rgb(37, 37, 37); direction: ltr;=
+ }
+  .mw-body .mw-editsection, .mw-body .mw-editsection-like { font-family: sa=
+ns-serif; }
+  .mw-body p { line-height: inherit; margin: 0.5em 0px; }
+  .mw-body h1, .mw-body h2 { font-family: "Linux Libertine",Georgia,Times,s=
+erif; line-height: 1.3; margin-bottom: 0.25em; padding: 0px; }
+  .mw-body h1 { font-size: 1.8em; }
+  .mw-body h2 { font-size: 1.5em; margin-top: 1em; }
+  .mw-body h3, .mw-body h4, .mw-body h5, .mw-body h6 { line-height: 1.6; ma=
+rgin-top: 0.3em; margin-bottom: 0px; padding-bottom: 0px; }
+  .mw-body h3 { font-size: 1.17em; }
+  .mw-body h3, .mw-body h4 { font-weight: bold; }
+  .mw-body #toc h2, .mw-body .toc h2 { font-size: 100%; font-family: sans-s=
+erif; }
+  .mw-body .firstHeading { overflow: visible; }
+  .mw-body .mw-indicators { float: right; line-height: 1.6; font-size: 0.87=
+5em; position: relative; z-index: 1; }
+  div.emptyPortlet { display: none; }
+  ul { list-style-type: disc; list-style-image: url("data:image/svg+xml,%3C=
+%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3F%3E%0A%3Csvg%20xmln=
+s%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20version%3D%221.1%22%20widt=
+h%3D%225%22%20height%3D%2213%22%3E%0A%3Ccircle%20cx%3D%222.5%22%20cy%3D%229=
+.5%22%20r%3D%222.5%22%20fill%3D%22%2300528c%22%2F%3E%0A%3C%2Fsvg%3E%0A");=
+ }
+  pre, .mw-code { line-height: 1.3em; }
+  #siteNotice { font-size: 0.8em; }
+  .mw-body-content { position: relative; line-height: 1.6; font-size: 0.875=
+em; z-index: 0; }
+  #p-personal { position: absolute; top: 0.33em; right: 0.75em; z-index: 10=
+0; }
+  #p-personal h3 { display: none; }
+  #p-personal ul { list-style-type: none; list-style-image: none; margin:=
+ 0px; padding-left: 10em; }
+  #p-personal li { line-height: 1.125em; float: left; margin-left: 0.75em;=
+ margin-top: 0.5em; font-size: 0.75em; white-space: nowrap; }
+  #p-search { float: left; margin-right: 0.5em; margin-left: 0.5em; }
+  #p-search h3 { display: none; }
+  #p-search form, #p-search input { margin: 0.4em 0px 0px; }
+  div#simpleSearch { display: block; width: 12.6em; padding-right: 1.4em;=
+ height: 1.4em; margin-top: 0.65em; position: relative; min-height: 1px; bo=
+rder: 1px solid rgb(170, 170, 170); color: black; background-color: white;=
+ background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAA=
+AAQCAIAAABY/YLgAAAAJUlEQVQIHQXBsQEAAAjDoND/73UWdnerhmHVsDQZJrNWVg3Dqge6bgMe=
+6bejNAAAAABJRU5ErkJggg=3D=3D"); background-position: left top; background-r=
+epeat: repeat-x; }
+  div#simpleSearch input { margin: 0px; padding: 0px; border: 0px none; bac=
+kground-color: transparent; color: black; }
+  div#simpleSearch #searchInput { width: 100%; padding: 0.2em 0px 0.2em 0.2=
+em; font-size: 13px; direction: ltr; }
+  div#simpleSearch #searchInput:focus { outline: medium none; }
+  div#simpleSearch #searchInput:-moz-placeholder { color: rgb(153, 153, 153=
+); }
+  div#simpleSearch #searchButton, div#simpleSearch #mw-searchButton { posit=
+ion: absolute; top: 0px; right: 0px; width: 1.65em; height: 100%; cursor:=
+ pointer; text-indent: -99999px; line-height: 1; direction: ltr; white-spac=
+e: nowrap; overflow: hidden; background-image: linear-gradient(transparent,=
+ transparent), url("data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20en=
+coding%3D%22UTF-8%22%3F%3E%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F200=
+0%2Fsvg%22%20width%3D%2212%22%20height%3D%2213%22%3E%3Cg%20stroke-width%3D%=
+222%22%20stroke%3D%22%236c6c6c%22%20fill%3D%22none%22%3E%3Cpath%20d%3D%22M1=
+1.29%2011.71l-4-4%22%2F%3E%3Ccircle%20cx%3D%225%22%20cy%3D%225%22%20r%3D%22=
+4%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E"); background-position: center center; bac=
+kground-repeat: no-repeat; }
+  div.vectorTabs h3 { display: none; }
+  div.vectorTabs { float: left; height: 2.5em; background-image: url("data:=
+image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAuCAIAAABmjeQ9AAAARElEQVR42m=
+VO2wrAUAhy/f8fz+niVMTYQ3hLKkgGgN/IPvgIhUYYV/qogdP75J01V+JwrKZr/5YPcnzN3e6t7=
+l+2K+EFX91B1daOi7sAAAAASUVORK5CYII=3D"); background-position: left bottom;=
+ background-repeat: no-repeat; padding-left: 1px; }
+  div.vectorTabs ul { float: left; height: 100%; list-style-type: none; lis=
+t-style-image: none; margin: 0px; padding: 0px; background-image: url("data=
+:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAuCAIAAABmjeQ9AAAARElEQVR42=
+mVO2wrAUAhy/f8fz+niVMTYQ3hLKkgGgN/IPvgIhUYYV/qogdP75J01V+JwrKZr/5YPcnzN3e6t=
+7l+2K+EFX91B1daOi7sAAAAASUVORK5CYII=3D"); background-position: right bottom=
+; background-repeat: no-repeat; }
+  div.vectorTabs ul li { float: left; line-height: 1.125em; display: inline=
+-block; height: 100%; margin: 0px; padding: 0px; background-color: rgb(243,=
+ 243, 243); background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSU=
+hEUgAAAAEAAABkCAIAAADITs03AAAAPElEQVR4XuWK2xEAIAzCsPvv5DSu0ahX3yv4wQVyGGCSv=
+g2dnJvduT8sz/IwKOIfjCi2z/76FhHeJcslVZQFLUC06LZ/AAAAAElFTkSuQmCC"); backgrou=
+nd-position: left bottom; background-repeat: repeat-x; white-space: nowrap;=
+ }
+  div.vectorTabs ul > li { display: block; }
+  div.vectorTabs li {  }
+  div.vectorTabs li.selected { background-image: url("data:image/png;base64=
+,iVBORw0KGgoAAAANSUhEUgAAAAEAAABkAQAAAABvV2fNAAAADUlEQVQIHWNoYBgWEACJ5TIB0K=
+9KcAAAAABJRU5ErkJggg=3D=3D"); }
+  div.vectorTabs li.selected a, div.vectorTabs li.selected a:visited { colo=
+r: rgb(51, 51, 51); text-decoration: none; }
+  div.vectorTabs li a { display: inline-block; height: 1.9em; padding-left:=
+ 0.5em; padding-right: 0.5em; color: rgb(6, 69, 173); cursor: pointer; font=
+-size: 0.8em; }
+  div.vectorTabs span { display: inline-block; background-image: url("data:=
+image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAuCAIAAABmjeQ9AAAARElEQVR42m=
+VO2wrAUAhy/f8fz+niVMTYQ3hLKkgGgN/IPvgIhUYYV/qogdP75J01V+JwrKZr/5YPcnzN3e6t7=
+l+2K+EFX91B1daOi7sAAAAASUVORK5CYII=3D"); background-position: right bottom;=
+ background-repeat: no-repeat; }
+  div.vectorTabs span a { display: inline-block; padding-top: 1.25em; }
+  div.vectorTabs span > a { float: left; display: block; }
+  div.vectorMenu { direction: ltr; float: left; cursor: pointer; position:=
+ relative; }
+  div#mw-head div.vectorMenu h3 { float: left; background-image: url("data:=
+image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAuCAIAAABmjeQ9AAAARElEQVR42m=
+VO2wrAUAhy/f8fz+niVMTYQ3hLKkgGgN/IPvgIhUYYV/qogdP75J01V+JwrKZr/5YPcnzN3e6t7=
+l+2K+EFX91B1daOi7sAAAAASUVORK5CYII=3D"); background-repeat: no-repeat; back=
+ground-position: right bottom; font-size: 1em; height: 2.5em; padding-right=
+: 1px; margin-right: -1px; }
+  div.vectorMenu h3 span { display: block; font-size: 0.8em; padding-left:=
+ 0.7em; padding-top: 1.375em; margin-right: 20px; font-weight: normal; colo=
+r: rgb(77, 77, 77); }
+  div.vectorMenu h3 a { position: absolute; top: 0px; right: 0px; width: 20=
+px; height: 2.5em; background-image: linear-gradient(transparent, transpare=
+nt), url("data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%=
+22UTF-8%22%3F%3E%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22=
+%20width%3D%2222%22%20height%3D%2216%22%3E%3Cpath%20d%3D%22M15.502%206.001l=
+-5%205.001-5-5.001z%22%20fill%3D%22%23797979%22%2F%3E%3C%2Fsvg%3E"); backgr=
+ound-position: 100% 70%; background-repeat: no-repeat; transition: backgrou=
+nd-position 250ms ease 0s; }
+  div.vectorMenu div.menu { min-width: 100%; position: absolute; top: 2.5em=
+; left: -1px; background-color: white; border-right: 1px solid silver; bord=
+er-width: 0px 1px 1px; border-style: solid; border-color: silver; -moz-bord=
+er-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-col=
+ors: none; -moz-border-left-colors: none; border-image: none; clear: both;=
+ text-align: left; display: none; }
+  div.vectorMenu:hover div.menu, div.vectorMenu.menuForceShow div.menu { di=
+splay: block; }
+  div.vectorMenu ul { list-style-type: none; list-style-image: none; paddin=
+g: 0px; margin: 0px; text-align: left; }
+  div.vectorMenu ul, x:-moz-any-link { min-width: 5em; }
+  div.vectorMenu ul, x:-moz-any-link, x:default { min-width: 0px; }
+  @keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  @keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  #mw-navigation h2 { position: absolute; top: -9999px; }
+  #mw-page-base { height: 5em; background-position: left bottom; background=
+-repeat: repeat-x; background-image: linear-gradient(rgb(255, 255, 255) 50%=
+, rgb(246, 246, 246) 100%); background-color: rgb(255, 255, 255); }
+  #mw-head-base { margin-top: -5em; margin-left: 10em; height: 5em; }
+  div#mw-head { position: absolute; top: 0px; right: 0px; width: 100%; }
+  div#mw-head h3 { margin: 0px; padding: 0px; }
+  #left-navigation { float: left; margin-left: 10em; margin-top: 2.5em; mar=
+gin-bottom: -2.5em; display: inline; }
+  #right-navigation { float: right; margin-top: 2.5em; }
+  #p-logo { position: absolute; top: -160px; left: 0px; width: 10em; height=
+: 160px; }
+  #p-logo a { display: block; width: 10em; height: 160px; background-repeat=
+: no-repeat; background-position: center center; text-decoration: none; }
+  div#mw-panel { font-size: inherit; position: absolute; top: 160px; paddin=
+g-top: 1em; width: 10em; left: 0px; }
+  div#mw-panel div.portal { margin: 0px 0.6em 0px 0.7em; padding: 0.25em 0p=
+x; direction: ltr; background-position: left top; background-repeat: no-rep=
+eat; background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA=
+IwAAAABCAAAAAAphRnkAAAAJ0lEQVQIW7XFsQEAIAyAMPD/b7uLWz8wS5youFW1UREfiIpH1Q2V=
+Bz7fGPS1dOGeAAAAAElFTkSuQmCC"); }
+  div#mw-panel div.portal h3 { font-size: 0.75em; color: rgb(77, 77, 77);=
+ font-weight: normal; margin: 0px; padding: 0.25em 0px 0.25em 0.25em; curso=
+r: default; border: medium none; }
+  div#mw-panel div.portal div.body { margin: 0px 0px 0px 1.25em; padding-to=
+p: 0px; }
+  div#mw-panel div.portal div.body ul { list-style-type: none; list-style-i=
+mage: none; margin: 0px; padding: 0px; }
+  div#mw-panel div.portal div.body ul li { line-height: 1.125em; margin: 0p=
+x; padding: 0.25em 0px; font-size: 0.75em; word-wrap: break-word; }
+  div#mw-panel div.portal div.body ul li a { color: rgb(6, 69, 173); }
+  div#mw-panel div.portal div.body ul li a:visited { color: rgb(11, 0, 128)=
+; }
+  div#mw-panel #p-logo + div.portal { background-image: none; margin-top:=
+ 0px; }
+  div#mw-panel #p-logo + div.portal h3 { display: none; }
+  div#mw-panel #p-logo + div.portal div.body { margin-left: 0.5em; }
+  div#footer { margin-left: 10em; margin-top: 0px; padding: 0.75em; directi=
+on: ltr; }
+  div#footer ul { list-style-type: none; list-style-image: none; margin: 0p=
+x; padding: 0px; }
+  div#footer ul li { margin: 0px; padding: 0.5em 0px; color: rgb(51, 51, 51=
+); font-size: 0.7em; }
+  div#footer #footer-icons { float: right; }
+  div#footer #footer-icons li { float: left; margin-left: 0.5em; line-heigh=
+t: 2em; text-align: right; }
+  div#footer #footer-info li { line-height: 1.4em; }
+  div#footer #footer-places li { float: left; margin-right: 1em; line-heigh=
+t: 2em; }
+  body.ltr div#footer #footer-places { float: left; }
+  .mw-body .external { background-position: right center; background-repeat=
+: no-repeat; background-image: linear-gradient(transparent, transparent),=
+ url("data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UT=
+F-8%22%3F%3E%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20w=
+idth%3D%2210%22%20height%3D%2210%22%3E%3Cg%20transform%3D%22translate%28-82=
+6.429%20-698.791%29%22%3E%3Crect%20width%3D%225.982%22%20height%3D%225.982%=
+22%20x%3D%22826.929%22%20y%3D%22702.309%22%20fill%3D%22%23fff%22%20stroke%3=
+D%22%2306c%22%2F%3E%3Cg%3E%3Cpath%20d%3D%22M831.194%20698.791h5.234v5.391l-=
+1.571%201.545-1.31-1.31-2.725%202.725-2.689-2.689%202.808-2.808-1.311-1.311=
+z%22%20fill%3D%22%2306f%22%2F%3E%3Cpath%20d%3D%22M835.424%20699.795l.022%20=
+4.885-1.817-1.817-2.881%202.881-1.228-1.228%202.881-2.881-1.851-1.851z%22%2=
+0fill%3D%22%23fff%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"); padding-right=
+: 13px; }
+}
+@media screen and (min-width: 982px) {
+  .mw-body { margin-left: 11em; padding: 1.25em 1.5em 1.5em; }
+  #p-logo { left: 0.5em; }
+  div#footer { margin-left: 11em; padding: 1.25em; }
+  #mw-panel { padding-left: 0.5em; }
+  #p-search { margin-right: 1em; }
+  #left-navigation { margin-left: 11em; }
+  #p-personal { right: 1em; }
+  #mw-head-base { margin-left: 11em; }
+}
+.wb-langlinks-link { line-height: 1.125em; font-size: 0.75em; float: right;=
+ }
+.wb-langlinks-link { list-style: outside none none; text-align: right; padd=
+ing-right: 0.5em ! important; }
+.wb-langlinks-link > a { padding-left: 11px; background: none no-repeat scr=
+oll left center transparent; }
+.wb-langlinks-link > a:link, .wb-langlinks-link > a:visited { background-im=
+age: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKBAMAAAB/HNK=
+OAAAAD1BMVEUZAAD///95eXmqqqrY2NjEIQ0cAAAAAXRSTlMAQObYZgAAACdJREFUCNdjYGBgYG=
+IAASUFENNJCUiqmADZTM5OqExFFZAKRSG4YgBjcwODynSgDwAAAABJRU5ErkJggg=3D=3D");=
+ color: rgb(121, 121, 121) ! important; }
+.wb-langlinks-link > a:hover { background-image: url("data:image/png;base64=
+,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKBAMAAAB/HNKOAAAAD1BMVEWBAADY2Nj///8GRa0zZr=
+tW2AECAAAAAXRSTlMAQObYZgAAACdJREFUCNdjYGBgYGYAAWMDEFPYGEgaOgLZzCLCqEwjQ5AKI=
+2W4YgBg5QOTQPzBuAAAAABJRU5ErkJggg=3D=3D"); color: rgb(6, 69, 173) ! importa=
+nt; }
+div.after-portlet-lang::after { content: ""; clear: both; display: block;=
+ }
+
+------=_NextPart_000_0000_5C44D950.B12B202B
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: http://upload.wikimedia.org/wikipedia/en/b/bc/Wiki.png
+
+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
+RK5CYII=
+------=_NextPart_000_0000_5C44D950.B12B202B
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: urn:snapshot-02CC273D:http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&lang=en&modules=site&only=styles&skin=vector&*
+
+/* Effective stylesheet produced by snapshot save */
+strong.selflink { font-weight: 700; }
+ol.references, div.reflist, div.refbegin { font-size: 90%; margin-bottom:=
+ 0.5em; }
+div.reflist ol.references { font-size: 100%; list-style-type: inherit; }
+span.citation:target { background-color: rgb(221, 238, 255); }
+sup.reference { font-weight: normal; font-style: normal; }
+.citation { word-wrap: break-word; }
+.hlist dl, .hlist ol, .hlist ul { margin: 0px; padding: 0px; }
+.hlist dd, .hlist dt, .hlist li { margin: 0px; display: inline; }
+.hlist dt::after { content: ":"; }
+.hlist dd::after, .hlist li::after { content: " =C2=B7 "; font-weight: bold=
+; }
+.hlist dd:last-child::after, .hlist dt:last-child::after, .hlist li:last-ch=
+ild::after { content: none; }
+.hlist dd.hlist-last-child::after, .hlist dt.hlist-last-child::after, .hlis=
+t li.hlist-last-child::after { content: none; }
+.hlist dd dd:first-child::before, .hlist dd dt:first-child::before, .hlist=
+ dd li:first-child::before, .hlist dt dd:first-child::before, .hlist dt dt:=
+first-child::before, .hlist dt li:first-child::before, .hlist li dd:first-c=
+hild::before, .hlist li dt:first-child::before, .hlist li li:first-child::b=
+efore { content: " ("; font-weight: normal; }
+.hlist dd dd:last-child::after, .hlist dd dt:last-child::after, .hlist dd=
+ li:last-child::after, .hlist dt dd:last-child::after, .hlist dt dt:last-ch=
+ild::after, .hlist dt li:last-child::after, .hlist li dd:last-child::after,=
+ .hlist li dt:last-child::after, .hlist li li:last-child::after { content:=
+ ") "; font-weight: normal; }
+.hlist dd dd.hlist-last-child::after, .hlist dd dt.hlist-last-child::after,=
+ .hlist dd li.hlist-last-child::after, .hlist dt dd.hlist-last-child::after=
+, .hlist dt dt.hlist-last-child::after, .hlist dt li.hlist-last-child::afte=
+r, .hlist li dd.hlist-last-child::after, .hlist li dt.hlist-last-child::aft=
+er, .hlist li li.hlist-last-child::after { content: ") "; font-weight: norm=
+al; }
+.hlist ol > li::before { content: " " counter(listitem, decimal) " "; white=
+-space: nowrap; }
+.hlist dd ol > li:first-child::before, .hlist dt ol > li:first-child::befor=
+e, .hlist li ol > li:first-child::before { content: " (" counter(listitem,=
+ decimal) " "; }
+.navbox { border: 1px solid rgb(170, 170, 170); width: 100%; margin: auto;=
+ clear: both; font-size: 88%; text-align: center; padding: 1px; }
+.navbox-inner, .navbox-subgroup { width: 100%; }
+.navbox-group, .navbox-title, .navbox-abovebelow { padding: 0.25em 1em; lin=
+e-height: 1.5em; text-align: center; }
+th.navbox-group { white-space: nowrap; text-align: right; }
+.navbox, .navbox-subgroup { background: none repeat scroll 0% 0% rgb(253,=
+ 253, 253); }
+.navbox-list { line-height: 1.8em; border-color: rgb(253, 253, 253); }
+.navbox th, .navbox-title { background: none repeat scroll 0% 0% rgb(204,=
+ 204, 255); }
+.navbox-abovebelow, th.navbox-group, .navbox-subgroup .navbox-title { backg=
+round: none repeat scroll 0% 0% rgb(221, 221, 255); }
+.navbox-even { background: none repeat scroll 0% 0% rgb(247, 247, 247); }
+.navbox-odd { background: none repeat scroll 0% 0% transparent; }
+.navbox .hlist td dl, .navbox .hlist td ol, .navbox .hlist td ul, .navbox=
+ td.hlist dl, .navbox td.hlist ol, .navbox td.hlist ul { padding: 0.125em=
+ 0px; }
+ol + table.navbox, ul + table.navbox { margin-top: 1em; }
+.navbar { display: inline; font-size: 88%; font-weight: normal; }
+.navbar ul { display: inline; white-space: nowrap; }
+.mw-body-content .navbar ul { line-height: inherit; }
+.navbar li { word-spacing: -0.125em; }
+.navbar.mini li span { font-variant: small-caps; }
+.navbox .navbar { display: block; font-size: 100%; }
+.navbox-title .navbar { float: left; text-align: left; margin-right: 0.5em;=
+ width: 6em; }
+.collapseButton { float: right; font-weight: normal; margin-left: 0.5em; te=
+xt-align: right; width: auto; }
+.navbox .collapseButton { width: 6em; }
+.hatnote { font-style: italic; }
+div.hatnote { padding-left: 1.6em; margin-bottom: 0.5em; }
+.nowrap, .nowraplinks a, .nowraplinks .selflink, sup.reference a { white-sp=
+ace: nowrap; }
+div.mw-geshi div, div.mw-geshi div pre, span.mw-geshi, pre.source-css, pre.=
+source-javascript, pre.source-lua { -moz-tab-size: 4; }
+.mw-body sub, .mw-body sup, span.reference { font-size: 80%; }
+div.vectorMenu div { z-index: 2; }
+#siteSub { display: block; font-size: 92%; }
+.mw-body .mw-indicators { padding-top: 0.4em; }
+@media print {
+  .ns-0 .ambox, .ns-0 .navbox, .ns-0 .vertical-navbox, .ns-0 .infobox.siste=
+rproject, .ns-0 .hatnote, .ns-0 .dablink, .ns-0 .metadata, .editlink, .navb=
+ar, a.NavToggle, span.collapseButton, span.mw-collapsible-toggle, th .sortk=
+ey, td .sortkey { display: none ! important; }
+  #content cite a.external.text::after, .nourlexpansion a.external.text::af=
+ter, .nourlexpansion a.external.autonumber::after { display: none ! importa=
+nt; }
+  table.collapsible tr, div.NavPic, div.NavContent { display: block ! impor=
+tant; }
+  table.collapsible tr { display: table-row ! important; }
+  #firstHeading { margin: 0px; }
+  #content a.external.text::after, #content a.external.autonumber::after {=
+ word-wrap: break-word; }
+}
+
+------=_NextPart_000_0000_5C44D950.B12B202B
+Content-Type: application/x-javascript
+Content-Transfer-Encoding: quoted-printable
+Content-Location: urn:snapshot-34F3BDCD:http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&lang=en&modules=startup&only=scripts&skin=vector&*
+
+/* Script removed by snapshot save */
+
+------=_NextPart_000_0000_5C44D950.B12B202B
+Content-Type: application/x-javascript
+Content-Transfer-Encoding: quoted-printable
+Content-Location: urn:snapshot-CC730FB8:http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&lang=en&modules=jquery%2Cmediawiki&only=scripts&skin=vector&version=20150422T225207Z
+
+/* Script removed by snapshot save */
+
+------=_NextPart_000_0000_5C44D950.B12B202B
+Content-Type: application/x-javascript
+Content-Transfer-Encoding: quoted-printable
+Content-Location: urn:snapshot-77EAE3CC:http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&lang=en&modules=site&only=scripts&skin=vector&*
+
+/* Script removed by snapshot save */
+
+------=_NextPart_000_0000_5C44D950.B12B202B--

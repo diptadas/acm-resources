@@ -1,0 +1,225 @@
+From: <Saved by Mozilla 5.0 (Windows)>
+Subject: GF(2m)
+Date: Sun, 23 Mar 2014 05:44:28 -0700
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----=_NextPart_000_0000_56248ABD.BAD6CE1B"
+X-MAF-Information: Produced By MAF V3.0.2
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0000_56248ABD.BAD6CE1B
+Content-Type: text/html;
+	charset="windows-1252"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.doc.ic.ac.uk/~mrh/330tutor/ch04s04.html
+
+<html><head>
+<meta http-equiv=3D"content-type" content=3D"text/html; charset=3Dwindows-1=
+252">
+<meta http-equiv=3D"content-type" content=3D"text/html; charset=3Dwindows-1=
+252"><meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dwind=
+ows-1252"><title>GF(2m)</title><link rel=3D"stylesheet" href=3D"urn:snapsho=
+t-B05E965D:file:///C:/Users/dipta/AppData/Local/Temp/maftemp-18bc1ede/14022=
+10468704_347/1395578668983_654/index_files/html.css" type=3D"text/css"><met=
+a name=3D"generator" content=3D"DocBook XSL-NS Stylesheets V1.75.1"><link=
+ rel=3D"home" href=3D"http://www.doc.ic.ac.uk/%7Emrh/330tutor/index.html"=
+ title=3D"Math in Network Security: A Crash Course"><link rel=3D"up" href=
+=3D"http://www.doc.ic.ac.uk/%7Emrh/330tutor/ch04.html" title=3D"Chapter=A04=
+.=A0Finite Fields"><link rel=3D"prev" href=3D"http://www.doc.ic.ac.uk/%7Emr=
+h/330tutor/ch04s03.html" title=3D"GF(pm)"><link rel=3D"next" href=3D"http:/=
+/www.doc.ic.ac.uk/%7Emrh/330tutor/ch05.html" title=3D"Chapter=A05.=A0Elemen=
+tary Number Theory"></head><body alink=3D"#0000FF" bgcolor=3D"white" link=
+=3D"#0000FF" text=3D"black" vlink=3D"#840084"><div class=3D"navheader"><tab=
+le summary=3D"Navigation header" width=3D"100%"><tbody><tr><th colspan=3D"3=
+" align=3D"center"><span class=3D"emphasis"><em>GF</em></span>(<span class=
+=3D"emphasis"><em>2<sup>m</sup></em></span>)</th></tr><tr><td align=3D"left=
+" width=3D"20%"><a accesskey=3D"p" href=3D"http://www.doc.ic.ac.uk/%7Emrh/3=
+30tutor/ch04s03.html">Prev</a>=A0</td><th align=3D"center" width=3D"60%">Ch=
+apter=A04.=A0Finite Fields</th><td align=3D"right" width=3D"20%">=A0<a acce=
+sskey=3D"n" href=3D"http://www.doc.ic.ac.uk/%7Emrh/330tutor/ch05.html">Next=
+</a></td></tr></tbody></table><hr></div><div class=3D"section" title=3D"GF(=
+2m)"><div class=3D"titlepage"><div><div><h2 class=3D"title" style=3D"clear:=
+ both"><a name=3D"id36078857"></a><span class=3D"emphasis"><em>GF</em></spa=
+n>(<span class=3D"emphasis"><em>2<sup>m</sup></em></span>)</h2></div></div>=
+</div><p>Finite fields of order 2<sup>m</sup> are called
+      binary fields or characteristic-two finite fields. They are of special
+      interest because they are particularly efficient for implementation in
+      hardware, or on a binary computer.</p><p>The elements of GF(2<sup>m</=
+sup>) are binary
+      polynomials, i.e. polynomials whose coefficients are either 0 or 1.
+      There are 2<sup>m</sup> such polynomials in the field
+      and the degree of each polynomial is no more than
+      <span class=3D"emphasis"><em>m</em></span>-1. Therefore the elements=
+ can be represented as
+      <span class=3D"emphasis"><em>m</em></span>-bit strings. Each bit in=
+ the bit string
+      corresponding to the coefficient in the polynomial at the same positi=
+on.
+      For example, <span class=3D"emphasis"><em>GF</em></span>(2<sup>3</sup=
+>)
+      contains 8 element {0, 1, x, x+1, x<sup>2</sup>,
+      x<sup>2</sup>+1, x<sup>2</sup>+x,
+      x<sup>2</sup>+x+1}. x+1 is actually
+      0x<sup>2</sup>+1x+1, so it can be represented as a bit
+      string 011. Similarly, x<sup>2</sup>+x =3D
+      1x<sup>2</sup>+1x+0, so it can be represented as
+      110.</p><p>In modulo 2 arithmetics, 1+1 &#8801; 0 mod 2, 1+0 &#8801;=
+ 1 mod 2 and 0+0 &#8801; 0
+      mod 2, which coincide with bit-XOR, i.e. 1&#8853;1=3D0, 1&#8853;0=3D1=
+ 0&#8853;0=3D0. Therefore
+      for binary polynomials, addition is simply bit-by-bit XOR. Also, in
+      modulo 2 arithmetics, -1 &#8801; 1 mod 2, so the result of subtractio=
+n of
+      elements is the same as addition. For example:</p><div class=3D"itemi=
+zedlist"><ul class=3D"itemizedlist" type=3D"disc"><li class=3D"listitem"><p=
+>(x<sup>2</sup>+x+1) +(x+1)
+          =3Dx<sup>2</sup>+2x+2, since 2 &#8801; 0 mod 2 the final
+          result is x<sup>2</sup>. It can also be computed as
+          111&#8853;011=3D100. 100 is the bit string representation of
+          x<sup>2</sup>.</p></li><li class=3D"listitem"><p>(x<sup>2</sup>+x=
++1) -(x+1)
+          =3Dx<sup>2</sup></p></li></ul></div><p>Multiplication of binary=
+ polynomials can be implemented as simple
+      bit-shift and XOR. For example:</p><div class=3D"itemizedlist"><ul cl=
+ass=3D"itemizedlist" type=3D"disc"><li class=3D"listitem"><p>(x<sup>2</sup>=
++x+1)*(x<sup>2</sup>+1)
+          =3D
+          x<sup>4</sup>+x<sup>3</sup>+2x<sup>2</sup>+x+1.
+          The final result is
+          x<sup>4</sup>+x<sup>3</sup>+x+1
+          after reduction modulo 2. It can also be computed as
+          111*101=3D11100&#8853;111=3D11011, which is exactly the bit string
+          representation of
+          x<sup>4</sup>+x<sup>3</sup>+x+1.</p><div class=3D"mediaobject" al=
+ign=3D"center"><img src=3D"file:///C:/Users/dipta/AppData/Local/Temp/maftem=
+p-18bc1ede/1402210468704_347/1395578668983_654/index_files/bin-mul.jpg" ali=
+gn=3D"middle"></div></li></ul></div><p>In GF(2<sup>m</sup>), when the degre=
+e of the
+      result is more than m-1, it needs to be reduced modulo a irreducible
+      polynomial. This can be implemented as bit-shift and XOR. For example,
+      x<sup>3</sup>+x+1 is an irreducible polynomial and
+      x<sup>4</sup>+x<sup>3</sup>+x+1 &#8801;
+      x<sup>2</sup>+x mod (x<sup>3</sup>+x+1).
+      The bit-string representation of
+      x<sup>4</sup>+x<sup>3</sup>+x+1 is 11011
+      and the bit-string representation of x<sup>3</sup>+x+1
+      is 1011. The degree of 11011 is 4 and the degree of the irreducible
+      polynomial is 3, so the reduction starts by shifting the irreducible
+      polynomial 1011 one bit left, you get 10110, then 11011&#8853;10110=
+ =3D 1101.
+      The degree of 1101 is 3 which is still greater than m-1=3D2, so you=
+ need
+      another XOR. But you don't need to shift the irreducible polynomial=
+ this
+      time. 1101&#8853;1011 =3D0110, which is the bit-string representation=
+ of
+      x<sup>2</sup>+x.</p><p><span class=3D"bold"><strong>Useful Links</str=
+ong></span></p><div class=3D"itemizedlist"><ul class=3D"itemizedlist" type=
+=3D"disc"><li class=3D"listitem"><p><a class=3D"link" href=3D"http://www.ee=
+.unb.ca/cgi-bin/tervo/calc.pl" target=3D"_top">Binary
+          Polynomial Calculator</a></p></li></ul></div></div><div class=3D"=
+navfooter"><hr><table summary=3D"Navigation footer" width=3D"100%"><tbody><=
+tr><td align=3D"left" width=3D"40%"><a accesskey=3D"p" href=3D"http://www.d=
+oc.ic.ac.uk/%7Emrh/330tutor/ch04s03.html">Prev</a>=A0</td><td align=3D"cent=
+er" width=3D"20%"><a accesskey=3D"u" href=3D"http://www.doc.ic.ac.uk/%7Emrh=
+/330tutor/ch04.html">Up</a></td><td align=3D"right" width=3D"40%">=A0<a acc=
+esskey=3D"n" href=3D"http://www.doc.ic.ac.uk/%7Emrh/330tutor/ch05.html">Nex=
+t</a></td></tr><tr><td align=3D"left" valign=3D"top" width=3D"40%"><span cl=
+ass=3D"emphasis"><em>GF</em></span>(<span class=3D"emphasis"><em>p<sup>m</s=
+up></em></span>)=A0</td><td align=3D"center" width=3D"20%"><a accesskey=3D"=
+h" href=3D"http://www.doc.ic.ac.uk/%7Emrh/330tutor/index.html">Home</a></td=
+><td align=3D"right" valign=3D"top" width=3D"40%">=A0Chapter=A05.=A0Element=
+ary Number Theory</td></tr></tbody></table></div>
+</body></html>
+------=_NextPart_000_0000_56248ABD.BAD6CE1B
+Content-Type: image/jpeg
+Content-Transfer-Encoding: base64
+Content-Location: file:///C:/Users/dipta/AppData/Local/Temp/maftemp-18bc1ede/1402210468704_347/1395578668983_654/index_files/bin-mul.jpg
+
+/9j/4AAQSkZJRgABAQEASABIAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0a
+HBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIy
+MjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCADbAH4DASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+iii
+gAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKA
+CiiigAooooAKKKKACiiigAooooA5Xx9rWraBoUN/pb2qgXUMU3nxlyVeRU+XBAB+bqc/Sjx9rWra
+BoUN/pb2qgXUMU3nxlyVeRU+XBAB+bqc/SqfxS86Xwittb2d7dTyXls4S1tZJiFSZHYnYpwAAevX
+tTPiZK954KhS0stQuZJ7q1lSOCylkcKsqOxZQuVwoPDAHt1oXT1/yE76+n+Zf+Ims6t4e8F32raO
+1qs9qodvtCFwVJA4AI5575HHSuojJaNWPUgGuL+JzyX/AMM9Rgs7O+uZ72JVghhs5XkJJDfMoXKc
+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
+D//Z
+------=_NextPart_000_0000_56248ABD.BAD6CE1B
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: urn:snapshot-B05E965D:file:///C:/Users/dipta/AppData/Local/Temp/maftemp-18bc1ede/1402210468704_347/1395578668983_654/index_files/html.css
+
+/* Effective stylesheet produced by snapshot save */
+body { color: black; background-color: white; }
+h1, h2, h3, h4, h5, h6 { color: rgb(57, 73, 134); margin-top: 1.33ex; margi=
+n-bottom: 1.33ex; }
+h2 { font-size: 1.6em; }
+table { border-spacing: 0px; font-size: 1em; }
+th, td { padding: 0px 1ex; }
+p, th, td, li, dt, dd { font-size: 1em; }
+p, pre, ol, dl, ul, table { margin-top: 1.33ex; margin-bottom: 1.33ex; }
+li { margin-top: 1.33ex; margin-bottom: 1.33ex; }
+a:link { text-decoration: none; color: rgb(0, 0, 255); }
+a:hover, a:visited:hover { text-decoration: underline; color: rgb(0, 70, 10=
+4); }
+a:visited { text-decoration: none; color: fuchsia; }
+
+------=_NextPart_000_0000_56248ABD.BAD6CE1B--

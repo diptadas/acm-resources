@@ -1,0 +1,1211 @@
+From: <Saved by Mozilla 5.0 (Windows)>
+Subject: Mathematical Expectation | CodeChef
+Date: Mon, 07 Sep 2015 21:45:44 +0600
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----=_NextPart_000_0000_508E7934.DE057A36"
+X-MAF-Information: Produced By MAF V3.1.0.1-signed
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0000_508E7934.DE057A36
+Content-Type: text/html;
+	charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: about:reader?url=https%3A%2F%2Fwww.codechef.com%2Fwiki%2Ftutorial-expectation
+
+<!DOCTYPE html><html hasbrowserhandlers=3D"true"><head>
+<meta http-equiv=3D"content-type" content=3D"text/html; charset=3DUTF-8">
+  <meta content=3D"text/html; charset=3DUTF-8" http-equiv=3D"content-type">
+  <meta name=3D"viewport" content=3D"width=3Ddevice-width; user-scalable=3D=
+0">
+
+  <link rel=3D"stylesheet" href=3D"urn:snapshot-56FAEF2F:chrome://global/sk=
+in/aboutReader.css" type=3D"text/css">
+
+  <script type=3D"text/javascript;version=3D1.8" src=3D"urn:snapshot-5BA12A=
+37:chrome://global/content/reader/aboutReader.js"></script>
+<title>Mathematical Expectation | CodeChef</title><link href=3D"https://www=
+.codechef.com/misc/favicon.ico" rel=3D"shortcut icon"></head>
+
+<body class=3D"light sans-serif loaded">
+  <div id=3D"container" class=3D"container font-size5">
+    <div dir=3D"ltr" style=3D"display: block;" id=3D"reader-header" class=
+=3D"header">
+      <style scoped=3D""><!--
+
+/* Effective stylesheet produced by snapshot save */
+
+@import url("urn:snapshot-CFE40793:chrome://global/skin/aboutReaderControls=
+.css");
+
+--></style>
+      <a href=3D"https://www.codechef.com/wiki/tutorial-expectation" id=3D"=
+reader-domain" class=3D"domain">codechef.com</a>
+      <div class=3D"domain-border"></div>
+      <h1 id=3D"reader-title">Mathematical Expectation | CodeChef</h1>
+      <div id=3D"reader-credits" class=3D"credits"></div>
+    </div>
+
+    <div class=3D"content">
+      <style scoped=3D""><!--
+
+/* Effective stylesheet produced by snapshot save */
+
+@import url("urn:snapshot-E9CD4DD2:chrome://global/skin/aboutReaderContent.=
+css");
+
+--></style>
+      <div style=3D"display: block;" dir=3D"ltr" id=3D"moz-reader-content">=
+<div xml:base=3D"https://www.codechef.com/wiki/tutorial-expectation" id=3D"=
+readability-page-1" class=3D"page"><div class=3D"content"><p>"Mathematical=
+ Expectation" is one of those few topics that is rarely discussed in detail=
+s in any curriculum, but is nevertheless very important. This tutorial atte=
+mpts to throw some light on this topic by discussing few related mathematic=
+al and programming problems.</p><h3>Theory</h3><p><a href=3D"http://www.the=
+learningpoint.net/home/mathematics/probability---part-1" class=3D"freelinki=
+ng external">Mathematical Expectation</a> is an important concept in <a hre=
+f=3D"http://www.thelearningpoint.net/home/mathematics/a-basic-introduction-=
+to-probability-part-0" class=3D"freelinking external">Probability Theory</a=
+>. Mathematically, for a discrete variable X with probability function P(X)=
+,  the expected value E[X] is given by  =CE=A3 x<sub>i</sub>P(x<sub>i</sub>=
+) the summation runs over all the distinct values x<sub>i </sub>that the va=
+riable can take. For example, for a dice-throw experiment, the set of discr=
+ete outcomes is { 1,2,3,4,5,6} and each of this outcome has the same probab=
+ility 1/6. Hence, the expected value of this experiment will be 1/6*(1+2+3+=
+4+5+6) =3D 21/6 =3D 3.5.  For a continuous variable X with probability dens=
+ity function P(x) , the expected value E[X] is given by =E2=88=AB xP(x)dx.=
+=C2=A0</p><p> It is important to understand that  "expected value" is not=
+ same as "most probable value" - rather, it need not even be one of the pro=
+bable values. For example, in a dice-throw experiment, the expected value,=
+ viz 3.5 is not one of the possible outcomes at all.</p><p></p><p>The rule=
+ of "linearity of of the expectation" says that E[x1+x2] =3D E[x1] + E[x2].=
+</p><p>Tutorials
+<br>
+<a href=3D"http://www.thelearningpoint.net/home/mathematics/a-basic-introdu=
+ction-to-probability-part-0">Introductory Probability- Compound and Indepen=
+dent Events, Mutually Exclusive Events, Multi-Stage Experiments; Applicatio=
+n of Probability and a quick example of a Probability Distribution, Random=
+ Variables and Sample Space</a>
+<br>
+<a href=3D"http://www.thelearningpoint.net/home/mathematics/probability---p=
+art-1">Basic Probability Definitions - Experiment, Random Experiment, Sampl=
+e Space, Baye's Theorem, Independent Events;Dealing with Random Variables;C=
+hebyshev=E2=80=99s Inequality</a>
+<br>
+<a href=3D"http://www.thelearningpoint.net/home/mathematics/probability---p=
+art-2---a-tutorial-on-probability-distributions">Discrete and continuous di=
+stributions:Bernoulli trials, Binomial distributions, Geometric distributio=
+ns, Negative binomial, Hypergeometric distributions, Poisson distribution,
+Uniform distributions, Exponential distributions, Gamma distributions, Norm=
+al distributions, Lognormal distributions</a>
+<br>
+<a href=3D"http://www.thelearningpoint.net/home/mathematics/probability---p=
+art-3---joint-probability-bivariate-normal-distributions-functions-of-rando=
+m-variable-transformation-of-random-vectors">Random Experiments with two or=
+ more Characteristics; The new concepts which will be introduced to you in=
+ this tutorial; Properties of CDF, Product Moments, Central moments, Non Ce=
+ntral moments</a>
+<br>
+</p><h3>Problems</h3><p><b>1. What is the expected number of coin flips for=
+ getting a head?</b></p><p><b>Ans: </b><b> </b></p><p>Let the expected numb=
+er of coin flips be x. Then we can write an equation for it -<br>a. If the=
+ first flip is the head, then we are done. The probability of this event is=
+ 1/2 and the number of  coin flips for this event is 1. <br>b. If the first=
+ flip is the tails, then we have wasted one flip. Since consecutive flips=
+ are independent events, the solution in this case can be recursively frame=
+d in terms of x - The probability of this event is 1/2 and the expected num=
+ber of coins flips now onwards is x. But we have already wasted one flip,=
+ so the total number of flips is x+1.</p><p>The expected value x is the sum=
+ of the expected values of these two cases. Using the rule of linerairty of=
+ the expectation and the definition of Expected value, we get </p><p>x =3D=
+ (1/2)(1) + (1/2) (1+x)</p><br>Solving, we get x =3D 2. <p>Thus the expecte=
+d number of coin flips for getting a head is 2.</p><p></p><p><b>Q2. What is=
+ the expected number of coin flips for getting two consecutive heads?<br></=
+b><br>Let the expected number of coin flips be x. The case analysis goes as=
+ follows:<br>a. If the first flip is a tails, then we have wasted one flip.=
+ The probability of this event is 1/2 and the total number of flips require=
+d is x+1<br>b. If the first flip is a heads and second flip is a tails, the=
+n we have wasted two flips. The probability of this event is 1/4 and the to=
+tal number of flips required is x+2<br>c. If the first flip is a heads and=
+ second flip is also heads, then we are done. The probability of this event=
+ is 1/4 and the total number of flips required is 2. </p><p>Adding, the equ=
+ation that we get is -</p><br>x =3D (1/2)(x+1) + (1/4)(x+2) + (1/4)2<p>Solv=
+ing, we get x =3D 6.</p><p>Thus, the expected number of coin flips for gett=
+ing two consecutive heads is 6.</p><p></p><p><b>Q3. (Generalization) What=
+ is the expected number of coin flips for getting N consecutive heads, give=
+n N?<br></b><br>Let the exepected number of coin flips be x. Based on previ=
+ous exercises, we can wind up the whole case analysis in two basic parts </=
+p><p>a) If we get 1st, 2nd, 3rd,...,n'th tail as the first tail in the expe=
+riment, then we have to start all over again. </p><br>b) Else we are done.<=
+p>For the 1st flip as tail, the part of  the equation is (1/2)(x+1) </p><br=
+>For the 2nd flip as tail, the part of the equation is (1/4)(x+2)<br>...<br=
+>For the k'th flip as tail, the part of the equation is (1/(2<sup>k</sup>))=
+(x+k)<br>...<br>For the N'th flip as tail, the part of the equation is (1/(=
+2<sup>N</sup>))(x+N)<br>The part of equation corrresponding to case (b) is=
+ (1/(2<sup>N</sup>))(N)<p>Adding, </p><p>x =3D (1/2)(x+1)  +  (1/4)(x+2) +=
+ ... +  (1/(2^k))(x+k) + .. + (1/(2^N))(x+N) + (1/(2^N))(N)</p><p>Solving=
+ this equation is left as an exercise to the reader.  The entire equation=
+ can be very easily reduced to the following form:</p><p></p><p>x =3D 2<sup=
+>N+1</sup>-2</p><p>Thus, the expected number of coin flips for getting N co=
+nsecutive heads is (2<sup>N+1</sup> - 2).</p><p><b>Q4. Candidates are appea=
+ring for interview one after other. Probability of  each candidate getting=
+ selected is 0.16. What is the expected number of candidates that you will=
+ need to interview to make sure that you select somebody?<br></b><br>This=
+ is very similar to Q1, the only difference is that in this case the coin=
+ is biased. (The probability of heads is 0.16 and we are asked to find numb=
+er of coin flips for getting a heads).<br>Let x be the expected number of=
+ candidates to be interviewed for a selection. The probability of first can=
+didate getting selected is 0.16 and the total number of interviews done in=
+ this case is 1. The other case is that the first candidate gets rejected=
+ and we start all over again. The probability for that is (1-0.16)*(x+1).=
+ The equation thus becomes -</p><p>x =3D 0.16 + (1-0.16)*(x+1)</p><p>Solvin=
+g, x =3D 1/0.16, i.e. x =3D 6.25</p><p></p><p><b>Q5. (Generalized version=
+ of Q4) - The queen of a honey bee nest produces offsprings one-after-other=
+ till she produces a male offspring. The probability of produing a male off=
+spring is p. What is the expected number of offsprings required to be produ=
+ced to produce a male offspring?<br></b><br>This is same as the previous qu=
+estion, except that the number 0.16 has been replaced by p. Observe that th=
+e equation now becomes -</p><p>x =3D p + (1-p)*(x+1)</p><br>Solving, x =3D=
+ 1/p<p>Thus, observe that in the problems where there are two events, where=
+ one event is desirable and other is undesirable, and the probability of de=
+sirable event is p, then the expected number of trials done to get the desi=
+rable event is 1/p</p><p>Generalizing on the number of events - If there ar=
+e K events, where one event is desirable and all others are undesirable, an=
+d the probability of desirable event is p, then also the expected number of=
+ trials done to get the desirable event is 1/p</p><p>The next question uses=
+ this generalization -</p><p><b>Q6. what is the expected number of dice thr=
+ows required to get a "four"?<br></b></p><br>Let the expected number of thr=
+ows be x. The desirable event (getting 'four') has probability 1/6 (as each=
+ face is equiprobable). There are 5 other undesirable events (K=3D5). Note=
+ that the value of the final answer doesnot depend on K. The answer is thus=
+ 1/(1/6) i.e. 6.<p></p><p><b>Q7.Candidates are appearing for interview one=
+ after other. Probability of  k-th candidate getting selected is 1/(k+1).=
+ What is the expected number of candidates that you will need to interview=
+ to make sure that you select somebody?<br></b><br>The result will be the=
+ sum of infinite number of cases -</p><p>case-1: First candidate gets selec=
+ted. The probability of this event is 1/2 and the number of interviews is=
+ 1. </p><br>case-2. Second candidate gets selected. The probability of this=
+ event is 1/6 (=3D 1/2 of first candidate not getting selected and 1/3 of=
+ second candidate getting selected, multiplied together gives 1/6) and the=
+ number of interviews is 2<br>case-3. Third candidate gets selected. The pr=
+obability of this event is 1/2 * 2/3 * 1/4 =3D 1/12 (=3D first not getting=
+ selected and second not getting selected and third getting selected) and=
+ the number of interviews is 3.<br>...<br>case-k. k'th candidate gets selec=
+ted. The probability of this event is 1/2 * 2/3 * 3/4 * ... * (k-1)/k * 1/(=
+k+1). (The first k-1 candidates get rejected and the k'th candidate is sele=
+cted). This evaluates to 1/(k*(k+1)) and the number of interviews is k<br>.=
+..<p>[ Note that similar to problem 4, here we can't just say - if the firs=
+t candidate is rejected, then we will start the whole process again. This=
+ is not correct, because the probabilty of each candidate depends on it's=
+ sequence number. Hence sub-experiments are not same as the parent experime=
+nt. This means that all the cases must be explicitly considered.]</p><br>Th=
+e resultant expression will be<p></p><p><br>x =3D 1/(1*2) + 2/(2*3) + 3/(3*=
+4)  + 4/(4*5) + ... + k/(k*(k+1)) + ...  <br> =3D 1/2 + 1/3 + 1/4 + ...</p>=
+<p><br>This is a well-known divergent series, which means that sum doesnot=
+ converge, and hence the expectation doesnot exist.</p><p><b>Q8: A random=
+ permutation P of [1...n] needs to be sorted in ascending order. To do this=
+, at every step you will </b><b>randomly </b><b>choose a pair (i,j) where=
+ i &lt; j but P[i] &gt; P[j], and swap P[i] with P[j]. What is the expected=
+ number of swaps needed to sort permutation in ascending order. (Idea: Topc=
+oder)</b></p><p>This is a programming question, and the idea is simple - si=
+nce each swap has same probability of getting selected, the total number of=
+ expected swaps for a permutation P=C2=AD=C2=AD=C2=AD=C2=AD=C2=AD=C2=AD=C2=
+=AD is</p><p>E[P] =3D ( 1/cnt )  * =CE=A3 (E[P<sub>s</sub>] + 1)</p><p>wher=
+e cnt is the total number of swaps possible in permutation P, and P<sub>s=
+ =C2=AD=C2=AD=C2=AD=C2=AD=C2=AD=C2=AD=C2=AD=C2=AD=C2=AD</sub>is the permuta=
+tion generated by doing swap 's'. Since all swaps are equiprobable, we simp=
+ly sum up the expected values of the resultant permutations  (of course add=
+ 1 to each to account for the swap done already) and divide the result by=
+ the total number of permutations. The base case will be for the array that=
+ has been already sorted - and the expected number of permutations for a so=
+rted array is 0.</p><p>Coding this is left as a (trivial) exercise to the=
+ reader.</p><p><b>Q9. A fair coin flip experiment is carried out N times.=
+ What is the expected number of heads?<br></b><br>Consider an experiment of=
+ flipping a fair coin N times and let the outcomes be represented by the ar=
+ray Z =3D {a<sub>1</sub>, a<sub>2</sub>,... ,a<sub>n</sub>} where each a<su=
+b>i</sub> is either 1 or 0 depending on whether the outcome was heads or ta=
+ils respectively. In other words, for each i we have -</p><p>ai =3D  if the=
+ i'th experiment gave head then 1 else 0.</p><p>Hence we have: </p><br>numb=
+er of heads in z =3D  a1+ a2 + ... + an<br>Hence E[number of heads in z] =
+=3D  E[a1+ a2 + ... + an]<br> =3D  E[a1] + E[a2] + ... + E[an] <p>Since ai=
+ corresponds to a coin-toss experiment, the value of E[ai] is 0.5 for each=
+ i. Adding this n times, the expected number of heads in Z comes out to be=
+ n/2.</p><p></p><p><b>Q10: (Bernaulli Trials) n students are asked to choos=
+e a number from 1 to 100 inclusive. What is the expected number of students=
+ that would choose a single digit number? <br> </b></p><p>This question is=
+ based on the concept of <b>bernaulli trials</b>.An experiment is called a=
+ bernaulli trial if it has exactly two outcomes, one of which is desired.=
+ For example - flipping a coin,=C2=A0 selecting a number from 1 to 100 to=
+ get a prime, rolling a dice to get 4 etc. The result of a bernaulli trial=
+ can typically be represented as "yes/no" or "success/failure". We have see=
+n in Q5 above that if the probability of success of a bernaulli trial is p=
+ then the expected number of trials to get a success is 1/p. is</p><p>This=
+ question is based on yet another result related to bernaulli trials - If=
+ the probability of a success in a bernaulli trial is p then the expected=
+ number of successes in n trials is n*p. The proof is simple -</p><p>  The=
+ number of successes in n trials =3D (if 1st trial is success then 1 else=
+ 0) + ... + (if nth trial is success then 1 else 0)</p><br> The expected va=
+lue of each bracket is=C2=A0 1*p + 0*(1-p) =3D p. Thus the expected number=
+ of successes in n trials is n*p.<p></p><p>In the current case, "success"=
+ is defined as the experiment that chooses a single digit number. Since all=
+ choices are equiprobable, the probability of success is 9/100. (There are=
+ 9 single digit numbers in 1 to 100). Since there are n students, the expec=
+ted number of students that would contribute to success (i.e the expected=
+ number of successes) is n*9/100</p><p><b>Q11. What is the expected number=
+ of coin flips to ensure that there are atleast N heads?<br></b><br>The sol=
+ution can easily be framed in a recursive manner - </p><p>N heads =3D if 1s=
+t flip is a head then N-1 more heads, else N more heads.</p><br>The probabi=
+lity of 1st head is 1/2. Thus<p>E[N] =3D (1/2)(E[N-1]+1)+ (1/2)(E[N] + 1)</=
+p><br>Note that each term has 1 added to it to account for the first flip.=
+ <p>The base case is when N =3D 1 : </p><br>E[1] =3D 2 (As discussed in Q2)=
+<p>Simplifying the recursive case,</p><br>E[N] =3D (1/2)( E[N-1] +1 + E[N]=
+ + 1) <br> =3D (1/2)( E[N-1] + E[N] + 2) <br>=3D&gt; 2 * E[N]  =3D ( E[N-1]=
+ + E[N] + 2) <br>=3D&gt; E[N]  =3D E[N-1] + 2<p>Since E[1] =3D 2, E[2] =3D=
+ 4, E[3] =3D 6,..., in general E[N] =3D 2N. Thus, the expected number of co=
+in flips to ensure that there are atleast N heads in 2N.</p><p></p><p>The=
+ next problem discusses a generalization :</p><p><b>Q12. What is the expect=
+ed number of bernaulli trials to ensure that there are atleast N successes,=
+ if the probability of each success is p?<br></b><br>The recursive equation=
+ in this case is -</p><p>E[N] =3D p(E[N-1]+1)+ (1- p)(E[N] + 1)</p><p>Solvi=
+ng, E[N]-E[N-1] =3D p. Writing a total of N-1 equations:</p><p>E[N]-E[N-1]=
+ =3D 1/p</p><br>E[N-1]-E[N-2] =3D 1/p<br>E[N-2]-E[N-3] =3D 1/p<br>...<br>E[=
+2]-E[1] =3D 1/p<p>Adding them all, E[N] - E[1] =3D (n-1)/p. But E[1] is 1/p=
+ (lemma -1). Hence E[N] =3D n/p. </p><p>Moral: If probability of success in=
+ a bernaulli trial is p, then the expected number of trials to guaranttee=
+ N successes is N/p.</p><p></p><p>This completes the discussion on problems=
+ on Mathematical Expectation.</p><h3><b>Exercises:</b></h3><p>Note: Some of=
+ these are non-trivial and require concepts not discussed in this tutorial.=
+ If you are interested you could read about <a href=3D"http://www.thelearni=
+ngpoint.net/home/mathematics/probability---part-2---a-tutorial-on-probabili=
+ty-distributions" class=3D"freelinking external">probability distribution=
+ basics</a>, <a href=3D"http://www.thelearningpoint.net/home/mathematics/pr=
+obability---part-3---joint-probability-bivariate-normal-distributions-funct=
+ions-of-random-variable-transformation-of-random-vectors" class=3D"freelink=
+ing external">more advanced topics such as joint and bivariate distribution=
+s and transformations</a> and <a href=3D"http://www.thelearningpoint.net/ho=
+me/mathematics/permutations-and-combinations-1" class=3D"freelinking extern=
+al">a tutorial on permutations and combinations</a></p><p>1. A game involve=
+s you choosing one number (between 1 to 6 inclusive) and then throwing thre=
+e fair dice simultaneously. If none of the dice shows up the number that yo=
+u have chosen, you lose $1. If exactly one, two or three dice show up the=
+ number that you have chosen, you win $1, $3 or $5 respectively. What is yo=
+ur expected gain?</p><p>2. There are 10 flowers in a garden, exactly one of=
+ which is poisonous. A dog starts eating all these flowers one by one at ra=
+ndom. whenever he eats the posionous flower he will die. What is the expect=
+ed number of flowers he will eat before he will die?</p><p>3. A bag contain=
+s 64 balls of eight different colours, with eight of each colour. What is=
+ the expected number of balls you would have to pick (without looking) to=
+ select three balls of the same color?</p><p>4.=C2=A0 In a game of fair dic=
+e throw, what is the expected number of throws to make sure that all 6 outc=
+omes appear atleast once?</p><p></p><p>5. What is the expected number of be=
+rnaulli trials for getting N consecutive successes, given N, if the probabi=
+lity of each success is p?</p><hr><p>Just in case someone needs to brush up=
+ their Probability Theory, you might find these tutorials useful. Specially=
+, with Data Science gaining so much importance, probability and statistics=
+ are important for Computer and Data Scientists. </p><p><a href=3D"http://w=
+ww.thelearningpoint.net/home/mathematics/a-basic-introduction-to-probabilit=
+y-part-0">A very basic introduction to probability and its applications</a>=
+</p><p><a href=3D"http://www.thelearningpoint.net/home/mathematics/probabil=
+ity---part-1">Basic Probability Definitions, Random Variables</a></p><p><a=
+ href=3D"http://www.thelearningpoint.net/home/mathematics/probability---par=
+t-2---a-tutorial-on-probability-distributions">Probability Distributions</a=
+></p><p><a href=3D"http://www.thelearningpoint.net/home/mathematics/probabi=
+lity---part-3---joint-probability-bivariate-normal-distributions-functions-=
+of-random-variable-transformation-of-random-vectors"> Joint Probability and=
+ Bivariate Distributions</a></p><br></div></div></div>
+    </div>
+
+    <div>
+      <style scoped=3D""><!--
+
+/* Effective stylesheet produced by snapshot save */
+
+@import url("urn:snapshot-BFABC97C:chrome://global/skin/aboutReaderControls=
+.css");
+
+--></style>
+      <div style=3D"display: none;" id=3D"reader-message"></div>
+    </div>
+
+    <div style=3D"display: none;" id=3D"reader-footer" class=3D"footer">
+      <style scoped=3D""><!--
+
+/* Effective stylesheet produced by snapshot save */
+
+@import url("urn:snapshot-B7AF0624:chrome://global/skin/aboutReaderControls=
+.css");
+
+--></style>
+      <button id=3D"remove-button" class=3D"button remove-button">
+    </button></div>
+  </div>
+
+  <ul style=3D"display: block;" id=3D"reader-toolbar" class=3D"toolbar">
+    <style scoped=3D""><!--
+
+/* Effective stylesheet produced by snapshot save */
+
+@import url("urn:snapshot-FC086D1D:chrome://global/skin/aboutReaderControls=
+.css");
+
+--></style>
+    <li><button title=3D"Close Reader View" id=3D"close-button" class=3D"bu=
+tton close-button"></button></li>
+    <li><button title=3D"Share" id=3D"share-button" class=3D"button share-b=
+utton"></button></li>
+    <ul id=3D"style-dropdown" class=3D"dropdown">
+      <li><button title=3D"Type controls" class=3D"dropdown-toggle button=
+ style-button"></button></li>
+      <li id=3D"reader-popup" class=3D"dropdown-popup">
+        <div id=3D"font-type-buttons"><button class=3D"sans-serif-button se=
+lected"><div class=3D"name">Aa</div><div class=3D"description">Sans-serif</=
+div></button><button class=3D"serif-button"><div class=3D"name">Aa</div><di=
+v class=3D"description">Serif</div></button></div>
+        <hr>
+        <div id=3D"font-size-buttons">
+          <button id=3D"font-size-minus" class=3D"minus-button">
+          </button><button id=3D"font-size-sample">Aa</button><button id=3D=
+"font-size-plus" class=3D"plus-button">
+        </button></div>
+        <hr>
+        <div id=3D"color-scheme-buttons"><button class=3D"light-button sele=
+cted"><div class=3D"name">Light</div></button><button class=3D"dark-button"=
+><div class=3D"name">Dark</div></button><button class=3D"sepia-button"><div=
+ class=3D"name">Sepia</div></button></div>
+        <div class=3D"dropdown-arrow">
+      </div></li>
+    </ul>
+    <li><button title=3D"Add to Reading List" id=3D"toggle-button" class=3D=
+"button toggle-button" hidden=3D"true"></button></li>
+    <li><button title=3D"Open Reading List" id=3D"list-button" class=3D"but=
+ton list-button" hidden=3D"true"></button></li>
+    <li><button id=3D"pocket-button" class=3D"button" hidden=3D""></button>=
+</li>
+  </ul>
+
+
+
+
+</body></html>
+------=_NextPart_000_0000_508E7934.DE057A36
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: urn:snapshot-56FAEF2F:chrome://global/skin/aboutReader.css
+
+/* Effective stylesheet produced by snapshot save */
+body { padding: 64px 0px; }
+@media (max-width: 785px) {
+  body { padding-top: 64px; -moz-padding-end: 0px; padding-bottom: 64px; -m=
+oz-padding-start: 51px; }
+}
+body.loaded { transition: color 0.4s ease 0s, background-color 0.4s ease 0s=
+; }
+body.light { color: rgb(51, 51, 51); background-color: rgb(255, 255, 255); }
+body.dark *::-moz-selection { background-color: rgb(255, 255, 255); color:=
+ rgb(0, 149, 221); }
+body.dark a::-moz-selection { color: rgb(221, 72, 0); }
+body.sans-serif, body.sans-serif .remove-button { font-family: Helvetica,Ar=
+ial,sans-serif; }
+#container { max-width: 30em; margin: 0px auto; }
+#container.font-size5 { font-size: 20px; }
+body.light > .container > .header > .domain { border-bottom-color: rgb(51,=
+ 51, 51) ! important; }
+
+------=_NextPart_000_0000_508E7934.DE057A36
+Content-Type: image/x-icon
+Content-Transfer-Encoding: base64
+Content-Location: https://www.codechef.com/misc/favicon.ico
+
+AAABAAEAEBAAAAEAGABoAwAAFgAAACgAAAAQAAAAIAAAAAEAGAAAAAAAAAMAAAAAAAAAAAAAAAAA
+AAAAAAC7yt2aq76Xp76TpbySpr+Spr+RpsGOo76QpcCPpL+Tp8CXqcCRorebqr2cqrzAzuCgscZD
+VWxDV3BIXHVCV3JFWnVDWHRCWHRFW3dAVXBFWnVHW3RKXHNIWW5LWW+cq76Nor1GW3ZKYHw8Um49
+U289VXE/V3VGXnxAWHZAVnI6UGxFW3c9Um1FW3RFWXKUqMGQo75HXHdBVnE+U25NYn0/VG89Um0+
+U25AVXBFWnU+U25HXHdFWXJBVW5HW3SRpryYprxLWm1PXnFDUmVNW21baXtkcoRQXnBNW21JV2lY
+ZnhOXG5ebH5RX3FOXG6err+aqbxJWGtMWmxda32ruMjp9v/n9P/T3ux4g5FlcH62wc/v/P/v/P/K
+1+dkcoSUorSWqsNJW3JMXXKouc7s+//P3e/C0OLj8P+YpbXL2Ojt+v/L2eu3xtnf7v+HmK2Yqb6Q
+pcBHXXZLXHbb7v/p9/9ebYBNW21hb4Fpdobr+P/Y5vhUZHVWZHpeb4RHWXCXqcCTqMNCWHFWZ4Ho
++//O3PJMW25OXG5OW2t1gpLt+v+zwdNTY3RKWG5IWW5JW3KTpbycrcdHWXBNXnPV5vvs+/9wfpBR
+Xm6DkJ5rdYbv/P/o9f9aaHpSYHJ/jqFWZHqYqb6UorVLWWtOXG6UorTj8P/t+P/h7Prl8f2stcOn
+ssDt+P/o8//l8P7u+/+Kl6ebqLigrsFKWWxLWm1XZnmLmavL2evY5fW4xdVjcIBWY3Oir7/U4fHL
+2Oims8NgbX2Yp7eSo71EWHFEWHFAVG1FWXJJXXZJXXZGWnNEWHFMYHlHWXBDVWxSY3hSY3hGV2ya
+rcKPo7xMYHlGWXREWXRFWnU/VG8+U25AV3FBVnI+U24/VG9FWXJFV25GWG9GWG+SpLubqr1MXXBB
+UmdHWXBGWG9KXndJXXZHXXZIW3ZIXHVJW3JKW3BLWm1NXG9OXG6cqrzAzuCWpLaaqbyZqr2To7qY
+qsGMoLmTp8CSpr+QpbuSormXqLuXpbicqryap7fCz98AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+------=_NextPart_000_0000_508E7934.DE057A36
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: urn:snapshot-CFE40793:chrome://global/skin/aboutReaderControls.css
+
+/* Effective stylesheet produced by snapshot save */
+.light-button { color: rgb(51, 51, 51); background-color: rgb(255, 255, 255=
+); }
+.dark-button { color: rgb(238, 238, 238); background-color: rgb(51, 51, 51)=
+; }
+.sepia-button { color: rgb(91, 70, 54); background-color: rgb(244, 236, 216=
+); }
+.sans-serif-button { font-family: Helvetica,Arial,sans-serif; }
+.serif-button { font-family: Georgia,"Times New Roman",serif; }
+#reader-message { margin-top: 40px; display: none; text-align: center; widt=
+h: 100%; font-size: 0.9em; }
+.header { text-align: start; display: none; }
+.domain { font-size: 0.9em; line-height: 1.48em; padding-bottom: 4px; font-=
+family: Helvetica,Arial,sans-serif; text-decoration: none; border-bottom:=
+ 1px solid; color: rgb(0, 149, 221); }
+.header > h1 { font-size: 1.6em; line-height: 1.25em; width: 100%; margin:=
+ 30px 0px; padding: 0px; }
+.header > .credits { font-size: 0.9em; line-height: 1.48em; margin: 0px 0px=
+ 30px; padding: 0px; font-style: italic; }
+.toolbar { font-family: Helvetica,Arial,sans-serif; position: fixed; height=
+: 100%; top: 0px; left: 0px; margin: 0px; padding: 0px; list-style: outside=
+ none none; background-color: rgb(251, 251, 251); -moz-user-select: none;=
+ border-right: 1px solid rgb(181, 181, 181); }
+.button { display: block; background-size: 24px 24px; background-repeat: no=
+-repeat; color: rgb(51, 51, 51); background-color: rgb(251, 251, 251); heig=
+ht: 40px; padding: 0px; }
+.toolbar .button { width: 40px; background-position: center center; margin-=
+right: -1px; border-width: 0px 1px 1px 0px; border-style: none solid solid=
+ none; border-color: -moz-use-text-color rgb(181, 181, 181) rgb(193, 193,=
+ 193) -moz-use-text-color; }
+.button[hidden] { display: none; }
+.dropdown { text-align: center; list-style: outside none none; margin: 0px;=
+ padding: 0px; }
+.dropdown li { margin: 0px; padding: 0px; }
+.dropdown-popup { min-width: 300px; text-align: start; position: absolute;=
+ left: 48px; z-index: 1000; background-color: rgb(251, 251, 251); visibilit=
+y: hidden; border-radius: 4px; border-width: 1px 1px 0px; border-style: sol=
+id; border-color: rgb(181, 181, 181); -moz-border-top-colors: none; -moz-bo=
+rder-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-=
+colors: none; border-image: none; box-shadow: 0px 1px 12px rgb(102, 102, 10=
+2); }
+.dropdown-popup > hr { display: none; }
+.dropdown-arrow { position: absolute; top: 30px; left: -16px; width: 24px;=
+ height: 24px; background-image: url("chrome://global/skin/reader/RM-Type-C=
+ontrols-Arrow.svg"); display: block; }
+#font-type-buttons, #font-size-buttons, #color-scheme-buttons { display: fl=
+ex; flex-direction: row; }
+#font-type-buttons > button:first-child { border-top-left-radius: 3px; }
+#font-type-buttons > button:last-child { border-top-right-radius: 3px; }
+#color-scheme-buttons > button:first-child { border-bottom-left-radius: 3px=
+; }
+#color-scheme-buttons > button:last-child { border-bottom-right-radius: 3px=
+; }
+#font-type-buttons > button, #font-size-buttons > button, #color-scheme-but=
+tons > button { text-align: center; border: 0px none; }
+#font-type-buttons > button, #font-size-buttons > button { width: 50%; back=
+ground-color: transparent; border-left: 1px solid rgb(181, 181, 181); borde=
+r-bottom: 1px solid rgb(181, 181, 181); }
+#color-scheme-buttons > button { width: 33.33%; font-size: 14px; }
+#color-scheme-buttons > .dark-button { margin-top: -1px; height: 61px; }
+#font-type-buttons > button:first-child, #font-size-buttons > button:first-=
+child { border-left: 0px none; }
+#font-type-buttons > button { display: inline-block; font-size: 62px; heigh=
+t: 100px; }
+#font-size-buttons > button, #color-scheme-buttons > button { height: 60px;=
+ }
+#font-type-buttons > button:active:hover, #font-type-buttons > button.selec=
+ted, #color-scheme-buttons > button:active:hover, #color-scheme-buttons >=
+ button.selected { box-shadow: 0px -3px 0px 0px rgb(252, 100, 32) inset; }
+#font-type-buttons > button:active:hover, #font-type-buttons > button.selec=
+ted { border-bottom: 1px solid rgb(252, 100, 32); }
+#font-type-buttons > button > .description { color: rgb(102, 102, 102); fon=
+t-size: 12px; margin-top: -5px; }
+#font-type-buttons > .sans-serif-button > .name { margin-top: 2px; }
+#font-type-buttons > .sans-serif-button > .description { margin-top: -4px; }
+#font-type-buttons > .serif-button > .name { font-size: 63px; }
+.button:hover, #font-size-buttons > button:hover, #font-type-buttons > butt=
+on:hover { background-color: rgb(235, 235, 235); }
+.dropdown.open, .button:active, #font-size-buttons > button:active, #font-s=
+ize-buttons > button.selected { background-color: rgb(218, 218, 218); }
+#font-size-sample { display: none; }
+.minus-button, .plus-button { background-color: transparent; border: 0px no=
+ne; background-size: 18px 18px; background-repeat: no-repeat; background-po=
+sition: center center; }
+.footer { height: 64px; background-color: rgb(235, 235, 235); position: abs=
+olute; left: 0px; width: 100%; text-align: center; padding: 12px 0px; box-s=
+izing: border-box; box-shadow: 0px 3px 3px -3px rgba(0, 0, 0, 0.35) inset; }
+.remove-button { background-image: url("urn:not-loaded:chrome://global/skin=
+/reader/RM-Delete-24x24.svg"); margin: 0px auto; border: 1px solid rgb(193,=
+ 193, 193); background-position: 10px 7px; padding-left: 42px; padding-righ=
+t: 10px; border-radius: 2px; box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1); fo=
+nt-size: 18px; }
+.share-button { display: none; }
+.close-button { background-image: url("chrome://global/skin/reader/RM-Close=
+-24x24.svg"); height: 68px; background-position: center 8px; }
+.close-button:hover { background-image: url("chrome://global/skin/reader/RM=
+-Close-24x24.svg"); background-color: rgb(217, 65, 65); border-bottom: 1px=
+ solid rgb(217, 65, 65); border-right: 1px solid rgb(217, 65, 65); }
+.close-button:hover:active { background-image: url("chrome://global/skin/re=
+ader/RM-Close-24x24.svg"); background-color: rgb(174, 35, 37); border-botto=
+m: 1px solid rgb(174, 35, 37); border-right: 1px solid rgb(174, 35, 37); }
+.style-button { background-image: url("chrome://global/skin/reader/RM-Type-=
+Controls-24x24.svg"); }
+.toggle-button { background-image: url("urn:not-loaded:chrome://global/skin=
+/reader/RM-Add-24x24.svg"); }
+.list-button { background-image: url("urn:not-loaded:chrome://global/skin/r=
+eader/RM-Reading-List-24x24.svg"); }
+.minus-button { background-image: url("chrome://global/skin/reader/RM-Minus=
+-24x24.svg"); }
+.plus-button { background-image: url("chrome://global/skin/reader/RM-Plus-2=
+4x24.svg"); }
+#pocket-button { background-image: url("urn:not-loaded:chrome://global/skin=
+/reader/pocket.svg#pocket-mark"); }
+#pocket-button:hover:active { background-image: url("urn:not-loaded:chrome:=
+//global/skin/reader/pocket.svg#pocket-mark-added"); }
+@media print {
+  .toolbar { display: none ! important; }
+  .footer { display: none ! important; }
+}
+
+------=_NextPart_000_0000_508E7934.DE057A36
+Content-Type: image/svg+xml;
+	charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: chrome://global/skin/reader/RM-Type-Controls-Arrow.svg
+
+<?xml version=3D"1.0" encoding=3D"utf-8"?>
+<svg version=3D"1.1" id=3D"Icons" xmlns=3D"http://www.w3.org/2000/svg" xmln=
+s:xlink=3D"http://www.w3.org/1999/xlink" x=3D"0px" y=3D"0px"
+     viewBox=3D"0 0 24 24" enable-background=3D"new 0 0 24 24" xml:space=3D=
+"preserve">
+<polygon opacity=3D"0.15" fill-rule=3D"evenodd" clip-rule=3D"evenodd" point=
+s=3D"16.583,0.015 16.569,0 4.583,12 16.569,24 16.583,23.985
+    "/>
+<g enable-background=3D"new    ">
+    <g>
+        <defs>
+            <rect id=3D"SVGID_2_" x=3D"-125" y=3D"-1086.667" width=3D"22"=
+ height=3D"34"/>
+        </defs>
+        <clipPath id=3D"SVGID_1_">
+            <use xlink:href=3D"#SVGID_2_"  overflow=3D"visible"/>
+        </clipPath>
+        <g clip-path=3D"url(#SVGID_1_)">
+            <defs>
+                <rect id=3D"SVGID_6_" x=3D"-221" y=3D"-1491.667" width=3D"1=
+080" height=3D"2896"/>
+            </defs>
+            <clipPath id=3D"SVGID_3_">
+                <use xlink:href=3D"#SVGID_6_"  overflow=3D"visible"/>
+            </clipPath>
+        </g>
+        <g clip-path=3D"url(#SVGID_1_)">
+            <defs>
+                <rect id=3D"SVGID_10_" x=3D"-221" y=3D"-1491.667" width=3D"=
+1080" height=3D"2896"/>
+            </defs>
+            <clipPath id=3D"SVGID_5_">
+                <use xlink:href=3D"#SVGID_10_"  overflow=3D"visible"/>
+            </clipPath>
+        </g>
+        <g clip-path=3D"url(#SVGID_1_)">
+            <defs>
+                <rect id=3D"SVGID_16_" x=3D"-221" y=3D"-1491.667" width=3D"=
+1080" height=3D"2896"/>
+            </defs>
+            <clipPath id=3D"SVGID_7_">
+                <use xlink:href=3D"#SVGID_16_"  overflow=3D"visible"/>
+            </clipPath>
+        </g>
+    </g>
+</g>
+<polygon fill-rule=3D"evenodd" clip-rule=3D"evenodd" fill=3D"#FBFBFB" point=
+s=3D"16.575,1.021 16.561,1.008 5.583,12 16.577,23.008
+    16.591,22.994 "/>
+</svg>
+
+------=_NextPart_000_0000_508E7934.DE057A36
+Content-Type: image/svg+xml;
+	charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: chrome://global/skin/reader/RM-Close-24x24.svg
+
+<?xml version=3D"1.0" encoding=3D"utf-8"?>
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+<svg viewBox=3D"0 0 24 24"
+  xmlns=3D"http://www.w3.org/2000/svg"
+  xmlns:xlink=3D"http://www.w3.org/1999/xlink">
+  <defs>
+    <style type=3D"text/css">
+      use:not(:target) {
+        display: none;
+      }
+
+      #close {
+        fill: #808080;
+      }
+      #close-hover {
+        fill: #FFFFFF;
+      }
+    </style>
+
+    <g id=3D"close-shape">
+      <polygon points=3D"20.477,6.551 20.477,17.449 11.992,17.449 11.992,20=
+ 23,20 23,4 11.992,4 11.992,6.551"/>
+      <polygon points=3D"1,11.981 9.698,19.95 9.698,15.13 18.184,15.13 18.1=
+84,8.87 9.698,8.87 9.698,4.011"/>
+    </g>
+  </defs>
+
+  <use id=3D"close"       xlink:href=3D"#close-shape"/>
+  <use id=3D"close-hover" xlink:href=3D"#close-shape"/>
+
+</svg>
+------=_NextPart_000_0000_508E7934.DE057A36
+Content-Type: image/svg+xml;
+	charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: chrome://global/skin/reader/RM-Type-Controls-24x24.svg
+
+<?xml version=3D"1.0" encoding=3D"utf-8"?>
+<svg version=3D"1.1" id=3D"Icons" xmlns=3D"http://www.w3.org/2000/svg" xmln=
+s:xlink=3D"http://www.w3.org/1999/xlink" x=3D"0px" y=3D"0px"
+     viewBox=3D"0 0 24 24" enable-background=3D"new 0 0 24 24" xml:space=3D=
+"preserve">
+<g>
+    <path fill=3D"#808080" d=3D"M8.23,18.748v-1.016l1.182-0.146c0.065-0.013=
+,0.12-0.055,0.166-0.127s0.052-0.143,0.02-0.215L8.513,14.07
+        H4.236l-1.104,3.096c-0.039,0.104-0.02,0.199,0.059,0.283s0.153,0.13,=
+0.225,0.137l1.123,0.146v1.016H0.232v-1.016l1.123-0.166
+        L5.837,5.008h2.275l4.443,12.197c0.052,0.124,0.103,0.21,0.151,0.259s=
+0.145,0.089,0.288,0.122l0.762,0.146v1.016H8.23z
+         M6.296,8.084l-1.68,4.805h3.398L6.296,8.084z"/>
+    <path fill=3D"#808080" d=3D"M20.05,18.748l-0.264-0.996c-0.345,0.234-0.7=
+06,0.443-1.083,0.625c-0.331,0.156-0.702,0.298-1.112,0.425
+        c-0.409,0.127-0.835,0.19-1.277,0.19c-0.364,0-0.704-0.06-1.02-0.181s=
+-0.592-0.293-0.829-0.518s-0.424-0.497-0.561-0.815
+        S13.7,16.801,13.7,16.404c0-0.299,0.024-0.576,0.073-0.83s0.146-0.49,=
+0.293-0.708s0.356-0.426,0.63-0.625s0.637-0.392,1.089-0.581
+        s1.008-0.377,1.665-0.566s1.445-0.384,2.363-0.586v-0.244c0-0.098,0.0=
+03-0.186,0.01-0.264c0-0.091,0.003-0.182,0.01-0.273
+        c0.007-0.189-0.013-0.392-0.059-0.61s-0.137-0.42-0.273-0.605s-0.329-=
+0.338-0.576-0.459s-0.569-0.181-0.967-0.181
+        c-0.137,0-0.259,0.003-0.366,0.01s-0.197,0.016-0.269,0.029c-0.085,0.=
+013-0.159,0.026-0.225,0.039v1.895h-2.061
+        c-0.169,0.013-0.319-0.003-0.449-0.049c-0.11-0.039-0.213-0.107-0.308=
+-0.205s-0.142-0.25-0.142-0.459
+        c0-0.371,0.132-0.703,0.396-0.996c0.263-0.293,0.607-0.542,1.033-0.74=
+7s0.904-0.363,1.435-0.474
+        c0.529-0.111,1.058-0.166,1.585-0.166c0.572,0,1.096,0.042,1.57,0.127=
+s0.883,0.249,1.224,0.493c0.342,0.244,0.604,0.587,0.79,1.03
+        s0.278,1.025,0.278,1.748v5.137c0,0.124,0.042,0.229,0.127,0.317s0.18=
+8,0.138,0.312,0.151l0.879,0.059v0.938H20.05z M19.793,13.592
+        c-0.645,0.13-1.177,0.264-1.597,0.4s-0.754,0.293-1.001,0.469s-0.42,0=
+.376-0.518,0.601s-0.146,0.487-0.146,0.786
+        c0,0.208,0.034,0.402,0.103,0.581s0.166,0.335,0.293,0.469s0.278,0.23=
+9,0.454,0.317s0.368,0.117,0.576,0.117
+        c0.215,0,0.432-0.023,0.649-0.068s0.415-0.094,0.591-0.146c0.208-0.06=
+5,0.407-0.14,0.596-0.225V13.592z"/>
+</g>
+</svg>
+
+------=_NextPart_000_0000_508E7934.DE057A36
+Content-Type: image/svg+xml;
+	charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: chrome://global/skin/reader/RM-Minus-24x24.svg
+
+<?xml version=3D"1.0" encoding=3D"utf-8"?>
+<svg version=3D"1.1" id=3D"Icons" xmlns=3D"http://www.w3.org/2000/svg" xmln=
+s:xlink=3D"http://www.w3.org/1999/xlink" x=3D"0px" y=3D"0px"
+     viewBox=3D"0 0 24 24" enable-background=3D"new 0 0 24 24" xml:space=3D=
+"preserve">
+<path fill-rule=3D"evenodd" clip-rule=3D"evenodd" fill=3D"#808080" d=3D"M0,=
+13.5v-3h24v3H0z"/>
+<g enable-background=3D"new    ">
+    <g>
+        <defs>
+            <rect id=3D"SVGID_2_" x=3D"-269.917" y=3D"-1054" width=3D"22"=
+ height=3D"34"/>
+        </defs>
+        <clipPath id=3D"SVGID_1_">
+            <use xlink:href=3D"#SVGID_2_"  overflow=3D"visible"/>
+        </clipPath>
+        <g clip-path=3D"url(#SVGID_1_)">
+            <defs>
+                <rect id=3D"SVGID_6_" x=3D"-365.917" y=3D"-1459" width=3D"1=
+080" height=3D"2896"/>
+            </defs>
+            <clipPath id=3D"SVGID_3_">
+                <use xlink:href=3D"#SVGID_6_"  overflow=3D"visible"/>
+            </clipPath>
+        </g>
+        <g clip-path=3D"url(#SVGID_1_)">
+            <defs>
+                <rect id=3D"SVGID_10_" x=3D"-365.917" y=3D"-1459" width=3D"=
+1080" height=3D"2896"/>
+            </defs>
+            <clipPath id=3D"SVGID_5_">
+                <use xlink:href=3D"#SVGID_10_"  overflow=3D"visible"/>
+            </clipPath>
+        </g>
+        <g clip-path=3D"url(#SVGID_1_)">
+            <defs>
+                <rect id=3D"SVGID_16_" x=3D"-365.917" y=3D"-1459" width=3D"=
+1080" height=3D"2896"/>
+            </defs>
+            <clipPath id=3D"SVGID_7_">
+                <use xlink:href=3D"#SVGID_16_"  overflow=3D"visible"/>
+            </clipPath>
+        </g>
+    </g>
+</g>
+</svg>
+
+------=_NextPart_000_0000_508E7934.DE057A36
+Content-Type: image/svg+xml;
+	charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: chrome://global/skin/reader/RM-Plus-24x24.svg
+
+<?xml version=3D"1.0" encoding=3D"utf-8"?>
+<svg version=3D"1.1" id=3D"Icons" xmlns=3D"http://www.w3.org/2000/svg" xmln=
+s:xlink=3D"http://www.w3.org/1999/xlink" x=3D"0px" y=3D"0px"
+     viewBox=3D"0 0 24 24" enable-background=3D"new 0 0 24 24" xml:space=3D=
+"preserve">
+<path fill-rule=3D"evenodd" clip-rule=3D"evenodd" fill=3D"#808080" d=3D"M24=
+,13.5H13.5V24h-3V13.5H0v-3h10.5V0h3v10.5H24V13.5z"/>
+<g enable-background=3D"new    ">
+    <g>
+        <defs>
+            <rect id=3D"SVGID_2_" x=3D"-233.667" y=3D"-1054" width=3D"22"=
+ height=3D"34"/>
+        </defs>
+        <clipPath id=3D"SVGID_1_">
+            <use xlink:href=3D"#SVGID_2_"  overflow=3D"visible"/>
+        </clipPath>
+        <g clip-path=3D"url(#SVGID_1_)">
+            <defs>
+                <rect id=3D"SVGID_6_" x=3D"-329.667" y=3D"-1459" width=3D"1=
+080" height=3D"2896"/>
+            </defs>
+            <clipPath id=3D"SVGID_3_">
+                <use xlink:href=3D"#SVGID_6_"  overflow=3D"visible"/>
+            </clipPath>
+        </g>
+        <g clip-path=3D"url(#SVGID_1_)">
+            <defs>
+                <rect id=3D"SVGID_10_" x=3D"-329.667" y=3D"-1459" width=3D"=
+1080" height=3D"2896"/>
+            </defs>
+            <clipPath id=3D"SVGID_5_">
+                <use xlink:href=3D"#SVGID_10_"  overflow=3D"visible"/>
+            </clipPath>
+        </g>
+        <g clip-path=3D"url(#SVGID_1_)">
+            <defs>
+                <rect id=3D"SVGID_16_" x=3D"-329.667" y=3D"-1459" width=3D"=
+1080" height=3D"2896"/>
+            </defs>
+            <clipPath id=3D"SVGID_7_">
+                <use xlink:href=3D"#SVGID_16_"  overflow=3D"visible"/>
+            </clipPath>
+        </g>
+    </g>
+</g>
+</svg>
+
+------=_NextPart_000_0000_508E7934.DE057A36
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: urn:snapshot-E9CD4DD2:chrome://global/skin/aboutReaderContent.css
+
+/* Effective stylesheet produced by snapshot save */
+#moz-reader-content { display: none; font-size: 1em; line-height: 1.6em; }
+h1, h2, h3 { font-weight: bold; }
+h1 { font-size: 1.6em; line-height: 1.25em; }
+h3 { font-size: 1em; line-height: 1.66em; }
+a { text-decoration: underline; font-weight: normal; }
+a, a:visited, a:hover, a:active { color: rgb(0, 149, 221); }
+* { max-width: 100%; height: auto; }
+p, code, pre, blockquote, ul, ol, li, figure, .wp-caption { margin: 0px 0px=
+ 30px; }
+ul, ol { padding: 0px; }
+ul { -moz-padding-start: 30px; list-style: outside none disc; }
+
+------=_NextPart_000_0000_508E7934.DE057A36
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: urn:snapshot-BFABC97C:chrome://global/skin/aboutReaderControls.css
+
+/* Effective stylesheet produced by snapshot save */
+.light-button { color: rgb(51, 51, 51); background-color: rgb(255, 255, 255=
+); }
+.dark-button { color: rgb(238, 238, 238); background-color: rgb(51, 51, 51)=
+; }
+.sepia-button { color: rgb(91, 70, 54); background-color: rgb(244, 236, 216=
+); }
+.sans-serif-button { font-family: Helvetica,Arial,sans-serif; }
+.serif-button { font-family: Georgia,"Times New Roman",serif; }
+#reader-message { margin-top: 40px; display: none; text-align: center; widt=
+h: 100%; font-size: 0.9em; }
+.header { text-align: start; display: none; }
+.domain { font-size: 0.9em; line-height: 1.48em; padding-bottom: 4px; font-=
+family: Helvetica,Arial,sans-serif; text-decoration: none; border-bottom:=
+ 1px solid; color: rgb(0, 149, 221); }
+.header > h1 { font-size: 1.6em; line-height: 1.25em; width: 100%; margin:=
+ 30px 0px; padding: 0px; }
+.header > .credits { font-size: 0.9em; line-height: 1.48em; margin: 0px 0px=
+ 30px; padding: 0px; font-style: italic; }
+.toolbar { font-family: Helvetica,Arial,sans-serif; position: fixed; height=
+: 100%; top: 0px; left: 0px; margin: 0px; padding: 0px; list-style: outside=
+ none none; background-color: rgb(251, 251, 251); -moz-user-select: none;=
+ border-right: 1px solid rgb(181, 181, 181); }
+.button { display: block; background-size: 24px 24px; background-repeat: no=
+-repeat; color: rgb(51, 51, 51); background-color: rgb(251, 251, 251); heig=
+ht: 40px; padding: 0px; }
+.toolbar .button { width: 40px; background-position: center center; margin-=
+right: -1px; border-width: 0px 1px 1px 0px; border-style: none solid solid=
+ none; border-color: -moz-use-text-color rgb(181, 181, 181) rgb(193, 193,=
+ 193) -moz-use-text-color; }
+.button[hidden] { display: none; }
+.dropdown { text-align: center; list-style: outside none none; margin: 0px;=
+ padding: 0px; }
+.dropdown li { margin: 0px; padding: 0px; }
+.dropdown-popup { min-width: 300px; text-align: start; position: absolute;=
+ left: 48px; z-index: 1000; background-color: rgb(251, 251, 251); visibilit=
+y: hidden; border-radius: 4px; border-width: 1px 1px 0px; border-style: sol=
+id; border-color: rgb(181, 181, 181); -moz-border-top-colors: none; -moz-bo=
+rder-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-=
+colors: none; border-image: none; box-shadow: 0px 1px 12px rgb(102, 102, 10=
+2); }
+.dropdown-popup > hr { display: none; }
+.dropdown-arrow { position: absolute; top: 30px; left: -16px; width: 24px;=
+ height: 24px; background-image: url("chrome://global/skin/reader/RM-Type-C=
+ontrols-Arrow.svg"); display: block; }
+#font-type-buttons, #font-size-buttons, #color-scheme-buttons { display: fl=
+ex; flex-direction: row; }
+#font-type-buttons > button:first-child { border-top-left-radius: 3px; }
+#font-type-buttons > button:last-child { border-top-right-radius: 3px; }
+#color-scheme-buttons > button:first-child { border-bottom-left-radius: 3px=
+; }
+#color-scheme-buttons > button:last-child { border-bottom-right-radius: 3px=
+; }
+#font-type-buttons > button, #font-size-buttons > button, #color-scheme-but=
+tons > button { text-align: center; border: 0px none; }
+#font-type-buttons > button, #font-size-buttons > button { width: 50%; back=
+ground-color: transparent; border-left: 1px solid rgb(181, 181, 181); borde=
+r-bottom: 1px solid rgb(181, 181, 181); }
+#color-scheme-buttons > button { width: 33.33%; font-size: 14px; }
+#color-scheme-buttons > .dark-button { margin-top: -1px; height: 61px; }
+#font-type-buttons > button:first-child, #font-size-buttons > button:first-=
+child { border-left: 0px none; }
+#font-type-buttons > button { display: inline-block; font-size: 62px; heigh=
+t: 100px; }
+#font-size-buttons > button, #color-scheme-buttons > button { height: 60px;=
+ }
+#font-type-buttons > button:active:hover, #font-type-buttons > button.selec=
+ted, #color-scheme-buttons > button:active:hover, #color-scheme-buttons >=
+ button.selected { box-shadow: 0px -3px 0px 0px rgb(252, 100, 32) inset; }
+#font-type-buttons > button:active:hover, #font-type-buttons > button.selec=
+ted { border-bottom: 1px solid rgb(252, 100, 32); }
+#font-type-buttons > button > .description { color: rgb(102, 102, 102); fon=
+t-size: 12px; margin-top: -5px; }
+#font-type-buttons > .sans-serif-button > .name { margin-top: 2px; }
+#font-type-buttons > .sans-serif-button > .description { margin-top: -4px; }
+#font-type-buttons > .serif-button > .name { font-size: 63px; }
+.button:hover, #font-size-buttons > button:hover, #font-type-buttons > butt=
+on:hover { background-color: rgb(235, 235, 235); }
+.dropdown.open, .button:active, #font-size-buttons > button:active, #font-s=
+ize-buttons > button.selected { background-color: rgb(218, 218, 218); }
+#font-size-sample { display: none; }
+.minus-button, .plus-button { background-color: transparent; border: 0px no=
+ne; background-size: 18px 18px; background-repeat: no-repeat; background-po=
+sition: center center; }
+.footer { height: 64px; background-color: rgb(235, 235, 235); position: abs=
+olute; left: 0px; width: 100%; text-align: center; padding: 12px 0px; box-s=
+izing: border-box; box-shadow: 0px 3px 3px -3px rgba(0, 0, 0, 0.35) inset; }
+.remove-button { background-image: url("urn:not-loaded:chrome://global/skin=
+/reader/RM-Delete-24x24.svg"); margin: 0px auto; border: 1px solid rgb(193,=
+ 193, 193); background-position: 10px 7px; padding-left: 42px; padding-righ=
+t: 10px; border-radius: 2px; box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1); fo=
+nt-size: 18px; }
+.share-button { display: none; }
+.close-button { background-image: url("chrome://global/skin/reader/RM-Close=
+-24x24.svg"); height: 68px; background-position: center 8px; }
+.close-button:hover { background-image: url("chrome://global/skin/reader/RM=
+-Close-24x24.svg"); background-color: rgb(217, 65, 65); border-bottom: 1px=
+ solid rgb(217, 65, 65); border-right: 1px solid rgb(217, 65, 65); }
+.close-button:hover:active { background-image: url("chrome://global/skin/re=
+ader/RM-Close-24x24.svg"); background-color: rgb(174, 35, 37); border-botto=
+m: 1px solid rgb(174, 35, 37); border-right: 1px solid rgb(174, 35, 37); }
+.style-button { background-image: url("chrome://global/skin/reader/RM-Type-=
+Controls-24x24.svg"); }
+.toggle-button { background-image: url("urn:not-loaded:chrome://global/skin=
+/reader/RM-Add-24x24.svg"); }
+.list-button { background-image: url("urn:not-loaded:chrome://global/skin/r=
+eader/RM-Reading-List-24x24.svg"); }
+.minus-button { background-image: url("chrome://global/skin/reader/RM-Minus=
+-24x24.svg"); }
+.plus-button { background-image: url("chrome://global/skin/reader/RM-Plus-2=
+4x24.svg"); }
+#pocket-button { background-image: url("urn:not-loaded:chrome://global/skin=
+/reader/pocket.svg#pocket-mark"); }
+#pocket-button:hover:active { background-image: url("urn:not-loaded:chrome:=
+//global/skin/reader/pocket.svg#pocket-mark-added"); }
+@media print {
+  .toolbar { display: none ! important; }
+  .footer { display: none ! important; }
+}
+
+------=_NextPart_000_0000_508E7934.DE057A36
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: urn:snapshot-B7AF0624:chrome://global/skin/aboutReaderControls.css
+
+/* Effective stylesheet produced by snapshot save */
+.light-button { color: rgb(51, 51, 51); background-color: rgb(255, 255, 255=
+); }
+.dark-button { color: rgb(238, 238, 238); background-color: rgb(51, 51, 51)=
+; }
+.sepia-button { color: rgb(91, 70, 54); background-color: rgb(244, 236, 216=
+); }
+.sans-serif-button { font-family: Helvetica,Arial,sans-serif; }
+.serif-button { font-family: Georgia,"Times New Roman",serif; }
+#reader-message { margin-top: 40px; display: none; text-align: center; widt=
+h: 100%; font-size: 0.9em; }
+.header { text-align: start; display: none; }
+.domain { font-size: 0.9em; line-height: 1.48em; padding-bottom: 4px; font-=
+family: Helvetica,Arial,sans-serif; text-decoration: none; border-bottom:=
+ 1px solid; color: rgb(0, 149, 221); }
+.header > h1 { font-size: 1.6em; line-height: 1.25em; width: 100%; margin:=
+ 30px 0px; padding: 0px; }
+.header > .credits { font-size: 0.9em; line-height: 1.48em; margin: 0px 0px=
+ 30px; padding: 0px; font-style: italic; }
+.toolbar { font-family: Helvetica,Arial,sans-serif; position: fixed; height=
+: 100%; top: 0px; left: 0px; margin: 0px; padding: 0px; list-style: outside=
+ none none; background-color: rgb(251, 251, 251); -moz-user-select: none;=
+ border-right: 1px solid rgb(181, 181, 181); }
+.button { display: block; background-size: 24px 24px; background-repeat: no=
+-repeat; color: rgb(51, 51, 51); background-color: rgb(251, 251, 251); heig=
+ht: 40px; padding: 0px; }
+.toolbar .button { width: 40px; background-position: center center; margin-=
+right: -1px; border-width: 0px 1px 1px 0px; border-style: none solid solid=
+ none; border-color: -moz-use-text-color rgb(181, 181, 181) rgb(193, 193,=
+ 193) -moz-use-text-color; }
+.button[hidden] { display: none; }
+.dropdown { text-align: center; list-style: outside none none; margin: 0px;=
+ padding: 0px; }
+.dropdown li { margin: 0px; padding: 0px; }
+.dropdown-popup { min-width: 300px; text-align: start; position: absolute;=
+ left: 48px; z-index: 1000; background-color: rgb(251, 251, 251); visibilit=
+y: hidden; border-radius: 4px; border-width: 1px 1px 0px; border-style: sol=
+id; border-color: rgb(181, 181, 181); -moz-border-top-colors: none; -moz-bo=
+rder-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-=
+colors: none; border-image: none; box-shadow: 0px 1px 12px rgb(102, 102, 10=
+2); }
+.dropdown-popup > hr { display: none; }
+.dropdown-arrow { position: absolute; top: 30px; left: -16px; width: 24px;=
+ height: 24px; background-image: url("chrome://global/skin/reader/RM-Type-C=
+ontrols-Arrow.svg"); display: block; }
+#font-type-buttons, #font-size-buttons, #color-scheme-buttons { display: fl=
+ex; flex-direction: row; }
+#font-type-buttons > button:first-child { border-top-left-radius: 3px; }
+#font-type-buttons > button:last-child { border-top-right-radius: 3px; }
+#color-scheme-buttons > button:first-child { border-bottom-left-radius: 3px=
+; }
+#color-scheme-buttons > button:last-child { border-bottom-right-radius: 3px=
+; }
+#font-type-buttons > button, #font-size-buttons > button, #color-scheme-but=
+tons > button { text-align: center; border: 0px none; }
+#font-type-buttons > button, #font-size-buttons > button { width: 50%; back=
+ground-color: transparent; border-left: 1px solid rgb(181, 181, 181); borde=
+r-bottom: 1px solid rgb(181, 181, 181); }
+#color-scheme-buttons > button { width: 33.33%; font-size: 14px; }
+#color-scheme-buttons > .dark-button { margin-top: -1px; height: 61px; }
+#font-type-buttons > button:first-child, #font-size-buttons > button:first-=
+child { border-left: 0px none; }
+#font-type-buttons > button { display: inline-block; font-size: 62px; heigh=
+t: 100px; }
+#font-size-buttons > button, #color-scheme-buttons > button { height: 60px;=
+ }
+#font-type-buttons > button:active:hover, #font-type-buttons > button.selec=
+ted, #color-scheme-buttons > button:active:hover, #color-scheme-buttons >=
+ button.selected { box-shadow: 0px -3px 0px 0px rgb(252, 100, 32) inset; }
+#font-type-buttons > button:active:hover, #font-type-buttons > button.selec=
+ted { border-bottom: 1px solid rgb(252, 100, 32); }
+#font-type-buttons > button > .description { color: rgb(102, 102, 102); fon=
+t-size: 12px; margin-top: -5px; }
+#font-type-buttons > .sans-serif-button > .name { margin-top: 2px; }
+#font-type-buttons > .sans-serif-button > .description { margin-top: -4px; }
+#font-type-buttons > .serif-button > .name { font-size: 63px; }
+.button:hover, #font-size-buttons > button:hover, #font-type-buttons > butt=
+on:hover { background-color: rgb(235, 235, 235); }
+.dropdown.open, .button:active, #font-size-buttons > button:active, #font-s=
+ize-buttons > button.selected { background-color: rgb(218, 218, 218); }
+#font-size-sample { display: none; }
+.minus-button, .plus-button { background-color: transparent; border: 0px no=
+ne; background-size: 18px 18px; background-repeat: no-repeat; background-po=
+sition: center center; }
+.footer { height: 64px; background-color: rgb(235, 235, 235); position: abs=
+olute; left: 0px; width: 100%; text-align: center; padding: 12px 0px; box-s=
+izing: border-box; box-shadow: 0px 3px 3px -3px rgba(0, 0, 0, 0.35) inset; }
+.remove-button { background-image: url("urn:not-loaded:chrome://global/skin=
+/reader/RM-Delete-24x24.svg"); margin: 0px auto; border: 1px solid rgb(193,=
+ 193, 193); background-position: 10px 7px; padding-left: 42px; padding-righ=
+t: 10px; border-radius: 2px; box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1); fo=
+nt-size: 18px; }
+.share-button { display: none; }
+.close-button { background-image: url("chrome://global/skin/reader/RM-Close=
+-24x24.svg"); height: 68px; background-position: center 8px; }
+.close-button:hover { background-image: url("chrome://global/skin/reader/RM=
+-Close-24x24.svg"); background-color: rgb(217, 65, 65); border-bottom: 1px=
+ solid rgb(217, 65, 65); border-right: 1px solid rgb(217, 65, 65); }
+.close-button:hover:active { background-image: url("chrome://global/skin/re=
+ader/RM-Close-24x24.svg"); background-color: rgb(174, 35, 37); border-botto=
+m: 1px solid rgb(174, 35, 37); border-right: 1px solid rgb(174, 35, 37); }
+.style-button { background-image: url("chrome://global/skin/reader/RM-Type-=
+Controls-24x24.svg"); }
+.toggle-button { background-image: url("urn:not-loaded:chrome://global/skin=
+/reader/RM-Add-24x24.svg"); }
+.list-button { background-image: url("urn:not-loaded:chrome://global/skin/r=
+eader/RM-Reading-List-24x24.svg"); }
+.minus-button { background-image: url("chrome://global/skin/reader/RM-Minus=
+-24x24.svg"); }
+.plus-button { background-image: url("chrome://global/skin/reader/RM-Plus-2=
+4x24.svg"); }
+#pocket-button { background-image: url("urn:not-loaded:chrome://global/skin=
+/reader/pocket.svg#pocket-mark"); }
+#pocket-button:hover:active { background-image: url("urn:not-loaded:chrome:=
+//global/skin/reader/pocket.svg#pocket-mark-added"); }
+@media print {
+  .toolbar { display: none ! important; }
+  .footer { display: none ! important; }
+}
+
+------=_NextPart_000_0000_508E7934.DE057A36
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: urn:snapshot-FC086D1D:chrome://global/skin/aboutReaderControls.css
+
+/* Effective stylesheet produced by snapshot save */
+.light-button { color: rgb(51, 51, 51); background-color: rgb(255, 255, 255=
+); }
+.dark-button { color: rgb(238, 238, 238); background-color: rgb(51, 51, 51)=
+; }
+.sepia-button { color: rgb(91, 70, 54); background-color: rgb(244, 236, 216=
+); }
+.sans-serif-button { font-family: Helvetica,Arial,sans-serif; }
+.serif-button { font-family: Georgia,"Times New Roman",serif; }
+#reader-message { margin-top: 40px; display: none; text-align: center; widt=
+h: 100%; font-size: 0.9em; }
+.header { text-align: start; display: none; }
+.domain { font-size: 0.9em; line-height: 1.48em; padding-bottom: 4px; font-=
+family: Helvetica,Arial,sans-serif; text-decoration: none; border-bottom:=
+ 1px solid; color: rgb(0, 149, 221); }
+.header > h1 { font-size: 1.6em; line-height: 1.25em; width: 100%; margin:=
+ 30px 0px; padding: 0px; }
+.header > .credits { font-size: 0.9em; line-height: 1.48em; margin: 0px 0px=
+ 30px; padding: 0px; font-style: italic; }
+.toolbar { font-family: Helvetica,Arial,sans-serif; position: fixed; height=
+: 100%; top: 0px; left: 0px; margin: 0px; padding: 0px; list-style: outside=
+ none none; background-color: rgb(251, 251, 251); -moz-user-select: none;=
+ border-right: 1px solid rgb(181, 181, 181); }
+.button { display: block; background-size: 24px 24px; background-repeat: no=
+-repeat; color: rgb(51, 51, 51); background-color: rgb(251, 251, 251); heig=
+ht: 40px; padding: 0px; }
+.toolbar .button { width: 40px; background-position: center center; margin-=
+right: -1px; border-width: 0px 1px 1px 0px; border-style: none solid solid=
+ none; border-color: -moz-use-text-color rgb(181, 181, 181) rgb(193, 193,=
+ 193) -moz-use-text-color; }
+.button[hidden] { display: none; }
+.dropdown { text-align: center; list-style: outside none none; margin: 0px;=
+ padding: 0px; }
+.dropdown li { margin: 0px; padding: 0px; }
+.dropdown-popup { min-width: 300px; text-align: start; position: absolute;=
+ left: 48px; z-index: 1000; background-color: rgb(251, 251, 251); visibilit=
+y: hidden; border-radius: 4px; border-width: 1px 1px 0px; border-style: sol=
+id; border-color: rgb(181, 181, 181); -moz-border-top-colors: none; -moz-bo=
+rder-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-=
+colors: none; border-image: none; box-shadow: 0px 1px 12px rgb(102, 102, 10=
+2); }
+.dropdown-popup > hr { display: none; }
+.dropdown-arrow { position: absolute; top: 30px; left: -16px; width: 24px;=
+ height: 24px; background-image: url("chrome://global/skin/reader/RM-Type-C=
+ontrols-Arrow.svg"); display: block; }
+#font-type-buttons, #font-size-buttons, #color-scheme-buttons { display: fl=
+ex; flex-direction: row; }
+#font-type-buttons > button:first-child { border-top-left-radius: 3px; }
+#font-type-buttons > button:last-child { border-top-right-radius: 3px; }
+#color-scheme-buttons > button:first-child { border-bottom-left-radius: 3px=
+; }
+#color-scheme-buttons > button:last-child { border-bottom-right-radius: 3px=
+; }
+#font-type-buttons > button, #font-size-buttons > button, #color-scheme-but=
+tons > button { text-align: center; border: 0px none; }
+#font-type-buttons > button, #font-size-buttons > button { width: 50%; back=
+ground-color: transparent; border-left: 1px solid rgb(181, 181, 181); borde=
+r-bottom: 1px solid rgb(181, 181, 181); }
+#color-scheme-buttons > button { width: 33.33%; font-size: 14px; }
+#color-scheme-buttons > .dark-button { margin-top: -1px; height: 61px; }
+#font-type-buttons > button:first-child, #font-size-buttons > button:first-=
+child { border-left: 0px none; }
+#font-type-buttons > button { display: inline-block; font-size: 62px; heigh=
+t: 100px; }
+#font-size-buttons > button, #color-scheme-buttons > button { height: 60px;=
+ }
+#font-type-buttons > button:active:hover, #font-type-buttons > button.selec=
+ted, #color-scheme-buttons > button:active:hover, #color-scheme-buttons >=
+ button.selected { box-shadow: 0px -3px 0px 0px rgb(252, 100, 32) inset; }
+#font-type-buttons > button:active:hover, #font-type-buttons > button.selec=
+ted { border-bottom: 1px solid rgb(252, 100, 32); }
+#font-type-buttons > button > .description { color: rgb(102, 102, 102); fon=
+t-size: 12px; margin-top: -5px; }
+#font-type-buttons > .sans-serif-button > .name { margin-top: 2px; }
+#font-type-buttons > .sans-serif-button > .description { margin-top: -4px; }
+#font-type-buttons > .serif-button > .name { font-size: 63px; }
+.button:hover, #font-size-buttons > button:hover, #font-type-buttons > butt=
+on:hover { background-color: rgb(235, 235, 235); }
+.dropdown.open, .button:active, #font-size-buttons > button:active, #font-s=
+ize-buttons > button.selected { background-color: rgb(218, 218, 218); }
+#font-size-sample { display: none; }
+.minus-button, .plus-button { background-color: transparent; border: 0px no=
+ne; background-size: 18px 18px; background-repeat: no-repeat; background-po=
+sition: center center; }
+.footer { height: 64px; background-color: rgb(235, 235, 235); position: abs=
+olute; left: 0px; width: 100%; text-align: center; padding: 12px 0px; box-s=
+izing: border-box; box-shadow: 0px 3px 3px -3px rgba(0, 0, 0, 0.35) inset; }
+.remove-button { background-image: url("urn:not-loaded:chrome://global/skin=
+/reader/RM-Delete-24x24.svg"); margin: 0px auto; border: 1px solid rgb(193,=
+ 193, 193); background-position: 10px 7px; padding-left: 42px; padding-righ=
+t: 10px; border-radius: 2px; box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1); fo=
+nt-size: 18px; }
+.share-button { display: none; }
+.close-button { background-image: url("chrome://global/skin/reader/RM-Close=
+-24x24.svg"); height: 68px; background-position: center 8px; }
+.close-button:hover { background-image: url("chrome://global/skin/reader/RM=
+-Close-24x24.svg"); background-color: rgb(217, 65, 65); border-bottom: 1px=
+ solid rgb(217, 65, 65); border-right: 1px solid rgb(217, 65, 65); }
+.close-button:hover:active { background-image: url("chrome://global/skin/re=
+ader/RM-Close-24x24.svg"); background-color: rgb(174, 35, 37); border-botto=
+m: 1px solid rgb(174, 35, 37); border-right: 1px solid rgb(174, 35, 37); }
+.style-button { background-image: url("chrome://global/skin/reader/RM-Type-=
+Controls-24x24.svg"); }
+.toggle-button { background-image: url("urn:not-loaded:chrome://global/skin=
+/reader/RM-Add-24x24.svg"); }
+.list-button { background-image: url("urn:not-loaded:chrome://global/skin/r=
+eader/RM-Reading-List-24x24.svg"); }
+.minus-button { background-image: url("chrome://global/skin/reader/RM-Minus=
+-24x24.svg"); }
+.plus-button { background-image: url("chrome://global/skin/reader/RM-Plus-2=
+4x24.svg"); }
+#pocket-button { background-image: url("urn:not-loaded:chrome://global/skin=
+/reader/pocket.svg#pocket-mark"); }
+#pocket-button:hover:active { background-image: url("urn:not-loaded:chrome:=
+//global/skin/reader/pocket.svg#pocket-mark-added"); }
+@media print {
+  .toolbar { display: none ! important; }
+  .footer { display: none ! important; }
+}
+
+------=_NextPart_000_0000_508E7934.DE057A36
+Content-Type: text/javascript;version=1.8
+Content-Transfer-Encoding: base64
+Content-Location: urn:snapshot-5BA12A37:chrome://global/content/reader/aboutReader.js
+
+
+------=_NextPart_000_0000_508E7934.DE057A36--

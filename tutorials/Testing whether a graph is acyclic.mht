@@ -1,0 +1,785 @@
+From: <Saved by Mozilla 5.0 (Windows)>
+Subject: Testing whether a graph is acyclic
+Date: Wed, 11 Jun 2014 00:58:43 +0600
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----=_NextPart_000_0000_C7C0FE5F.EBB0D30A"
+X-MAF-Information: Produced By MAF V3.0.2
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0000_C7C0FE5F.EBB0D30A
+Content-Type: text/html;
+	charset="windows-1252"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.cs.hmc.edu/~keller/courses/cs60/s98/examples/acyclic/
+
+<!--This file created 9/18/96 11:25 PM by Claris Home Page version 1.0--><h=
+tml><head>
+<meta http-equiv=3D"content-type" content=3D"text/html; charset=3Dwindows-1=
+252">
+   <title>Testing whether a graph is acyclic</title>
+   <meta name=3D"GENERATOR" content=3D"Claris Home Page 1.0">
+   </head><body><x-sas-window top=3D"42" bottom=3D"867" left=3D"4" right=3D=
+"534">
+
+
+
+<h1>Example:</h1>
+
+<blockquote><h1>Testing whether a graph is acyclic</h1>
+
+<h3><font size=3D"4">by
+</font><font size=3D"4"><a href=3D"http://www.cs.hmc.edu/%7Ekeller">Robert=
+ M.
+Keller</a></font></h3></blockquote>
+
+<h2><hr></h2>
+
+<h2>What we want to do here are two things:</h2>
+
+<h2>=A0</h2>
+
+<blockquote><h2>Get an idea of an informal algorithm for testing
+graphs.</h2>
+
+<h2>=A0</h2>
+
+<h2>Show how to use our information structure list representations
+and functions to determine whether a graph is acyclic.</h2>
+</blockquote>
+
+<p></p><hr><p></p>
+
+<h2>Given some representation of a directed graph, we might like to
+know whether there are any cycles (loops from a node back to itself,
+possibly through other nodes).</h2>
+
+<h2>=A0</h2>
+
+<h2>A graph that has at least one such loop is called <i>cyclic</i>,
+and one which doesn't is called <i>acyclic</i>. Acylic directed
+graphs are also called <i>dags</i>.</h2>
+
+<h2>=A0</h2>
+
+<h2>An acylic graph:</h2>
+
+<h2 align=3D"CENTER"><img src=3D"http://www.cs.hmc.edu/%7Ekeller/courses/cs=
+60/s98/examples/acyclic/image%20500.gif" x-sas-useimagewidth=3D"" x-sas-use=
+imageheight=3D"" align=3D"bottom" height=3D"256" width=3D"256"></h2>
+
+<h2>A similar-appearing cylic graph:</h2>
+
+<h2>=A0</h2>
+
+<h2 align=3D"CENTER"><img src=3D"http://www.cs.hmc.edu/%7Ekeller/courses/cs=
+60/s98/examples/acyclic/image%20749.gif" x-sas-useimagewidth=3D"" x-sas-use=
+imageheight=3D"" align=3D"bottom" height=3D"256" width=3D"256"></h2>
+
+<h2><hr></h2>
+
+<h2>Idea:</h2>
+
+<h2>=A0</h2>
+
+<blockquote><h2>If a graph is acyclic, then it must have at least one
+node with no targets (called a leaf).</h2></blockquote>
+
+<h2>=A0</h2>
+
+<h2>For example, in</h2>
+
+<h2 align=3D"CENTER"><img src=3D"http://www.cs.hmc.edu/%7Ekeller/courses/cs=
+60/s98/examples/acyclic/image%20507.gif" x-sas-useimagewidth=3D"" x-sas-use=
+imageheight=3D"" align=3D"bottom" height=3D"156" width=3D"156"></h2>
+
+<h2>node 3 is such a node. There in general may be other nodes, but
+in this case it is the only one.</h2>
+
+<h2><hr></h2>
+
+<h2>This condition (having a leaf) is necessary for the graph to be
+acyclic, but it isn't sufficient. If it were, the problem would be
+trivial.</h2>
+
+<h2>=A0</h2>
+
+<h2>For example, the preceding <i>cyclic</i> graph had a leaf (3):
+</h2>
+
+<h2 align=3D"CENTER"><img src=3D"http://www.cs.hmc.edu/%7Ekeller/courses/cs=
+60/s98/examples/acyclic/image%20121.gif" x-sas-useimagewidth=3D"" x-sas-use=
+imageheight=3D"" align=3D"bottom" height=3D"156" width=3D"151"></h2>
+
+<h2>Continuation of the idea:</h2>
+
+<h2>=A0</h2>
+
+<h2>If we "peel off" a leaf node in an acyclic graph, then we are
+always left with an acyclic graph.</h2>
+
+<h2>=A0</h2>
+
+<blockquote><h2>If we keep peeling off leaf nodes, one of two things
+will happen:</h2>
+
+<h2>=A0</h2>
+
+<h2>We will eventually peel off all nodes: The graph is acyclic.
+</h2></blockquote>
+
+<h2>=A0</h2>
+
+<h2>OR</h2>
+
+<h2>=A0</h2>
+
+<blockquote><h2>We will get to a point where there is no leaf, yet
+the graph is not empty: The graph is cyclic.</h2></blockquote>
+
+<p>=A0</p>
+
+<p></p><hr><p></p>
+
+<h2>An informal statement of the algorithm is as follows:</h2>
+
+<h2>=A0</h2>
+
+<h2>To test a graph for being acyclic:</h2>
+
+<h2>=A0</h2>
+
+<blockquote><h2>1. If the graph has no nodes, stop. The graph is
+acyclic.</h2>
+
+<h2>=A0</h2>
+
+<h2>2. If the graph has no leaf, stop. The graph is cyclic.</h2>
+
+<h2>=A0</h2>
+
+<h2>3. Choose a leaf of the graph. Remove this leaf and all arcs
+going into the leaf to get a new graph.</h2>
+
+<h2>=A0</h2>
+
+<h2>4. Go to 1.</h2></blockquote>
+
+<p></p><hr><p></p>
+
+<h2>The <i><a href=3D"#partial_correctness">partial correctness</a></i>
+of the algorithm is based on the ideas which led to it.</h2>
+
+<h2>=A0</h2>
+
+<h2>We can see that this algorithm must <i>terminate</i> as follows:
+</h2>
+
+<h2>=A0</h2>
+
+<blockquote><h2>Each time we go from 4 to 1, we do so with a graph
+which has one fewer node.</h2>
+
+<h2>Thus, in a number of steps at most equal to the number of nodes
+in the original graph, the algorithm must terminate.</h2>
+</blockquote>
+
+<h2>=A0</h2>
+
+<h2><i>=A0</i></h2>
+
+<h2><i>=A0</i></h2>
+
+<h2><i>Partial correctness<a name=3D"partial_correctness"></a></i> is a
+technical term: It means that if the algorithm terminates, it does so
+with the correct answer.</h2>
+
+<p></p><hr><p></p>
+
+<h2>How can we represent this algorithm in terms of information
+structures?</h2>
+
+<h2>=A0</h2>
+
+<h2>Let's choose the list-of-arcs representation for the graph for
+simplicity.</h2>
+
+<h2>=A0</h2>
+
+<h2>Recall that for the following graph</h2>
+
+<h2 align=3D"CENTER"><img src=3D"http://www.cs.hmc.edu/%7Ekeller/courses/cs=
+60/s98/examples/acyclic/image%20350.gif" x-sas-useimagewidth=3D"" x-sas-use=
+imageheight=3D"" align=3D"bottom" height=3D"156" width=3D"156"></h2>
+
+<h2>the representation would be:</h2>
+
+<h2>=A0</h2>
+
+<h2 align=3D"CENTER">[ [1, 2], [2, 3], [2, 4], [4, 5], [6, 3], [4, 6],
+[5, 6] ]</h2>
+
+<h2><hr></h2>
+
+<h2>First we have to find whether there is a leaf. By definition, a
+leaf is a node with no arcs leaving it.</h2>
+
+<h2><font size=3D"5">=A0</font></h2>
+
+<h2><font size=3D"5">The anonymous function</font></h2>
+
+<h2><tt>=A0</tt></h2>
+
+<blockquote><h2><tt>(Pair) =3D&gt;
+<a href=3D"http://www.cs.hmc.edu/%7Ekeller/rex/index.html#first">first</a>(=
+Pair)
+=3D=3D Node</tt></h2></blockquote>
+
+<h2>=A0</h2>
+
+<h2>returns 1 for any <tt>Pair</tt> having <tt>Node</tt> as its first
+element.</h2>
+
+<h2><font size=3D"5">The reading of this expression is "the function
+which, with argument Pair, returns the result of first(Pair) =3D=3D Node.
+=3D=3D is the equality test.</font></h2>
+
+<h2><hr></h2>
+
+<h2>We embed this anonymous function in a call of the rex function
+<tt>find</tt>, to give a function
+<tt><a href=3D"#is_leaf2">is_leaf</a></tt> which will determine whether
+<tt>Node</tt> is a leaf:</h2>
+
+<h2><tt>=A0</tt></h2>
+
+<h3><tt>is_leaf<a name=3D"is_leaf2"></a>(Node, Graph) =3D </tt></h3>
+
+<h3><tt>=A0</tt></h3>
+
+<blockquote><h3><tt><a href=3D"http://www.cs.hmc.edu/%7Ekeller/rex/index.ht=
+ml#no">no</a>((Pair)
+=3D&gt; first(Pair) =3D=3D Node, Graph);</tt></h3></blockquote>
+
+<h2>=A0</h2>
+
+<h2>Here <tt>Graph</tt> is our list of arcs. If the call to
+<tt>no</tt> returns 1 if, and only if, there is no arc with
+<tt>Node</tt> as its first element.<hr></h2>
+
+<h2>Now we have a leaf test. So we next need to use it.</h2>
+
+<h2>=A0</h2>
+
+<h2>Let's assume that we have a list of the nodes by themselves.
+</h2>
+
+<h2>We can test whether any of these is a leaf, and if so, return the
+identity of the leaf, by:</h2>
+
+<h2><tt>=A0</tt></h2>
+
+<h3><tt>find_leaf<a name=3D"find_leaf"></a>(Graph) =3D </tt></h3>
+
+<blockquote><h3><tt>=A0</tt></h3></blockquote>
+
+<h3><tt><a href=3D"http://www.cs.hmc.edu/%7Ekeller/rex/index.html#find">fin=
+d</a>((Node)
+=3D&gt; <a href=3D"#is_leaf2">is_leaf</a>(Node, Graph),
+nodes(Graph));</tt></h3>
+
+<h2>=A0</h2>
+
+<h2>If <tt><a href=3D"#find_leaf">find_leaf</a></tt> returns [ ], there
+is no leaf. If it returns a non-empty list, then the <i>first</i>
+element in that list is a leaf.</h2>
+
+<h2><hr></h2>
+
+<h2>We can also create one more descriptive function:</h2>
+
+<h2><tt>=A0</tt></h2>
+
+<blockquote><h3><tt>no_leaf<a name=3D"no_leaf"></a>(Graph) =3D
+<a href=3D"#find_leaf">find_leaf</a>(Graph) =3D=3D [ ];</tt></h3>
+</blockquote>
+
+<h3><hr></h3>
+
+<h2>How to get the list of nodes:</h2>
+
+<h2>=A0</h2>
+
+<h2>Think of the list of pairs as a (very bushy) tree.</h2>
+
+<h2>=A0</h2>
+
+<h2>Example:</h2>
+
+<h2>=A0</h2>
+
+<h2>For the list</h2>
+
+<h2>=A0</h2>
+
+<h2>[ [1, 2], [2, 3], [2, 4], [4, 5], [6, 3], [4, 6], [5, 6] ]</h2>
+
+<h2>=A0</h2>
+
+<h2>the bushy tree is:</h2>
+
+<h2 align=3D"CENTER"><img src=3D"http://www.cs.hmc.edu/%7Ekeller/courses/cs=
+60/s98/examples/acyclic/image%20623.gif" x-sas-useimagewidth=3D"" x-sas-use=
+imageheight=3D"" align=3D"bottom" height=3D"105" width=3D"400"></h2>
+
+<h2>=A0</h2>
+
+<h2>The rex function <tt>leaves</tt> acting on this tree will return
+a list of all nodes, possibly with duplicates. By applying
+<tt>remove_duplicates</tt> to this list, we will get a list of the
+nodes:</h2>
+
+<h2><tt>=A0</tt></h2>
+
+<h3><tt>nodes<a name=3D"nodes"></a>(Graph) =3D</tt></h3>
+
+<blockquote><h3><tt><a href=3D"http://www.cs.hmc.edu/%7Ekeller/rex/index.ht=
+ml#remove_duplicates">remove_duplicates</a>(<a href=3D"http://www.cs.hmc.ed=
+u/%7Ekeller/rex/index.html#leaves">leaves</a>(Graph));</tt>
+</h3></blockquote>
+
+<h2>=A0</h2>
+
+<h2>Caution: The "leaves" of this tree aren't only the leaf nodes of
+the original graph; they include all the nodes, as desired.</h2>
+
+<h2><hr></h2>
+
+<h2>Now we are ready to cast the steps of the algorithm in terms of
+functions.</h2>
+
+<h2>=A0</h2>
+
+<h2>To start, let <tt>Graph</tt> be the original graph (as a list of
+pairs).</h2>
+
+<h2>=A0</h2>
+
+<blockquote><h2>1. If the <tt>Graph</tt> has no nodes, stop. The
+original graph is acyclic.</h2></blockquote>
+
+<h2>=A0</h2>
+
+<h2>We can test this by checking whether Graph is [ ]. If it has no
+nodes, it has no arcs either, and vice-versa.</h2>
+
+<h2>=A0</h2>
+
+<blockquote><h2>2. If the graph has no leaf, stop. The graph is
+cyclic.</h2></blockquote>
+
+<h2>=A0</h2>
+
+<h2>We can test this by computing
+<tt><a href=3D"#no_leaf">no_leaf</a>(Graph)</tt>. If the result is [ ],
+the graph has no leaf.</h2>
+
+<h2>=A0</h2>
+
+<blockquote><h2>3. Choose a leaf of <tt>Graph</tt>. Remove this leaf
+and all arcs going into the leaf to get a new graph.</h2>
+</blockquote>
+
+<h2>=A0</h2>
+
+<h2>We need one more function:<tt>
+<a href=3D"#remove_leaf2">remove_leaf</a></tt> to remove a leaf from a
+graph.</h2>
+
+<h2>=A0</h2>
+
+<blockquote><h2>4. Go to 1.</h2></blockquote>
+
+<p></p><hr><p></p>
+
+<h2>The spirit of functional programming is that we don't actually
+remove something from a list; instead we build a new list without the
+thing to be removed in it.</h2>
+
+<h2><hr></h2>
+
+<h2>Suppose <tt>Leaf</tt> is the leaf to be removed. Then we need
+only drop all arcs with <tt>Leaf</tt> as its second element (it will
+never be a first element; why?):</h2>
+
+<h2><tt>=A0</tt></h2>
+
+<h3><tt>remove_leaf<a name=3D"remove_leaf2"></a>(Leaf, Graph) =3D</tt>
+</h3>
+
+<blockquote><h3><tt><a href=3D"http://www.cs.hmc.edu/%7Ekeller/rex/index.ht=
+ml#drop">drop</a>((Pair)
+=3D&gt; second(Pair) =3D=3D Leaf, Graph);</tt></h3></blockquote>
+
+<h2>=A0</h2>
+
+<h2>As usual,</h2>
+
+<h2><tt>=A0</tt></h2>
+
+<blockquote><h3><tt>(Pair) =3D&gt;
+<a href=3D"http://www.cs.hmc.edu/%7Ekeller/rex/index.html#second">second</a=
+>(Pair)
+=3D=3D Leaf</tt></h3></blockquote>
+
+<h2>=A0</h2>
+
+<h2>is an anonymous function which is 1 for a pair with second
+element being a leaf.</h2>
+
+<h2>=A0</h2>
+
+<h2>We can simplify this function, provided we only call it knowing
+there is a leaf:</h2>
+
+<h2><tt>=A0</tt></h2>
+
+<h3><tt>remove_leaf<a name=3D"remove_leaf1"></a>(Graph) =3D </tt></h3>
+
+<h3><tt>=A0</tt></h3>
+
+<blockquote><h3><tt><a href=3D"#remove_leaf2">remove_leaf</a>(first(find_le=
+af(Graph)),
+Graph);</tt></h3></blockquote>
+
+<h2><tt><hr></tt></h2>
+
+<h2>Finally, we need to package the calls to these functions in such
+a way that iteration is achieved. This is simple, if we use
+<i>conditional expressions</i>:</h2>
+
+<h2>The form</h2>
+
+<blockquote><h3><tt>P ? T : F</tt></h3></blockquote>
+
+<h2>evaluates to the value of <tt>T</tt> if <tt>P</tt> is true and to
+the value of <tt>F</tt> if <tt>P</tt> is false.</h2>
+
+<p></p><hr><p></p>
+
+<h2>The overall function for testing acyclicity uses two conditional
+expressions:</h2>
+
+<blockquote><p><tt>acyclic(Graph) =3D</tt></p>
+
+<p><tt>Graph =3D=3D [ ] ? 1 // empty graph is acyclic</tt></p>
+
+<p><tt>: no_leaf(Graph) ? 0 // graph with no leaf is cyclic</tt></p>
+
+<p><tt>: acyclic(remove_leaf(Graph)); // try reduced graph</tt></p>
+</blockquote>
+
+<h2><hr>A complete file acyclic.rex with comments and two test cases
+maybe found as <a href=3D"http://www.cs.hmc.edu/%7Ekeller/courses/cs60/s98/=
+examples/acyclic/acyclic.rex">acylic.rex</a>. This may be run
+in rex by</h2>
+
+<blockquote><pre><font size=3D"4">rex acyclic.rex</font></pre>
+</blockquote>
+
+<h2><font size=3D"5">Once the file is loaded, you may try any of the
+examples individually. The two graphs used as examples here are
+examples graph1 and graph2 in the file.</font></h2>
+
+<p></p><hr><p></p>
+
+<h2>Disclaimer: We make no statement that this method is the most
+efficient. Other more efficient ways to achieve the same result are
+known. This example served to illustrate several functional
+programming ideas and the progression from an informal algorithm to a
+working functional program.</h2>
+
+<p>=A0</p>
+
+<h2><hr></h2>
+
+<h2>=A0</h2>
+
+<h2>=A0</h2>
+
+<h2>=A0</h2>
+
+<h2>=A0</h2>
+
+<h2>=A0</h2>
+
+<h2>=A0</h2>
+
+<h2>=A0</h2>
+
+<h2>=A0</h2>
+
+<p>=A0</p>
+
+
+</x-sas-window></body></html>
+------=_NextPart_000_0000_C7C0FE5F.EBB0D30A
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.cs.hmc.edu/%7Ekeller/courses/cs60/s98/examples/acyclic/image%20500.gif
+
+R0lGODlhAAEAAfcAAP//////zP//mf//Zv//M///AP/M///MzP/Mmf/MZv/MM//MAP+Z//+ZzP+Z
+mf+ZZv+ZM/+ZAP9m//9mzP9mmf9mZv9mM/9mAP8z//8zzP8zmf8zZv8zM/8zAP8A//8AzP8Amf8A
+Zv8AM/8AAMz//8z/zMz/mcz/Zsz/M8z/AMzM/8zMzMzMmczMZszMM8zMAMyZ/8yZzMyZmcyZZsyZ
+M8yZAMxm/8xmzMxmmcxmZsxmM8xmAMwz/8wzzMwzmcwzZswzM8wzAMwA/8wAzMwAmcwAZswAM8wA
+AJn//5n/zJn/mZn/Zpn/M5n/AJnM/5nMzJnMmZnMZpnMM5nMAJmZ/5mZzJmZmZmZZpmZM5mZAJlm
+/5lmzJlmmZlmZplmM5lmAJkz/5kzzJkzmZkzZpkzM5kzAJkA/5kAzJkAmZkAZpkAM5kAAGb//2b/
+zGb/mWb/Zmb/M2b/AGbM/2bMzGbMmWbMZmbMM2bMAGaZ/2aZzGaZmWaZZmaZM2aZAGZm/2ZmzGZm
+mWZmZmZmM2ZmAGYz/2YzzGYzmWYzZmYzM2YzAGYA/2YAzGYAmWYAZmYAM2YAADP//zP/zDP/mTP/
+ZjP/MzP/ADPM/zPMzDPMmTPMZjPMMzPMADOZ/zOZzDOZmTOZZjOZMzOZADNm/zNmzDNmmTNmZjNm
+MzNmADMz/zMzzDMzmTMzZjMzMzMzADMA/zMAzDMAmTMAZjMAMzMAAAD//wD/zAD/mQD/ZgD/MwD/
+AADM/wDMzADMmQDMZgDMMwDMAACZ/wCZzACZmQCZZgCZMwCZAABm/wBmzABmmQBmZgBmMwBmAAAz
+/wAzzAAzmQAzZgAzMwAzAAAA/wAAzAAAmQAAZgAAM+4AAN0AALsAAKoAAIgAAHcAAFUAAEQAACIA
+ABEAAADuAADdAAC7AACqAACIAAB3AABVAABEAAAiAAARAAAA7gAA3QAAuwAAqgAAiAAAdwAAVQAA
+RAAAIgAAEe7u7t3d3bu7u6qqqoiIiHd3d1VVVURERCIiIhEREQAAACH5BAACAAAALAAAAAAAAQAB
+QAj/AAEIHEiQ4L+DCA8WXMiwocOHECNKnEixosWLGDNqrPhv48KOHkOKHEmypMmTD0FOVEhRJcqX
+MGPKnGnRZUmbABLS3Mmzp0+PLDni3Knzp9GjSJMqrYmwZ1CmS6NKnZoxYdOcEVk+TUm1q9evDId+
+3CpRLNizaHkGJVvVbNq3cIWOdBu3rt2sdE3mvcu369Wpe/sKlskWbuDBiOUm5rrYaGG8Da0KfNy4
+bGWnENcGPny5ZWe1kCcf5vzZIenSIikrRg0VK+u6RV9ntqpatmHZpxnbfpsbbV7Nnnfzvtwbb3Hh
+mImLvlibeXPkqe8el/68bO/qhL9Oh56T7O/T20OG/8c4nrvl0N1XRi0f1rz1vzfHYwdNuzZt6vDd
+a7+pV7L+/wYZN9Bz7AFo4EcvFXjggpGBpyCDiM034IMQQrhXbFlVqOFGnGFH4YbuSdigePmBaCJx
+JfpW34ksTqhaYex92OJupFUn44ysUXgjjoLZ6CCP/4moHpAACknSjkT+ZGRySca1pF9NprTiSU/y
+heRnMYpW35W+RTlaipGZyGVpOm44JnISVomaf1EeeR9u153Zopw0fblZm1Qqt1qGeOrVmZrpCdgn
+cxFGCCiHU+6XFp28aYWha3OtJ+mgAbbGZ1JcMooimGUCBlSltrHp149UCemopgY9SulR3014XneJ
+rv+KpnWuviprhYAeeuuuvIJFIKq9OhlpsLiudCexBnbYIbJB7nkps+Z92ZKu0MKWp7HUVrvUdjKq
+qm2jYoG5rbjfEustq5sBW65z2cq37qYgiQqplMG9uymCs6U6pL2v2ckRv6HO9mZmANN4bcGVPcYt
+woYCBWO2DNepoLoRkzgTxRU7S1TGZ0FMHsfjdgmyWhjXO3J/iZW8q8eYnuyccCr3mC6tYzXbprup
+ylvkzYLaKqaXTB1rJp6kPmvhoBd6CGLMfU28NK8Laxgr1A+znDDT+g1M48wRN4W1n9F13e+/RgP8
+tUYz2yi2nlJOHebaCWv8dsVnfwx2zgXXbTeHaFv/faDe+xbEqd+CEz5202SSOxfXk96WrMLhDtuy
+r0BOSZfb+CKlMuCOC6y05kpxbler+pbtk5yi45fuaFLtmHroOvscdusovd6f4jBF7dVxsQ/WO2xV
+N2rsWFqvd67LA0pO1PHIV/XehcSbxnzzdUKGe4CYU18qesuZrv1w75n8/egHj9+jeOavGXz67NO9
+fvt/Fg3/+Z/OT93i9gt7d/6Uhx84/1DKl9oAuDu5mYaAARye+BAYOgPOjYHbcmB7IEi72mnJds1z
+WtswSDf+kOd6FNxb/dxkuPaZKlMgDGHNaDauEiJvS8BLoQoXMz1MvW+GxtFUmjgYrBqOEG04JNEA
+/8MiHx7aS1VILF8QE5So7/hwXkusneXyVSuCRVFJL5PdFbMzLdZtETT+W+AXc5fDJxoxgwka4+mU
+qMaYKCRLbXQjTnAWR5RRMYt1xB8e75hHh4UNhn1MDRwDSaUHnXFkfjtk166kSLOhjpCWwiIkuceq
+SUpve5bsXgEn6UIg9rGTPxwjKGe3xVF6cImmZCMEU0lGCrKSiwR8ZfX4J0smUWpwyxpRtG4pP+K5
+pJaT41koLyjDw3mpiC4qXtaIpkqpCVN6vxMcixrpmEge8ETUXCO2vDi0Z2LrfwzKpiQlCKpiMdNz
+KRQnKb15SnMirZnJutUg3SkrOobziUQ64dKi2f+nX02zmP1sojr3xzB+qi9cwLSQMhO3R35lj22e
+LGiokCnRHMGzXAOFIh91Y7Y1bROcR8QSzYaYtz+V0YcZJR9EWei9d2WzRtxEmDg71cGVzg6gUDPp
+kdrmUpGus2fIUidOA+WwhNqUflXcaCFTCsZCoXOoi2NqKxHXGKj2DaGbo2q/ILbDxnWOO7hzi+5A
+B7572gSJFK2kyP45MA2qdZM4gqETURrMCt6SklpsagTr+TwQokpdUh0nOSfTwLeujJLNARadAkvW
+pwqtsbOsZ2xoWlc33syMF9XmVMWETysqz6vtLJJBf+q8BO4UrJ2VY1s65keNXi21NlTgoq5q1LZz
+WLVjD/XVDXM2Ws311n17/O3FYHuysTpGuOzL1Y2Qi0C3lq6MmXRt4Ub7S/gwN4+Xy028FhpdjjaI
+u5lLandbKt7EjneYKxTvA89LqJM+lr3tzSx8yVva+fLttPZFrwjz29qG8lePeP0vE8Er4AIbmDUB
+AQA7
+------=_NextPart_000_0000_C7C0FE5F.EBB0D30A
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.cs.hmc.edu/%7Ekeller/courses/cs60/s98/examples/acyclic/image%20749.gif
+
+R0lGODlhAAEAAfcAAP//////zP//mf//Zv//M///AP/M///MzP/Mmf/MZv/MM//MAP+Z//+ZzP+Z
+mf+ZZv+ZM/+ZAP9m//9mzP9mmf9mZv9mM/9mAP8z//8zzP8zmf8zZv8zM/8zAP8A//8AzP8Amf8A
+Zv8AM/8AAMz//8z/zMz/mcz/Zsz/M8z/AMzM/8zMzMzMmczMZszMM8zMAMyZ/8yZzMyZmcyZZsyZ
+M8yZAMxm/8xmzMxmmcxmZsxmM8xmAMwz/8wzzMwzmcwzZswzM8wzAMwA/8wAzMwAmcwAZswAM8wA
+AJn//5n/zJn/mZn/Zpn/M5n/AJnM/5nMzJnMmZnMZpnMM5nMAJmZ/5mZzJmZmZmZZpmZM5mZAJlm
+/5lmzJlmmZlmZplmM5lmAJkz/5kzzJkzmZkzZpkzM5kzAJkA/5kAzJkAmZkAZpkAM5kAAGb//2b/
+zGb/mWb/Zmb/M2b/AGbM/2bMzGbMmWbMZmbMM2bMAGaZ/2aZzGaZmWaZZmaZM2aZAGZm/2ZmzGZm
+mWZmZmZmM2ZmAGYz/2YzzGYzmWYzZmYzM2YzAGYA/2YAzGYAmWYAZmYAM2YAADP//zP/zDP/mTP/
+ZjP/MzP/ADPM/zPMzDPMmTPMZjPMMzPMADOZ/zOZzDOZmTOZZjOZMzOZADNm/zNmzDNmmTNmZjNm
+MzNmADMz/zMzzDMzmTMzZjMzMzMzADMA/zMAzDMAmTMAZjMAMzMAAAD//wD/zAD/mQD/ZgD/MwD/
+AADM/wDMzADMmQDMZgDMMwDMAACZ/wCZzACZmQCZZgCZMwCZAABm/wBmzABmmQBmZgBmMwBmAAAz
+/wAzzAAzmQAzZgAzMwAzAAAA/wAAzAAAmQAAZgAAM+4AAN0AALsAAKoAAIgAAHcAAFUAAEQAACIA
+ABEAAADuAADdAAC7AACqAACIAAB3AABVAABEAAAiAAARAAAA7gAA3QAAuwAAqgAAiAAAdwAAVQAA
+RAAAIgAAEe7u7t3d3bu7u6qqqoiIiHd3d1VVVURERCIiIhEREQAAACH5BAACAAAALAAAAAAAAQAB
+QAj/AAEIHEiQ4L+DCA8WXMiwocOHECNKnEixosWLGDNqrPhv48KOHkOKHEmypMmTD0FOVEhRJcqX
+MGPKnGnRZUmbABLS3Mmzp0+PLDni3Knzp9GjSJMqrYmwZ1CmS6NKnZoxYdOcEVk+TUm1q9evDId+
+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
+------=_NextPart_000_0000_C7C0FE5F.EBB0D30A
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.cs.hmc.edu/%7Ekeller/courses/cs60/s98/examples/acyclic/image%20507.gif
+
+R0lGODlhnACcAPcAAP//////zP//mf//Zv//M///AP/M///MzP/Mmf/MZv/MM//MAP+Z//+ZzP+Z
+mf+ZZv+ZM/+ZAP9m//9mzP9mmf9mZv9mM/9mAP8z//8zzP8zmf8zZv8zM/8zAP8A//8AzP8Amf8A
+Zv8AM/8AAMz//8z/zMz/mcz/Zsz/M8z/AMzM/8zMzMzMmczMZszMM8zMAMyZ/8yZzMyZmcyZZsyZ
+M8yZAMxm/8xmzMxmmcxmZsxmM8xmAMwz/8wzzMwzmcwzZswzM8wzAMwA/8wAzMwAmcwAZswAM8wA
+AJn//5n/zJn/mZn/Zpn/M5n/AJnM/5nMzJnMmZnMZpnMM5nMAJmZ/5mZzJmZmZmZZpmZM5mZAJlm
+/5lmzJlmmZlmZplmM5lmAJkz/5kzzJkzmZkzZpkzM5kzAJkA/5kAzJkAmZkAZpkAM5kAAGb//2b/
+zGb/mWb/Zmb/M2b/AGbM/2bMzGbMmWbMZmbMM2bMAGaZ/2aZzGaZmWaZZmaZM2aZAGZm/2ZmzGZm
+mWZmZmZmM2ZmAGYz/2YzzGYzmWYzZmYzM2YzAGYA/2YAzGYAmWYAZmYAM2YAADP//zP/zDP/mTP/
+ZjP/MzP/ADPM/zPMzDPMmTPMZjPMMzPMADOZ/zOZzDOZmTOZZjOZMzOZADNm/zNmzDNmmTNmZjNm
+MzNmADMz/zMzzDMzmTMzZjMzMzMzADMA/zMAzDMAmTMAZjMAMzMAAAD//wD/zAD/mQD/ZgD/MwD/
+AADM/wDMzADMmQDMZgDMMwDMAACZ/wCZzACZmQCZZgCZMwCZAABm/wBmzABmmQBmZgBmMwBmAAAz
+/wAzzAAzmQAzZgAzMwAzAAAA/wAAzAAAmQAAZgAAM+4AAN0AALsAAKoAAIgAAHcAAFUAAEQAACIA
+ABEAAADuAADdAAC7AACqAACIAAB3AABVAABEAAAiAAARAAAA7gAA3QAAuwAAqgAAiAAAdwAAVQAA
+RAAAIgAAEe7u7t3d3bu7u6qqqoiIiHd3d1VVVURERCIiIhEREQAAACH5BAACAAAALAAAAACcAJwA
+QAj/AAEIHCjwn8GDBBMqXMiwocOHECNKnEgR4j+HFxlmrMixo8ePICkaFLlx4cGSIVOqXMmy5cqT
+L1EmHOmyps2bE2UW1DmQJ86fQD/SLCjRZ9CjQYdyNIq0aUulN5k6ndoQKtWeV1XqRGgyq0epXosu
+DSuSrFOrZnueBJs2KlmfaIm2Pco2al0AULnOtXk3Zd+feosajRvyr8W9hTFWrWnYcFKYWsU+Ldtx
+LeLLBHkGnom581Ormz17vutYtOjBi02rrgya8NfQq2NfhqxXJmy5snN3rVhaN1LXnH1jBs5b+FTi
+fI3vxIiSK/Krvd8+1Bw7+ly21ulCVk45LWnulcOi/9YIPnzWjKFvR1SfO7ti3ZZt33af2W95y7hz
+2sWfeTtO/uXpp5B/wbEX4Fuk0XcgScwt2F5qAzpo2ni7SdjZX+gZaCF0kvGm4YYSEvgfgCA2JWJ9
+wXVYonjORZhfiit65+J0Me713HI1QjdYawrmOB2GPh6XXY9BqkXki0WyZmKSHoq34FpMyYfYkUvq
+B+WEykVJXnXcbYVVhacFeCNeVLpUplfpjWmWml2eeN6OSZ4pIJgo5ijnYS7CVeSd75HE53XSrbce
+m1hS9edMhGpE4mR0TTiUUt8xypiYA7KnIH2H/jajnpKaV52biDKYnEUXZWoSqGbyOGKDH/qZaIm2
+ff8J46OoMilUhdTZymFxuqKpYq/A2qlqsE4KSqyQoh7baKW5KgsUhTM66xaE0Uo7KbWhWjttd0aa
+6mOkg3oLomuvdqutq+UKlu65gLXqoXziHugundiyG66UaiVr72u0pdjsvi/1WS3AIHlJI8GRIape
+vLYCibBfpXL7cJOVNjgxxTReebG+eG68lGMM15huyOO6R7KD6w58ccr1IsxyxwS//Ou5Mkssbc2e
+KovzrfcNmy2OU4KHXbc7s3RywQk+2OWm9IaZZVWcqnZ0wbhuKbXQikbtNNa8FkrpnKMVjSacn07N
+WHzwxSk2v8wGWetZM6949Jhr2yjjqVaLHGiEWsesGPJWbpqdVLF5w6i3r7zO+zTice8kuNEIkp1T
+3VUayqzizD0OtqYslpYmkYdqTmashrdM9bOyaUw3poAJB2npKvNsprxMF54Y5E8KDLvst8uLlqWz
+n+7bokjCjPtYpxFv/MHXdmy28hBb/B+plF9ePdRva+Uz9EhjPm7jH2ffq8/9qXv9hqSnBqXoXPtr
+u8dxb/Qv/JvXT7+xNt8PftP6Ty59/xATHwAH+JGAAAA7
+------=_NextPart_000_0000_C7C0FE5F.EBB0D30A
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.cs.hmc.edu/%7Ekeller/courses/cs60/s98/examples/acyclic/image%20121.gif
+
+R0lGODlhlwCcAPcAAP//////zP//mf//Zv//M///AP/M///MzP/Mmf/MZv/MM//MAP+Z//+ZzP+Z
+mf+ZZv+ZM/+ZAP9m//9mzP9mmf9mZv9mM/9mAP8z//8zzP8zmf8zZv8zM/8zAP8A//8AzP8Amf8A
+Zv8AM/8AAMz//8z/zMz/mcz/Zsz/M8z/AMzM/8zMzMzMmczMZszMM8zMAMyZ/8yZzMyZmcyZZsyZ
+M8yZAMxm/8xmzMxmmcxmZsxmM8xmAMwz/8wzzMwzmcwzZswzM8wzAMwA/8wAzMwAmcwAZswAM8wA
+AJn//5n/zJn/mZn/Zpn/M5n/AJnM/5nMzJnMmZnMZpnMM5nMAJmZ/5mZzJmZmZmZZpmZM5mZAJlm
+/5lmzJlmmZlmZplmM5lmAJkz/5kzzJkzmZkzZpkzM5kzAJkA/5kAzJkAmZkAZpkAM5kAAGb//2b/
+zGb/mWb/Zmb/M2b/AGbM/2bMzGbMmWbMZmbMM2bMAGaZ/2aZzGaZmWaZZmaZM2aZAGZm/2ZmzGZm
+mWZmZmZmM2ZmAGYz/2YzzGYzmWYzZmYzM2YzAGYA/2YAzGYAmWYAZmYAM2YAADP//zP/zDP/mTP/
+ZjP/MzP/ADPM/zPMzDPMmTPMZjPMMzPMADOZ/zOZzDOZmTOZZjOZMzOZADNm/zNmzDNmmTNmZjNm
+MzNmADMz/zMzzDMzmTMzZjMzMzMzADMA/zMAzDMAmTMAZjMAMzMAAAD//wD/zAD/mQD/ZgD/MwD/
+AADM/wDMzADMmQDMZgDMMwDMAACZ/wCZzACZmQCZZgCZMwCZAABm/wBmzABmmQBmZgBmMwBmAAAz
+/wAzzAAzmQAzZgAzMwAzAAAA/wAAzAAAmQAAZgAAM+4AAN0AALsAAKoAAIgAAHcAAFUAAEQAACIA
+ABEAAADuAADdAAC7AACqAACIAAB3AABVAABEAAAiAAARAAAA7gAA3QAAuwAAqgAAiAAAdwAAVQAA
+RAAAIgAAEe7u7t3d3bu7u6qqqoiIiHd3d1VVVURERCIiIhEREQAAACH5BAACAAAALAAAAACXAJwA
+QAj/AAEIHAjgn8GD/wgqXMiwocOHECNKnEixIsOEDTFetMixo8ePICcapDjSIcKQKFOqXMkS5UGV
+GjO2nEmzZsSYBEtutMmzp8uYOGX6HEpUoE6OQYsqXXl0ZtKlUDM+VTo1qsiFL3datVh1q8SuWL2S
+FDu0KdmCCM2e9QnW5lO1RteytQr3Is6sclm2Tbm3bF2sVf9+7Hsz72CIb1sSjms4rcurTMd6dGw4
+71u4iytrNplU8OazfTN//jy19OjTSDuLfngStevKrdFiDIpX4erXaxffxs02NO/Gu8P+LupZ8XDG
+JgEnLA41eNTAQk87F9t2Ok/KxytaD+k7O1K6yaN7/5dMNLZa5na3P3f7O63q88ZBqm/eOvN8o+61
+9sQ+/mv6xPj1pxl66AkYGWsGvgagcAkOGJ5+DVrG1UCxRUhWdZMVaKF3Fdbk3n0bIlYbg8gVFiJ1
+L9FGoXgneqUiYi3mFhqIMYrImmo1+vVdjjo+xqNTINJooYaH/UiSkCZymN+DFCK5Y3uSLQnbcdBB
+uJmT7Nm2opVTKnkkalgSh6NrRFI54lZdhZkbdSxuWaOaVs7GZItwkvhVmVSi6d9NeDooZp2y8cVf
+fFmSVpJOhKl3H6BO/TenfDAl2JmbWh7YEaMZngmYdkGS91yHNJ2pKV8wFgTkqEaWiNyLATaJaqqX
+av81KaxL6UYreEneqmuM52G6q6pt/nrdjMKWpVywxer1KKXJEmpnTs16uCx+vvJo67HRcuepiH0W
+m+ZP3d764X7hZuvhqxnaZS6ffWK4LqdjovXlu5medBezwNJbJLLVWssltPr6mBOo+Qb8JGQGD7bc
+tgmLNOu0DUt1p5QR28hwxRYfjLHEkG6sbqQe4yswxuVCvG7JpQaM8p7vrqyduS5rvGvM+5r5sW1A
+9fsvmSzLRrOlvBGo88t5Amzqs6QVvSmyjWXH6oKjDT1ZeiavyeGE0gnY3ZXo4vYtmD+7mJ/UPb8Z
+9qXx8no21im/ieK8vLK5NNIbVjupaW7jOvCoZO+hpzfdR+fo67Vdj2f3xdQO+WngTEvV99RUNTWu
+oI8jPJfYoolKM5aVJ250wYDHWijYKSa6XaftacRq42yDbLisrBM98usI7ix6x1pfhrfrt3tNsH2N
+ymwZwW3nCnTZaBIvX2BI7sXooH8Wzl3azSvvb2HTQe8tbWYJLX2zqzM4ecifu/kw+cWvajv6IhvP
+fuyVvu9+1fLHD3/9/32P//4MBQQAOw==
+------=_NextPart_000_0000_C7C0FE5F.EBB0D30A
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.cs.hmc.edu/%7Ekeller/courses/cs60/s98/examples/acyclic/image%20350.gif
+
+R0lGODlhnACcAPcAAP//////zP//mf//Zv//M///AP/M///MzP/Mmf/MZv/MM//MAP+Z//+ZzP+Z
+mf+ZZv+ZM/+ZAP9m//9mzP9mmf9mZv9mM/9mAP8z//8zzP8zmf8zZv8zM/8zAP8A//8AzP8Amf8A
+Zv8AM/8AAMz//8z/zMz/mcz/Zsz/M8z/AMzM/8zMzMzMmczMZszMM8zMAMyZ/8yZzMyZmcyZZsyZ
+M8yZAMxm/8xmzMxmmcxmZsxmM8xmAMwz/8wzzMwzmcwzZswzM8wzAMwA/8wAzMwAmcwAZswAM8wA
+AJn//5n/zJn/mZn/Zpn/M5n/AJnM/5nMzJnMmZnMZpnMM5nMAJmZ/5mZzJmZmZmZZpmZM5mZAJlm
+/5lmzJlmmZlmZplmM5lmAJkz/5kzzJkzmZkzZpkzM5kzAJkA/5kAzJkAmZkAZpkAM5kAAGb//2b/
+zGb/mWb/Zmb/M2b/AGbM/2bMzGbMmWbMZmbMM2bMAGaZ/2aZzGaZmWaZZmaZM2aZAGZm/2ZmzGZm
+mWZmZmZmM2ZmAGYz/2YzzGYzmWYzZmYzM2YzAGYA/2YAzGYAmWYAZmYAM2YAADP//zP/zDP/mTP/
+ZjP/MzP/ADPM/zPMzDPMmTPMZjPMMzPMADOZ/zOZzDOZmTOZZjOZMzOZADNm/zNmzDNmmTNmZjNm
+MzNmADMz/zMzzDMzmTMzZjMzMzMzADMA/zMAzDMAmTMAZjMAMzMAAAD//wD/zAD/mQD/ZgD/MwD/
+AADM/wDMzADMmQDMZgDMMwDMAACZ/wCZzACZmQCZZgCZMwCZAABm/wBmzABmmQBmZgBmMwBmAAAz
+/wAzzAAzmQAzZgAzMwAzAAAA/wAAzAAAmQAAZgAAM+4AAN0AALsAAKoAAIgAAHcAAFUAAEQAACIA
+ABEAAADuAADdAAC7AACqAACIAAB3AABVAABEAAAiAAARAAAA7gAA3QAAuwAAqgAAiAAAdwAAVQAA
+RAAAIgAAEe7u7t3d3bu7u6qqqoiIiHd3d1VVVURERCIiIhEREQAAACH5BAACAAAALAAAAACcAJwA
+QAj/AAEIHCjwn8GDBBMqXMiwocOHECNKnEgR4j+HFxlmrMixo8ePICkaFLlx4cGSIVOqXMmy5cqT
+L1EmHOmyps2bE2UW1DmQJ86fQD/SLCjRZ9CjQYdyNIq0aUulN5k6ndoQKtWeV1XqRGgyq0epXosu
+DSuSrFOrZnueBJs2KlmfaIm2Pco2al0AULnOtXk3Zd+feosajRvyr8W9hTFWrWnYcFKYWsU+Ldtx
+LeLLBHkGnom581Ormz17vutYtOjBi02rrgya8NfQq2NfhqxXJmy5snN3rVhaN1LXnH1jBs5b+FTi
+fI3vxIiSK/Krvd8+1Bw7+ly21ulCVk45LWnulcOi/9YIPnzWjKFvR1SfO7ti3ZZt33af2W95y7hz
+2sWfeTtO/uXpp5B/wbEX4Fuk0XcgScwt2F5qAzpo2ni7SdjZX+gZaCF0kvGm4YYSEvgfgCA2JWJ9
+wXVYonjORZhfiit65+J0Me713HI1QjdYawrmOB2GPh6XXY9BqkXki0WyZmKSHoq34FpMyYfYkUvq
+B+WEykVJXnXcbYVVhacFeCNeVLpUplfpjWmWml2eeN6OSZ4pIJgo5ijnYS7CVeSd75HE53XSrbce
+m1hS9edMhGpE4mR0TTiUUt8xypiYA7KnIH2H/jajnpKaV52biDKYnEUXZWoSqGbyOGKDH/qZaIm2
+ff8J46OoMilUhdTZymFxuqKpYq/A2qlqsE4KSqyQoh7baKW5KgsUhTM66xaE0Uo7KbWhWjttd0aa
+6mOkg3oLomuvdqutq+UKlu65gLXqoXziHugundiyG66UaiVr72u0pdjsvi/1WS3AIHlJI8GRIape
+vLYCibBfpXL7cJOVNjgxxTReebG+eG68lGMM15huyOO6R7KD6w58ccr1IsxyxwS//Ou5Mkssbc2e
+KovzrfcNmy2OU4KHXbc7s3RywQk+2OWm9IaZZVWcqnZ0wbhuKbXQikbtNNa8FkrpnKMVjSacn07N
+WHzwxSk2v8wGWetZM6949Jhr2yjjqVaLHGiEWsesGPJWbpqdVLF5w6i3r7zO+zTice8kuNEIkp1T
+3VUayqzizD0OtqYslpYmkYdqTmashrdM9bOyaUw3poAJB2npKvNsprxMF54Y5E8KDLvst8uLlqWz
+n+7bokjCjPtYpxFv/MHXdmy28hBb/B+plF9ePdRva+Uz9EhjPm7jH2ffq8/9qXv9hqSnBqXoXPtr
+u8dxb/Qv/JvXT7+xNt8PftP6Ty59/xATHwAH+JGAAAA7
+------=_NextPart_000_0000_C7C0FE5F.EBB0D30A
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.cs.hmc.edu/%7Ekeller/courses/cs60/s98/examples/acyclic/image%20623.gif
+
+R0lGODlhkAFpAPcAAP//////zP//mf//Zv//M///AP/M///MzP/Mmf/MZv/MM//MAP+Z//+ZzP+Z
+mf+ZZv+ZM/+ZAP9m//9mzP9mmf9mZv9mM/9mAP8z//8zzP8zmf8zZv8zM/8zAP8A//8AzP8Amf8A
+Zv8AM/8AAMz//8z/zMz/mcz/Zsz/M8z/AMzM/8zMzMzMmczMZszMM8zMAMyZ/8yZzMyZmcyZZsyZ
+M8yZAMxm/8xmzMxmmcxmZsxmM8xmAMwz/8wzzMwzmcwzZswzM8wzAMwA/8wAzMwAmcwAZswAM8wA
+AJn//5n/zJn/mZn/Zpn/M5n/AJnM/5nMzJnMmZnMZpnMM5nMAJmZ/5mZzJmZmZmZZpmZM5mZAJlm
+/5lmzJlmmZlmZplmM5lmAJkz/5kzzJkzmZkzZpkzM5kzAJkA/5kAzJkAmZkAZpkAM5kAAGb//2b/
+zGb/mWb/Zmb/M2b/AGbM/2bMzGbMmWbMZmbMM2bMAGaZ/2aZzGaZmWaZZmaZM2aZAGZm/2ZmzGZm
+mWZmZmZmM2ZmAGYz/2YzzGYzmWYzZmYzM2YzAGYA/2YAzGYAmWYAZmYAM2YAADP//zP/zDP/mTP/
+ZjP/MzP/ADPM/zPMzDPMmTPMZjPMMzPMADOZ/zOZzDOZmTOZZjOZMzOZADNm/zNmzDNmmTNmZjNm
+MzNmADMz/zMzzDMzmTMzZjMzMzMzADMA/zMAzDMAmTMAZjMAMzMAAAD//wD/zAD/mQD/ZgD/MwD/
+AADM/wDMzADMmQDMZgDMMwDMAACZ/wCZzACZmQCZZgCZMwCZAABm/wBmzABmmQBmZgBmMwBmAAAz
+/wAzzAAzmQAzZgAzMwAzAAAA/wAAzAAAmQAAZgAAM+4AAN0AALsAAKoAAIgAAHcAAFUAAEQAACIA
+ABEAAADuAADdAAC7AACqAACIAAB3AABVAABEAAAiAAARAAAA7gAA3QAAuwAAqgAAiAAAdwAAVQAA
+RAAAIgAAEe7u7t3d3bu7u6qqqoiIiHd3d1VVVURERCIiIhEREQAAACH5BAACAAAALAAAAACQAWkA
+QAj/AAEIHEiwoMGDCBMqXMiwocOHECH+m0gxosWLGDNq3Mixo8ePIEOKHCnyH0OTJFOqXMmypcuX
+MGMirEhwokGUMwva1LmTJ06ZQIMKHUq0qEKaJx/+TNqw50KkJ6EanUq1qlWMTi8utbiVq8asEaVy
+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
+------=_NextPart_000_0000_C7C0FE5F.EBB0D30A--

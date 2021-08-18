@@ -1,0 +1,3079 @@
+From: <Saved by Mozilla 5.0 (Windows)>
+Subject: Bertrand's ballot theorem - Wikipedia, the free encyclopedia
+Date: Sat, 05 Sep 2015 00:27:49 +0600
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----=_NextPart_000_0000_366E3B3A.157F5130"
+X-MAF-Information: Produced By MAF V3.1.0.1-signed
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0000_366E3B3A.157F5130
+Content-Type: text/html;
+	charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://en.wikipedia.org/wiki/Bertrand%27s_ballot_theorem
+
+<!DOCTYPE html><html dir=3D"ltr" class=3D"client-js ve-not-available" lang=
+=3D"en"><head>
+<meta http-equiv=3D"content-type" content=3D"text/html; charset=3DUTF-8">
+<meta charset=3D"UTF-8">
+<title>Bertrand's ballot theorem - Wikipedia, the free encyclopedia</title>
+<script><!--
+
+/* Script removed by snapshot save */
+
+--></script>
+<script><!--
+
+/* Script removed by snapshot save */
+
+--></script>
+<link rel=3D"stylesheet" href=3D"urn:snapshot-8A08F915:https://en.wikipedia=
+.org/w/load.php?debug=3Dfalse&amp;lang=3Den&amp;modules=3Dext.gadget.Watchl=
+istBase%2CWatchlistGreenIndicators%7Cext.math.styles%7Cext.uls.nojs%7Cext.v=
+isualEditor.desktopArticleTarget.noscript%7Cmediawiki.legacy.shared%7Cmedia=
+wiki.sectionAnchor%7Cmediawiki.skinning.interface%7Cmediawiki.ui.button%7Cs=
+kins.vector.styles%7Cwikibase.client.init&amp;only=3Dstyles&amp;skin=3Dvect=
+or">
+<link rel=3D"stylesheet" href=3D"urn:snapshot-D7A9B9A9:https://en.wikipedia=
+.org/w/load.php?debug=3Dfalse&amp;lang=3Den&amp;modules=3Dmediawiki.legacy.=
+commonPrint&amp;only=3Dstyles&amp;skin=3Dvector" media=3D"print">
+<style><!--
+
+/* Effective stylesheet produced by snapshot save */
+
+@keyframes centralAuthPPersonalAnimation {
+
+  0% { opacity: 0; transform: translateY(-20px); }
+
+  100% { opacity: 1; transform: translateY(0px); }
+
+}
+
+@keyframes centralAuthPPersonalAnimation {
+
+  0% { opacity: 0; transform: translateY(-20px); }
+
+  100% { opacity: 1; transform: translateY(0px); }
+
+}
+
+.ve-activated #toc, .ve-activated #siteNotice, .ve-activated .mw-indicators=
+, .ve-active #bodyContent > :not(#siteSub):not(#contentSub):not(.ve-ui-mwTo=
+cWidget), .ve-activated #t-print, .ve-activated #t-permalink, .ve-activated=
+ #p-coll-print_export, .ve-activated #t-cite, .ve-activating .ve-ui-surface=
+, .ve-deactivating .ve-ui-surface { display: none; }
+
+.mw-editsection { white-space: nowrap; unicode-bidi: -moz-isolate; }
+
+@media print {
+
+  #centralNotice { display: none; }
+
+}
+
+.cite-accessibility-label { position: absolute ! important; top: -99999px;=
+ clip: rect(1px, 1px, 1px, 1px); padding: 0px ! important; border: 0px none=
+ ! important; height: 1px ! important; width: 1px ! important; overflow: hi=
+dden; }
+
+.mw-body sub, .mw-body sup, span.reference { font-size: 80%; }
+
+ol.references, div.reflist, div.refbegin { font-size: 90%; margin-bottom:=
+ 0.5em; }
+
+div.reflist ol.references { font-size: 100%; list-style-type: inherit; }
+
+span.citation:target { background-color: rgb(221, 238, 255); }
+
+sup.reference { font-weight: normal; font-style: normal; }
+
+.citation { word-wrap: break-word; }
+
+.hlist dt::after { content: ":"; }
+
+.hlist dd::after, .hlist li::after { content: " \B7  "; font-weight: bold; }
+
+.hlist dd:last-child::after, .hlist dt:last-child::after, .hlist li:last-ch=
+ild::after { content: none; }
+
+.hlist dd.hlist-last-child::after, .hlist dt.hlist-last-child::after, .hlis=
+t li.hlist-last-child::after { content: none; }
+
+.hlist dd dd:first-child::before, .hlist dd dt:first-child::before, .hlist=
+ dd li:first-child::before, .hlist dt dd:first-child::before, .hlist dt dt:=
+first-child::before, .hlist dt li:first-child::before, .hlist li dd:first-c=
+hild::before, .hlist li dt:first-child::before, .hlist li li:first-child::b=
+efore { content: " ("; font-weight: normal; }
+
+.hlist dd dd:last-child::after, .hlist dd dt:last-child::after, .hlist dd=
+ li:last-child::after, .hlist dt dd:last-child::after, .hlist dt dt:last-ch=
+ild::after, .hlist dt li:last-child::after, .hlist li dd:last-child::after,=
+ .hlist li dt:last-child::after, .hlist li li:last-child::after { content:=
+ ") "; font-weight: normal; }
+
+.hlist dd dd.hlist-last-child::after, .hlist dd dt.hlist-last-child::after,=
+ .hlist dd li.hlist-last-child::after, .hlist dt dd.hlist-last-child::after=
+, .hlist dt dt.hlist-last-child::after, .hlist dt li.hlist-last-child::afte=
+r, .hlist li dd.hlist-last-child::after, .hlist li dt.hlist-last-child::aft=
+er, .hlist li li.hlist-last-child::after { content: ") "; font-weight: norm=
+al; }
+
+.hlist ol > li::before { content: " " counter(listitem, decimal) " "; white=
+-space: nowrap; }
+
+.hlist dd ol > li:first-child::before, .hlist dt ol > li:first-child::befor=
+e, .hlist li ol > li:first-child::before { content: " (" counter(listitem,=
+ decimal) " "; }
+
+div#content a.external[href$=3D".pdf"], div#content a.external[href*=3D".pd=
+f?"], div#content a.external[href*=3D".pdf#"], div#content a.external[href$=
+=3D".PDF"], div#content a.external[href*=3D".PDF?"], div#content a.external=
+[href*=3D".PDF#"], div#mw_content a.external[href$=3D".pdf"], div#mw_conten=
+t a.external[href*=3D".pdf?"], div#mw_content a.external[href*=3D".pdf#"],=
+ div#mw_content a.external[href$=3D".PDF"], div#mw_content a.external[href*=
+=3D".PDF?"], div#mw_content a.external[href*=3D".PDF#"] { background: trans=
+parent url("https://upload.wikimedia.org/wikipedia/commons/2/23/Icons-mini-=
+file_acrobat.gif") no-repeat scroll right center; padding-right: 18px; }
+
+th.mbox-text, td.mbox-text { border: medium none; padding: 0.25em 0.9em; wi=
+dth: 100%; }
+
+td.mbox-image { border: medium none; padding: 2px 0px 2px 0.9em; text-align=
+: center; }
+
+table.ambox { margin: 0px 10%; border-width: 1px 1px 1px 10px; border-style=
+: solid; border-color: rgb(170, 170, 170) rgb(170, 170, 170) rgb(170, 170,=
+ 170) rgb(30, 144, 255); -moz-border-top-colors: none; -moz-border-right-co=
+lors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none;=
+ border-image: none; background: rgb(251, 251, 251) none repeat scroll 0%=
+ 0%; }
+
+.ambox th.mbox-text, .ambox td.mbox-text { padding: 0.25em 0.5em; }
+
+.ambox td.mbox-image { padding: 2px 0px 2px 0.5em; }
+
+table.ambox-style { border-left: 10px solid rgb(244, 196, 48); }
+
+.nowrap, .nowraplinks a, .nowraplinks .selflink, sup.reference a { white-sp=
+ace: nowrap; }
+
+.thumbinner { min-width: 100px; }
+
+div.thumb .thumbimage { background-color: rgb(255, 255, 255); }
+
+div.vectorMenu div { z-index: 2; }
+
+#siteSub { display: block; font-size: 92%; }
+
+.mw-body .mw-indicators { padding-top: 0.4em; }
+
+div#simpleSearch { width: 20vw; min-width: 5em; max-width: 20em; }
+
+@media print {
+
+  .ns-0 .ambox, .ns-0 .navbox, .ns-0 .vertical-navbox, .ns-0 .infobox.siste=
+rproject, .ns-0 .dablink, .ns-0 .metadata, .editlink, .navbar, a.NavToggle,=
+ span.collapseButton, span.mw-collapsible-toggle, th .sortkey, td .sortkey=
+ { display: none ! important; }
+
+  #content cite a.external.text::after, .nourlexpansion a.external.text::af=
+ter, .nourlexpansion a.external.autonumber::after { display: none ! importa=
+nt; }
+
+  #firstHeading { margin: 0px; }
+
+  #content a.external.text::after, #content a.external.autonumber::after {=
+ word-wrap: break-word; }
+
+}
+
+.suggestions { overflow: hidden; position: absolute; top: 0px; left: 0px;=
+ width: 0px; border: medium none; z-index: 1099; padding: 0px; margin: -1px=
+ 0px 0px; }
+
+.suggestions-special { position: relative; background-color: white; cursor:=
+ pointer; border: 1px solid rgb(170, 170, 170); margin: -2px 0px 0px; displ=
+ay: none; padding: 0.25em; line-height: 1.25em; }
+
+.suggestions-results { background-color: white; cursor: pointer; border: 1p=
+x solid rgb(170, 170, 170); padding: 0px; margin: 0px; }
+
+.mw-ui-button:focus::-moz-focus-inner { border-color: transparent; }
+
+.mw-ui-button.mw-ui-progressive:focus::-moz-focus-inner, .mw-ui-button.mw-u=
+i-primary:focus::-moz-focus-inner { border-color: transparent; }
+
+.mw-ui-button.mw-ui-constructive:focus::-moz-focus-inner { border-color: tr=
+ansparent; }
+
+.mw-ui-button.mw-ui-destructive:focus::-moz-focus-inner { border-color: tra=
+nsparent; }
+
+.mw-ui-button-group > :first-child { border-top-left-radius: 2px; border-bo=
+ttom-left-radius: 2px; }
+
+.mw-ui-button-group > :not(:first-child) { border-left: medium none; }
+
+.mw-ui-button-group > :last-child { border-top-right-radius: 2px; border-bo=
+ttom-right-radius: 2px; }
+
+.mw-ui-icon.mw-ui-icon-element::before { left: 0px; right: 0px; position:=
+ absolute; margin: 0px 1em; }
+
+.mw-ui-icon.mw-ui-icon-before::before, .mw-ui-icon.mw-ui-icon-element::befo=
+re { background-position: 50% 50%; float: left; display: block; background-=
+repeat: no-repeat; background-size: 100% auto; min-height: 1.5em; content:=
+ ""; }
+
+.mw-ui-icon.mw-ui-icon-before::before { position: relative; width: 1.5em;=
+ margin-right: 1em; }
+
+.referencetooltip > li + li::after { content: ""; border-top: 8px solid rgb=
+(247, 247, 247); border-right: 5px solid transparent; border-left: 5px soli=
+d transparent; margin-top: -12px; margin-left: -5px; z-index: 1; height: 0p=
+x; width: 0px; display: block; }
+
+.referencetooltip.RTflipped li + li::after { border-top: 0px none; border-b=
+ottom: 8px solid rgb(247, 247, 247); position: absolute; margin-top: 7px;=
+ }
+
+#p-lang .uls-settings-trigger { background-color: transparent; background-r=
+epeat: no-repeat; background-attachment: scroll; background-position: right=
+ top; background-clip: border-box; background-origin: padding-box; backgrou=
+nd-size: auto auto; background-image: linear-gradient(transparent, transpar=
+ent), url("data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D=
+%22UTF-8%22%3F%3E%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%2=
+2%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20width%3D=
+%2214%22%20height%3D%2232%22%3E%3Cdefs%3E%3Cpath%20d%3D%22M14%209.3V6.73l-1=
+.575-.264c-.117-.44-.292-.848-.496-1.2l.93-1.285-1.81-1.84-1.31.908c-.38-.2=
+05-.79-.38-1.196-.497L8.284%201H5.716l-.263%201.578c-.437.117-.816.293-1.19=
+6.497L2.975%202.17%201.137%203.98l.934%201.287c-.2.38-.376.79-.493%201.228L=
+0%206.73V9.3l1.575.264c.117.438.292.818.496%201.198l-.93%201.315L2.95%2013.=
+89l1.312-.938c.38.205.787.38%201.224.497L5.746%2015h2.566l.263-1.578c.408-.=
+117.817-.293%201.196-.497l1.315.935%201.81-1.812-.935-1.315c.203-.38.38-.76=
+.495-1.2L14%209.303zm-7%201.404c-1.488%200-2.683-1.2-2.683-2.69S5.542%205.3=
+27%207%205.327c1.458%200%202.683%201.198%202.683%202.69%200%201.49-1.195%20=
+2.688-2.683%202.688z%22%20id%3D%22a%22%2F%3E%3C%2Fdefs%3E%3Cuse%20xlink%3Ah=
+ref%3D%22%23a%22%20fill%3D%22%23808080%22%2F%3E%3Cuse%20transform%3D%22tran=
+slate%280%2016%29%22%20xlink%3Ahref%3D%22%23a%22%20fill%3D%22%23555%22%2F%3=
+E%3C%2Fsvg%3E%0A"); height: 16px; width: 14px; float: right; cursor: pointe=
+r; }
+
+.skin-vector #p-lang .uls-settings-trigger { margin-top: 3px; }
+
+#p-lang .uls-settings-trigger:hover { background-position: right -16px; }
+
+--></style><style><!--
+
+/* Effective stylesheet produced by snapshot save */
+
+.mw-mmv-filepage-buttons .mw-mmv-view-expanded.mw-ui-icon::before { backgro=
+und-image: url("data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encodi=
+ng%3D%22UTF-8%22%20standalone%3D%22no%22%3F%3E%0A%3C%21\2D\2D %20Created%20=
+with%20Inkscape%20%28http%3A%2F%2Fwww.inkscape.org%2F%29%20--%3E%0A%0A%3Csv=
+g%0A%20%20%20xmlns%3Adc%3D%22http%3A%2F%2Fpurl.org%2Fdc%2Felements%2F1.1%2F=
+%22%0A%20%20%20xmlns%3Acc%3D%22http%3A%2F%2Fcreativecommons.org%2Fns%23%22%=
+0A%20%20%20xmlns%3Ardf%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-sy=
+ntax-ns%23%22%0A%20%20%20xmlns%3Asvg%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2F=
+svg%22%0A%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%=
+20%20version%3D%221.1%22%0A%20%20%20width%3D%22100%25%22%0A%20%20%20height%=
+3D%22100%25%22%0A%20%20%20viewBox%3D%220%200%201024%20768%22%0A%20%20%20id%=
+3D%22Layer_1%22%0A%20%20%20xml%3Aspace%3D%22preserve%22%3E%3Cmetadata%0A%20=
+%20%20%20%20id%3D%22metadata17%22%3E%3Crdf%3ARDF%3E%3Ccc%3AWork%0A%20%20%20=
+%20%20%20%20%20%20rdf%3Aabout%3D%22%22%3E%3Cdc%3Aformat%3Eimage%2Fsvg%2Bxml=
+%3C%2Fdc%3Aformat%3E%3Cdc%3Atype%0A%20%20%20%20%20%20%20%20%20%20%20rdf%3Ar=
+esource%3D%22http%3A%2F%2Fpurl.org%2Fdc%2Fdcmitype%2FStillImage%22%20%2F%3E=
+%3Cdc%3Atitle%3E%3C%2Fdc%3Atitle%3E%3C%2Fcc%3AWork%3E%3C%2Frdf%3ARDF%3E%3C%=
+2Fmetadata%3E%3Cdefs%0A%20%20%20%20%20id%3D%22defs15%22%20%2F%3E%3Cg%0A%20%=
+20%20%20%20id%3D%22g3%22%3E%3Cpolygon%0A%20%20%20%20%20%20%20points%3D%2285=
+1.2%2C71.6%20690.7%2C232.1%20650.6%2C191.8%20641%2C356.6%20805.8%2C347.3%20=
+765.5%2C306.9%20926%2C146.4%20984.5%2C204.9%20997.6%2C0%20792.7%2C13.1%20%2=
+2%0A%20%20%20%20%20%20%20id%3D%22polygon5%22%0A%20%20%20%20%20%20%20style%3=
+D%22fill%3A%23777777%22%20%2F%3E%3Cpolygon%0A%20%20%20%20%20%20%20points%3D=
+%22769.6%2C89.3%20611.9%2C89.3%20682.8%2C160.1%20690.7%2C167.6%20%22%0A%20%=
+20%20%20%20%20%20id%3D%22polygon7%22%0A%20%20%20%20%20%20%20style%3D%22fill=
+%3A%23777777%22%20%2F%3E%3Cpath%0A%20%20%20%20%20%20%20d%3D%22m%20643.6%2C4=
+02.2%20-51.2%2C3%203%2C-51.2%209.4%2C-164.4%205.8%2C-100.3%20H%2026.4%20V%2=
+0768%20H%20909.5%20V%20387%20l%20-100.9%2C5.8%20-165%2C9.4%20z%20M%20813.9%=
+2C678%20H%20113.6%20l%20207.2%2C-270.2%2031.5%2C-12.9%20195.7%2C204.9%20105=
+.9%2C-63.2%20159.8%2C140.8%200.2%2C0.6%200%2C0%20z%22%0A%20%20%20%20%20%20%=
+20id%3D%22path9%22%0A%20%20%20%20%20%20%20style%3D%22fill%3A%23777777%22%20=
+%2F%3E%3Cpolygon%0A%20%20%20%20%20%20%20points%3D%22909.5%2C386.1%20909.5%2=
+C228%20830.4%2C306.9%20838.2%2C314.8%20%22%0A%20%20%20%20%20%20%20id%3D%22p=
+olygon11%22%0A%20%20%20%20%20%20%20style%3D%22fill%3A%23777777%22%20%2F%3E%=
+3C%2Fg%3E%3C%2Fsvg%3E"); }
+
+.mw-mmv-filepage-buttons .mw-mmv-view-config.mw-ui-icon::before { backgroun=
+d-image: url("data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding=
+%3D%22UTF-8%22%20standalone%3D%22no%22%3F%3E%0A%3C%21--%20Created%20with%20=
+Inkscape%20%28http%3A%2F%2Fwww.inkscape.org%2F%29%20--%3E%0A%0A%3Csvg%0A%20=
+%20%20xmlns%3Adc%3D%22http%3A%2F%2Fpurl.org%2Fdc%2Felements%2F1.1%2F%22%0A%=
+20%20%20xmlns%3Acc%3D%22http%3A%2F%2Fcreativecommons.org%2Fns%23%22%0A%20%2=
+0%20xmlns%3Ardf%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns=
+%23%22%0A%20%20%20xmlns%3Asvg%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%=
+0A%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20ve=
+rsion%3D%221.1%22%0A%20%20%20width%3D%22100%25%22%0A%20%20%20height%3D%2210=
+0%25%22%0A%20%20%20viewBox%3D%220%200%201024%20768%22%0A%20%20%20id%3D%22La=
+yer_1%22%0A%20%20%20xml%3Aspace%3D%22preserve%22%3E%3Cmetadata%0A%20%20%20%=
+20%20id%3D%22metadata9%22%3E%3Crdf%3ARDF%3E%3Ccc%3AWork%0A%20%20%20%20%20%2=
+0%20%20%20rdf%3Aabout%3D%22%22%3E%3Cdc%3Aformat%3Eimage%2Fsvg%2Bxml%3C%2Fdc=
+%3Aformat%3E%3Cdc%3Atype%0A%20%20%20%20%20%20%20%20%20%20%20rdf%3Aresource%=
+3D%22http%3A%2F%2Fpurl.org%2Fdc%2Fdcmitype%2FStillImage%22%20%2F%3E%3Cdc%3A=
+title%3E%3C%2Fdc%3Atitle%3E%3C%2Fcc%3AWork%3E%3C%2Frdf%3ARDF%3E%3C%2Fmetada=
+ta%3E%3Cdefs%0A%20%20%20%20%20id%3D%22defs7%22%20%2F%3E%3Cpath%0A%20%20%20%=
+20%20d%3D%22M%20897%2C454.6%20V%20313.4%20L%20810.4%2C299%20c%20-6.4%2C-23.=
+3%20-16%2C-45.7%20-27.3%2C-65.8%20L%20833.6%2C161.8%20734.2%2C61.6%20662.8%=
+2C112.1%20C%20641.9%2C100.9%20620.3%2C91.2%20597%2C84.8%20L%20582.6%2C-1%20=
+H%20441.4%20L%20427%2C85.6%20c%20-23.3%2C6.4%20-45.7%2C16%20-65.8%2C27.3%20=
+L%20289.8%2C62.4%20189.5%2C161.9%20240%2C233.3%20c%20-11.2%2C20.9%20-20.9%2=
+C42.5%20-27.3%2C66.6%20L%20127%2C313.4%20v%20141.2%20l%2085.8%2C14.4%20c%20=
+6.4%2C23.3%2016%2C45.7%2027.3%2C66.6%20l%20-50.5%2C71.4%2099.5%2C99.5%2071.=
+4%2C-50.5%20c%2020.9%2C11.2%2042.5%2C20.9%2066.6%2C27.3%20l%2014.4%2C85.8%2=
+0h%20141.2%20l%2014.4%2C-86.6%20c%2023.3%2C-6.4%2045.7%2C-16%2065.8%2C-27.3=
+%20l%2071.4%2C50.5%2099.5%2C-99.5%20-50.5%2C-71.4%20c%2011.2%2C-20.9%2020.9=
+%2C-42.5%2027.3%2C-66.6%20L%20897%2C454.6%20z%20m%20-385%2C77%20C%20430.2%2=
+C531.6%20364.4%2C465%20364.4%2C384%20364.4%2C302.2%20431%2C236.4%20512%2C23=
+6.4%20c%2081%2C0%20147.6%2C65.8%20147.6%2C147.6%200%2C81.8%20-65.8%2C147.6%=
+20-147.6%2C147.6%20z%22%0A%20%20%20%20%20id%3D%22path3%22%0A%20%20%20%20%20=
+style%3D%22fill%3A%23777777%22%20%2F%3E%3C%2Fsvg%3E"); opacity: 0.75; }
+
+--></style><style><!--
+
+/* Effective stylesheet produced by snapshot save */
+
+--></style><meta name=3D"ResourceLoaderDynamicStyles" content=3D"">
+<link rel=3D"stylesheet" href=3D"urn:snapshot-FA864FEC:https://en.wikipedia=
+.org/w/load.php?debug=3Dfalse&amp;lang=3Den&amp;modules=3Dsite&amp;only=3Ds=
+tyles&amp;skin=3Dvector">
+<style><!--
+
+/* Effective stylesheet produced by snapshot save */
+
+a:lang(ar), a:lang(kk-arab), a:lang(mzn), a:lang(ps), a:lang(ur) { text-dec=
+oration: none; }
+
+--></style>
+<script async=3D"" src=3D"urn:snapshot-E410FC9D:https://en.wikipedia.org/w/=
+load.php?debug=3Dfalse&amp;lang=3Den&amp;modules=3Dstartup&amp;only=3Dscrip=
+ts&amp;skin=3Dvector"></script>
+<meta name=3D"generator" content=3D"MediaWiki 1.26wmf21">
+<link rel=3D"alternate" href=3D"android-app://org.wikipedia/http/en.m.wikip=
+edia.org/wiki/Bertrand%27s_ballot_theorem">
+<link rel=3D"alternate" type=3D"application/x-wiki" title=3D"Edit this page=
+" href=3D"https://en.wikipedia.org/w/index.php?title=3DBertrand%27s_ballot_=
+theorem&amp;action=3Dedit">
+<link rel=3D"edit" title=3D"Edit this page" href=3D"https://en.wikipedia.or=
+g/w/index.php?title=3DBertrand%27s_ballot_theorem&amp;action=3Dedit">
+<link rel=3D"apple-touch-icon" href=3D"urn:not-loaded:https://en.wikipedia.=
+org/static/apple-touch/wikipedia.png">
+<link rel=3D"shortcut icon" href=3D"https://en.wikipedia.org/static/favicon=
+/wikipedia.ico">
+<link rel=3D"search" type=3D"application/opensearchdescription+xml" href=3D=
+"https://en.wikipedia.org/w/opensearch_desc.php" title=3D"Wikipedia (en)">
+<link rel=3D"EditURI" type=3D"application/rsd+xml" href=3D"https://en.wikip=
+edia.org/w/api.php?action=3Drsd">
+<link rel=3D"copyright" href=3D"https://creativecommons.org/licenses/by-sa/=
+3.0/">
+<link rel=3D"alternate" type=3D"application/atom+xml" title=3D"Wikipedia At=
+om feed" href=3D"https://en.wikipedia.org/w/index.php?title=3DSpecial:Recen=
+tChanges&amp;feed=3Datom">
+<link rel=3D"canonical" href=3D"#">
+<link rel=3D"dns-prefetch" href=3D"https://meta.wikimedia.org/">
+<!--[if lt IE 7]><style type=3D"text/css">body{behavior:url("/w/static/1.26=
+wmf21/skins/Vector/csshover.min.htc")}</style><![endif]-->
+<script src=3D"urn:snapshot-AD10FB0B:https://en.wikipedia.org/w/load.php?de=
+bug=3Dfalse&amp;lang=3Den&amp;modules=3Djquery%2Cmediawiki&amp;only=3Dscrip=
+ts&amp;skin=3Dvector&amp;version=3DKk41yJbu"></script></head>
+<body class=3D"mediawiki ltr sitedir-ltr ns-0 ns-subject page-Bertrand_s_ba=
+llot_theorem skin-vector action-view">
+		<div id=3D"mw-page-base" class=3D"noprint"></div>
+		<div id=3D"mw-head-base" class=3D"noprint"></div>
+		<div id=3D"content" class=3D"mw-body" role=3D"main">
+			<a id=3D"top"></a>
+
+							<div id=3D"siteNotice"><div id=3D"centralNotice"></div><!-- CentralN=
+otice --></div>
+						<div class=3D"mw-indicators">
+</div>
+			<h1 id=3D"firstHeading" class=3D"firstHeading" lang=3D"en">Bertrand's ba=
+llot theorem</h1>
+									<div id=3D"bodyContent" class=3D"mw-body-content">
+									<div id=3D"siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id=3D"contentSub"></div>
+												<div id=3D"jump-to-nav" class=3D"mw-jump">
+					Jump to:					<a href=3D"#mw-head">navigation</a>, 					<a href=3D"#p-s=
+earch">search</a>
+				</div>
+				<div id=3D"mw-content-text" dir=3D"ltr" class=3D"mw-content-ltr" lang=
+=3D"en"><p>In <a href=3D"https://en.wikipedia.org/wiki/Combinatorics" title=
+=3D"Combinatorics">combinatorics</a>, <b>Bertrand's ballot problem</b> is=
+ the question: "In an <a href=3D"https://en.wikipedia.org/wiki/Election" ti=
+tle=3D"Election">election</a> where candidate A receives <i>p</i> votes and=
+ candidate B receives <i>q</i> votes with <i>p</i>=C2=A0&gt;=C2=A0<i>q</i>,=
+ what is the <a href=3D"https://en.wikipedia.org/wiki/Probability" title=3D=
+"Probability">probability</a> that A will be strictly ahead of B throughout=
+ the count?" The answer is</p>
+<dl>
+<dd><img class=3D"mwe-math-fallback-image-inline tex" alt=3D"\frac{p-q}{p+q=
+}." src=3D"https://upload.wikimedia.org/math/b/5/5/b551bad2dfb55d4f49627fd7=
+cb357578.png"></dd>
+</dl>
+<p>The result was first published by <a href=3D"https://en.wikipedia.org/wi=
+ki/William_Allen_Whitworth" title=3D"William Allen Whitworth">W. A. Whitwor=
+th</a> in 1878, but is named after <a href=3D"https://en.wikipedia.org/wiki=
+/Joseph_Louis_Fran%C3%A7ois_Bertrand" title=3D"Joseph Louis Fran=C3=A7ois=
+ Bertrand">Joseph Louis Fran=C3=A7ois Bertrand</a> who rediscovered it in=
+ 1887.<sup id=3D"cite_ref-1" class=3D"reference"><a href=3D"#cite_note-1"><=
+span>[</span>1<span>]</span></a></sup><sup id=3D"cite_ref-2" class=3D"refer=
+ence"><a href=3D"#cite_note-2"><span>[</span>2<span>]</span></a></sup></p>
+<p>In Bertrand's original paper, he sketches a proof based on a general for=
+mula for the number of favourable sequences using a <a href=3D"https://en.w=
+ikipedia.org/wiki/Recursion_relation" title=3D"Recursion relation" class=3D=
+"mw-redirect">recursion relation</a>. He remarks that it seems probable tha=
+t such a simple result could be proved by a more direct method. Such a proo=
+f was given by <a href=3D"https://en.wikipedia.org/wiki/D%C3%A9sir%C3%A9_An=
+dr%C3%A9" title=3D"D=C3=A9sir=C3=A9 Andr=C3=A9">D=C3=A9sir=C3=A9 Andr=C3=A9=
+</a>,<sup id=3D"cite_ref-3" class=3D"reference"><a href=3D"#cite_note-3"><s=
+pan>[</span>3<span>]</span></a></sup> based on the observation that the unf=
+avourable sequences can be divided into two equally probable cases, one of=
+ which (the case where B receives the first vote) is easily computed; he pr=
+oves the equality by an explicit <a href=3D"https://en.wikipedia.org/wiki/B=
+ijection" title=3D"Bijection">bijection</a>. A variation of his method is=
+ popularly known as <b>Andr=C3=A9's reflection method</b>, although Andr=C3=
+=A9 did not use any reflections.<sup id=3D"cite_ref-4" class=3D"reference">=
+<a href=3D"#cite_note-4"><span>[</span>4<span>]</span></a></sup></p>
+<p></p>
+<div id=3D"toc" class=3D"toc">
+<div id=3D"toctitle">
+<h2>Contents</h2>
+<span class=3D"toctoggle">=C2=A0[<a href=3D"#" id=3D"togglelink">hide</a>]=
+=C2=A0</span></div>
+<ul>
+<li class=3D"toclevel-1 tocsection-1"><a href=3D"#Example"><span class=3D"t=
+ocnumber">1</span> <span class=3D"toctext">Example</span></a></li>
+<li class=3D"toclevel-1 tocsection-2"><a href=3D"#Equivalent_problems"><spa=
+n class=3D"tocnumber">2</span> <span class=3D"toctext">Equivalent problems<=
+/span></a></li>
+<li class=3D"toclevel-1 tocsection-3"><a href=3D"#Proof_by_reflection"><spa=
+n class=3D"tocnumber">3</span> <span class=3D"toctext">Proof by reflection<=
+/span></a></li>
+<li class=3D"toclevel-1 tocsection-4"><a href=3D"#Proof_by_induction"><span=
+ class=3D"tocnumber">4</span> <span class=3D"toctext">Proof by induction</s=
+pan></a></li>
+<li class=3D"toclevel-1 tocsection-5"><a href=3D"#Bertrand.27s_and_Andr.C3.=
+A9.27s_proofs"><span class=3D"tocnumber">5</span> <span class=3D"toctext">B=
+ertrand's and Andr=C3=A9's proofs</span></a></li>
+<li class=3D"toclevel-1 tocsection-6"><a href=3D"#Variant:_ties_allowed"><s=
+pan class=3D"tocnumber">6</span> <span class=3D"toctext">Variant: ties allo=
+wed</span></a></li>
+<li class=3D"toclevel-1 tocsection-7"><a href=3D"#Notes"><span class=3D"toc=
+number">7</span> <span class=3D"toctext">Notes</span></a></li>
+<li class=3D"toclevel-1 tocsection-8"><a href=3D"#References"><span class=
+=3D"tocnumber">8</span> <span class=3D"toctext">References</span></a></li>
+<li class=3D"toclevel-1 tocsection-9"><a href=3D"#External_links"><span cla=
+ss=3D"tocnumber">9</span> <span class=3D"toctext">External links</span></a>=
+</li>
+</ul>
+</div>
+<p></p>
+<h2><span class=3D"mw-headline" id=3D"Example">Example</span><span class=3D=
+"mw-editsection"><span class=3D"mw-editsection-bracket">[</span><a href=3D"=
+https://en.wikipedia.org/w/index.php?title=3DBertrand%27s_ballot_theorem&am=
+p;action=3Dedit&amp;section=3D1" title=3D"Edit section: Example">edit</a><s=
+pan class=3D"mw-editsection-bracket">]</span></span></h2>
+<p>Suppose there are 5 voters, of whom 3 vote for candidate <i>A</i> and 2=
+ vote for candidate <i>B</i> (so <i>p</i> =3D 3 and <i>q</i> =3D 2). There=
+ are ten possibilities for the order of the votes cast:</p>
+<ul>
+<li><i>AAABB</i></li>
+<li><i>AABAB</i></li>
+<li><i>ABAAB</i></li>
+<li><i>BAAAB</i></li>
+<li><i>AABBA</i></li>
+<li><i>ABABA</i></li>
+<li><i>BAABA</i></li>
+<li><i>ABBAA</i></li>
+<li><i>BABAA</i></li>
+<li><i>BBAAA</i></li>
+</ul>
+<p>For the order <i>AABAB</i>, the tally of the votes as the election progr=
+esses is:</p>
+<table class=3D"wikitable" border=3D"1">
+<tbody><tr>
+<td><b>Candidate</b></td>
+<td><i>A</i></td>
+<td><i>A</i></td>
+<td><i>B</i></td>
+<td><i>A</i></td>
+<td><i>B</i></td>
+</tr>
+<tr>
+<td><i><b>A</b></i></td>
+<td>1</td>
+<td>2</td>
+<td>2</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr>
+<td><i><b>B</b></i></td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>2</td>
+</tr>
+</tbody></table>
+<p>For each column the tally for <i>A</i> is always larger than the tally=
+ for <i>B</i> so the <i>A</i> is always strictly ahead of <i>B</i>. For the=
+ order <i>AABBA</i> the tally of the votes as the election progresses is:</=
+p>
+<table class=3D"wikitable" border=3D"1">
+<tbody><tr>
+<td><b>Candidate</b></td>
+<td><i>A</i></td>
+<td><i>A</i></td>
+<td><i>B</i></td>
+<td><i>B</i></td>
+<td><i>A</i></td>
+</tr>
+<tr>
+<td><i><b>A</b></i></td>
+<td>1</td>
+<td>2</td>
+<td>2</td>
+<td>2</td>
+<td>3</td>
+</tr>
+<tr>
+<td><i><b>B</b></i></td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>2</td>
+<td>2</td>
+</tr>
+</tbody></table>
+<p>For this order, <i>B</i> is tied with <i>A</i> after the fourth vote, so=
+ <i>A</i> is not always strictly ahead of <i>B</i>. Of the 10 possible orde=
+rs, <i>A</i> is always ahead of <i>B</i> only for <i>AAABB</i> and <i>AABAB=
+</i>. So the probability that <i>A</i> will always be strictly ahead is</p>
+<dl>
+<dd><img class=3D"mwe-math-fallback-image-inline tex" alt=3D"\frac{2}{10}=
+=3D\frac{1}{5}," src=3D"https://upload.wikimedia.org/math/d/5/b/d5b22d602e2=
+1a46dbb91e88fd7267a26.png"></dd>
+</dl>
+<p>and this is indeed equal to <img class=3D"mwe-math-fallback-image-inline=
+ tex" alt=3D"\frac{3-2}{3+2}" src=3D"https://upload.wikimedia.org/math/1/a/=
+d/1ad7592f2a8ac1a8c616c4783fcb1d38.png"> as the theorem predicts.</p>
+<h2><span class=3D"mw-headline" id=3D"Equivalent_problems">Equivalent probl=
+ems</span><span class=3D"mw-editsection"><span class=3D"mw-editsection-brac=
+ket">[</span><a href=3D"https://en.wikipedia.org/w/index.php?title=3DBertra=
+nd%27s_ballot_theorem&amp;action=3Dedit&amp;section=3D2" title=3D"Edit sect=
+ion: Equivalent problems">edit</a><span class=3D"mw-editsection-bracket">]<=
+/span></span></h2>
+<p>Rather than computing the probability that a random vote counting order=
+ has the desired property, one can instead compute the number of favourable=
+ counting orders, then divide by the total number of ways in which the vote=
+s could have been counted. (This is the method used by Bertrand.) The total=
+ number of ways is the <a href=3D"https://en.wikipedia.org/wiki/Binomial_co=
+efficient" title=3D"Binomial coefficient">binomial coefficient</a> <img cla=
+ss=3D"mwe-math-fallback-image-inline tex" alt=3D"\tbinom{p+q}{p}" src=3D"ht=
+tps://upload.wikimedia.org/math/3/6/5/365e1d12314cb73dbc1ae483d07ee8ef.png"=
+>; Bertrand's proof shows that the number of favourable orders in which to=
+ count the votes is <img class=3D"mwe-math-fallback-image-inline tex" alt=
+=3D"\tbinom{p+q-1}{p-1}-\tbinom{p+q-1}{p}" src=3D"https://upload.wikimedia.=
+org/math/0/f/d/0fdf3e5826b5a613314cb9e17ed67360.png"> (though he does not=
+ give this number explicitly). And indeed after division this gives <img cl=
+ass=3D"mwe-math-fallback-image-inline tex" alt=3D"\tfrac{p}{p+q}-\tfrac{q}{=
+p+q}=3D\tfrac{p-q}{p+q}" src=3D"https://upload.wikimedia.org/math/f/f/1/ff1=
+564978f7f78b634bd9dd7a733e8c6.png">.</p>
+<p>Another equivalent problem is to calculate the number of <a href=3D"http=
+s://en.wikipedia.org/wiki/Random_walk" title=3D"Random walk">random walks</=
+a> on the <a href=3D"https://en.wikipedia.org/wiki/Integer" title=3D"Intege=
+r">integers</a> that consist of <i>n</i> steps of unit length, beginning at=
+ the origin and ending at the point <i>m</i>, that never become negative.=
+ Assuming <i>n</i> and <i>m</i> have the same parity and <i>n</i>=C2=A0=E2=
+=89=A5=C2=A0<i>m</i>=C2=A0=E2=89=A5=C2=A00, this number is</p>
+<dl>
+<dd><img class=3D"mwe-math-fallback-image-inline tex" alt=3D"\binom{n}{\tfr=
+ac{n+m}2}-\binom{n}{\tfrac{n+m}2+1} =3D \frac{m+1}{\tfrac{n+m}2+1}\binom{n}=
+{\tfrac{n+m}2}." src=3D"https://upload.wikimedia.org/math/2/b/1/2b1ebc8324e=
+09b1c22816582b9f1970d.png"></dd>
+</dl>
+<p>When <i>m</i>=C2=A0=3D=C2=A00 and <i>n</i> is even, this gives the <a hr=
+ef=3D"https://en.wikipedia.org/wiki/Catalan_number" title=3D"Catalan number=
+">Catalan number</a> <img class=3D"mwe-math-fallback-image-inline tex" alt=
+=3D"\frac1{\tfrac{n}2+1}\binom{n}{\tfrac{n}2}" src=3D"https://upload.wikime=
+dia.org/math/5/0/d/50d6f41563e44d679d5933a65e4eb1de.png">.</p>
+<h2><span class=3D"mw-headline" id=3D"Proof_by_reflection">Proof by reflect=
+ion</span><span class=3D"mw-editsection"><span class=3D"mw-editsection-brac=
+ket">[</span><a href=3D"https://en.wikipedia.org/w/index.php?title=3DBertra=
+nd%27s_ballot_theorem&amp;action=3Dedit&amp;section=3D3" title=3D"Edit sect=
+ion: Proof by reflection">edit</a><span class=3D"mw-editsection-bracket">]<=
+/span></span></h2>
+<p>For A to be strictly ahead of B throughout the counting of the votes, th=
+ere can be no ties. Separate the counting sequences according to the first=
+ vote. Any sequence that begins with a vote for B must reach a tie at some=
+ point, because A eventually wins. For any sequence that begins with A and=
+ reaches a tie, reflect the votes up to the point of the first tie (so any=
+ A becomes a B, and vice versa) to obtain a sequence that begins with B. He=
+nce every sequence that begins with A and reaches a tie is in one to one co=
+rrespondence with a sequence that begins with B, and the probability that=
+ a sequence begins with B is <img class=3D"mwe-math-fallback-image-inline=
+ tex" alt=3D"q/(p+q)" src=3D"https://upload.wikimedia.org/math/2/6/9/26996c=
+744efb622bea87e734ab95149f.png">, so the probability that A always leads th=
+e vote is</p>
+<dl>
+<dd><img class=3D"mwe-math-fallback-image-inline tex" alt=3D" =3D 1- " src=
+=3D"https://upload.wikimedia.org/math/7/7/e/77ecde396cd28994d9469fe2e12a3e3=
+c.png"> the probability of sequences that tie at some point</dd>
+<dd><img class=3D"mwe-math-fallback-image-inline tex" alt=3D" =3D 1- " src=
+=3D"https://upload.wikimedia.org/math/7/7/e/77ecde396cd28994d9469fe2e12a3e3=
+c.png"> the probability of sequences that tie at some point and begin with=
+ A or B</dd>
+<dd><img class=3D"mwe-math-fallback-image-inline tex" alt=3D" =3D 1-2\frac{=
+q}{p+q}=3D\frac{p-q}{p+q}" src=3D"https://upload.wikimedia.org/math/6/c/2/6=
+c2d4e78cf1aafd0ba758385bf85bf08.png"></dd>
+</dl>
+<h2><span class=3D"mw-headline" id=3D"Proof_by_induction">Proof by inductio=
+n</span><span class=3D"mw-editsection"><span class=3D"mw-editsection-bracke=
+t">[</span><a href=3D"https://en.wikipedia.org/w/index.php?title=3DBertrand=
+%27s_ballot_theorem&amp;action=3Dedit&amp;section=3D4" title=3D"Edit sectio=
+n: Proof by induction">edit</a><span class=3D"mw-editsection-bracket">]</sp=
+an></span></h2>
+<p>Another method of proof is by <a href=3D"https://en.wikipedia.org/wiki/M=
+athematical_induction" title=3D"Mathematical induction">mathematical induct=
+ion</a>:</p>
+<ul>
+<li>Clearly the theorem is true if <i>p</i>=C2=A0&gt;=C2=A00 and <i>q</i>=
+=C2=A0=3D=C2=A00 when the probability is 1, given that the first candidate=
+ receives all the votes; it is also true when <i>p</i>=C2=A0=3D=C2=A0<i>q</=
+i>=C2=A0&gt;=C2=A00 since the probability is 0, given that the first candid=
+ate will not be <i>strictly</i> ahead after all the votes have been counted=
+.</li>
+<li>Assume it is true both when <i>p</i>=C2=A0=3D=C2=A0<i>a</i>=C2=A0=E2=88=
+=92=C2=A01 and <i>q</i>=C2=A0=3D=C2=A0<i>b</i>, and when <i>p</i>=C2=A0=3D=
+=C2=A0<i>a</i> and <i>q</i>=C2=A0=3D=C2=A0<i>b</i>=E2=88=921, with <i>a</i>=
+=C2=A0&gt;=C2=A0<i>b</i>=C2=A0&gt;=C2=A00. Then considering the case with=
+ <i>p</i>=C2=A0=3D=C2=A0<i>a</i> and <i>q</i>=C2=A0=3D=C2=A0<i>b</i>, the=
+ last vote counted is either for the first candidate with probability <i>a<=
+/i>/(<i>a</i>=C2=A0+=C2=A0<i>b</i>), or for the second with probability <i>=
+b</i>/(<i>a</i>=C2=A0+=C2=A0<i>b</i>). So the probability of the first bein=
+g ahead throughout the count to the penultimate vote counted (and also afte=
+r the final vote) is:</li>
+</ul>
+<dl>
+<dd>
+<dl>
+<dd><img class=3D"mwe-math-fallback-image-inline tex" alt=3D"{a \over (a+b)=
+}{(a-1)-b \over (a+b-1)}+{b \over (a+b)}{a-(b-1) \over (a+b-1)}=3D{a-b \ove=
+r a+b}." src=3D"https://upload.wikimedia.org/math/7/2/a/72a770b7b9a14bb3c3f=
+5306753c3e7a3.png"></dd>
+</dl>
+</dd>
+</dl>
+<ul>
+<li>And so it is true for all <i>p</i> and <i>q</i> with <i>p</i>=C2=A0&gt;=
+=C2=A0<i>q</i>=C2=A0&gt;=C2=A00.</li>
+</ul>
+<h2><span class=3D"mw-headline" id=3D"Bertrand.27s_and_Andr.C3.A9.27s_proof=
+s">Bertrand's and Andr=C3=A9's proofs</span><span class=3D"mw-editsection">=
+<span class=3D"mw-editsection-bracket">[</span><a href=3D"https://en.wikipe=
+dia.org/w/index.php?title=3DBertrand%27s_ballot_theorem&amp;action=3Dedit&a=
+mp;section=3D5" title=3D"Edit section: Bertrand's and Andr=C3=A9's proofs">=
+edit</a><span class=3D"mw-editsection-bracket">]</span></span></h2>
+<p>Bertrand expressed the solution as</p>
+<dl>
+<dd><img class=3D"mwe-math-fallback-image-inline tex" alt=3D"\frac{2m-\mu}{=
+\mu}" src=3D"https://upload.wikimedia.org/math/2/f/4/2f4702eea932de1219f89f=
+ac7ce91c2b.png"></dd>
+</dl>
+<p>where <img class=3D"mwe-math-fallback-image-inline tex" alt=3D"\mu=3Dp+q=
+" src=3D"https://upload.wikimedia.org/math/4/a/8/4a83c20bbec6f63c216f879e36=
+407771.png"> is the total number of voters and <img class=3D"mwe-math-fallb=
+ack-image-inline tex" alt=3D"m=3Dp" src=3D"https://upload.wikimedia.org/mat=
+h/9/2/1/92109cb167b0002bab041f2ddf818b69.png"> is the number of voters for=
+ the first candidate. He states that the result follows from the formula</p>
+<dl>
+<dd><img class=3D"mwe-math-fallback-image-inline tex" alt=3D"P_{m+1,\mu+1}=
+=3DP_{m,\mu}+P_{m+1,\mu}," src=3D"https://upload.wikimedia.org/math/d/7/9/d=
+790aa1a86d59be3a8fab49fcee099d8.png"></dd>
+</dl>
+<p>where <img class=3D"mwe-math-fallback-image-inline tex" alt=3D"P_{m,\mu}=
+" src=3D"https://upload.wikimedia.org/math/3/f/8/3f81312729be6bab520746cdb9=
+6052e7.png"> is the number of favourable sequences, but "it seems probable=
+ that such a simple result could be shown in a more direct way". Indeed, a=
+ more direct proof was soon produced by D=C3=A9sir=C3=A9 Andr=C3=A9. His ap=
+proach is often mistakenly labelled "the reflection principle" by modern au=
+thors but in fact uses a permutation. He shows that the "unfavourable" sequ=
+ences (those that reach an intermediate tie) consist of an equal number of=
+ sequences that begin with A as those that begin with B. Every sequence tha=
+t begins with B is unfavourable, and there are <img class=3D"mwe-math-fallb=
+ack-image-inline tex" alt=3D"\tbinom{p+q-1}{q-1}" src=3D"https://upload.wik=
+imedia.org/math/b/b/6/bb66a6acabb5cc636c4536c7791e6160.png"> such sequences=
+ with a B followed by an arbitrary sequence of (<i>q</i>-1) B's and <i>p</i=
+> A's. Each unfavourable sequence that begins with A can be transformed to=
+ an arbitrary sequence of (<i>q</i>-1) B's and <i>p</i> A's by finding the=
+ first B that violates the rule (by causing the vote counts to tie) and del=
+eting it, and interchanging the order of the remaining parts. To reverse th=
+e process, take any sequence of (<i>q</i>-1) B's and <i>p</i> A's and searc=
+h from the end to find where the number of A's first exceeds the number of=
+ B's, and then interchange the order of the parts and place a B in between.=
+ For example, the unfavourable sequence <span style=3D"color:green;">AAB</s=
+pan><span style=3D"color:red;">B</span>ABAA corresponds uniquely to the arb=
+itrary sequence ABAA<span style=3D"color:green;">AAB</span>. From this, it=
+ follows that the number of favourable sequences of <i>p</i> A's and <i>q</=
+i> B's is</p>
+<dl>
+<dd><img class=3D"mwe-math-fallback-image-inline tex" alt=3D"\binom{p+q}{q}=
+-2\binom{p+q-1}{q-1}=3D\binom{p+q}{q}\frac{p-q}{p+q}" src=3D"https://upload=
+.wikimedia.org/math/2/9/4/2946fc189c46e38a002c106fc8479ba0.png"></dd>
+</dl>
+<p>and thus the required probability is</p>
+<dl>
+<dd><img class=3D"mwe-math-fallback-image-inline tex" alt=3D"\frac{p-q}{p+q=
+}" src=3D"https://upload.wikimedia.org/math/a/5/2/a52abb41977a5d74eed176f60=
+7ddfe7e.png"></dd>
+</dl>
+<p>as expected.</p>
+<h2><span class=3D"mw-headline" id=3D"Variant:_ties_allowed">Variant: ties=
+ allowed</span><span class=3D"mw-editsection"><span class=3D"mw-editsection=
+-bracket">[</span><a href=3D"https://en.wikipedia.org/w/index.php?title=3DB=
+ertrand%27s_ballot_theorem&amp;action=3Dedit&amp;section=3D6" title=3D"Edit=
+ section: Variant: ties allowed">edit</a><span class=3D"mw-editsection-brac=
+ket">]</span></span></h2>
+<p>The original problem is to find the probability that the first candidate=
+ is always strictly ahead in the vote count. Consider now the problem to fi=
+nd the probability that the second candidate is never ahead (i.e. ties are=
+ allowed); the solution is</p>
+<dl>
+<dd><img class=3D"mwe-math-fallback-image-inline tex" alt=3D"\frac{p+1-q}{p=
++1}." src=3D"https://upload.wikimedia.org/math/5/5/2/552082622ebfc17af3f970=
+3a73470512.png"></dd>
+</dl>
+<p>The variant problem can be solved by the reflection method in a similar=
+ way to the original problem. First note that the number of possible vote=
+ sequences is <img class=3D"mwe-math-fallback-image-inline tex" alt=3D"\tbi=
+nom{p+q}{q}" src=3D"https://upload.wikimedia.org/math/5/a/3/5a37b2b6a614f6c=
+9a862455342065afb.png">. Call a sequence "bad" if the second candidate is=
+ ever ahead, and if the number of bad sequences can be enumerated then the=
+ number of "good" sequences can be found by subtraction and the probability=
+ can be computed.</p>
+<p>Represent a voting sequence as a <a href=3D"https://en.wikipedia.org/wik=
+i/Lattice_path" title=3D"Lattice path">lattice path</a> on the Cartesian pl=
+ane as follows:</p>
+<ul>
+<li>Start the path at (0,=C2=A00)</li>
+<li>Each time a vote for the first candidate is received move right 1 unit.=
+</li>
+<li>Each time a vote for the second candidate is received move up 1 unit.</=
+li>
+</ul>
+<p>Each such path corresponds to a unique sequence of votes and will end at=
+ (<i>p</i>, <i>q</i>). A sequence is 'good' exactly when the corresponding=
+ path never goes above the diagonal line <i>y</i>=C2=A0=3D=C2=A0<i>x</i>;=
+ equivalently, a sequence is 'bad' exactly when the corresponding path touc=
+hes the line <i>y</i>=C2=A0=3D=C2=A0<i>x</i>=C2=A0+=C2=A01.</p>
+<div class=3D"thumb tright">
+<div class=3D"thumbinner" style=3D"width:222px;"><a href=3D"https://en.wiki=
+pedia.org/wiki/File:AndreReflection.svg" class=3D"image"><img alt=3D"" src=
+=3D"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/AndreReflecti=
+on.svg/220px-AndreReflection.svg.png" class=3D"thumbimage" srcset=3D"//uplo=
+ad.wikimedia.org/wikipedia/commons/thumb/d/d5/AndreReflection.svg/330px-And=
+reReflection.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d=
+/d5/AndreReflection.svg/440px-AndreReflection.svg.png 2x" data-file-width=
+=3D"110" data-file-height=3D"90" height=3D"180" width=3D"220"></a>
+<div class=3D"thumbcaption">
+<div class=3D"magnify"><a href=3D"https://en.wikipedia.org/wiki/File:AndreR=
+eflection.svg" class=3D"internal" title=3D"Enlarge"></a></div>
+'Bad' path (blue) and its reflected path (red)</div>
+</div>
+</div>
+<p>For each 'bad' path <i>P</i>, define a new path <i>P</i>=E2=80=B2 by ref=
+lecting the part of <i>P</i> up to the first point it touches the line acro=
+ss it. <i>P</i>=E2=80=B2 is a path from (=E2=88=921,=C2=A01) to (<i>p</i>,=
+=C2=A0<i>q</i>). The same operation applied again restores the original <i>=
+P</i>. This produces a one-to-one correspondence between the 'bad' paths an=
+d the paths from (=E2=88=921,=C2=A01) to (<i>p</i>,=C2=A0<i>q</i>). The num=
+ber of these paths is <img class=3D"mwe-math-fallback-image-inline tex" alt=
+=3D"\tbinom{p+q}{q-1}" src=3D"https://upload.wikimedia.org/math/c/5/6/c5602=
+2020836fe35e779df0fe5cd1a4e.png"> and so that is the number of 'bad' sequen=
+ces. This leaves the number of 'good' sequences as</p>
+<dl>
+<dd><img class=3D"mwe-math-fallback-image-inline tex" alt=3D"\binom{p+q}{q}=
+ - \binom{p+q}{q-1} =3D \binom{p+q}{q}\frac{p+1-q}{p+1}." src=3D"https://up=
+load.wikimedia.org/math/d/3/2/d32525539fd10e02c082dac244b574f9.png"></dd>
+</dl>
+<p>Since there are <img class=3D"mwe-math-fallback-image-inline tex" alt=3D=
+"\tbinom{p+q}{q}" src=3D"https://upload.wikimedia.org/math/5/a/3/5a37b2b6a6=
+14f6c9a862455342065afb.png"> altogether, the probability of a sequence bein=
+g good is <img class=3D"mwe-math-fallback-image-inline tex" alt=3D"\tfrac{p=
++1-q}{p+1}" src=3D"https://upload.wikimedia.org/math/5/1/4/514d89f2a467c716=
+d90f3e2f18591d20.png">.</p>
+<p>In fact, the solutions to the original problem and the variant problem=
+ are easily related. For candidate A to be strictly ahead throughout the vo=
+te count, they must receive the first vote and for the remaining votes (ign=
+oring the first) they must be either strictly ahead or tied throughout the=
+ count. Hence the solution to the original problem is</p>
+<dl>
+<dd><img class=3D"mwe-math-fallback-image-inline tex" alt=3D"\frac{p}{p+q}\=
+frac{p-1+1-q}{p-1+1}=3D\frac{p-q}{p+q}" src=3D"https://upload.wikimedia.org=
+/math/b/9/1/b918a87d09b53d8a5401b404f5864483.png"></dd>
+</dl>
+<p>as required.</p>
+<p>Conversely, the tie case can be derived from the non-tie case. Note that=
+ the <i>number</i> of non-tie sequences with p+1 votes for A is equal to th=
+e number of tie sequences with p votes for A. The number of non-tie votes=
+ with p + 1 votes for A votes is <img class=3D"mwe-math-fallback-image-inli=
+ne tex" alt=3D"\tfrac{p + 1 - q}{p + 1 + q} \tbinom{p + 1 + q}{q} " src=3D"=
+https://upload.wikimedia.org/math/9/2/f/92f1f6454537520b143d57bf1cc8ef30.pn=
+g">, which by algebraic manipulation is <img class=3D"mwe-math-fallback-ima=
+ge-inline tex" alt=3D"\tfrac{p + 1 - q}{p + 1} \tbinom{p + q}{q}  " src=3D"=
+https://upload.wikimedia.org/math/f/8/c/f8c04ce31177219a88b5f7f3d4879b7f.pn=
+g">, so the <i>fraction</i> of sequences with p votes for A votes is <img=
+ class=3D"mwe-math-fallback-image-inline tex" alt=3D"\tfrac{p + 1 - q}{p +=
+ 1}" src=3D"https://upload.wikimedia.org/math/5/1/4/514d89f2a467c716d90f3e2=
+f18591d20.png">.</p>
+<table class=3D"metadata plainlinks ambox ambox-style ambox-More_footnotes"=
+ role=3D"presentation">
+<tbody><tr>
+<td class=3D"mbox-image">
+<div style=3D"width:52px"><img alt=3D"" src=3D"https://upload.wikimedia.org=
+/wikipedia/commons/thumb/a/a4/Text_document_with_red_question_mark.svg/40px=
+-Text_document_with_red_question_mark.svg.png" srcset=3D"//upload.wikimedia=
+.org/wikipedia/commons/thumb/a/a4/Text_document_with_red_question_mark.svg/=
+60px-Text_document_with_red_question_mark.svg.png 1.5x, //upload.wikimedia.=
+org/wikipedia/commons/thumb/a/a4/Text_document_with_red_question_mark.svg/8=
+0px-Text_document_with_red_question_mark.svg.png 2x" data-file-width=3D"48"=
+ data-file-height=3D"48" height=3D"40" width=3D"40"></div>
+</td>
+<td class=3D"mbox-text"><span class=3D"mbox-text-span">This article include=
+s a <a href=3D"https://en.wikipedia.org/wiki/Wikipedia:Citing_sources" titl=
+e=3D"Wikipedia:Citing sources">list of references</a>, but <b>its sources=
+ remain unclear</b> because it has <b>insufficient <a href=3D"https://en.wi=
+kipedia.org/wiki/Wikipedia:Citing_sources#Inline_citations" title=3D"Wikipe=
+dia:Citing sources">inline citations</a></b>. <span class=3D"hide-when-comp=
+act">Please help to <a href=3D"https://en.wikipedia.org/wiki/Wikipedia:Wiki=
+Project_Fact_and_Reference_Check" title=3D"Wikipedia:WikiProject Fact and=
+ Reference Check">improve</a> this article by <a href=3D"https://en.wikiped=
+ia.org/wiki/Wikipedia:When_to_cite" title=3D"Wikipedia:When to cite">introd=
+ucing</a> more precise citations.</span> <small><i>(June 2012)</i></small><=
+/span></td>
+</tr>
+</tbody></table>
+<h2><span class=3D"mw-headline" id=3D"Notes">Notes</span><span class=3D"mw-=
+editsection"><span class=3D"mw-editsection-bracket">[</span><a href=3D"http=
+s://en.wikipedia.org/w/index.php?title=3DBertrand%27s_ballot_theorem&amp;ac=
+tion=3Dedit&amp;section=3D7" title=3D"Edit section: Notes">edit</a><span cl=
+ass=3D"mw-editsection-bracket">]</span></span></h2>
+<div class=3D"reflist" style=3D"list-style-type: decimal;">
+<ol class=3D"references">
+<li id=3D"cite_note-1"><span class=3D"mw-cite-backlink"><b><a href=3D"#cite=
+_ref-1"><span class=3D"cite-accessibility-label">Jump up </span>^</a></b></=
+span> <span class=3D"reference-text"><span id=3D"CITEREFFeller1968" class=
+=3D"citation"><a href=3D"https://en.wikipedia.org/wiki/William_Feller" titl=
+e=3D"William Feller">Feller, William</a> (1968), <i>An Introduction to Prob=
+ability Theory and its Applications, Volume I</i> (3rd ed.), Wiley, p.=C2=
+=A069</span><span title=3D"ctx_ver=3DZ39.88-2004&amp;rfr_id=3Dinfo%3Asid%2F=
+en.wikipedia.org%3ABertrand%27s+ballot+theorem&amp;rft.au=3DFeller%2C+Willi=
+am&amp;rft.aufirst=3DWilliam&amp;rft.aulast=3DFeller&amp;rft.btitle=3DAn+In=
+troduction+to+Probability+Theory+and+its+Applications%2C+Volume+I&amp;rft.d=
+ate=3D1968&amp;rft.edition=3D3rd&amp;rft.genre=3Dbook&amp;rft.pages=3D69&am=
+p;rft.pub=3DWiley&amp;rft_val_fmt=3Dinfo%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" cl=
+ass=3D"Z3988"><span style=3D"display:none;">=C2=A0</span></span>.</span></l=
+i>
+<li id=3D"cite_note-2"><span class=3D"mw-cite-backlink"><b><a href=3D"#cite=
+_ref-2"><span class=3D"cite-accessibility-label">Jump up </span>^</a></b></=
+span> <span class=3D"reference-text">J. Bertrand, Solution d'un probl=C3=A8=
+me, Comptes Rendus de l'Acad=C3=A9mie des Sciences, Paris 105 (1887), 369.<=
+/span></li>
+<li id=3D"cite_note-3"><span class=3D"mw-cite-backlink"><b><a href=3D"#cite=
+_ref-3"><span class=3D"cite-accessibility-label">Jump up </span>^</a></b></=
+span> <span class=3D"reference-text">D. Andr=C3=A9, Solution directe du pro=
+bl=C3=A8me r=C3=A9solu par M. Bertrand, Comptes Rendus de l=E2=80=99Acad=C3=
+=A9mie des Sciences, Paris 105 (1887) 436=E2=80=93437.</span></li>
+<li id=3D"cite_note-4"><span class=3D"mw-cite-backlink"><b><a href=3D"#cite=
+_ref-4"><span class=3D"cite-accessibility-label">Jump up </span>^</a></b></=
+span> <span class=3D"reference-text"><a rel=3D"nofollow" class=3D"external=
+ text" href=3D"http://webspace.ship.edu/msrenault/ballotproblem/monthly358-=
+363-renault.pdf">Renault, Marc, Lost (and found) in translation: Andr=C3=A9=
+'s actual method and its application to the generalized ballot problem. Ame=
+r. Math. Monthly 115 (2008), no. 4, 358--363.</a></span></li>
+</ol>
+</div>
+<h2><span class=3D"mw-headline" id=3D"References">References</span><span cl=
+ass=3D"mw-editsection"><span class=3D"mw-editsection-bracket">[</span><a hr=
+ef=3D"https://en.wikipedia.org/w/index.php?title=3DBertrand%27s_ballot_theo=
+rem&amp;action=3Dedit&amp;section=3D8" title=3D"Edit section: References">e=
+dit</a><span class=3D"mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a rel=3D"nofollow" class=3D"external text" href=3D"http://www.dms.umon=
+treal.ca/%7Eaddario/papers/btsurvey.pdf">Ballot theorems, old and new</a>,=
+ L. Addario-Berry, <a href=3D"https://en.wikipedia.org/wiki/Bruce_Reed_%28m=
+athematician%29" title=3D"Bruce Reed (mathematician)">B.A. Reed</a>, 2007,=
+ in <a rel=3D"nofollow" class=3D"external text" href=3D"http://books.google=
+.com/books?id=3DkIKW18ENfUMC">Horizons of combinatorics</a>, Editors Ervin=
+ Gy=C5=91ri, G. Katona, Gyula O. H. Katona, <a href=3D"https://en.wikipedia=
+.org/wiki/L%C3%A1szl%C3%B3_Lov%C3%A1sz" title=3D"L=C3=A1szl=C3=B3 Lov=C3=A1=
+sz">L=C3=A1szl=C3=B3 Lov=C3=A1sz</a>, Springer, 2008, <a href=3D"https://en=
+.wikipedia.org/wiki/Special:BookSources/9783540771999" class=3D"internal mw=
+-magiclink-isbn">ISBN 978-3-540-77199-9</a></li>
+</ul>
+<h2><span class=3D"mw-headline" id=3D"External_links">External links</span>=
+<span class=3D"mw-editsection"><span class=3D"mw-editsection-bracket">[</sp=
+an><a href=3D"https://en.wikipedia.org/w/index.php?title=3DBertrand%27s_bal=
+lot_theorem&amp;action=3Dedit&amp;section=3D9" title=3D"Edit section: Exter=
+nal links">edit</a><span class=3D"mw-editsection-bracket">]</span></span></=
+h2>
+<ul>
+<li><a rel=3D"nofollow" class=3D"external text" href=3D"http://webspace.shi=
+p.edu/msrenault/ballotproblem/">The Ballot Problem</a> (includes scans of=
+ the original French articles and English translations)</li>
+<li><span class=3D"citation mathworld" id=3D"Reference-Mathworld-Ballot_Pro=
+blem"><a href=3D"https://en.wikipedia.org/wiki/Eric_W._Weisstein" title=3D"=
+Eric W. Weisstein">Weisstein, Eric W.</a>, <a rel=3D"nofollow" class=3D"ext=
+ernal text" href=3D"http://mathworld.wolfram.com/BallotProblem.html">"Ballo=
+t Problem"</a>, <i><a href=3D"https://en.wikipedia.org/wiki/MathWorld" titl=
+e=3D"MathWorld">MathWorld</a></i>.</span></li>
+</ul>
+
+
+<!--=20
+NewPP limit report
+Parsed by mw1009
+Cached time: 20150831105416
+Cache expiry: 2592000
+Dyanmic content: false
+CPU time usage: 0.244 seconds
+Real time usage: 2.417 seconds
+Preprocessor visited node count: 443/1000000
+Preprocessor generated node count: 0/1500000
+Post=E2=80=90expand include size: 5775/2097152 bytes
+Template argument size: 50/2097152 bytes
+Highest expansion depth: 6/40
+Expensive parser function count: 1/500
+Lua time usage: 0.053/10.000 seconds
+Lua memory usage: 1.47 MB/50 MB
+Number of Wikibase entities loaded: 0-->
+
+<!--=20
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  136.147      1 - -total
+ 61.31%   83.474      1 - Template:More_footnotes
+ 42.54%   57.919      1 - Template:Ambox
+ 36.29%   49.408      1 - Template:Reflist
+ 28.10%   38.252      1 - Template:Citation
+  2.14%    2.920      1 - Template:MathWorld
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:1043036-0!*!0!!en!=
+4!*!math=3D0 and timestamp 20150831105414 and revision id 675130146
+ -->
+<noscript><img src=3D"//en.wikipedia.org/wiki/Special:CentralAutoLogin/star=
+t?type=3D1x1" alt=3D"" title=3D"" width=3D"1" height=3D"1" style=3D"border:=
+ none; position: absolute;" /></noscript></div>					<div class=3D"printfoot=
+er">
+						Retrieved from "<a dir=3D"ltr" href=3D"https://en.wikipedia.org/w/ind=
+ex.php?title=3DBertrand%27s_ballot_theorem&amp;oldid=3D675130146">https://e=
+n.wikipedia.org/w/index.php?title=3DBertrand%27s_ballot_theorem&amp;oldid=
+=3D675130146</a>"					</div>
+				<div id=3D"catlinks" class=3D"catlinks"><div id=3D"mw-normal-catlinks"=
+ class=3D"mw-normal-catlinks"><a href=3D"https://en.wikipedia.org/wiki/Help=
+:Category" title=3D"Help:Category">Categories</a>: <ul><li><a href=3D"https=
+://en.wikipedia.org/wiki/Category:Named_probability_problems" title=3D"Cate=
+gory:Named probability problems">Named probability problems</a></li><li><a=
+ href=3D"https://en.wikipedia.org/wiki/Category:Enumerative_combinatorics"=
+ title=3D"Category:Enumerative combinatorics">Enumerative combinatorics</a>=
+</li><li><a href=3D"https://en.wikipedia.org/wiki/Category:Theorems_in_comb=
+inatorics" title=3D"Category:Theorems in combinatorics">Theorems in combina=
+torics</a></li><li><a href=3D"https://en.wikipedia.org/wiki/Category:Probab=
+ility_theorems" title=3D"Category:Probability theorems">Probability theorem=
+s</a></li></ul></div><div id=3D"mw-hidden-catlinks" class=3D"mw-hidden-catl=
+inks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href=3D"https://e=
+n.wikipedia.org/wiki/Category:Articles_lacking_in-text_citations_from_June_=
+2012" title=3D"Category:Articles lacking in-text citations from June 2012">=
+Articles lacking in-text citations from June 2012</a></li><li><a href=3D"ht=
+tps://en.wikipedia.org/wiki/Category:All_articles_lacking_in-text_citations=
+" title=3D"Category:All articles lacking in-text citations">All articles la=
+cking in-text citations</a></li><li><a href=3D"https://en.wikipedia.org/wik=
+i/Category:Articles_containing_proofs" title=3D"Category:Articles containin=
+g proofs">Articles containing proofs</a></li></ul></div></div>				<div clas=
+s=3D"visualClear"></div>
+							</div>
+		</div>
+		<div id=3D"mw-navigation">
+			<h2>Navigation menu</h2>
+
+			<div id=3D"mw-head">
+									<div id=3D"p-personal" role=3D"navigation" class=3D"" aria-labelle=
+dby=3D"p-personal-label">
+						<h3 id=3D"p-personal-label">Personal tools</h3>
+						<ul>
+							<li id=3D"pt-createaccount"><a href=3D"https://en.wikipedia.org/w/in=
+dex.php?title=3DSpecial:UserLogin&amp;returnto=3DBertrand%27s+ballot+theore=
+m&amp;type=3Dsignup" title=3D"You are encouraged to create an account and=
+ log in; however, it is not mandatory">Create account</a></li><li id=3D"pt-=
+login"><a href=3D"https://en.wikipedia.org/w/index.php?title=3DSpecial:User=
+Login&amp;returnto=3DBertrand%27s+ballot+theorem" title=3D"You're encourage=
+d to log in; however, it's not mandatory. [Alt+Shift+o]" accesskey=3D"o">Lo=
+g in</a></li>						</ul>
+					</div>
+									<div id=3D"left-navigation">
+										<div id=3D"p-namespaces" role=3D"navigation" class=3D"vectorTabs"=
+ aria-labelledby=3D"p-namespaces-label">
+						<h3 id=3D"p-namespaces-label">Namespaces</h3>
+						<ul>
+															<li id=3D"ca-nstab-main" class=3D"selected"><span><a href=3D=
+"#" title=3D"View the content page [Alt+Shift+c]" accesskey=3D"c">Article</=
+a></span></li>
+															<li id=3D"ca-talk"><span><a href=3D"https://en.wikipedia.org=
+/wiki/Talk:Bertrand%27s_ballot_theorem" title=3D"Discussion about the conte=
+nt page [Alt+Shift+t]" accesskey=3D"t" rel=3D"discussion">Talk</a></span></=
+li>
+													</ul>
+					</div>
+										<div id=3D"p-variants" role=3D"navigation" class=3D"vectorMenu em=
+ptyPortlet" aria-labelledby=3D"p-variants-label">
+												<h3 tabindex=3D"0" id=3D"p-variants-label">
+							<span>Variants</span><a tabindex=3D"-1" href=3D"#"></a>
+						</h3>
+
+						<div class=3D"menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id=3D"right-navigation">
+										<div id=3D"p-views" role=3D"navigation" class=3D"vectorTabs" aria=
+-labelledby=3D"p-views-label">
+						<h3 id=3D"p-views-label">Views</h3>
+						<ul>
+															<li id=3D"ca-view" class=3D"selected"><span><a href=3D"#">Re=
+ad</a></span></li>
+															<li id=3D"ca-edit"><span><a href=3D"https://en.wikipedia.org=
+/w/index.php?title=3DBertrand%27s_ballot_theorem&amp;action=3Dedit" title=
+=3D"Edit this page [Alt+Shift+e]" accesskey=3D"e">Edit</a></span></li>
+															<li id=3D"ca-history" class=3D"collapsible"><span><a href=3D=
+"https://en.wikipedia.org/w/index.php?title=3DBertrand%27s_ballot_theorem&a=
+mp;action=3Dhistory" title=3D"Past revisions of this page [Alt+Shift+h]" ac=
+cesskey=3D"h">View history</a></span></li>
+													</ul>
+					</div>
+										<div style=3D"" id=3D"p-cactions" role=3D"navigation" class=3D"ve=
+ctorMenu emptyPortlet" aria-labelledby=3D"p-cactions-label">
+						<h3 tabindex=3D"0" id=3D"p-cactions-label"><span>More</span><a tabind=
+ex=3D"-1" href=3D"#"></a></h3>
+
+						<div class=3D"menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id=3D"p-search" role=3D"search">
+						<h3>
+							<label for=3D"searchInput">Search</label>
+						</h3>
+
+						<form action=3D"https://en.wikipedia.org/w/index.php" id=3D"searchfor=
+m">
+							<div id=3D"simpleSearch">
+							<input autocomplete=3D"off" tabindex=3D"1" name=3D"search" placehold=
+er=3D"Search" title=3D"Search Wikipedia [Alt+Shift+f]" accesskey=3D"f" id=
+=3D"searchInput" type=3D"search"><input value=3D"Special:Search" name=3D"ti=
+tle" type=3D"hidden"><input name=3D"go" value=3D"Go" title=3D"Go to a page=
+ with this exact name if it exists" id=3D"searchButton" class=3D"searchButt=
+on" type=3D"submit">							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id=3D"mw-panel">
+				<div id=3D"p-logo" role=3D"banner"><a class=3D"mw-wiki-logo" href=3D"ht=
+tps://en.wikipedia.org/wiki/Main_Page" title=3D"Visit the main page"></a></=
+div>
+						<div class=3D"portal" role=3D"navigation" id=3D"p-navigation" aria-la=
+belledby=3D"p-navigation-label">
+			<h3 id=3D"p-navigation-label">Navigation</h3>
+
+			<div class=3D"body">
+									<ul>
+						<li id=3D"n-mainpage-description"><a href=3D"https://en.wikipedia.org=
+/wiki/Main_Page" title=3D"Visit the main page [Alt+Shift+z]" accesskey=3D"z=
+">Main page</a></li><li id=3D"n-contents"><a href=3D"https://en.wikipedia.o=
+rg/wiki/Portal:Contents" title=3D"Guides to browsing Wikipedia">Contents</a=
+></li><li id=3D"n-featuredcontent"><a href=3D"https://en.wikipedia.org/wiki=
+/Portal:Featured_content" title=3D"Featured content =E2=80=93 the best of=
+ Wikipedia">Featured content</a></li><li id=3D"n-currentevents"><a href=3D"=
+https://en.wikipedia.org/wiki/Portal:Current_events" title=3D"Find backgrou=
+nd information on current events">Current events</a></li><li id=3D"n-random=
+page"><a href=3D"https://en.wikipedia.org/wiki/Special:Random" title=3D"Loa=
+d a random article [Alt+Shift+x]" accesskey=3D"x">Random article</a></li><l=
+i id=3D"n-sitesupport"><a href=3D"https://donate.wikimedia.org/wiki/Special=
+:FundraiserRedirector?utm_source=3Ddonate&amp;utm_medium=3Dsidebar&amp;utm_=
+campaign=3DC13_en.wikipedia.org&amp;uselang=3Den" title=3D"Support us">Dona=
+te to Wikipedia</a></li><li id=3D"n-shoplink"><a href=3D"https://shop.wikim=
+edia.org/" title=3D"Visit the Wikipedia store">Wikipedia store</a></li>		=
+			</ul>
+							</div>
+		</div>
+			<div class=3D"portal" role=3D"navigation" id=3D"p-interaction" aria-labe=
+lledby=3D"p-interaction-label">
+			<h3 id=3D"p-interaction-label">Interaction</h3>
+
+			<div class=3D"body">
+									<ul>
+						<li id=3D"n-help"><a href=3D"https://en.wikipedia.org/wiki/Help:Conte=
+nts" title=3D"Guidance on how to use and edit Wikipedia">Help</a></li><li=
+ id=3D"n-aboutsite"><a href=3D"https://en.wikipedia.org/wiki/Wikipedia:Abou=
+t" title=3D"Find out about Wikipedia">About Wikipedia</a></li><li id=3D"n-p=
+ortal"><a href=3D"https://en.wikipedia.org/wiki/Wikipedia:Community_portal"=
+ title=3D"About the project, what you can do, where to find things">Communi=
+ty portal</a></li><li id=3D"n-recentchanges"><a href=3D"https://en.wikipedi=
+a.org/wiki/Special:RecentChanges" title=3D"A list of recent changes in the=
+ wiki [Alt+Shift+r]" accesskey=3D"r">Recent changes</a></li><li id=3D"n-con=
+tactpage"><a href=3D"https://en.wikipedia.org/wiki/Wikipedia:Contact_us">Co=
+ntact page</a></li>					</ul>
+							</div>
+		</div>
+			<div class=3D"portal" role=3D"navigation" id=3D"p-tb" aria-labelledby=3D=
+"p-tb-label">
+			<h3 id=3D"p-tb-label">Tools</h3>
+
+			<div class=3D"body">
+									<ul>
+						<li id=3D"t-whatlinkshere"><a href=3D"https://en.wikipedia.org/wiki/S=
+pecial:WhatLinksHere/Bertrand%27s_ballot_theorem" title=3D"List of all Engl=
+ish Wikipedia pages containing links to this page [Alt+Shift+j]" accesskey=
+=3D"j">What links here</a></li><li id=3D"t-recentchangeslinked"><a href=3D"=
+https://en.wikipedia.org/wiki/Special:RecentChangesLinked/Bertrand%27s_ball=
+ot_theorem" title=3D"Recent changes in pages linked from this page [Alt+Shi=
+ft+k]" accesskey=3D"k">Related changes</a></li><li id=3D"t-upload"><a href=
+=3D"https://en.wikipedia.org/wiki/Wikipedia:File_Upload_Wizard" title=3D"Up=
+load files [Alt+Shift+u]" accesskey=3D"u">Upload file</a></li><li id=3D"t-s=
+pecialpages"><a href=3D"https://en.wikipedia.org/wiki/Special:SpecialPages"=
+ title=3D"A list of all special pages [Alt+Shift+q]" accesskey=3D"q">Specia=
+l pages</a></li><li id=3D"t-permalink"><a href=3D"https://en.wikipedia.org/=
+w/index.php?title=3DBertrand%27s_ballot_theorem&amp;oldid=3D675130146" titl=
+e=3D"Permanent link to this revision of the page">Permanent link</a></li><l=
+i id=3D"t-info"><a href=3D"https://en.wikipedia.org/w/index.php?title=3DBer=
+trand%27s_ballot_theorem&amp;action=3Dinfo" title=3D"More information about=
+ this page">Page information</a></li><li id=3D"t-wikibase"><a href=3D"https=
+://www.wikidata.org/wiki/Q2253746" title=3D"Link to connected data reposito=
+ry item [Alt+Shift+g]" accesskey=3D"g">Wikidata item</a></li><li id=3D"t-ci=
+te"><a href=3D"https://en.wikipedia.org/w/index.php?title=3DSpecial:CiteThi=
+sPage&amp;page=3DBertrand%27s_ballot_theorem&amp;id=3D675130146" title=3D"I=
+nformation on how to cite this page">Cite this page</a></li>					</ul>
+							</div>
+		</div>
+			<div class=3D"portal" role=3D"navigation" id=3D"p-coll-print_export" ari=
+a-labelledby=3D"p-coll-print_export-label">
+			<h3 id=3D"p-coll-print_export-label">Print/export</h3>
+
+			<div class=3D"body">
+									<ul>
+						<li id=3D"coll-create_a_book"><a href=3D"https://en.wikipedia.org/w/i=
+ndex.php?title=3DSpecial:Book&amp;bookcmd=3Dbook_creator&amp;referer=3DBert=
+rand%27s+ballot+theorem">Create a book</a></li><li id=3D"coll-download-as-r=
+df2latex"><a href=3D"https://en.wikipedia.org/w/index.php?title=3DSpecial:B=
+ook&amp;bookcmd=3Drender_article&amp;arttitle=3DBertrand%27s+ballot+theorem=
+&amp;oldid=3D675130146&amp;writer=3Drdf2latex">Download as PDF</a></li><li=
+ id=3D"t-print"><a href=3D"https://en.wikipedia.org/w/index.php?title=3DBer=
+trand%27s_ballot_theorem&amp;printable=3Dyes" title=3D"Printable version of=
+ this page [Alt+Shift+p]" accesskey=3D"p">Printable version</a></li>					</=
+ul>
+							</div>
+		</div>
+			<div class=3D"portal" role=3D"navigation" id=3D"p-lang" aria-labelledby=
+=3D"p-lang-label"><span original-title=3D"Language settings" aria-haspopup=
+=3D"true" role=3D"button" tabindex=3D"0" class=3D"uls-settings-trigger"></s=
+pan>
+			<h3 id=3D"p-lang-label">Languages</h3>
+
+			<div class=3D"body">
+									<ul>
+						<li class=3D"interlanguage-link interwiki-eu"><a href=3D"https://eu.w=
+ikipedia.org/wiki/Bertranden_bozketa_ebazkizuna" title=3D"Bertranden bozket=
+a ebazkizuna =E2=80=93 Basque" hreflang=3D"eu" lang=3D"eu">Euskara</a></li>=
+<li class=3D"interlanguage-link interwiki-it"><a href=3D"https://it.wikiped=
+ia.org/wiki/Teorema_del_ballottaggio" title=3D"Teorema del ballottaggio =E2=
+=80=93 Italian" hreflang=3D"it" lang=3D"it">Italiano</a></li><li class=3D"i=
+nterlanguage-link interwiki-ru"><a href=3D"https://ru.wikipedia.org/wiki/%D=
+0%A2%D0%B5%D0%BE%D1%80%D0%B5%D0%BC%D0%B0_%D0%91%D0%B5%D1%80%D1%82%D1%80%D0%=
+B0%D0%BD%D0%B0_%D0%BE_%D0%B2%D1%8B%D0%B1%D0%BE%D1%80%D0%B0%D1%85" title=3D"=
+=D0=A2=D0=B5=D0=BE=D1=80=D0=B5=D0=BC=D0=B0 =D0=91=D0=B5=D1=80=D1=82=D1=80=
+=D0=B0=D0=BD=D0=B0 =D0=BE =D0=B2=D1=8B=D0=B1=D0=BE=D1=80=D0=B0=D1=85 =E2=80=
+=93 Russian" hreflang=3D"ru" lang=3D"ru">=D0=A0=D1=83=D1=81=D1=81=D0=BA=D0=
+=B8=D0=B9</a></li><li class=3D"interlanguage-link interwiki-ur"><a href=3D"=
+https://ur.wikipedia.org/wiki/%D9%82%D8%B1%D8%B9%DB%81_%D9%85%D8%B3%D8%A6%D=
+9%84%DB%81" title=3D"=D9=82=D8=B1=D8=B9=DB=81 =D9=85=D8=B3=D8=A6=D9=84=DB=
+=81 =E2=80=93 Urdu" hreflang=3D"ur" lang=3D"ur">=D8=A7=D8=B1=D8=AF=D9=88</a=
+></li>					</ul>
+				<div class=3D"after-portlet after-portlet-lang"><span class=3D"wb-langl=
+inks-edit wb-langlinks-link"><a href=3D"https://www.wikidata.org/wiki/Q2253=
+746#sitelinks-wikipedia" title=3D"Edit interlanguage links" class=3D"wbc-ed=
+itpage">Edit links</a></span></div>			</div>
+		</div>
+				</div>
+		</div>
+		<div id=3D"footer" role=3D"contentinfo">
+							<ul id=3D"footer-info">
+											<li id=3D"footer-info-lastmod"> This page was last modified on=
+ 8 August 2015, at 12:24.</li>
+											<li id=3D"footer-info-copyright">Text is available under the <a=
+ rel=3D"license" href=3D"https://en.wikipedia.org/wiki/Wikipedia:Text_of_Cr=
+eative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Common=
+s Attribution-ShareAlike License</a><a rel=3D"license" href=3D"https://crea=
+tivecommons.org/licenses/by-sa/3.0/" style=3D"display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href=
+=3D"https://wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and=
+ <a href=3D"https://wikimediafoundation.org/wiki/Privacy_policy">Privacy Po=
+licy</a>. Wikipedia=C2=AE is a registered trademark of the <a href=3D"https=
+://www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-prof=
+it organization.</li>
+									</ul>
+							<ul id=3D"footer-places">
+											<li id=3D"footer-places-privacy"><a href=3D"https://wikimediafou=
+ndation.org/wiki/Privacy_policy" title=3D"wikimedia:Privacy policy">Privacy=
+ policy</a></li>
+											<li id=3D"footer-places-about"><a href=3D"https://en.wikipedia.o=
+rg/wiki/Wikipedia:About" title=3D"Wikipedia:About">About Wikipedia</a></li>
+											<li id=3D"footer-places-disclaimer"><a href=3D"https://en.wikipe=
+dia.org/wiki/Wikipedia:General_disclaimer" title=3D"Wikipedia:General discl=
+aimer">Disclaimers</a></li>
+											<li id=3D"footer-places-contact"><a href=3D"https://en.wikipedia=
+.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+											<li id=3D"footer-places-developers"><a href=3D"https://www.media=
+wiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id=3D"footer-places-mobileview"><a href=3D"https://en.m.wiki=
+pedia.org/w/index.php?title=3DBertrand%27s_ballot_theorem&amp;mobileaction=
+=3Dtoggle_view_mobile" class=3D"noprint stopMobileRedirectToggle">Mobile vi=
+ew</a></li>
+									</ul>
+										<ul id=3D"footer-icons" class=3D"noprint">
+											<li id=3D"footer-copyrightico">
+							<a href=3D"https://wikimediafoundation.org/"><img src=3D"https://en.=
+wikipedia.org/static/images/wikimedia-button.png" srcset=3D"/static/images/=
+wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x"=
+ alt=3D"Wikimedia Foundation" height=3D"31" width=3D"88"></a>						</li>
+											<li id=3D"footer-poweredbyico">
+							<a href=3D"https://www.mediawiki.org/"><img src=3D"https://en.wikipe=
+dia.org/static/1.26wmf21/resources/assets/poweredby_mediawiki_88x31.png" al=
+t=3D"Powered by MediaWiki" srcset=3D"https://en.wikipedia.org/static/1.26wm=
+f21/resources/assets/poweredby_mediawiki_132x47.png 1.5x, https://en.wikipe=
+dia.org/static/1.26wmf21/resources/assets/poweredby_mediawiki_176x62.png 2x=
+" height=3D"31" width=3D"88"></a>						</li>
+									</ul>
+						<div style=3D"clear:both"></div>
+		</div>
+		<script><!--
+
+/* Script removed by snapshot save */
+
+--></script>
+<link rel=3D"stylesheet" href=3D"urn:snapshot-1D2CD8B8:https://en.wikipedia=
+.org/w/load.php?debug=3Dfalse&amp;lang=3Den&amp;modules=3Dext.cite.styles%7=
+Cext.gadget.DRN-wizard%2CReferenceTooltips%2Ccharinsert%2Cfeatured-articles=
+-links%2CrefToolbar%2Cswitcher%2Cteahouse%7Cext.wikimediaBadges&amp;only=3D=
+styles&amp;skin=3Dvector">
+<script><!--
+
+/* Script removed by snapshot save */
+
+--></script><script><!--
+
+/* Script removed by snapshot save */
+
+--></script>
+=09
+
+<div class=3D"suggestions" style=3D"display: none; font-size: 13px;"><div=
+ class=3D"suggestions-results"></div><div class=3D"suggestions-special"></d=
+iv></div></body></html>
+------=_NextPart_000_0000_366E3B3A.157F5130
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: https://upload.wikimedia.org/math/b/5/5/b551bad2dfb55d4f49627fd7cb357578.png
+
+iVBORw0KGgoAAAANSUhEUgAAADMAAAAoBAMAAAChnt9BAAAAMFBMVEX///9AQEAwMDAMDAy2trbM
+zMwEBAQWFhZQUFB0dHSKiorm5uYiIiJiYmKenp4AAABab3oFAAAAAXRSTlMAQObYZgAAAQhJREFU
+OBFjYHh7emUnAwp4MTcQwr9Qs4EtAFmK8wBrLpjP4pDFwH4BWcp/A/cXMJ+b9TcDG1CKNRQENgDF
+zjDwfYAo5TRgiF/AwBCkBAIg7T8ZOA5ApJgEGOZDWBCS5QsDewOEybaAoRZZCmjB/gcQgfgJnAeQ
+pRhMGPSh/Mkre1FkGBznikMFFFElQLwKqJAVptQ/iBD3Vwwplt8QoeWfHqDLCX9yQBeiOZ//PzYA
+DXpq2r4NFHXYAR4p7BqwiG7AIgYVOkCCFCJhw3RhSdhQKWwJGyqFkbCBToBKYSRs9fLy9PJykCy2
+hA3RhTVhQ6SwJmyIFNaEDZXClrChUtgStgIDFFCSsAGTnHL1WZIDWAAAAABJRU5ErkJggg==
+------=_NextPart_000_0000_366E3B3A.157F5130
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: https://upload.wikimedia.org/math/d/5/b/d5b22d602e21a46dbb91e88fd7267a26.png
+
+iVBORw0KGgoAAAANSUhEUgAAAEIAAAAqBAMAAAD13ZDsAAAAMFBMVEX///8MDAyKioqenp7m5ubM
+zMwwMDAEBAR0dHQWFhZiYmIiIiJAQEBQUFC2trYAAACRzTdTAAAAAXRSTlMAQObYZgAAAW5JREFU
+OBHdlD1Lw1AUhl9LTO1X6lIQXDI5+weE/oCCg6vQjooUHFwcxIx+LKI4iA6iW6f8AIWuOmXqUByy
+6iI4iOhwPTe3nHvMDfgxeqDhec99bm5CewoAwcMtXd3qcOsJtSMOFoJ55iGCNw4MXv+ceQd45SBg
+g/kC+OAgwBrA9LtYYJRGY4vbAqTxnIoFRmmccFeCMPxQLjAL4woBtwVYoxShIRYYrfE4GIy5LWCd
+eVepFw4WRqrftuk/0t2ZrviXr6a4chuzfq73o/i35/jm1t4cCXr4OgeJox63FwBvm6ZWD18LlHKl
+1Cl1ZpANX7WHckrxS61d61iiD/3YKgkqlzrLMueuUIuMZgTfGX9jhMZYDlGflfs13+8ZJ7tHl4zN
+vNHD/qRFp5DhOwYdHhqFDDql5pwClIds0JM6f1T1EFMxG0Vv20zkPaoxmqnx+UqD2l00iYbPa+GQ
+lyYQRLgxmA3fasE3tzSK8ruK8yecl1zbikM+PQAAAABJRU5ErkJggg==
+------=_NextPart_000_0000_366E3B3A.157F5130
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: https://upload.wikimedia.org/math/1/a/d/1ad7592f2a8ac1a8c616c4783fcb1d38.png
+
+iVBORw0KGgoAAAANSUhEUgAAACwAAAArBAMAAADxr3eKAAAAMFBMVEX///8MDAwiIiIWFhaKiorm
+5uYEBAR0dHS2trbMzMwwMDBAQEBiYmJQUFCenp4AAABYhlReAAAAAXRSTlMAQObYZgAAARFJREFU
+KBXVkr9PwkAUgD9RSfkRy59QViZjEyeH2xxhYpWFhJGdhX/CwakMOkAcTIzMTRzVxNlFduK/QLm7
+9srdhYmEwTe8u/dde++1+eDvY44T69c3CMYsHRqktKExpCts3oAk5eyS7srG4QthpIB7ycmMqsK1
+kTqzI/mGi3dhI7X/7ancUcmK2kYXsjE8qLjX9amQc/cIW7LBQsWzxo8yJxHhQFcmNQVT+oK7mSF6
+vYWU5oqlbmyOgpvPrxQmP0+G6LWaZZlwyH8q5PB74rhfcKBs5/lUvmyVHPuyFdiXrcDyHUe2HXZk
+K7EtG5TYkq0ex9dxfKWHcWUzT3uyGezJVmBftgL7splL8n9Q5nq5gy3MtGXLmBjiugAAAABJRU5E
+rkJggg==
+------=_NextPart_000_0000_366E3B3A.157F5130
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: https://upload.wikimedia.org/math/3/6/5/365e1d12314cb73dbc1ae483d07ee8ef.png
+
+iVBORw0KGgoAAAANSUhEUgAAACYAAAAcBAMAAAD/8tBWAAAAMFBMVEX///+2trZAQEAiIiIEBARQ
+UFAWFhbMzMwMDAwwMDCenp6KiopiYmLm5uZ0dHQAAAAvZALAAAAAAXRSTlMAQObYZgAAASpJREFU
+KBVlkbFLw0AUxn/W1LapiQ4ijnFwESraSXDJH+DQRUFwyOKiSyfXukhRELpmC4igk50EFym6KDgE
+ugqWulZwc6r47h3BEt/wvu/73b27cIGskswY/bQhsNIzMtu1IbByZeSGt61hAoH4/dekYLa0GRyW
+ImWFwVzqnYDfIQ3dizg+i2stlmAFyl3c9WJH933wCAvQgmKj3FR2zxE4Cc8wvbYs5wZQGH1LahDL
+ihBllEKZijiARWWmVeVcP2QbbzPJ4N2G8C9+spxpdfyfuWOZzZXMnuaQuaOeZ/Itu3lWCbjNM3kA
+Z16h9/SwalffU3kAtf5McmzZC3ihWs/h2rK2yMjaS/bU+Gau0lS/Iz/BVF97TXt9aC+zSRGhlck+
+FU0m6/vnf+wXAp87tYLG/D4AAAAASUVORK5CYII=
+------=_NextPart_000_0000_366E3B3A.157F5130
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: https://upload.wikimedia.org/math/0/f/d/0fdf3e5826b5a613314cb9e17ed67360.png
+
+iVBORw0KGgoAAAANSUhEUgAAAI4AAAAcBAMAAABFfZpzAAAAMFBMVEX///+2trZAQEAiIiIEBARQ
+UFAWFhbMzMwMDAwwMDCenp6KiopiYmLm5uZ0dHQAAAAvZALAAAAAAXRSTlMAQObYZgAAAidJREFU
+OBGFlT9oE2EYxp/GpGmTXnQQcTwDLkpL7SS43ObSIYuC4JDFRZdMFad2kaIgdJPbDopQQTBToSBS
+qoOCYKBroaGuFcTFSfH93j93X+7Sr99w3/M+7+97uNyR9wBbmQm3zw/8qqwz38jRn+LGXrP9eYB9
+rzYZQheGQsUGu70+wBu/Fh1E3+LozkkGxMQ+/EbCLcqpab4YfA2imxg/bvY5pza+OJJjlBNtiPSu
+IbSzhVHSepWmL9LFdVzFQbfbHbv7wXUvgWUQnRuitdzY4vv5gQM963Iul3OC6DrQ6M3RsRjYwxMv
+p56VgoLoF+DC0jU6EQO10z9ytPX9Jtm9Uk4QTenlME85aCYs5dLoe4WTQfQRcCXn2/Sc8tVJciki
+iK4iup3Zgd1bpmhv//IKJ4PovxJclO2/TjefujVyMoie3WxxzrPUrf1wDqGrjpi6pvyuqRyZhD4/
+q4fKcw6iK5Wc1+pU3nsVtbOE3jdt+4e7quZjs3SvoHmf0Pd5YcJy6O80uaqo9QmtX+Ii+vTxhrqW
+c8wv21DaFWVHZpY1CW30uOjMZmvqWs5Xo2xXlEuZWdYhNEq4iOrYWaDRswRYzqZRtivKJc2sDfMB
+h55KuY0H6mtOR260gHPUWTKztMmofjfucahraM6hQt6Wf2JsZmlP0EWuVk7kgePd7yEbYnspJAtP
+ZpZ2CxtIJk+cV8nMqlIz/aoXcoqZNUkdvpysz6m8mSXkf2SdlC9Etn3PAAAAAElFTkSuQmCC
+------=_NextPart_000_0000_366E3B3A.157F5130
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: https://upload.wikimedia.org/math/f/f/1/ff1564978f7f78b634bd9dd7a733e8c6.png
+
+iVBORw0KGgoAAAANSUhEUgAAAIYAAAAZBAMAAAAGZ0s0AAAAMFBMVEX///+2trYwMDBQUFAMDAwE
+BATMzMwWFhaenp5AQEB0dHSKiooiIiJiYmLm5uYAAAD6BmzuAAAAAXRSTlMAQObYZgAAAb9JREFU
+OBGtVD1LA0EQnRBz+TIXC8E2HDYWgmgtiIVYyf2ENGqn6RS0uMLSIlaaKyRtQEHSCFYR0oh/QMFg
+sLBSSGVp3Nm92d3JbWGRKW5m3pv3WK54AFjfz51IDulPdvCSBsF/e7hSsObbx17DcYlQDL8OppSP
+9hWs+WFY2HBcCsgbZVyMn4OzSqvVig1f6GVrbo9Sr9J0MeewKmHDZ1dm6q5LgHItf+di1mBLwoaf
+jS9ch4jF73UX9dSZU7Dmc66zBNt1cqFGiV/QSHroGujyCKsngExDownv9yMNTQ7l0+TRjPjaphX5
+6tgqJPawDnCyiPEIAVMplaHE5AVYywyb5mL+xzRdba+CvfA54qu9cVXRpvjc5Ku9cRXf7Dv4h4dK
+AvTQSUAWKlXQY30QEag6V6kkQA+dBHSuUkV4FNvVIYGqcxUmwUewGCx9ppJCpMpOEGwG14cwzy1g
+QiWTQLzDJAHdq1QR77iBV8Koc5VMAuFhkoDuVKoIjy6cEEadq2QSyP8xmRQqVfB/3P6QljpXhQij
+B1AS4IylUkV4gCePJJh8mCqdBPrUpEq5pkE1cBVPAvvU70e03j/SlHSm+gOEsp6Dq6FhWQAAAABJ
+RU5ErkJggg==
+------=_NextPart_000_0000_366E3B3A.157F5130
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: https://upload.wikimedia.org/math/2/b/1/2b1ebc8324e09b1c22816582b9f1970d.png
+
+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
+QmCC
+------=_NextPart_000_0000_366E3B3A.157F5130
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: https://upload.wikimedia.org/math/5/0/d/50d6f41563e44d679d5933a65e4eb1de.png
+
+iVBORw0KGgoAAAANSUhEUgAAAFcAAAAyBAMAAADb31q2AAAAMFBMVEX///+enp6KiooEBAQMDAx0
+dHS2trZiYmJQUFAwMDAiIiIWFhbMzMxAQEDm5uYAAAAeOD8PAAAAAXRSTlMAQObYZgAAAr1JREFU
+SA2VVT2IE0EUfrtu1vzdJmBxZVJZ+EPSqIggh82pHBJRuDaNWFhkweK8A/UKK0G9xkqFAeWwEEln
+EZAUWlkkYKFicYsKh4KXaHFa+PfezJu9vM2PZCDzfd/7vt2dnZ2ZAExs+a6xv05MsXkpMsRVXIgh
+4NvEBQgWLF+2xOIrZZnFXNmybGiZwc/vlSwAvIsLweGYGpJRiYJ/fKdwfodqNhTODTzbq8n0ULgS
+AbjL7uJTzLnV/4RPop/adR/eUu7I5LDzC/0DhTI8oNyNyeFME/2oBHCIcp2iSCfHXAjJvgn5P4Re
+l/q4JcOVOlnPIN2MENNVUnFLhje0sw1ejR7hbMdBIsnwaSo6fShs1ZAEP0jalt74fdtyjT+pT63B
+zJKWR3U/pvO/S+ORlFKl5CDBvILMxCqtZyyWcL29w4dYpi9LlaLUQmWrQkKpLLVQuTkhoUETOK55
+c9JphFIL5TWFhE4If0e3Pq6c4bC8elBNNYypXnCqqRv1UTbXF7uDQ0VuzjHzuYOVC1eNTZ+7Ng/4
+6qKZcyxF+xVSXlgw5h2ErWp+ziiIDPI5ZpZo8BFemPJDBFftXjUKFKPZMrw19sEVU6aNMxN6Lzmk
+GHl/ndLyDSzUiOhrs+3MWQ4pRg6/1vIJ3C0Scb6xy6AYOVxps9aQTkyDYpPDPf14e0FuDRktJL4o
+Ec6SLpCPCL0y9dzutVrHWi1Fiu/sik14mXMWFBMOw7w1COn8HWyKhQ2fGzAd85jZlToXFaMN678G
+Z2mdyrlV6oPQt2NTpPG8tOeYU0W1CY0IYQ/+9Mlnp1vpwkD3GHkJCkWEE6ZcD/TyQkEzKdqnOoAP
+vTYuii4baUtEkIR/hvpb+NtPhNpBA6N6yrh4L/85u04YjMrpmosjm8V1/iXiyMWtvWPDaPjXPtRj
+Px8vjbgkSMcsDar9A9JevjBBb11ZAAAAAElFTkSuQmCC
+------=_NextPart_000_0000_366E3B3A.157F5130
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: https://upload.wikimedia.org/math/2/6/9/26996c744efb622bea87e734ab95149f.png
+
+iVBORw0KGgoAAAANSUhEUgAAAEwAAAAVBAMAAAAeOBUnAAAAMFBMVEX///+KioowMDAMDAwWFhbm
+5ua2trYEBAQiIiJAQEDMzMxiYmJ0dHRQUFCenp4AAAAAmQDQAAAAAXRSTlMAQObYZgAAAX9JREFU
+KBVdkTtLA1EQhb88NsYkJhZ2WliIoJX+AlMEEURYUtm5rVUU/AG3sbGQNNpoITaW0VKrgCAWgpbi
+A7a3UIQ0FuLZe3eTXaeYmTPfuY+9C3HUVb1EZGt6PC30ksWJqgVJB4tQDUcy0x2NlIHzkcp27aHM
+9eFgqNT4KTEeJqLsU2kmIqomJUpDsamrPaVIxsYO1N9uuvAA5Un42J95c+Z4A0cP4Z6LS9iHsTO4
+XPOjojA2x/SE0oCtAE/Thk8p2KWoRQoNFI7yTtnwqXvpwIZ+Q2XAWNrmKNc0+jzrXlopG7Ulelox
+12rttVpGM0tl6wRsuJfVoeS7PMqtMDY7qkN7vvcLVxoWAn3GJOtqFcZmRzmlEOS/oKlhXqf1+jWj
+VmFsdpRVSqfXTSpdDWtKtzOvFic2S4mel+ITE6GqtwQLsSmxWUo92qURUrT0GJaHttm4EyV/JtHx
+2bazNt6PbdJJ1OLxlXm0jyLXn/oObTdKEWU21sbVu1j+K1WfP/uqWwGAvrWIAAAAAElFTkSuQmCC
+
+------=_NextPart_000_0000_366E3B3A.157F5130
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: https://upload.wikimedia.org/math/7/7/e/77ecde396cd28994d9469fe2e12a3e3c.png
+
+iVBORw0KGgoAAAANSUhEUgAAACsAAAAPBAMAAACPTivTAAAAJFBMVEX///9iYmLMzMxQUFAwMDAM
+DAy2trbm5uYiIiIWFhZAQEAAAACLLYoiAAAAAXRSTlMAQObYZgAAAEVJREFUGBljYEAA9gUINhIr
+tQGJA2eWWGIVZmAhW3jlTBAAayfdECYlEChgQAIgQ1RcQECAgXyzJyCZCGcye28xh3OwMwANtxQb
+Qb/0FQAAAABJRU5ErkJggg==
+------=_NextPart_000_0000_366E3B3A.157F5130
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: https://upload.wikimedia.org/math/6/c/2/6c2d4e78cf1aafd0ba758385bf85bf08.png
+
+iVBORw0KGgoAAAANSUhEUgAAALcAAAAoBAMAAABOcHY6AAAAMFBMVEX///90dHSKiooEBAQMDAy2
+traenp5iYmJQUFAwMDDMzMzm5uYiIiIWFhZAQEAAAAAlGkijAAAAAXRSTlMAQObYZgAAApZJREFU
+SA3tlrFv00AUxr8odWnsJu5QqQsSzh/AwsKEhJCYyV9AssEE2UAMqJ1YEFRICCFBQWICJOy/gHpg
+gwGJoQyxFCQGJBSpDEUqHcrZPvvdnd85LoWNG5L3vvfzZ+dOST6g8VrcuDW1wVfe9zf02dW1N7pQ
+353Ei7GNGE+i9nN12Irds2o/p3YOsD2wMM7gDLranYeRt2eBOXk5xnVOTzXPPUBbmLuv0hUJ5QMW
+d200o/sruMvIudQ6jzAAXj5OV/oRfmApzkeNXocDfLaCnSlOqUNnD911VZhTh5H304q0A+yoQ7FN
+2yNVmFMvDDr2XQxXWrF2/UU803rgrdFfm30nxfly+yN1RrXav6Mrl9dmuuBO9N4Z452q1Ozilsrl
+tX5A3pZh3gPC9OSL5Y+KqvJ+oaLAPKAnOuJP4ceKNIyURiu9X1qbNuI7py/DfGET7ZiI3qWH1OjV
+6f2RLgBf9we6ZJiLYbiuE0fsZkm64uyqqvl9604AvezKSdP7Vcxd81SaOjFcbp79+LzOxt2Aof5Q
+yszd7MfnUWbxAPAPubWr38EG1e35iQDGkauex9zzPjBW7Y5VGwfq7Ny4+dfM7x1+i9SHa4vdDlTh
+f83tgMeJpqZtrDms6ZdrZuUoLqujFf/AnJJaYc4kNYKKJ2cg5qNQUpPmXFIjSJpzUNVcSWrSnElq
+CiTNGajqXSY1MZLmTFIr4pyApDkDMeaQSa2TJJ+SZCIILqlJ6GmSnMv/eTiIcaeklj85m9QIyp+c
+hRhzSmq5OZvUCMrNWYgxp6Qm97ya1MQfeRnncnNwEGNOSU2aV5KauIggac5BjDklNWkOJkoTJM05
+iDGnpNYpptVMQNCmHSom9N4kqaERRJ5l1SSpwQL9Bs4C/X/A/1CiAAAAAElFTkSuQmCC
+------=_NextPart_000_0000_366E3B3A.157F5130
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: https://upload.wikimedia.org/math/7/2/a/72a770b7b9a14bb3c3f5306753c3e7a3.png
+
+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
+------=_NextPart_000_0000_366E3B3A.157F5130
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: https://upload.wikimedia.org/math/2/f/4/2f4702eea932de1219f89fac7ce91c2b.png
+
+iVBORw0KGgoAAAANSUhEUgAAAD8AAAAtBAMAAADrb658AAAAMFBMVEX///90dHSKiopQUFAEBAQw
+MDDMzMwMDAwiIiJiYmK2trbm5uYWFhZAQECenp4AAAABL0dXAAAAAXRSTlMAQObYZgAAAVhJREFU
+OBHdUz1Lw1AUPQkhNV9NEATdnktxs6Ob7i5FUSg4uFRwqg6OQjYHESIiQacs4tgM7nXtlkUo6F+Q
+xg6CFYz3ZShJhNutg2fJPfecm/fe4T3g/e0VHMwAF5wOB+gGnMNN4PqcodaCxhpouNtUb9WVy+Ml
+QaSAZVjbOd2MFW0fL56ZFlQqr6DmHf0HDVfgAFXDGI4vR2yBeAScwngmph9JxFSZ37Dz8+0Q2YD1
+CbtJVWdPQgrGCfqR/ApEGEDdQv9QDk6xkGBkEVsFAkzgtBDqYqpS4XoYKrTS4O4mqKeoedg1ijp6
+gXlOHS3LMqFQWjEe7kuGsL3YKXdKsoxhBsYzdIqBh+rz+jxVyolDOs+9/Ke1FB9PpatdPRxd9fVq
+r8TpCQ5LjSrpxfSGOISwJpxOV72espv8oBfvMb8wv/CYBIzBOLtutCPGQDHwoBh4UAw81v7Kv3u2
+bPQYl+kPAAAAAElFTkSuQmCC
+------=_NextPart_000_0000_366E3B3A.157F5130
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: https://upload.wikimedia.org/math/4/a/8/4a83c20bbec6f63c216f879e36407771.png
+
+iVBORw0KGgoAAAANSUhEUgAAAFEAAAAQBAMAAACcpY7MAAAAMFBMVEX////MzMwwMDBQUFB0dHSe
+np4MDAxiYmIWFha2trZAQEDm5uYEBAQiIiKKiooAAADoe+fAAAAAAXRSTlMAQObYZgAAARxJREFU
+KBVjYKAO4CXaGFSVfBcYeDag6GV14nN+ABaBqWQ18TZgYOBdwPAeJLyiAwQuAFnsHBcZDqKofMEw
+rYCBgf8Bw1qwMJyQ5HnAkIKskvEjw/4JDAzzNzC0wxVBGPIbGL4jq2S6wBAP5JcxcP9EU+nGwPiV
+gYGro6Ono6MXKMdfwGALpG4xsH4AqUS4k0GLgf0ASIgB6iP5AIZmIO87A1eDA0gYAc4xsDmAeTCV
+AtxAOzg/M8xYAPQYEmD8zlAE4UJVsgUwAa1lTyoJVBdAUsfAwJJa4oCiknFJVQM4OFGUATlMC2Ai
+UDMZGDgMwMEJE4fRUEcCuUwwIf4AcHDCuDBaHtUxIGFgoDM8gsnDab5+TTgbyuDKV2QAAJXLO+Li
+zgSHAAAAAElFTkSuQmCC
+------=_NextPart_000_0000_366E3B3A.157F5130
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: https://upload.wikimedia.org/math/9/2/1/92109cb167b0002bab041f2ddf818b69.png
+
+iVBORw0KGgoAAAANSUhEUgAAADUAAAANBAMAAAD74TuDAAAAMFBMVEX///8WFhZQUFAMDAzMzMye
+np62trZAQEAEBATm5uYiIiJ0dHQwMDBiYmKKiooAAABU0ngcAAAAAXRSTlMAQObYZgAAAAlwSFlz
+AAAOxAAADsQBlSsOGwAAAMBJREFUGBlj4LvDt3vl3DsPGFBA9IHXegwMvBxlDMc3sDWApAoFQWAB
+kHVByoHDgSFk/gOGxQysH0BycMCS0MfAvIGBIZ6BoZuBaQFcHMxg+cnAf4GBQYuB8wsDowJYCE5w
+GzD4BzAwyDLwNTDMdwAJI+zjKWC4ART4xsB+gGEzC1AVEuB4wGDNAHIF0NZyJiQJINP/Au8BBgbu
+AgaOCQw5V1DlNsfuRhVA4h1HYqMzgZbhAixfcMkwMDz8kwCUBADxxytxOx42wQAAAABJRU5ErkJg
+gg==
+------=_NextPart_000_0000_366E3B3A.157F5130
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: https://upload.wikimedia.org/math/d/7/9/d790aa1a86d59be3a8fab49fcee099d8.png
+
+iVBORw0KGgoAAAANSUhEUgAAAN8AAAAUBAMAAAD/+PVoAAAAMFBMVEX///8WFhZQUFCenp4EBATm
+5uZiYmLMzMyKioq2trYwMDBAQEAMDAwiIiJ0dHQAAAB9auBqAAAAAXRSTlMAQObYZgAAAnZJREFU
+SA2VUkuL01AU/pw2bSbpQ0GXYkFx3ZXgQuxGXAxCF2UWKhhmURgHnC5cO0FwM6DUPzB2oVTiKwoO
+OoPiSkURshPBR1bdiIwLHcdRxJPcR2/SXFsPJDnf4+TjPgB8+b2+9g7/U5VPr9fvdLUTY2RMbwEb
+He14lnDNReVHlsC4MXLhO1D19eMZymIT+JXBc2qMXH4GnOnpxzOU94CxPcKXBZMtCxV5Wt1RV8JJ
+mhkgRweRKhmYLUv3Ugh8kGiSpvgHKAcjThGokaWfLszJGxLpGntXVHtjmS6M4dExpkoEamTpvtee
+m5dgosbabB/sjjpFoEaWAydkR02dnnJHMinI+XwgDWojAhNyLnK8VW3FTRX5gHlgGJiC3LnkqCOs
+py3fzbc8IdskXzyu+is/VUQJyCcCOVTPcKOrjsherDAhR4FIBFoNYoyzFxZW2tTIwKm6RbkSkjSs
+61E72x88HjjU7Ec/wnQU7IOEPAwUvnjHzZJTdVs0IBNKnaoK+b/YJz519zm2jAYRL/CV0SIwIQ8D
+I9/pEPa+mSb5WziPI8aa98rz2R62cFWF7Jfsff/bQ2qMRrGRC6Lv9E7G80BVPuXd9m6xLY19LW4F
+LuMzntKcT098hsuYUyH7pfo2g4pvh3THeoUa48UKYyRkuULmowFWq7iJY44MPIwHeBlKyE2Jj+1Y
+bn4217VrpStMsFSdyQAPFD5XePrYg9VunJBbvIsneDNYIJEWHMGssjo7mva8HZQ+th9l6ExmgYe2
+Q+4r1tPWGiMq8XUAOEy7FBxGV+0fNcU15jN1zoLZ00kp3llOERo4xnepEGoGU7TZPJdisqH0/QWC
+8bNuOh73iAAAAABJRU5ErkJggg==
+------=_NextPart_000_0000_366E3B3A.157F5130
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: https://upload.wikimedia.org/math/3/f/8/3f81312729be6bab520746cdb96052e7.png
+
+iVBORw0KGgoAAAANSUhEUgAAACYAAAAUBAMAAAAToVI7AAAAMFBMVEX///9QUFAWFhZ0dHTMzMye
+np4EBAQwMDDm5uaKioq2trZAQEAMDAwiIiJiYmIAAAA3YukbAAAAAXRSTlMAQObYZgAAAMlJREFU
+GBljYGB4+2f33lsMqIDrJwPD/AWoYnw/GBj4C1DFeA8AxS6girFtYGCIf4Aq5m/AwHAJVYjB3oGh
++waaWP27h6JoQgy56AIMDCz/MMWYf2GKsScAxTjeLn69+CGQwT2B14GBgQ3kXGaeB/wT2IAMHgd+
+oMT900AJjjYGH4YgoFgbwyIgCQFzGawZ9jUwMExneAgkIWAfQyVDxoMohn0MR4HegoArDBoMlwOK
+GI7bPZwAE4PQzBwJqAJAHjNnAYbYFEaQYQB1sy9XNUqTCwAAAABJRU5ErkJggg==
+------=_NextPart_000_0000_366E3B3A.157F5130
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: https://upload.wikimedia.org/math/b/b/6/bb66a6acabb5cc636c4536c7791e6160.png
+
+iVBORw0KGgoAAAANSUhEUgAAADgAAAAcBAMAAADGlWENAAAAMFBMVEX///+2trZAQEAiIiIEBARQ
+UFAWFhbMzMwMDAwwMDCenp6KiopiYmLm5uZ0dHQAAAAvZALAAAAAAXRSTlMAQObYZgAAAWlJREFU
+KBV9kj9Iw1AQxj9rY9ukjR1EHGPBSRqqk+CSzcWhk5NDQVx0yeDeLlIchG6SLYuDINhJKDiU4qBS
+aMBVsOhaobg4Rbx37yX0rzfcfff93l3+AlH4kRA146ruS1ZLtaIYjy7aQmSbIgMWZ5WSLq6FvMHb
+7ocv4WGXhAiCCTFUR/8kVWGY6C8HAjHM1QCzgcDRLz3vwitWsYZOoVDoi0lsAOkm9JLW4MlPdHiO
+J7ECVAGtnKaDFtDC6QhM+ngCFu118ggmBj8S6r1NssvwaAc7BJFyWMqkVXAMrMaOQdeOw3Swj9yO
+Hxn3W5GiagzxO9KOSyP8B+ohrZ0XtPZ8HgPd0PYUvFIOPcrBJHzYU07Gwt0kRATprSfzkmrdF3Us
+gu8BvXXp2Qgn4DOQc9hLDRdqWfqUNuK1dQIDhmYpa7GIoSlWyr/QaCw1x+Ert0XOds+V8PZbnpK2
+GjhTdWZpzXSlaRzlp+gfySNJ3+Aden8AAAAASUVORK5CYII=
+------=_NextPart_000_0000_366E3B3A.157F5130
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: https://upload.wikimedia.org/math/2/9/4/2946fc189c46e38a002c106fc8479ba0.png
+
+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
+Lg5I/wGbaSahDHk8/AAAAABJRU5ErkJggg==
+------=_NextPart_000_0000_366E3B3A.157F5130
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: https://upload.wikimedia.org/math/a/5/2/a52abb41977a5d74eed176f607ddfe7e.png
+
+iVBORw0KGgoAAAANSUhEUgAAAC0AAAAoBAMAAACY+W4aAAAAMFBMVEX///9AQEAwMDAMDAy2trbM
+zMwEBAQWFhZQUFB0dHSKiorm5uYiIiJiYmKenp4AAABab3oFAAAAAXRSTlMAQObYZgAAAP9JREFU
+KBVjYHh7emUnAwp4MTcQyL9Qs4EtAFmc8wBrLgMDi0MWA/sFZHH/DdxfGBi4WX8zsAHFWUNBYANQ
+wRkGvg9AitOAIX4BA0OQEgiANP5k4DgApJgEGOYDKThg+cLA3gDksS1gqIULAhlAc/c/ANLxEzgP
+ACkEMGHQB3Emr+xFiIFYjnPFQZQiiEAFFSCuFaoYiPcPiLm/Yoiz/AYKLf/0AF1C+JMDuhD1+fz/
+sQFQgA5asAGHyw4QJY5IhzD16OkQKo6RDqHiqOkQaCdUHDUdqpeXp5eXg6Qw0iFEPWY6hIhjpkOI
+OANGOoSKY6RDqDgDA1o6VGCAAjLSIQATKG/pb66ZsgAAAABJRU5ErkJggg==
+------=_NextPart_000_0000_366E3B3A.157F5130
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: https://upload.wikimedia.org/math/5/5/2/552082622ebfc17af3f9703a73470512.png
+
+iVBORw0KGgoAAAANSUhEUgAAAFQAAAAtBAMAAADCaFH7AAAAMFBMVEX///9AQEDm5uYMDAy2trYE
+BATMzMwiIiIWFhZiYmJQUFCKioowMDB0dHSenp4AAAALBVuHAAAAAXRSTlMAQObYZgAAAapJREFU
+OBHNlL9LQkEcwL+99OVvhRZHWyOoLRoSoX+gKYIIXhBNwWtqdgmPllzaCqIpqMGxJVAQDAkUnIoE
+14JAJARBtPe+9+60O89z9Dvcfb+f7+fu3RPfAchhJGSmIDtnioaE1x70KjMiLJF24YAZSvWn+PJI
+baX63VxFI5+z/BZmKjWc9W25gpk5gMX6VNW2jF8UzA7E8xNU88SNlNOpQKyNQnQD7BZAkpB9QvAM
+9LVO39xwN+lBCDlEEnCNa4DWAMIvYA4gcIeGvwDb09UurLfQsPPBoqBmac3GNNRo2vhqesw7QKjW
+v2cWzkfvSVqXOGZn5YAnlzTzDuoURd4SkwECsytyufZ1kD33M3JPIMt9SyBzX8aHM0V77l9k7IDG
+6A8wRnm6wjMA43CskFLfpoQUwKjmFJ0RXmJphSXKWavGPsMfBVyuVYOBc9ibTT3mX7l2V7BTzj3i
+hl5tgHOPwAIhF4TkcE0FxwlDCYK7iPW78stTq5o9uKHP4urrhGe7KJq+rf9Xn4bVFCXC6FyeXvBd
+GRBn75Z3cERsibVtiURVh6/KqpbH/wC+YoYYsiU8OwAAAABJRU5ErkJggg==
+------=_NextPart_000_0000_366E3B3A.157F5130
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: https://upload.wikimedia.org/math/5/a/3/5a37b2b6a614f6c9a862455342065afb.png
+
+iVBORw0KGgoAAAANSUhEUgAAACYAAAAcBAMAAAD/8tBWAAAAMFBMVEX///+2trZAQEAiIiIEBARQ
+UFAWFhbMzMwMDAwwMDCenp6KiopiYmLm5uZ0dHQAAAAvZALAAAAAAXRSTlMAQObYZgAAASdJREFU
+KBVlkLFLw0AUxj9jY9qkiR1EHM/BsaE6CS75Axw6OTkUxEWXDu7tIsVByJrtFgcnMwndxEml0ICr
+YNG1QjeniO/e86DEG973fb977+44wC5tjdEvCUrkwUgzl6BEbozc4u3gQwOK/PFEO6ZlhNmZ12Pm
+zNaLcAhEKYrEv86yq6w9wBawA9Rz+B035b5PPAIbwABwu/U+szHOgZrGE7Aab9O5CnDm35S6yGiH
+CDN4CU31cApsMjMloHOjBIcI97WF97vEF/ix2WpQ/md+SbOVRbOXFWTu2KsyestRlTUU7qqMPqDW
+EuhOXsS8F/QBYmOUYp6BMGHrLVaGwkYkc7ZRp6nEmLlG3/ggXcuZvXJtc42nvAdJjICLP12W8XIQ
+H5y0LPwFVvM8MXbPQcoAAAAASUVORK5CYII=
+------=_NextPart_000_0000_366E3B3A.157F5130
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/AndreReflection.svg/220px-AndreReflection.svg.png
+
+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
+
+------=_NextPart_000_0000_366E3B3A.157F5130
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: https://upload.wikimedia.org/math/c/5/6/c56022020836fe35e779df0fe5cd1a4e.png
+
+iVBORw0KGgoAAAANSUhEUgAAACYAAAAcBAMAAAD/8tBWAAAAMFBMVEX///+2trZAQEAiIiIEBARQ
+UFAWFhbMzMwMDAwwMDCenp6KiopiYmLm5uZ0dHQAAAAvZALAAAAAAXRSTlMAQObYZgAAAS5JREFU
+KBVlkDFLw1AUhT9qSpvERAeRjrHgJBV1ElzyAxwyOTl0cdGl/6AuUhyErtmyODjZSXCT4qAgGHAV
+DLpWcHOqeN+NT0O9Q86537v35XHAVmaN0feyiUq5MTI/KpuolHMjFzzvvGYQid9/yGpmZEBx2Ogq
+qxULeXAM4ZA89s7S9DTt9GnBKjRHeBv1oc69MYYl6EM9afaUXXMETsYdzK2vyL0R1Caf0iWkciJE
+GY1YtrocwLIy8/Hl3jBml2A7s/BqU/gHX7a36k//M28quzMluyczyPxjq8pcebu8Za/C/FthbsRl
+heEIkwCcRY2tPDHsJZcAMLH9sXsIYommxbjdbhe6O5DjCRqbDspumIhzexqbZU9qOhqbsd7jGh1l
+aGw/9ldMbLNlYqvUN0DFRTO7JifpAAAAAElFTkSuQmCC
+------=_NextPart_000_0000_366E3B3A.157F5130
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: https://upload.wikimedia.org/math/d/3/2/d32525539fd10e02c082dac244b574f9.png
+
+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
+------=_NextPart_000_0000_366E3B3A.157F5130
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: https://upload.wikimedia.org/math/5/1/4/514d89f2a467c716d90f3e2f18591d20.png
+
+iVBORw0KGgoAAAANSUhEUgAAACwAAAAcBAMAAADo0ECfAAAAMFBMVEX///8wMDDMzMxQUFCenp4E
+BAQWFhYMDAy2trZAQEB0dHSKiooiIiJiYmLm5uYAAADM4P6AAAAAAXRSTlMAQObYZgAAAPRJREFU
+KBVjYAADFhB5CMJGIjmB7M1BSAIQJkiYAVmY786uGQwMKMK8d5cwcLNvaEMTnsvwj4GBlcH9paC4
+oCTIEK6ZM2fOYvrHUcDA4MNgiaqau4B3AgODMV8dqjCLAPsGBobDKxUgwr4fF4Dcw8Aw674CA0MA
+iMUMIuBAlYGBIwHOgzMWMjC8KYHzYAzuMgUG/v/YAEwF1WgHoEk8ChjGAb3MbYpVmIEVWfjt6ZUN
+DAxA1ajCG6pBnsUQZghgqZsoWCg4AVU1ywFmoFIM1cwGzx9gEeaxmgS0Dqia5b4UkAEDrGCGAYwL
+o4FxjwXwHXdAEwUAW1dEQkKoblQAAAAASUVORK5CYII=
+------=_NextPart_000_0000_366E3B3A.157F5130
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: https://upload.wikimedia.org/math/b/9/1/b918a87d09b53d8a5401b404f5864483.png
+
+iVBORw0KGgoAAAANSUhEUgAAAOoAAAAtBAMAAABSV+pxAAAAMFBMVEX///9AQEAwMDAMDAy2trbM
+zMwEBAQWFhZQUFB0dHSKiorm5uYiIiJiYmKenp4AAABab3oFAAAAAXRSTlMAQObYZgAAA2dJREFU
+WAntlz1MFEEUxx/HLXAuAokFWgnGxAY/Cisaz8T+0EQpLK4yJiYmVq4FRi2JmlxCQyGRztAtlja3
+PRZY2FlQ2hiRYIEk4uzOm3kft7ccJ0ckcQr2ff9ndzbH/gA6X+GYql1Vfk/c2USODeak3xPv/bhT
+jbP54eRRqELJqbrrVKbe4z+9UB358mGxwfb9bW1lnrnG3F/169JN2QJ6KsDI/Gf2Vp4cXIN7rGd9
+Lh6YYX4HqpUkeCg6APRUgDdwZ52Kbgwsw1Nyy9UHMMjSJrPvvdbicJsmZJaaClDehWaViuJ6DGyn
+YbALA0Y1uJ2uOK1ro0oVH2FkkwZmlpuaTblrQsMJfOc1CxD8Yn7lCtSXAW6dS1d201b1QhTdj6Ik
+rbTvMFXswFAWT3Nu2alBNuWiCY424JXLpddJqPCdlsbgLU+3vVdfVN6GwefeQ0NNhVoVnvAadY7y
+mNPCNk/YzzBn0tzwHhpqKtTj8DerCXbM68VWvVFJmGvM/VThKlyWHea1UFOhv1riT7QyvZidnutb
+WHntTHsdOvvjpbUSe3mxdzq2Fv69vjQufOPoqVA+8+kRKzLnKNak8ISTCI874sjShJ5qQuLs+5fT
+KlrTZGprQge8z48sC+qpJji64csBmjPMAQh/Crczx/wEqKWmptkaO5YTzy6JhndbG8LvyDm1VZV1
+eqrJ9l07L2v+ewd/An1Ruo7kS+NAmxvdy1ubkB/Pq5WxTakuk86TNcfa+1fP9fg81FW11RYUUflD
+cVtIYzb5i7lhZ71EGthAKFI4gP3o87ph7hTZjjRcg//IKGqCJD/rhuRnWfQQVIksnKrkBsp73QOo
+MuJIbL8lDiILVFXcQPluVBlxoGpGHIwsUFVyA8t3o8qIw6pa4nBkYUaiquQGn/fM4L75fQN9svp9
+ecMRhwkkWRCJA8miFEWP7f9ExQ2YJ2ZAVWooUgXkGM8pSBxEFvZeNTdQ3t/AFFr4cApViTjsvSJx
+EFnYIZobKN+VKhGHVUXiILLArStuoHw3qow4rCoSB5EFqipuoLxT9aSBDYQiroKujDisKhIHkQUO
+AYl6lKdZaPmGlowPMOJIMJgRB5FFydUKbqC8S/urb/CRFoMRxwQmU+LIIQvBDTn5ltEFgTbEkUMW
+ghty8gUiOtWGOP4AeElsFeroG1UAAAAASUVORK5CYII=
+------=_NextPart_000_0000_366E3B3A.157F5130
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: https://upload.wikimedia.org/math/9/2/f/92f1f6454537520b143d57bf1cc8ef30.png
+
+iVBORw0KGgoAAAANSUhEUgAAAGgAAAAcBAMAAAB/gedFAAAAMFBMVEX///8wMDDMzMxQUFCenp4E
+BAQWFhYMDAy2trZAQEB0dHSKiooiIiJiYmLm5uYAAADM4P6AAAAAAXRSTlMAQObYZgAAAcZJREFU
+OBGdVD1LA1EQXM33nRdNJXZp7AQDVnZ2NgohvZDWLkSxlFhoa0oTiEQQxC6QziroH7ASBEVbwSK2
+FtHZfR+5e5ezcCFv583s3OM+JkRSaV7vFXZWKwkIiwVshrUwQ9RXWysxQPVl5UWIqCnQqpW0aYjx
+4svdhWMKXq8hnLgSmyAVtoj83ODMMfVoAr3pSmyCVGygZ2j7o7RcWiGqkdfpdLrzkzx4fxSVZEak
+Hkw7tBk9yW8EbaLswJVwkkinMG0Uj6Om9FIOhvV3V4JJpEyL6OG2rEy7X32S6r6BuQGMSnxPLGUr
+RFUeTPFiaxWohF9UkhlIhRHl63bWgiugfUqSgip9HtpZA/yjMtEBJUnemBZ/ZhXRnrlErPvjGGWI
+bwNi/Q/Tv07CPSWUJw8VYjw0/MhnV6queX5xkicGUk8GxPpCRVMyy3mypvPYsCEyg4TQ4AtvmSF0
+lTBN4Kt08sQnSZ5S7ZBJJUwTz+jhPE1DQ5I1PaYSZi7SBIjmCSepPBH/F+jSjNp5j+jRPMGk8kRz
+LW2xjNqvcZsdGgiXaohXSZjeCi3v1+bJhGZqEMQJC1VSnkIjgJywUCXlKTSCZ8MJm9YvviqL92ru
+gPQAAAAASUVORK5CYII=
+------=_NextPart_000_0000_366E3B3A.157F5130
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: https://upload.wikimedia.org/math/f/8/c/f8c04ce31177219a88b5f7f3d4879b7f.png
+
+iVBORw0KGgoAAAANSUhEUgAAAFYAAAAcBAMAAAAJu1XOAAAAMFBMVEX///8wMDDMzMxQUFCenp4E
+BAQWFhYMDAy2trZAQEB0dHSKiooiIiJiYmLm5uYAAADM4P6AAAAAAXRSTlMAQObYZgAAAa1JREFU
+OBGVUz1Lw1AUPdrPJKYfk7h1cRNacHKrk4tC6S4UN7dSxUWQOqijHW2hUkEQB6HQoeBU9A90EhSL
+XQWH6uhQve8meXkvDYIXcu+555w8QnICcEVFf3BwoLOkcgYtvbLKAB1nFRJVh7toTOhe21Vdb49c
+qdf7i4DXHl2TcKxIxBhFwEp0TwPeNqbkrSkSMakqcTFsvGcXs0tAGWaz2WzNT5PEWwNfYqZN3k2s
+6edaVbsBxLu+xMwJeVdTR7o3mkmQLz/2JWZideDxNud4tz474Gq9EXNDUEqCiReAktAjoslaJpSl
+y5eIMQZIVqRFgitCu1AlYuwSPvalxQPWQQ7YgyIJxpwg/RNWwLZ3pzetiYdm5neQ+cP7n3PpefUy
++a24nJ5h8c60ilSUVYTPz/CTojBcKCiMnuFzRWEY6/IIyTDE5+cavRR5ioBQhWQYkQZLMIbpMaNn
+Z9cy7FKcbcL58ZnD1FxhJsPEix+Mqg/nQHPo7LMZJn6uzuI6DnmucKcmgyozTOQlq8bdF09nI1gS
+q55hNog2z6JcwzIsRTMjoQAhGfb1/o6HfwHsJ3sqEqLRQwAAAABJRU5ErkJggg==
+------=_NextPart_000_0000_366E3B3A.157F5130
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Text_document_with_red_question_mark.svg/40px-Text_document_with_red_question_mark.svg.png
+
+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
+------=_NextPart_000_0000_366E3B3A.157F5130
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: https://en.wikipedia.org/static/images/wikimedia-button.png
+
+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
+------=_NextPart_000_0000_366E3B3A.157F5130
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: https://en.wikipedia.org/static/1.26wmf21/resources/assets/poweredby_mediawiki_88x31.png
+
+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
+------=_NextPart_000_0000_366E3B3A.157F5130
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: urn:snapshot-8A08F915:https://en.wikipedia.org/w/load.php?debug=false&lang=en&modules=ext.gadget.WatchlistBase%2CWatchlistGreenIndicators%7Cext.math.styles%7Cext.uls.nojs%7Cext.visualEditor.desktopArticleTarget.noscript%7Cmediawiki.legacy.shared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.interface%7Cmediawiki.ui.button%7Cskins.vector.styles%7Cwikibase.client.init&only=styles&skin=vector
+
+/* Effective stylesheet produced by snapshot save */
+.mwe-math-fallback-image-inline { display: inline-block; vertical-align: mi=
+ddle; }
+.client-js .mw-content-ltr .mw-editsection-bracket:first-of-type, .client-j=
+s .mw-content-rtl .mw-editsection-bracket:not(:first-of-type) { margin-righ=
+t: 0.25em; color: rgb(85, 85, 85); }
+.client-js .mw-content-rtl .mw-editsection-bracket:first-of-type, .client-j=
+s .mw-content-ltr .mw-editsection-bracket:not(:first-of-type) { margin-left=
+: 0.25em; color: rgb(85, 85, 85); }
+.client-js.ve-not-available .mw-content-ltr .mw-editsection-bracket, .clien=
+t-js.ve-not-available .mw-content-rtl .mw-editsection-bracket { margin-left=
+: 0px; margin-right: 0px; }
+@media screen {
+  .mw-content-ltr { direction: ltr; }
+  .sitedir-ltr textarea, .sitedir-ltr input { direction: ltr; }
+  input[type=3D"submit"], input[type=3D"button"], input[type=3D"reset"], in=
+put[type=3D"file"] { direction: ltr; }
+  img.tex { vertical-align: middle; }
+  .mw-icon-question:lang(ar), .mw-icon-question:lang(fa), .mw-icon-question=
+:lang(ur) { transform: scaleX(-1); }
+  .mw-content-ltr .thumbcaption { text-align: left; }
+  .mw-content-ltr .magnify { float: right; }
+  #catlinks { text-align: left; }
+  .catlinks ul { display: inline; margin: 0px; padding: 0px; list-style: ou=
+tside none none; }
+  .catlinks li { display: inline-block; line-height: 1.25em; border-left:=
+ 1px solid rgb(170, 170, 170); margin: 0.125em 0px; padding: 0px 0.5em; }
+  .catlinks li:first-child { padding-left: 0.25em; border-left: medium none=
+; }
+  .mw-hidden-cats-hidden { display: none; }
+  table.wikitable { margin: 1em 0px; background-color: rgb(249, 249, 249);=
+ border: 1px solid rgb(170, 170, 170); border-collapse: collapse; color: bl=
+ack; }
+  table.wikitable > tr > th, table.wikitable > tr > td, table.wikitable >=
+ * > tr > th, table.wikitable > * > tr > td { border: 1px solid rgb(170, 17=
+0, 170); padding: 0.2em 0.4em; }
+  .visualClear { clear: both; }
+  .mw-content-ltr ul, .mw-content-rtl .mw-content-ltr ul { margin: 0.3em 0p=
+x 0px 1.6em; padding: 0px; }
+  .mw-content-ltr ol, .mw-content-rtl .mw-content-ltr ol { margin: 0.3em 0p=
+x 0px 3.2em; padding: 0px; }
+  .mw-content-ltr dd, .mw-content-rtl .mw-content-ltr dd { margin-left: 1.6=
+em; margin-right: 0px; }
+  h1:lang(anp), h1:lang(as), h1:lang(bh), h1:lang(bho), h1:lang(bn), h1:lan=
+g(gu), h1:lang(hi), h1:lang(kn), h1:lang(ks), h1:lang(ml), h1:lang(mr), h1:=
+lang(my), h1:lang(mai), h1:lang(ne), h1:lang(new), h1:lang(or), h1:lang(pa)=
+, h1:lang(pi), h1:lang(sa), h1:lang(ta), h1:lang(te) { line-height: 1.6em=
+ ! important; }
+  h2:lang(anp), h3:lang(anp), h4:lang(anp), h5:lang(anp), h6:lang(anp), h2:=
+lang(as), h3:lang(as), h4:lang(as), h5:lang(as), h6:lang(as), h2:lang(bho),=
+ h3:lang(bho), h4:lang(bho), h5:lang(bho), h6:lang(bho), h2:lang(bh), h3:la=
+ng(bh), h4:lang(bh), h5:lang(bh), h6:lang(bh), h2:lang(bn), h3:lang(bn), h4=
+:lang(bn), h5:lang(bn), h6:lang(bn), h2:lang(gu), h3:lang(gu), h4:lang(gu),=
+ h5:lang(gu), h6:lang(gu), h2:lang(hi), h3:lang(hi), h4:lang(hi), h5:lang(h=
+i), h6:lang(hi), h2:lang(kn), h3:lang(kn), h4:lang(kn), h5:lang(kn), h6:lan=
+g(kn), h2:lang(ks), h3:lang(ks), h4:lang(ks), h5:lang(ks), h6:lang(ks), h2:=
+lang(ml), h3:lang(ml), h4:lang(ml), h5:lang(ml), h6:lang(ml), h2:lang(mr),=
+ h3:lang(mr), h4:lang(mr), h5:lang(mr), h6:lang(mr), h2:lang(my), h3:lang(m=
+y), h4:lang(my), h5:lang(my), h6:lang(my), h2:lang(mai), h3:lang(mai), h4:l=
+ang(mai), h5:lang(mai), h6:lang(mai), h2:lang(ne), h3:lang(ne), h4:lang(ne)=
+, h5:lang(ne), h6:lang(ne), h2:lang(new), h3:lang(new), h4:lang(new), h5:la=
+ng(new), h6:lang(new), h2:lang(or), h3:lang(or), h4:lang(or), h5:lang(or),=
+ h6:lang(or), h2:lang(pa), h3:lang(pa), h4:lang(pa), h5:lang(pa), h6:lang(p=
+a), h2:lang(pi), h3:lang(pi), h4:lang(pi), h5:lang(pi), h6:lang(pi), h2:lan=
+g(sa), h3:lang(sa), h4:lang(sa), h5:lang(sa), h6:lang(sa), h2:lang(ta), h3:=
+lang(ta), h4:lang(ta), h5:lang(ta), h6:lang(ta), h2:lang(te), h3:lang(te),=
+ h4:lang(te), h5:lang(te), h6:lang(te) { line-height: 1.2em; }
+  ol:lang(azb) li, ol:lang(bcc) li, ol:lang(bgn) li, ol:lang(bqi) li, ol:la=
+ng(fa) li, ol:lang(glk) li, ol:lang(kk-arab) li, ol:lang(lrc) li, ol:lang(l=
+uz) li, ol:lang(mzn) li { list-style-type: persian; }
+  ol:lang(ckb) li, ol:lang(sdh) li { list-style-type: arabic-indic; }
+  ol:lang(hi) li, ol:lang(mr) li { list-style-type: devanagari; }
+  ol:lang(as) li, ol:lang(bn) li { list-style-type: bengali; }
+  ol:lang(or) li { list-style-type: oriya; }
+  #toc ul, .toc ul { margin: 0.3em 0px; }
+  .mw-content-ltr .toc ul, .mw-content-ltr #toc ul, .mw-content-rtl .mw-con=
+tent-ltr .toc ul, .mw-content-rtl .mw-content-ltr #toc ul { text-align: lef=
+t; }
+  #toc #toctitle, .toc #toctitle, #toc .toctitle, .toc .toctitle { directio=
+n: ltr; }
+  div.tright, div.floatright, table.floatright { clear: right; float: right=
+; }
+  .mw-jump, #jump-to-nav { overflow: hidden; height: 0px; }
+  .printfooter { display: none; }
+  .mw-editsection, .toctoggle, .tochidden, #jump-to-nav { -moz-user-select:=
+ none; }
+  .mw-editsection, .mw-editsection-like { font-size: small; font-weight: no=
+rmal; margin-left: 1em; vertical-align: baseline; line-height: 1em; display=
+: inline-block; }
+  .mw-content-ltr .mw-editsection, .mw-content-rtl .mw-content-ltr .mw-edit=
+section { margin-left: 1em; }
+  sup, sub { line-height: 1; }
+}
+@media screen {
+  a { text-decoration: none; color: rgb(6, 69, 173); background: transparen=
+t none repeat scroll 0% 0%; }
+  a:visited { color: rgb(11, 0, 128); }
+  a:active { color: rgb(250, 167, 0); }
+  a:hover, a:focus { text-decoration: underline; }
+  .mw-body a.external { color: rgb(51, 102, 187); }
+  .mw-body a.external:visited { color: rgb(102, 51, 102); }
+  .mw-body a.external:active { color: rgb(187, 102, 51); }
+  img { border: medium none; vertical-align: middle; }
+  h1, h2, h3, h4, h5, h6 { color: black; background: transparent none repea=
+t scroll 0% 0%; font-weight: normal; margin: 0px; overflow: hidden; padding=
+-top: 0.5em; padding-bottom: 0.17em; border-bottom: 1px solid rgb(170, 170,=
+ 170); }
+  h1 { font-size: 188%; }
+  h2 { font-size: 150%; }
+  h3, h4, h5, h6 { border-bottom: medium none; font-weight: bold; }
+  h3 { font-size: 128%; }
+  h1, h2 { margin-bottom: 0.6em; }
+  h3, h4, h5 { margin-bottom: 0.3em; }
+  p { margin: 0.4em 0px 0.5em; }
+  p img { margin: 0px; }
+  ul { list-style-type: square; margin: 0.3em 0px 0px 1.6em; padding: 0px; }
+  ol { margin: 0.3em 0px 0px 3.2em; padding: 0px; list-style-image: none;=
+ }
+  li { margin-bottom: 0.1em; }
+  dl { margin-top: 0.2em; margin-bottom: 0.5em; }
+  dd { margin-left: 1.6em; margin-bottom: 0.1em; }
+  table { font-size: 100%; }
+  form { border: medium none; margin: 0px; }
+  #toc, .toc, .mw-warning, .toccolours { border: 1px solid rgb(170, 170, 17=
+0); background-color: rgb(249, 249, 249); padding: 5px; font-size: 95%; }
+  #toc, .toc { display: table; padding: 7px; }
+  #toc h2, .toc h2 { display: inline; border: medium none; padding: 0px; fo=
+nt-size: 100%; font-weight: bold; }
+  #toc #toctitle, .toc #toctitle, #toc .toctitle, .toc .toctitle { text-ali=
+gn: center; }
+  #toc ul, .toc ul { list-style-type: none; list-style-image: none; margin-=
+left: 0px; padding: 0px; text-align: left; }
+  #toc .toctoggle, .toc .toctoggle { font-size: 94%; }
+  div.thumb { margin-bottom: 0.5em; width: auto; background-color: transpar=
+ent; }
+  div.thumbinner { border: 1px solid rgb(204, 204, 204); padding: 3px; back=
+ground-color: rgb(249, 249, 249); font-size: 94%; text-align: center; overf=
+low: hidden; }
+  html .thumbimage { border: 1px solid rgb(204, 204, 204); }
+  html .thumbcaption { border: medium none; line-height: 1.4em; padding: 3p=
+x; font-size: 94%; text-align: left; }
+  div.magnify { float: right; margin-left: 3px; }
+  div.magnify a { display: block; text-indent: 15px; white-space: nowrap;=
+ overflow: hidden; width: 15px; height: 11px; background-image: linear-grad=
+ient(transparent, transparent), url("data:image/svg+xml,%3C%3Fxml%20version=
+%3D%221.0%22%20encoding%3D%22UTF-8%22%20standalone%3D%22no%22%3F%3E%0A%3Csv=
+g%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200=
+%2011%2015%22%20width%3D%2215%22%20height%3D%2211%22%3E%0A%20%20%20%20%3Cg%=
+20id%3D%22magnify-clip%22%20fill%3D%22%23fff%22%20stroke%3D%22%23000%22%3E%=
+0A%20%20%20%20%20%20%20%20%3Cpath%20id%3D%22bigbox%22%20d%3D%22M1.509%201.8=
+65h10.99v7.919h-10.99z%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20id%3D%2=
+2smallbox%22%20d%3D%22M-1.499%206.868h5.943v4.904h-5.943z%22%2F%3E%0A%20%20=
+%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E%0A"); -moz-user-select: none; }
+  .mw-content-ltr .thumbcaption { text-align: left; }
+  .mw-content-ltr .magnify { float: right; margin-left: 3px; margin-right:=
+ 0px; }
+  .mw-content-ltr div.magnify a { background-image: linear-gradient(transpa=
+rent, transparent), url("data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22=
+%20encoding%3D%22UTF-8%22%20standalone%3D%22no%22%3F%3E%0A%3Csvg%20xmlns%3D=
+%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2011%2015%2=
+2%20width%3D%2215%22%20height%3D%2211%22%3E%0A%20%20%20%20%3Cg%20id%3D%22ma=
+gnify-clip%22%20fill%3D%22%23fff%22%20stroke%3D%22%23000%22%3E%0A%20%20%20%=
+20%20%20%20%20%3Cpath%20id%3D%22bigbox%22%20d%3D%22M1.509%201.865h10.99v7.9=
+19h-10.99z%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20id%3D%22smallbox%22=
+%20d%3D%22M-1.499%206.868h5.943v4.904h-5.943z%22%2F%3E%0A%20%20%20%20%3C%2F=
+g%3E%0A%3C%2Fsvg%3E%0A"); }
+  div.tright { margin: 0.5em 0px 1.3em 1.4em; }
+  .catlinks { border: 1px solid rgb(170, 170, 170); background-color: rgb(2=
+49, 249, 249); padding: 5px; margin-top: 1em; clear: both; }
+  #siteNotice { position: relative; text-align: center; margin: 0px; }
+  .firstHeading { margin-bottom: 0.1em; line-height: 1.2em; padding-bottom:=
+ 0px; }
+  #siteSub { display: none; }
+  #jump-to-nav { margin-top: -1.4em; margin-bottom: 1.4em; }
+  #contentSub, #contentSub2 { font-size: 84%; line-height: 1.2em; margin:=
+ 0px 0px 1.4em 1em; color: rgb(84, 84, 84); width: auto; }
+}
+.mw-wiki-logo { background-image: url("https://en.wikipedia.org/static/imag=
+es/project-logos/enwiki.png"); }
+@media not all, (min--moz-device-pixel-ratio: 1.5), (min-resolution: 1.5dpp=
+x), (min-resolution: 144dpi) {
+  .mw-wiki-logo { background-image: url("urn:not-loaded:https://en.wikipedi=
+a.org/static/images/project-logos/enwiki-1.5x.png"); background-size: 135px=
+ auto; }
+}
+@media not all, (min--moz-device-pixel-ratio: 2), (min-resolution: 2dppx),=
+ (min-resolution: 192dpi) {
+  .mw-wiki-logo { background-image: url("urn:not-loaded:https://en.wikipedi=
+a.org/static/images/project-logos/enwiki-2x.png"); background-size: 135px=
+ auto; }
+}
+.mw-ui-button:focus::-moz-focus-inner { border-color: transparent; }
+.mw-ui-button.mw-ui-progressive:focus::-moz-focus-inner, .mw-ui-button.mw-u=
+i-primary:focus::-moz-focus-inner { border-color: transparent; }
+.mw-ui-button.mw-ui-constructive:focus::-moz-focus-inner { border-color: tr=
+ansparent; }
+.mw-ui-button.mw-ui-destructive:focus::-moz-focus-inner { border-color: tra=
+nsparent; }
+.mw-ui-button-group > :first-child { border-top-left-radius: 2px; border-bo=
+ttom-left-radius: 2px; }
+.mw-ui-button-group > :not(:first-child) { border-left: medium none; }
+.mw-ui-button-group > :last-child { border-top-right-radius: 2px; border-bo=
+ttom-right-radius: 2px; }
+@media screen {
+  html { font-size: 100%; }
+  html, body { height: 100%; margin: 0px; padding: 0px; font-family: sans-s=
+erif; }
+  body { background-color: rgb(246, 246, 246); }
+  .mw-body { margin-left: 10em; padding: 1em; border-width: 1px 0px 1px 1px=
+; border-style: solid; border-color: rgb(167, 215, 249); -moz-border-top-co=
+lors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none=
+; -moz-border-left-colors: none; border-image: none; margin-top: -1px; back=
+ground-color: rgb(255, 255, 255); color: rgb(37, 37, 37); direction: ltr;=
+ }
+  .mw-body .mw-editsection, .mw-body .mw-editsection-like { font-family: sa=
+ns-serif; }
+  .mw-body p { line-height: inherit; margin: 0.5em 0px; }
+  .mw-body h1, .mw-body h2 { font-family: "Linux Libertine",Georgia,Times,s=
+erif; line-height: 1.3; margin-bottom: 0.25em; padding: 0px; }
+  .mw-body h1 { font-size: 1.8em; }
+  .mw-body h2 { font-size: 1.5em; margin-top: 1em; }
+  .mw-body #toc h2, .mw-body .toc h2 { font-size: 100%; font-family: sans-s=
+erif; }
+  .mw-body .firstHeading { overflow: visible; }
+  .mw-body .mw-indicators { float: right; line-height: 1.6; font-size: 0.87=
+5em; position: relative; z-index: 1; }
+  div.emptyPortlet { display: none; }
+  ul { list-style-type: disc; list-style-image: url("data:image/svg+xml,%3C=
+%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3F%3E%0A%3Csvg%20xmln=
+s%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20version%3D%221.1%22%20widt=
+h%3D%225%22%20height%3D%2213%22%3E%0A%3Ccircle%20cx%3D%222.5%22%20cy%3D%229=
+.5%22%20r%3D%222.5%22%20fill%3D%22%2300528c%22%2F%3E%0A%3C%2Fsvg%3E%0A");=
+ }
+  #siteNotice { font-size: 0.8em; }
+  .mw-body-content { position: relative; line-height: 1.6; font-size: 0.875=
+em; z-index: 0; }
+  #p-personal { position: absolute; top: 0.33em; right: 0.75em; z-index: 10=
+0; }
+  #p-personal h3 { display: none; }
+  #p-personal ul { list-style-type: none; list-style-image: none; margin:=
+ 0px; padding-left: 10em; }
+  #p-personal li { line-height: 1.125em; float: left; margin-left: 0.75em;=
+ margin-top: 0.5em; font-size: 0.75em; white-space: nowrap; }
+  #p-search { float: left; margin-right: 0.5em; margin-left: 0.5em; }
+  #p-search h3 { display: none; }
+  #p-search form, #p-search input { margin: 0.4em 0px 0px; }
+  div#simpleSearch { display: block; width: 12.6em; padding-right: 1.4em;=
+ height: 1.4em; margin-top: 0.65em; position: relative; min-height: 1px; bo=
+rder: 1px solid rgb(170, 170, 170); color: black; background-color: white;=
+ background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAA=
+AAQCAIAAABY/YLgAAAAJUlEQVQIHQXBsQEAAAjDoND/73UWdnerhmHVsDQZJrNWVg3Dqge6bgMe=
+6bejNAAAAABJRU5ErkJggg=3D=3D"); background-position: left top; background-r=
+epeat: repeat-x; }
+  div#simpleSearch input { margin: 0px; padding: 0px; border: 0px none; bac=
+kground-color: transparent; color: black; }
+  div#simpleSearch #searchInput { width: 100%; padding: 0.2em 0px 0.2em 0.2=
+em; font-size: 13px; direction: ltr; }
+  div#simpleSearch #searchInput:focus { outline: medium none; }
+  div#simpleSearch #searchInput:-moz-placeholder { color: rgb(153, 153, 153=
+); }
+  div#simpleSearch #searchButton, div#simpleSearch #mw-searchButton { posit=
+ion: absolute; top: 0px; right: 0px; width: 1.65em; height: 100%; cursor:=
+ pointer; text-indent: -99999px; line-height: 1; direction: ltr; white-spac=
+e: nowrap; overflow: hidden; background-image: linear-gradient(transparent,=
+ transparent), url("data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20en=
+coding%3D%22UTF-8%22%3F%3E%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F200=
+0%2Fsvg%22%20width%3D%2212%22%20height%3D%2213%22%3E%3Cg%20stroke-width%3D%=
+222%22%20stroke%3D%22%236c6c6c%22%20fill%3D%22none%22%3E%3Cpath%20d%3D%22M1=
+1.29%2011.71l-4-4%22%2F%3E%3Ccircle%20cx%3D%225%22%20cy%3D%225%22%20r%3D%22=
+4%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E"); background-position: center center; bac=
+kground-repeat: no-repeat; }
+  div.vectorTabs h3 { display: none; }
+  div.vectorTabs { float: left; height: 2.5em; background-image: url("data:=
+image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAuCAIAAABmjeQ9AAAARElEQVR42m=
+VO2wrAUAhy/f8fz+niVMTYQ3hLKkgGgN/IPvgIhUYYV/qogdP75J01V+JwrKZr/5YPcnzN3e6t7=
+l+2K+EFX91B1daOi7sAAAAASUVORK5CYII=3D"); background-position: left bottom;=
+ background-repeat: no-repeat; padding-left: 1px; }
+  div.vectorTabs ul { float: left; height: 100%; list-style-type: none; lis=
+t-style-image: none; margin: 0px; padding: 0px; background-image: url("data=
+:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAuCAIAAABmjeQ9AAAARElEQVR42=
+mVO2wrAUAhy/f8fz+niVMTYQ3hLKkgGgN/IPvgIhUYYV/qogdP75J01V+JwrKZr/5YPcnzN3e6t=
+7l+2K+EFX91B1daOi7sAAAAASUVORK5CYII=3D"); background-position: right bottom=
+; background-repeat: no-repeat; }
+  div.vectorTabs ul li { float: left; line-height: 1.125em; display: inline=
+-block; height: 100%; margin: 0px; padding: 0px; background-color: rgb(243,=
+ 243, 243); background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSU=
+hEUgAAAAEAAABkCAIAAADITs03AAAAPElEQVR4XuWK2xEAIAzCsPvv5DSu0ahX3yv4wQVyGGCSv=
+g2dnJvduT8sz/IwKOIfjCi2z/76FhHeJcslVZQFLUC06LZ/AAAAAElFTkSuQmCC"); backgrou=
+nd-position: left bottom; background-repeat: repeat-x; white-space: nowrap;=
+ }
+  div.vectorTabs ul > li { display: block; }
+  div.vectorTabs li {  }
+  div.vectorTabs li.selected { background-image: url("data:image/png;base64=
+,iVBORw0KGgoAAAANSUhEUgAAAAEAAABkAQAAAABvV2fNAAAADUlEQVQIHWNoYBgWEACJ5TIB0K=
+9KcAAAAABJRU5ErkJggg=3D=3D"); }
+  div.vectorTabs li.selected a, div.vectorTabs li.selected a:visited { colo=
+r: rgb(51, 51, 51); text-decoration: none; }
+  div.vectorTabs li a { display: inline-block; height: 1.9em; padding-left:=
+ 0.5em; padding-right: 0.5em; color: rgb(6, 69, 173); cursor: pointer; font=
+-size: 0.8em; }
+  div.vectorTabs span { display: inline-block; background-image: url("data:=
+image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAuCAIAAABmjeQ9AAAARElEQVR42m=
+VO2wrAUAhy/f8fz+niVMTYQ3hLKkgGgN/IPvgIhUYYV/qogdP75J01V+JwrKZr/5YPcnzN3e6t7=
+l+2K+EFX91B1daOi7sAAAAASUVORK5CYII=3D"); background-position: right bottom;=
+ background-repeat: no-repeat; }
+  div.vectorTabs span a { display: inline-block; padding-top: 1.25em; }
+  div.vectorTabs span > a { float: left; display: block; }
+  div.vectorMenu { direction: ltr; float: left; cursor: pointer; position:=
+ relative; }
+  div#mw-head div.vectorMenu h3 { float: left; background-image: url("data:=
+image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAuCAIAAABmjeQ9AAAARElEQVR42m=
+VO2wrAUAhy/f8fz+niVMTYQ3hLKkgGgN/IPvgIhUYYV/qogdP75J01V+JwrKZr/5YPcnzN3e6t7=
+l+2K+EFX91B1daOi7sAAAAASUVORK5CYII=3D"); background-repeat: no-repeat; back=
+ground-position: right bottom; font-size: 1em; height: 2.5em; padding-right=
+: 1px; margin-right: -1px; }
+  div.vectorMenu h3 span { display: block; font-size: 0.8em; padding-left:=
+ 0.7em; padding-top: 1.375em; margin-right: 20px; font-weight: normal; colo=
+r: rgb(77, 77, 77); }
+  div.vectorMenu h3 a { position: absolute; top: 0px; right: 0px; width: 20=
+px; height: 2.5em; background-image: linear-gradient(transparent, transpare=
+nt), url("data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%=
+22UTF-8%22%3F%3E%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22=
+%20width%3D%2222%22%20height%3D%2216%22%3E%3Cpath%20d%3D%22M15.502%206.001l=
+-5%205.001-5-5.001z%22%20fill%3D%22%23797979%22%2F%3E%3C%2Fsvg%3E"); backgr=
+ound-position: 100% 70%; background-repeat: no-repeat; transition: backgrou=
+nd-position 250ms ease 0s; }
+  div.vectorMenu div.menu { min-width: 100%; position: absolute; top: 2.5em=
+; left: -1px; background-color: white; border-width: 0px 1px 1px; border-st=
+yle: solid; border-color: silver; -moz-border-top-colors: none; -moz-border=
+-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colo=
+rs: none; border-image: none; clear: both; text-align: left; display: none;=
+ z-index: 1; }
+  div.vectorMenu:hover div.menu, div.vectorMenu.menuForceShow div.menu { di=
+splay: block; }
+  div.vectorMenu ul { list-style-type: none; list-style-image: none; paddin=
+g: 0px; margin: 0px; text-align: left; }
+  div.vectorMenu ul, x:-moz-any-link { min-width: 5em; }
+  div.vectorMenu ul, x:-moz-any-link, x:default { min-width: 0px; }
+  @keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  @keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  #mw-navigation h2 { position: absolute; top: -9999px; }
+  #mw-page-base { height: 5em; background-position: left bottom; background=
+-repeat: repeat-x; background-image: linear-gradient(rgb(255, 255, 255) 50%=
+, rgb(246, 246, 246) 100%); background-color: rgb(255, 255, 255); }
+  #mw-head-base { margin-top: -5em; margin-left: 10em; height: 5em; }
+  div#mw-head { position: absolute; top: 0px; right: 0px; width: 100%; }
+  div#mw-head h3 { margin: 0px; padding: 0px; }
+  #left-navigation { float: left; margin-left: 10em; margin-top: 2.5em; mar=
+gin-bottom: -2.5em; display: inline; }
+  #right-navigation { float: right; margin-top: 2.5em; }
+  #p-logo { position: absolute; top: -160px; left: 0px; width: 10em; height=
+: 160px; }
+  #p-logo a { display: block; width: 10em; height: 160px; background-repeat=
+: no-repeat; background-position: center center; text-decoration: none; }
+  div#mw-panel { font-size: inherit; position: absolute; top: 160px; paddin=
+g-top: 1em; width: 10em; left: 0px; }
+  div#mw-panel div.portal { margin: 0px 0.6em 0px 0.7em; padding: 0.25em 0p=
+x; direction: ltr; background-position: left top; background-repeat: no-rep=
+eat; background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA=
+IwAAAABCAAAAAAphRnkAAAAJ0lEQVQIW7XFsQEAIAyAMPD/b7uLWz8wS5youFW1UREfiIpH1Q2V=
+Bz7fGPS1dOGeAAAAAElFTkSuQmCC"); }
+  div#mw-panel div.portal h3 { font-size: 0.75em; color: rgb(77, 77, 77);=
+ font-weight: normal; margin: 0px; padding: 0.25em 0px 0.25em 0.25em; curso=
+r: default; border: medium none; }
+  div#mw-panel div.portal div.body { margin: 0px 0px 0px 1.25em; padding-to=
+p: 0px; }
+  div#mw-panel div.portal div.body ul { list-style-type: none; list-style-i=
+mage: none; margin: 0px; padding: 0px; }
+  div#mw-panel div.portal div.body ul li { line-height: 1.125em; margin: 0p=
+x; padding: 0.25em 0px; font-size: 0.75em; word-wrap: break-word; }
+  div#mw-panel div.portal div.body ul li a { color: rgb(6, 69, 173); }
+  div#mw-panel div.portal div.body ul li a:visited { color: rgb(11, 0, 128)=
+; }
+  div#mw-panel #p-logo + div.portal { background-image: none; margin-top:=
+ 0px; }
+  div#mw-panel #p-logo + div.portal h3 { display: none; }
+  div#mw-panel #p-logo + div.portal div.body { margin-left: 0.5em; }
+  div#footer { margin-left: 10em; margin-top: 0px; padding: 0.75em; directi=
+on: ltr; }
+  div#footer ul { list-style-type: none; list-style-image: none; margin: 0p=
+x; padding: 0px; }
+  div#footer ul li { margin: 0px; padding: 0.5em 0px; color: rgb(51, 51, 51=
+); font-size: 0.7em; }
+  div#footer #footer-icons { float: right; }
+  div#footer #footer-icons li { float: left; margin-left: 0.5em; line-heigh=
+t: 2em; text-align: right; }
+  div#footer #footer-info li { line-height: 1.4em; }
+  div#footer #footer-places li { float: left; margin-right: 1em; line-heigh=
+t: 2em; }
+  body.ltr div#footer #footer-places { float: left; }
+  .mw-body .external { background-position: right center; background-repeat=
+: no-repeat; background-image: linear-gradient(transparent, transparent),=
+ url("data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UT=
+F-8%22%3F%3E%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20w=
+idth%3D%2210%22%20height%3D%2210%22%3E%3Cg%20transform%3D%22translate%28-82=
+6.429%20-698.791%29%22%3E%3Crect%20width%3D%225.982%22%20height%3D%225.982%=
+22%20x%3D%22826.929%22%20y%3D%22702.309%22%20fill%3D%22%23fff%22%20stroke%3=
+D%22%2306c%22%2F%3E%3Cg%3E%3Cpath%20d%3D%22M831.194%20698.791h5.234v5.391l-=
+1.571%201.545-1.31-1.31-2.725%202.725-2.689-2.689%202.808-2.808-1.311-1.311=
+z%22%20fill%3D%22%2306f%22%2F%3E%3Cpath%20d%3D%22M835.424%20699.795l.022%20=
+4.885-1.817-1.817-2.881%202.881-1.228-1.228%202.881-2.881-1.851-1.851z%22%2=
+0fill%3D%22%23fff%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"); padding-right=
+: 13px; }
+}
+@media screen and (min-width: 982px) {
+  .mw-body { margin-left: 11em; padding: 1.25em 1.5em 1.5em; }
+  #p-logo { left: 0.5em; }
+  div#footer { margin-left: 11em; padding: 1.25em; }
+  #mw-panel { padding-left: 0.5em; }
+  #p-search { margin-right: 1em; }
+  #left-navigation { margin-left: 11em; }
+  #p-personal { right: 1em; }
+  #mw-head-base { margin-left: 11em; }
+}
+.wb-langlinks-link { line-height: 1.125em; font-size: 0.75em; float: right;=
+ }
+.wb-langlinks-link { list-style: outside none none; text-align: right; padd=
+ing-right: 0.5em ! important; }
+.wb-langlinks-link > a { padding-left: 11px; background: transparent none=
+ no-repeat scroll left center; }
+.wb-langlinks-link > a:link, .wb-langlinks-link > a:visited { background-im=
+age: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKBAMAAAB/HNK=
+OAAAAD1BMVEUZAAD///95eXmqqqrY2NjEIQ0cAAAAAXRSTlMAQObYZgAAACdJREFUCNdjYGBgYG=
+IAASUFENNJCUiqmADZTM5OqExFFZAKRSG4YgBjcwODynSgDwAAAABJRU5ErkJggg=3D=3D");=
+ color: rgb(121, 121, 121) ! important; }
+.wb-langlinks-link > a:hover { background-image: url("data:image/png;base64=
+,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKBAMAAAB/HNKOAAAAD1BMVEWBAADY2Nj///8GRa0zZr=
+tW2AECAAAAAXRSTlMAQObYZgAAACdJREFUCNdjYGBgYGYAAWMDEFPYGEgaOgLZzCLCqEwjQ5AKI=
+2W4YgBg5QOTQPzBuAAAAABJRU5ErkJggg=3D=3D"); color: rgb(6, 69, 173) ! importa=
+nt; }
+div.after-portlet-lang::after { content: ""; clear: both; display: block;=
+ }
+
+------=_NextPart_000_0000_366E3B3A.157F5130
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: https://en.wikipedia.org/static/images/project-logos/enwiki.png
+
+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
+------=_NextPart_000_0000_366E3B3A.157F5130
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: urn:snapshot-D7A9B9A9:https://en.wikipedia.org/w/load.php?debug=false&lang=en&modules=mediawiki.legacy.commonPrint&only=styles&skin=vector
+
+/* Effective stylesheet produced by snapshot save */
+@media print {
+  .noprint, div#jump-to-nav, .mw-jump, div.top, div#column-one, #colophon,=
+ .mw-editsection, .mw-editsection-like, .toctoggle, #toc.tochidden, div#f-p=
+oweredbyico, div#f-copyrightico, li#about, li#disclaimer, li#mobileview, li=
+#privacy, #footer-places, .mw-hidden-catlinks, tr.mw-metadata-show-hide-ext=
+ended, span.mw-filepage-other-resolutions, #filetoc, .usermessage, .patroll=
+ink, .ns-0 .mw-redirectedfrom, #mw-navigation, #siteNotice { display: none;=
+ }
+  .wikitable, .thumb, img { page-break-inside: avoid; }
+  h2, h3, h4, h5, h6 { page-break-after: avoid; }
+  p { widows: 3; orphans: 3; }
+  body { background: white none repeat scroll 0% 0%; color: black; margin:=
+ 0px; padding: 0px; }
+  ul { list-style-type: square; }
+  h1, h2, h3, h4, h5, h6 { font-weight: bold; }
+  p { margin: 1em 0px; line-height: 1.2em; }
+  .mw-body { background: white none repeat scroll 0% 0%; border: medium non=
+e ! important; padding: 0px ! important; margin: 0px ! important; direction=
+: ltr; color: black; }
+  #toc { border: 1px solid rgb(170, 170, 170); background-color: rgb(249,=
+ 249, 249); padding: 5px; display: table; }
+  #footer { background: white none repeat scroll 0% 0%; color: black; margi=
+n-top: 1em; border-top: 1px solid rgb(170, 170, 170); direction: ltr; }
+  img { border: medium none; vertical-align: middle; }
+  a { color: black ! important; background: transparent none repeat scroll=
+ 0% 0% ! important; padding: 0px ! important; }
+  a:link, a:visited { color: rgb(85, 34, 0); background: transparent none=
+ repeat scroll 0% 0%; text-decoration: underline; }
+  .mw-body a.external.text::after, .mw-body a.external.autonumber::after {=
+ content: " (" attr(href) ")"; }
+  .mw-body a.external.text[href^=3D"//"]::after, .mw-body a.external.autonu=
+mber[href^=3D"//"]::after { content: " (https:" attr(href) ")"; }
+  a, a.external, a.new, a.stub { color: black ! important; text-decoration:=
+ none ! important; }
+  a, a.external, a.new, a.stub { color: inherit ! important; text-decoratio=
+n: inherit ! important; }
+  div.thumb { border: medium none; width: auto; margin-top: 0.5em; margin-b=
+ottom: 0.8em; background-color: transparent; }
+  div.thumbinner { border: 1px solid rgb(204, 204, 204); padding: 3px ! imp=
+ortant; background-color: White; font-size: 94%; text-align: center; overfl=
+ow: hidden; }
+  html .thumbimage { border: 1px solid rgb(204, 204, 204); }
+  html .thumbcaption { border: medium none; text-align: left; line-height:=
+ 1.4em; padding: 3px ! important; font-size: 94%; }
+  div.magnify { display: none; }
+  div.tright { float: right; clear: right; margin: 0.5em 0px 0.8em 1.4em;=
+ }
+  table.wikitable, table.mw_metadata { margin: 1em 0px; border: 1px solid=
+ rgb(170, 170, 170); background: white none repeat scroll 0% 0%; border-col=
+lapse: collapse; }
+  table.wikitable > tr > th, table.wikitable > tr > td, table.wikitable >=
+ * > tr > th, table.wikitable > * > tr > td, .mw_metadata th, .mw_metadata=
+ td { border: 1px solid rgb(170, 170, 170); padding: 0.2em; }
+  .catlinks ul { display: inline; margin: 0px; padding: 0px; list-style: ou=
+tside none none; }
+  .catlinks li { display: inline-block; line-height: 1.15em; padding: 0px=
+ 0.4em; border-left: 1px solid rgb(170, 170, 170); margin: 0.1em 0px; }
+  .catlinks li:first-child { padding-left: 0.2em; border-left: medium none;=
+ }
+  .printfooter { padding: 1em 0px; }
+}
+
+------=_NextPart_000_0000_366E3B3A.157F5130
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: urn:snapshot-FA864FEC:https://en.wikipedia.org/w/load.php?debug=false&lang=en&modules=site&only=styles&skin=vector
+
+/* Effective stylesheet produced by snapshot save */
+.mw-body sub, .mw-body sup, span.reference { font-size: 80%; }
+ol.references, div.reflist, div.refbegin { font-size: 90%; margin-bottom:=
+ 0.5em; }
+div.reflist ol.references { font-size: 100%; list-style-type: inherit; }
+span.citation:target { background-color: rgb(221, 238, 255); }
+sup.reference { font-weight: normal; font-style: normal; }
+.citation { word-wrap: break-word; }
+.hlist dt::after { content: ":"; }
+.hlist dd::after, .hlist li::after { content: " =C2=B7 "; font-weight: bold=
+; }
+.hlist dd:last-child::after, .hlist dt:last-child::after, .hlist li:last-ch=
+ild::after { content: none; }
+.hlist dd.hlist-last-child::after, .hlist dt.hlist-last-child::after, .hlis=
+t li.hlist-last-child::after { content: none; }
+.hlist dd dd:first-child::before, .hlist dd dt:first-child::before, .hlist=
+ dd li:first-child::before, .hlist dt dd:first-child::before, .hlist dt dt:=
+first-child::before, .hlist dt li:first-child::before, .hlist li dd:first-c=
+hild::before, .hlist li dt:first-child::before, .hlist li li:first-child::b=
+efore { content: " ("; font-weight: normal; }
+.hlist dd dd:last-child::after, .hlist dd dt:last-child::after, .hlist dd=
+ li:last-child::after, .hlist dt dd:last-child::after, .hlist dt dt:last-ch=
+ild::after, .hlist dt li:last-child::after, .hlist li dd:last-child::after,=
+ .hlist li dt:last-child::after, .hlist li li:last-child::after { content:=
+ ") "; font-weight: normal; }
+.hlist dd dd.hlist-last-child::after, .hlist dd dt.hlist-last-child::after,=
+ .hlist dd li.hlist-last-child::after, .hlist dt dd.hlist-last-child::after=
+, .hlist dt dt.hlist-last-child::after, .hlist dt li.hlist-last-child::afte=
+r, .hlist li dd.hlist-last-child::after, .hlist li dt.hlist-last-child::aft=
+er, .hlist li li.hlist-last-child::after { content: ") "; font-weight: norm=
+al; }
+.hlist ol > li::before { content: " " counter(listitem, decimal) " "; white=
+-space: nowrap; }
+.hlist dd ol > li:first-child::before, .hlist dt ol > li:first-child::befor=
+e, .hlist li ol > li:first-child::before { content: " (" counter(listitem,=
+ decimal) " "; }
+div#content a.external[href$=3D".pdf"], div#content a.external[href*=3D".pd=
+f?"], div#content a.external[href*=3D".pdf#"], div#content a.external[href$=
+=3D".PDF"], div#content a.external[href*=3D".PDF?"], div#content a.external=
+[href*=3D".PDF#"], div#mw_content a.external[href$=3D".pdf"], div#mw_conten=
+t a.external[href*=3D".pdf?"], div#mw_content a.external[href*=3D".pdf#"],=
+ div#mw_content a.external[href$=3D".PDF"], div#mw_content a.external[href*=
+=3D".PDF?"], div#mw_content a.external[href*=3D".PDF#"] { background: trans=
+parent url("https://upload.wikimedia.org/wikipedia/commons/2/23/Icons-mini-=
+file_acrobat.gif") no-repeat scroll right center; padding-right: 18px; }
+th.mbox-text, td.mbox-text { border: medium none; padding: 0.25em 0.9em; wi=
+dth: 100%; }
+td.mbox-image { border: medium none; padding: 2px 0px 2px 0.9em; text-align=
+: center; }
+table.ambox { margin: 0px 10%; border-width: 1px 1px 1px 10px; border-style=
+: solid; border-color: rgb(170, 170, 170) rgb(170, 170, 170) rgb(170, 170,=
+ 170) rgb(30, 144, 255); -moz-border-top-colors: none; -moz-border-right-co=
+lors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none;=
+ border-image: none; background: rgb(251, 251, 251) none repeat scroll 0%=
+ 0%; }
+.ambox th.mbox-text, .ambox td.mbox-text { padding: 0.25em 0.5em; }
+.ambox td.mbox-image { padding: 2px 0px 2px 0.5em; }
+table.ambox-style { border-left: 10px solid rgb(244, 196, 48); }
+.nowrap, .nowraplinks a, .nowraplinks .selflink, sup.reference a { white-sp=
+ace: nowrap; }
+.thumbinner { min-width: 100px; }
+div.thumb .thumbimage { background-color: rgb(255, 255, 255); }
+div.vectorMenu div { z-index: 2; }
+#siteSub { display: block; font-size: 92%; }
+.mw-body .mw-indicators { padding-top: 0.4em; }
+div#simpleSearch { width: 20vw; min-width: 5em; max-width: 20em; }
+@media print {
+  .ns-0 .ambox, .ns-0 .navbox, .ns-0 .vertical-navbox, .ns-0 .infobox.siste=
+rproject, .ns-0 .dablink, .ns-0 .metadata, .editlink, .navbar, a.NavToggle,=
+ span.collapseButton, span.mw-collapsible-toggle, th .sortkey, td .sortkey=
+ { display: none ! important; }
+  #content cite a.external.text::after, .nourlexpansion a.external.text::af=
+ter, .nourlexpansion a.external.autonumber::after { display: none ! importa=
+nt; }
+  #firstHeading { margin: 0px; }
+  #content a.external.text::after, #content a.external.autonumber::after {=
+ word-wrap: break-word; }
+}
+
+------=_NextPart_000_0000_366E3B3A.157F5130
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: https://upload.wikimedia.org/wikipedia/commons/2/23/Icons-mini-file_acrobat.gif
+
+R0lGODlhEAAQAMQfAOmNjMfHx9UqJ3Fvb9hoZqmpqbe3t96pqPn4+IeHh9ra2qRSUOXl5dtFQ9i2
+turq6uDg4NTT0+7u7uzMy/DX15OTk9/Ew99+fa89PN+Yl/Hp6eLi4vPz8/v7+////////yH5BAEA
+AB8ALAAAAAAQABAAAAWgoCeO5PidHhOtQWC8ReyhEdLdOB5Usxd1HARnSOy0eD4gkUO5UHAJUaAj
+qVYBl8zjgYh6pg/J9mFpZBiMrsjQGaMZDQsEovYYEI/3hiEQWBQcA2scaBtzBxkZcRoDCB4FhBuG
+EBcOCg19GBePHJJzCgQEDQQZBxgAjwiTChcNlSuBIhVpHBMNDRRiDxwKgo8JFQkCGAsJA8fHXiQA
+uCUjIQA7
+------=_NextPart_000_0000_366E3B3A.157F5130
+Content-Type: image/vnd.microsoft.icon
+Content-Transfer-Encoding: base64
+Content-Location: https://en.wikipedia.org/static/favicon/wikipedia.ico
+
+AAABAAMAMDAQAAEABABoBgAANgAAACAgEAABAAQA6AIAAJ4GAAAQEBAAAQAEACgBAACGCQAAKAAA
+ADAAAABgAAAAAQAEAAAAAAAABgAAAAAAAAAAAAAQAAAAAAAAAAEBAQAXFxcAMDAwAEdHRwBYWFgA
+Z2dnAHZ2dgCHh4cAlZWVAKmpqQC3t7cAx8fHANfX1wDo6OgA/v7+AAAAAAD////+7u7u7u7u7u7u
+7u7u7u7u7u///////+7u7u7u7u7u7u7u7u7u7u7u7u7u/////u7u7u7u7u7u7u7u7u7u7u7u7u7u
+7///7u7u7u7u7u7u7u7u7u7u7u7u7u7u7v/+7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u/+7u7u7u7u
+7u7u7u7u7u7u7u7u7u7u7u/+7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u/u7u7u7u7u7u7u7u7u7u7u
+7u7u7u7u7u7u7u7u7u7u7sa+7u7u7u1b7u7u7u7u7u7u7u7u7u7u7p9u7u7u7ugG7u7u7u7u7u7u
+7u7u7u7u7TAa7u7u7tQBzu7u7u7u7u7u7u7u7u7u6wAF7u7u7pAAju7u7u7u7u7u7u7u7u7u1AAA
+ru7u7U//Le7u7u7u7u7u7u7u7u7uz/8RPe7u6gAB+e7u7u7u7u7u7u7u7u7ubw94Ce7u1QAIIu7u
+7u7u7u7u7u7u7u7tH/G+Mt7usAAtcL7u7u7u7u7u7u7u7u7n8ATun47uQACO0T7u7u7u7u7u7u7u
+7u7hDxnu4x3sAPLO5Qzu7u7u7u7u7u7u7u6P/z7u6wXk/wfu7ATu7u7u7u7u7u7u7u4QAY7u7kCQ
+ADzu7kDO7u7u7u7u7u7u7uoA8u7u7sAAAG7u7r9e7u7u7u7u7u7u7uIPB+7u7uUAAs7u7uMd7u7u
+7u7u7u7u7rEAHe7u7uQABu7u7un37u7u7u7u7u7u7kAAXu7u7sAPHe7u7u4S3u7u7u7u7u7u7BAA
+3u7u7k8AHO7u7u6Aju7u7u7u7u7u5g/07u7u7B8BBe7u7u7RLu7u7u7u7u7u0v/87u7u5QAGQa7u
+7u7nCe7u7u7u7u7ugAA+7u7uwQ8dsE7u7u7rBO7u7u7u7u7tP/++7u7uYAB+5Qnu7u7tQa7u7u7u
+7u7pH/Lu7u7sLwHe6xPe7u7ur27u7u7u7u7V//ru7u7mAAju7n+e7u7u0yvu7u7u7u6h8C3u7u6y
+AB3u7rEs7u7u6Pfu7u7u7u1AAE7u7u5g/27u7tQG3u7u6QHO7u7u7tbwAB3u7ukfAH7u7sIAju7u
+5wA97u7utiAAAAF76lAA/wWeyDAA84zqUAABfO7uMiNERDIm4iNERDIrkiNEQybiI0RDJO7u7u7u
+7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u
+7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u
+7u7+7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u/+7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u/+7u7u7u7u
+7u7u7u7u7u7u7u7u7u7u7u//7u7u7u7u7u7u7u7u7u7u7u7u7u7u7v///u7u7u7u7u7u7u7u7u7u
+7u7u7u7u7////+7u7u7u7u7u7u7u7u7u7u7u7u7u///////+7u7u7u7u7u7u7u7u7u7u7u/////+
+AAAAAH8AAPAAAAAADwAA4AAAAAAHAADAAAAAAAMAAIAAAAAAAQAAgAAAAAABAACAAAAAAAEAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAABAACAAAAAAAEA
+AIAAAAAAAQAAwAAAAAADAADgAAAAAAcAAPAAAAAADwAA/gAAAAB/AAAoAAAAIAAAAEAAAAABAAQA
+AAAAAIACAAAAAAAAAAAAABAAAAAAAAAAAQEBABYWFgAnJycANTU1AEdHRwBZWVkAZWVlAHh4eACI
+iIgAmZmZAK6urgDMzMwA19fXAOnp6QD+/v4AAAAAAP//7u7u7u7u7u7u7u7u////7u7u7u7u7u7u
+7u7u7u7//u7u7u7u7u7u7u7u7u7u7/7u7u7u7u7u7u7u7u7u7u/u7u7u7u7u7u7u7u7u7u7u7u7u
+7u7X3u7u7I7u7u7u7u7u7u7uYF7u7uIK7u7u7u7u7u7u7QAM7u6vBO7u7u7u7u7u7ucABe7uMA/O
+7u7u7u7u7u7R8q/O6gCEbu7u7u7u7u7ukAnibuTx6g3u7u7u7u7u7hAe6gzP+O4Y7u7u7u7u7urw
+ju4mXx7uge7u7u7u7u7jAd7uoACO7tCe7u7u7u7uoPfu7uEB3u7mPu7u7u7u7k8N7u7QBu7u6wru
+7u7u7uwAXu7ufwbu7u407u7u7u7lAM7u7RBQzu7ur87u7u7u0ATu7ucA0l7u7uFu7u7u7n/67u7R
+B+oL7u7nHe7u7u0fPu7ucA3uJO7u7Qju7u7o/67u7Q9u7q+u7u5R3u7u0Q/e7ub/vu7PLO7uX13u
+4w//Be4v/xnoH/+ekv//Xu7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u
+7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7+7u7u7u7u7u7u7u7u7u7v/u7u7u7u7u7u7u7u7u7u7//u
+7u7u7u7u7u7u7u7u7v///+7u7u7u7u7u7u7u7v//8AAAD8AAAAOAAAABgAAAAQAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAGAAAABwAAAA/AAAA8oAAAAEAAAACAAAAAB
+AAQAAAAAAMAAAAAAAAAAAAAAABAAAAAAAAAAAQEBABcXFwAnJycAOzs7AElJSQBpaWkAeXl5AIaG
+hgCVlZUApqamALOzswDMzMwA2dnZAObm5gD+/v4AAAAAAP/u7u7u7u7//u7u7u7u7u/u7uzu7t7u
+7u7u4Y7lTu7u7u6QTtA77u7u7iaoctXu7u7qDOQZ5d7u7uRO5R7rbu7uv77iLu5O7u5D7pGn7pju
+7QrtKOTe4+6z+OT40z2RTO7u7u7u7u7u7u7u7u7u7u7+7u7u7u7u7//u7u7u7u7/wAMAD4ABAA8A
+AAAPAAAADwAAAA8AAAAPAAAADwAAAA8AAAAPAAAADwAAAA8AAAAPAAAADwAAAA+AAQAPwAMADw==
+
+------=_NextPart_000_0000_366E3B3A.157F5130
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: urn:snapshot-1D2CD8B8:https://en.wikipedia.org/w/load.php?debug=false&lang=en&modules=ext.cite.styles%7Cext.gadget.DRN-wizard%2CReferenceTooltips%2Ccharinsert%2Cfeatured-articles-links%2CrefToolbar%2Cswitcher%2Cteahouse%7Cext.wikimediaBadges&only=styles&skin=vector
+
+/* Effective stylesheet produced by snapshot save */
+.mw-cite-backlink, .cite-accessibility-label { -moz-user-select: none; }
+sup.reference { unicode-bidi: -moz-isolate; }
+ol.references li:target, sup.reference:target { background-color: rgba(0,=
+ 127, 255, 0.133); }
+@media print {
+  .mw-cite-backlink { display: none; }
+}
+.referencetooltip > li + li::after { content: ""; border-top: 8px solid rgb=
+(247, 247, 247); border-right: 5px solid transparent; border-left: 5px soli=
+d transparent; margin-top: -12px; margin-left: -5px; z-index: 1; height: 0p=
+x; width: 0px; display: block; }
+.referencetooltip.RTflipped li + li::after { border-top: 0px none; border-b=
+ottom: 8px solid rgb(247, 247, 247); position: absolute; margin-top: 7px;=
+ }
+
+------=_NextPart_000_0000_366E3B3A.157F5130
+Content-Type: application/x-javascript
+Content-Transfer-Encoding: quoted-printable
+Content-Location: urn:snapshot-E410FC9D:https://en.wikipedia.org/w/load.php?debug=false&lang=en&modules=startup&only=scripts&skin=vector
+
+/* Script removed by snapshot save */
+
+------=_NextPart_000_0000_366E3B3A.157F5130
+Content-Type: application/x-javascript
+Content-Transfer-Encoding: quoted-printable
+Content-Location: urn:snapshot-AD10FB0B:https://en.wikipedia.org/w/load.php?debug=false&lang=en&modules=jquery%2Cmediawiki&only=scripts&skin=vector&version=Kk41yJbu
+
+/* Script removed by snapshot save */
+
+------=_NextPart_000_0000_366E3B3A.157F5130--

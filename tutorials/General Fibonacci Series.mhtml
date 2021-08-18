@@ -1,0 +1,3561 @@
+From: <Saved by Blink>
+Subject: General Fibonacci Series
+Date: Thu, 22 Jun 2016 19:12:43 -0000
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--UxjdjIMnY5KNvsYOcECDC1B007hdarJeqQ2nKjbTnX----"
+
+------MultipartBoundary--UxjdjIMnY5KNvsYOcECDC1B007hdarJeqQ2nKjbTnX----
+Content-Type: text/html
+Content-ID: <frame-136-50FB86A0-681E-4949-8123-2E6591A8AD7A@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/Fibonacci/fibGen.html
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"><html><head>=
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8">  =
+          <title>General Fibonacci Series</title>
+
+<meta name=3D"generator" content=3D"BBEdit 7.0.4">
+<meta name=3D"author" content=3D"Dr R Knott: Fib AT ronknott DOT com">
+<meta name=3D"description" content=3D"Fibonacci series are generalised to a=
+ny two starting values
+    and listed with some of their amazing properties.  Two arrays of genera=
+lised Fibonacci sequences=20
+    containing every Fibonacci sequence (the Wythoff and Stolarsky arrays).
+    Suitable for school-level students and  recreational mathematicians.">
+<meta name=3D"keywords" content=3D"Fibonacci, Leonardo, Pisano, Pisa,
+  numbers, series, sequence, Lucas, formula, formulae, generalised, general=
+isation,
+  golden, section, sections, rectangle, mean, ratio, Gulden Snede, divine p=
+roportion,=20
+   extreme and mean ratio, goldner, goldener, goldene, schnitt, Phi, phi, s=
+um,=20
+   phi, string, rabbit,=20
+   mathematics, Wythoff, Stolarsky, array, self-producing, self-reproducing=
+, self-contained,
+   fractal, fractal series, number patterns, interspersion, Kimberling,
+   number representations, integer,  Zeckendorf,=20
+   para-Fibonacci, para, horizontal para, vertical para, self-reproducing, =
+fractal sequence,
+   school, college, university, projects, puzzles, recreational, recreation=
+,
+   combinatorics, discrete, pi,
+     fibinocci, fibonaccis, fibonacci's, fibinacci">
+=09
+<link rel=3D"stylesheet" type=3D"text/css" href=3D"http://www.maths.surrey.=
+ac.uk/hosted-sites/R.Knott/global.css">=20
+
+
+
+
+
+
+<link rel=3D"stylesheet" type=3D"text/css" href=3D"http://www.maths.surrey.=
+ac.uk/hosted-sites/R.Knott/tocgen.css">
+
+
+<style type=3D"text/css">
+TABLE TD {text-align:center;}
+TABLE.left TD {text-align:left;}
+.rowi {color:#09F;font-style:italic;}
+.coli {color:#0C3;font-style:italic;}
+.col1 {font-weight:bolder;}
+.optional {color:gray;font-style:italic;}
+</style>
+
+
+
+</head>
+<body onload=3D"javascript:generateTOC(document.getElementById('toc'),true)=
+;document.getElementById('noscript').style.display =3D 'none'">
+ <div id=3D"noscript" style=3D"border: 2px solid red; margin: 3%; padding: =
+3%; display: none;">=20
+  The calculators on this page require JavaScript but you appear to have sw=
+itched JavaScript off
+(it is disabled).  Please go to the Preferences for this browser and enable=
+ it if you want to use the
+calculators, then Reload this page.
+</div>
+
+<h1> Generalising the Fibonacci Series
+</h1>
+
+This page takes a brief look at one of the ways that the Fibonacci series c=
+an been generalised.
+The <em>Fibonacci series</em> starts with 0 and 1 and the <em>Lucas series<=
+/em> with 2 and 1.  On this page,=20
+the first we look at a generalisation that
+lets us choose <i>any two starting values</i>, called the G series (for Gen=
+eralised Fibonacci series). =20
+We also find two particular ways that we
+can put <i>every number</i> into a collection of such series. In all aspect=
+s of the G series,
+it is the Fibonacci numbers
+themselves and the golden ratio Phi  that again take the starring roles.
+
+<div id=3D"toc">
+<div class=3D"hTOC">                                 Contents of this page=
+=20
+</div>=20
+
+The  <img src=3D"http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/images/=
+ttdIcon.gif" width=3D"25" height=3D"14" alt=3D"Things To Do"> icon means th=
+ere is a <span class=3D"ttdtitle">
+   Things to do</span> section of questions to start your own investigation=
+s.<br>
+The <img src=3D"http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/images/c=
+alcicon.gif" width=3D"34" height=3D"13" alt=3D"calculator"> calculator icon
+indicates that there is a live interactive calculator in that section.
+
+<ul><li><a href=3D"http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/Fibon=
+acci/fibGen.html#section1">1                           The G series=20
+</a><ul><li><a href=3D"http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/F=
+ibonacci/fibGen.html#section1.1">1.1                           Two starting=
+ values
+</a><ul><li><a href=3D"http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/F=
+ibonacci/fibGen.html#section1.1.1">1.1.1 <img src=3D"http://www.maths.surre=
+y.ac.uk/hosted-sites/R.Knott/Fibonacci/calcicon.gif" width=3D"34" height=3D=
+"13" alt=3D"calculator">
+General Fibonacci Series Calculator
+</a></li></ul></li><li><a href=3D"http://www.maths.surrey.ac.uk/hosted-site=
+s/R.Knott/Fibonacci/fibGen.html#section1.2">1.2                            =
+    All G series are related to the Fibonacci series
+</a></li><li><a href=3D"http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/=
+Fibonacci/fibGen.html#section1.3">1.3                             The Index=
+ Shift Rule
+</a></li><li><a href=3D"http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/=
+Fibonacci/fibGen.html#section1.4">1.4                                   The=
+ Zero Rules
+</a></li><li><a href=3D"http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/=
+Fibonacci/fibGen.html#section1.5">1.5                            Adding two=
+ G series together
+</a></li><li><a href=3D"http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/=
+Fibonacci/fibGen.html#section1.6">1.6                                 Multi=
+plying a G series by a number
+</a></li></ul></li><li><a href=3D"http://www.maths.surrey.ac.uk/hosted-site=
+s/R.Knott/Fibonacci/fibGen.html#section2">2                  G series  as a=
+ sum of multiples of 2 Fibonacci numbers=20
+</a><ul><li><a href=3D"http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/F=
+ibonacci/fibGen.html#section2.1">2.1             G(a,b,i) as a sum of two F=
+ibonacci multiples
+</a></li></ul></li><li><a href=3D"http://www.maths.surrey.ac.uk/hosted-site=
+s/R.Knott/Fibonacci/fibGen.html#section3">3                              Si=
+mplifying a description of a G series
+</a><ul><li><a href=3D"http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/F=
+ibonacci/fibGen.html#section3.1">3.1 <img src=3D"http://www.maths.surrey.ac=
+.uk/hosted-sites/R.Knott/Fibonacci/calcicon.gif" width=3D"34" height=3D"13"=
+ alt=3D"calculator">
+   G(a,b) Formula Calculator
+</a></li></ul></li><li><a href=3D"http://www.maths.surrey.ac.uk/hosted-site=
+s/R.Knott/Fibonacci/fibGen.html#section4">4                                =
+    A Phi Formula for G(a,b,n)
+</a><ul><li><a href=3D"http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/F=
+ibonacci/fibGen.html#section4.1">4.1 <img src=3D"http://www.maths.surrey.ac=
+.uk/hosted-sites/R.Knott/Fibonacci/calcicon.gif" width=3D"34" height=3D"13"=
+ alt=3D"calculator">
+   A G(a,b) Table Calculator
+</a></li></ul></li><li><a href=3D"http://www.maths.surrey.ac.uk/hosted-site=
+s/R.Knott/Fibonacci/fibGen.html#section5">5                          The ra=
+tio of two neighbouring G terms
+</a></li><li><a href=3D"http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/=
+Fibonacci/fibGen.html#section6">6                                 All numbe=
+rs are in the Wythoff Array of G series
+</a><ul><li><a href=3D"http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/F=
+ibonacci/fibGen.html#section6.1">6.1   Rounding, Floors and Ceilings
+</a></li><li><a href=3D"http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/=
+Fibonacci/fibGen.html#section6.2">6.2          The Wythoff Array
+</a></li><li><a href=3D"http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/=
+Fibonacci/fibGen.html#section6.3">6.3                                    In=
+teresting Wythoff Array facts
+</a></li><li><a href=3D"http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/=
+Fibonacci/fibGen.html#section6.4">6.4                          The Zeckendo=
+rf Representations and the Wythoff Array
+</a></li><li><a href=3D"http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/=
+Fibonacci/fibGen.html#section6.5">6.5                               In whic=
+h row is number n in the Wythoff Array?
+</a></li><li><a href=3D"http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/=
+Fibonacci/fibGen.html#section6.6">6.6                               In whic=
+h column is number n in the Wythoff Array?
+</a></li></ul></li><li><a href=3D"http://www.maths.surrey.ac.uk/hosted-site=
+s/R.Knott/Fibonacci/fibGen.html#section7">7                           The S=
+tolarsky Array is similar
+ </a><ul><li><a href=3D"http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/=
+Fibonacci/fibGen.html#section7.1">7.1                      The Stolarsky Ar=
+ray
+ </a></li><li><a href=3D"http://www.maths.surrey.ac.uk/hosted-sites/R.Knott=
+/Fibonacci/fibGen.html#section7.2">7.2 <img src=3D"http://www.maths.surrey.=
+ac.uk/hosted-sites/R.Knott/Fibonacci/calcicon.gif" width=3D"34" height=3D"1=
+3" alt=3D"calculator">
+  Wythoff Array Calculator
+</a></li><li><a href=3D"http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/=
+Fibonacci/fibGen.html#section7.3">7.3                               In whic=
+h row is number n in the Stolarsky Array?
+</a></li><li><a href=3D"http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/=
+Fibonacci/fibGen.html#section7.4">7.4                               In whic=
+h column is number n in the Stolarsky Array?
+</a></li><li><a href=3D"http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/=
+Fibonacci/fibGen.html#section7.5">7.5 <img src=3D"http://www.maths.surrey.a=
+c.uk/hosted-sites/R.Knott/Fibonacci/calcicon.gif" width=3D"34" height=3D"13=
+" alt=3D"calculator">
+  Stolarsky Array Calculator
+</a></li></ul></li><li><a href=3D"http://www.maths.surrey.ac.uk/hosted-site=
+s/R.Knott/Fibonacci/fibGen.html#section8">8  Primes and G Series
+</a><ul><li><a href=3D"http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/F=
+ibonacci/fibGen.html#section8.1">8.1 G series with no primes
+</a></li></ul></li><li><a href=3D"http://www.maths.surrey.ac.uk/hosted-site=
+s/R.Knott/Fibonacci/fibGen.html#section9">9                    Links and Bi=
+bliography
+ </a></li></ul></div>=20
+<!-- H1> Contents of this page </h1>
+The <img src=3D"ttdIcon.gif" width=3D"25" height=3D"14" alt=3D"Things To Do=
+"> icon means=20
+there is a <span class=3Dttd> Things To Do</span> investigation at the end =
+of the section.<br>
+The <img src=3D"calcicon.gif" width=3D34 height=3D13 alt=3D"calculator"> ic=
+on means there is an
+interactive calculator in this section.
+
+<ul class=3Dcontentsl1>
+<LI><a href=3D"#Gseries">The G series</a>
+	<ul class=3Dcontentsl2>
+	<li><a href=3D"#gstart">Two starting values</a>=20
+	   <a href=3D"#CALC1"><img src=3D"calcicon.gif" width=3D34 height=3D13 alt=
+=3D"calculator"></a></li>
+	<li><a href=3D"#reductionRule">All G series are related to the Fibonacci s=
+eries</a>=20
+	 <li><a href=3D"#indexShift">The Index Shift Rule</a></li>
+	<li><a href=3D"#zeroIndexRules">The Zero Rules</a></li>
+	<li><a href=3D"#addingG">Adding two G series together</a></li>
+	<li><a href=3D"#multiplyinhRule">Multiplying a G series by a number</a></l=
+i>
+	<li><a href=3D"#ident">G series  as a sum of multiples of 2 Fibonacci numb=
+ers</a>=20
+	     <ul class=3Dcontentsl2>
+	     <li><a href=3D"#G2Fib">G(a,b,i) as a sum of two Fibonacci multiples</=
+a>
+	       <img src=3D"ttdIcon.gif" width=3D"25" height=3D"14" alt=3D"Things T=
+o Do"></li>
+	     </ul>
+	<li><a href=3D"#simplifyG">Simplifying a description of a G series</a>=20
+	     <a href=3D"#CALC2"><img src=3D"calcicon.gif" width=3D34 height=3D13 a=
+lt=3D"calculator"></a></li>
+	<li><a href=3D"#Gformula">A Formula for G(a,b,n)</a>=20
+	    <img src=3D"ttdIcon.gif" width=3D"25" height=3D"14" alt=3D"Things To D=
+o">
+	    <A href=3D"#CALC3"><img src=3D"calcicon.gif" width=3D34 height=3D13 al=
+t=3D"calculator"></a>
+	    <ul class=3Dcontentsl3>
+	            <li><a href=3D"#Gratio">The ratio of two neighbouring G terms<=
+/a></li>
+	    </ul></li>
+	</ul></li>
+<li><a href=3D"#wythoff">All numbers are in the Wythoff Array of G series</=
+a>
+    <ul class=3Dcontentsl2>
+    <li><a href=3D"#wythoffprops">Interesting Wythoff Array facts</a></li>
+    <li><a href=3D"#wythoffzeck">The Zeckendorf Representations and the Wyt=
+hoff Array</a></li>
+    <li><a href=3D"#Wythoffrownb">In which row is number n in the Wythoff A=
+rray?</a></li>
+    <li><a href=3D"#Wythoffcolnb">In which column is number n in the Wythof=
+f Array?</a>=20
+        <A href=3D"#CALC5"><img src=3D"calcicon.gif" width=3D34 height=3D13=
+ alt=3D"calculator"></a></li>
+    </ul></li>
+<li><a href=3D"#Stolarray">The Stolarsky Array is similar</a>   =20
+    <ul class=3Dcontentsl2>
+    <li><a href=3D"#stolarsky">The Stolarsky Array</a></li>
+    <li><a href=3D"#Stolarskyrownb">In which row is number n in the Stolars=
+ky Array?</a></li>
+    <li><a href=3D"#Stolarskycolnb">In which column is number n in the Stol=
+arsky Array?</a>
+        <A href=3D"#CALC6"><img src=3D"calcicon.gif" width=3D34 height=3D13=
+ alt=3D"calculator"></a></li>
+    </ul></li>
+<li><a href=3D"#refs">Links and Bibliography</a>    </li>
+</ul -->
+   =20
+<hr>
+
+<a name=3D"Gseries"></a>
+<h2 id=3D"section1">1                           The G series=20
+</h2>
+
+<a name=3D"gstart"></a>
+<h3 id=3D"section1.1">1.1                           Two starting values
+</h3>
+The first generalisation we shall look at is choosing two new starting numb=
+ers. =20
+The Fibonacci series,
+which here we will call <i>the</i> Fibonacci series, starts with
+0 and 1 although 1 and 1 or even 1 and 2 will do just as well too.  We have=
+ already looked in
+some detail at a series that chooses two different starting values - 2 and =
+1 -=20
+<a href=3D"http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/Fibonacci/Luc=
+asNbs.html">the Lucas series</a>.<br>
+
+When we start with different values, we call the series a G series (for Gen=
+eralised Fibonacci series).
+Once we have the first two values of a G series, the rest are formed using =
+the Fibonacci Rule
+of adding the latest two to get the next one.
+ <p>
+ Here is a simple calculator to show you some terms of a General Fibonacci =
+Series.  Enter the values for a and b
+ then click the <b>Show</b> button.  Alter the number of terms the calculat=
+or produces if you like.
+=20
+<a name=3D"CALC1"></a>
+</p><h4 id=3D"section1.1.1">1.1.1 <img src=3D"http://www.maths.surrey.ac.uk=
+/hosted-sites/R.Knott/Fibonacci/calcicon.gif" width=3D"34" height=3D"13" al=
+t=3D"calculator">
+General Fibonacci Series Calculator
+</h4>
+<div class=3D"calc"> General Fibonacci Series  C A L C U L A T O R=20
+ <form name=3D"g1F" action=3D"http://www.maths.surrey.ac.uk/hosted-sites/R.=
+Knott/Fibonacci/fibGen.html">
+ <div class=3D"norm" align=3D"center"><br clear=3D"all">
+   <span style=3D"background-color:#6C9;padding:8px">
+   <input type=3D"button" value=3D"Show" onclick=3D"outF=3Dthis.form.name;g=
+1()">=20
+    the first <input type=3D"text" id=3D"g1Fnb" value=3D"10" size=3D"5">
+   terms of G(a,b) when=20
+    a=3D<input type=3D"text" size=3D"6" id=3D"g1Fa" value=3D"0">
+    b=3D<input type=3D"text" size=3D"6" id=3D"g1Fb" value=3D"1">=20
+  </span>
+ </div>
+<br>
+=20
+R E S U L T S=20
+<input type=3D"button" class=3D"clear" value=3D"Clear" onclick=3D"clearmsg(=
+'g1F');document.getElementById('msgg1Fdepth').value=3D'15'">
+<input type=3D"hidden" id=3D"msgg1Fdepth" value=3D"15">
+<input type=3D"button" class=3D"resSPACEbtn" value=3D"Show more space" oncl=
+ick=3D"showMoreOrLess('msgg1F',15)">
+<input type=3D"button" class=3D"resSPACEbtn" value=3D"Show less space" oncl=
+ick=3D"showMoreOrLess('msgg1F',-15)">
+<div id=3D"msgg1F" class=3D"res" style=3D"height:15em;">g(0,1): ... 0 1 1 2=
+ 3 5 8 13 21 34 ...<br>g(1,1): ... 1 1 2 3 5 8 13 21 34 55 ...<br></div>
+ <b>Infinity</b> means the number has become too big for this calculator
+
+ </form>
+</div>
+=20
+=20
+We will use the letter G (for Generalised) for this series, which starts wi=
+th values a and b,=20
+that is,
+<div class=3D"rule">
+                 <span class=3D"math"> G(0) =3D a and G(1) =3D b</span>
+</div>
+  For all other values of n, that is n bigger than 1 or n negative, the Fib=
+onacci Rule  holds, that is:
+<div class=3D"rule">
+                   <span class=3D"math">G(n) =3D G(n =E2=80=93 1) + G(n =E2=
+=80=93 2)</span>  ........  the Fibonacci Rule
+</div>
+When the starting values are just "a" and "b", we will use G for the series=
+ and G(i) for individual numbers
+in it.  <br>
+If we are using several different G series, that is, with different startin=
+g values, then we will=20
+make clear which is which by writing G(a,b,i).  We shall find a formula for=
+ G(a,b,i).
+
+<a name=3D"reductionRule"></a>
+<h3 id=3D"section1.2">1.2                                All G series are r=
+elated to the Fibonacci series
+</h3>
+
+All G series look like this:
+
+<table border=3D"1" cellspacing=3D"0" cellpadding=3D"2" align=3D"center">
+<tbody><tr class=3D"index1"><th align=3D"right">i:</th>
+  <td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td=
+>...</td></tr>
+<tr><th>G(a,b,i):</th><td>a&nbsp;</td><td>b&nbsp;</td><td>a+b&nbsp;</td><td=
+>a+2b&nbsp;</td><td>2a+3b&nbsp;</td><td>3a+5b&nbsp;</td><td>5a+8b&nbsp;</td=
+><td>...&nbsp;</td></tr>
+</tbody></table>
+
+and, like the Fibonacci series itself, can be extended backwards too:
+
+<table border=3D"1" cellspacing=3D"0" cellpadding=3D"0" align=3D"center">
+<tbody><tr class=3D"index1"><th align=3D"right">i:</th>
+ <td>...</td><td>=E2=80=933</td><td>=E2=80=932</td><td>=E2=80=931</td>
+  <td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td=
+>...</td></tr>
+<tr><th>G(a,b,i):</th><td>&nbsp;...&nbsp;</td><td>&nbsp;=E2=80=933a+2b&nbsp=
+;</td><td>&nbsp;2a=E2=80=93b&nbsp;</td><td>&nbsp;=E2=80=93a+b&nbsp;</td>
+   <td>&nbsp;a&nbsp;</td><td>&nbsp;b&nbsp;</td><td>&nbsp;a+b&nbsp;</td><td>=
+&nbsp;a+2b&nbsp;</td><td>&nbsp;2a+3b&nbsp;</td><td>&nbsp;3a+5b&nbsp;</td><t=
+d>&nbsp;5a+8b&nbsp;</td><td>&nbsp;...&nbsp;</td></tr>
+</tbody></table>
+
+We will now find a few simple rules that will help us understand the G seri=
+es and show
+that they are all described by a simple relationship involving <i>the</i> F=
+ibonacci series.
+
+<a name=3D"indexShift"></a>
+<h3 id=3D"section1.3">1.3                             The Index Shift Rule
+</h3>
+Here are some simple examples to see if you can spot some of the new series=
+: =20
+=20
+
+<table border=3D"1" cellspacing=3D"0" cellpadding=3D"5" align=3D"center">
+<tbody><tr><th>Series</th><th>a=3DG(0)</th><th>b=3DG(1)</th><th>i=3D2</th><=
+th>i=3D3</th><th>i=3D4</th><th>i=3D5</th>
+    <th>i=3D6</th><th>i=3D7</th><th>i=3D8</th><th>i=3D9</th></tr>
+<tr><td>G(1,1,i)</td><td>1</td><td>1</td><td>2</td><td>3</td><td>5</td><td>=
+8</td><td>13</td>
+   <td>21</td><td>34</td><td>55</td></tr>
+<tr><td>G(1,2,i)</td><td>1</td><td>2</td><td>3</td><td>5</td><td>8</td><td>=
+13</td>  <td>21</td>
+   <td>34</td><td>55</td><td>89</td></tr>
+<tr><td>G(2,3,i)</td><td>2</td><td>3</td><td>5</td><td>8</td><td>13</td><td=
+>21</td><td>34</td>
+    <td>55</td><td>89</td><td>144</td></tr>
+<tr><td>G(1,0,i)</td><td>1</td><td>0</td><td>1</td><td>1</td><td>2</td><td>=
+3</td><td>5</td><td>8</td><td>13</td><td>21</td></tr>
+<tr><td>G(=E2=80=931,1,i)</td><td>=E2=80=931</td><td>1</td><td>0</td><td>1<=
+/td><td>1</td><td>2</td><td>3</td><td>5</td><td>8</td><td>13</td></tr>
+</tbody></table>
+
+
+ OK, so those were easy!  Each is  the Fibonacci series but shifted along s=
+o that the starting point for
+ the indices (when i=3D0) is not at the 0 Fibonacci number but somewhere el=
+se in the series:
+ <div class=3D"centered">G(1,1,i) is F(i+1)<br>
+ G(1,2,i) is F(i+2)<br>
+ G(2,3,i) is F(i+3)<br>
+ G(1,0,i) is F(i=E2=80=931)<br>
+ G(=E2=80=931,1,i) is F(i=E2=80=932).
+ </div>
+ <p>
+=20
+ So starting with any two consecutive Fibonacci numbers as our choices for =
+a and b, G(a,b,i) will be essentially
+ the same as the Fibonacci series but with its indices changed. The general=
+ rule is:<br>
+ </p><div class=3D"rule">
+          G( F(k), F(k+1), i) =3D F(i+k)     ...........   (G1)
+</div>
+What we did with the Fibonacci series we can of course do to any G series. =
+ <br>
+
+<table border=3D"1" cellspacing=3D"0" cellpadding=3D"3" align=3D"center">
+<tbody><tr class=3D"index1"><th>i</th>
+  <td>...</td><td>0</td><td>1</td><td>2</td><td>...</td></tr>
+<tr><th>G(a,b,i)</th> <td> ...</td><td>a</td><td>b</td><td>a+b</td><td>...<=
+/td></tr>
+</tbody></table>
+which is the same series as G(b,a+b) but starting one place further along. =
+ So to make G(a,b)
+<i>the same series as G(b,a+b) with the same index numbers</i> we need to u=
+se i+1 instead of i:
+<div class=3D"rule">
+                     G(b, a+b, i) =3D G(a,b,i+1)
+</div>
+
+If we had started the indices at the pair a+b, a+2b in the series G(a,b,i),=
+ we would
+have increased i by 2:<br>
+G(a+b, a+2b, i) =3D G( a,  b, i+2)<br>
+
+The general result for altering the index numbers or shifting the series a =
+few places along, making
+the index numbers start at a different place in the same series of numbers =
+is as follows:
+<div class=3D"rule">
+  G( G(a,b,k), G(a,b,k+1), i) =3D G(a, b, i+k)  ....   the Index Shift Rule
+</div>
+
+Checking this, when we put a=3D0 and b=3D1 so that G(a,b,k) is F(k), we hav=
+e
+<div align=3D"center">
+   G(F(k), F(k+1), i) =3D F(i+k)=20
+</div>=20
+as we had already discovered above in (G1).
+
+<p>
+
+If we display each of these general terms of the G series in a column with =
+the multiples of <i>a</i> in the top row and the=20
+<i>b</i> multiples underneath, we have:
+
+<table border=3D"1" cellspacing=3D"0" cellpadding=3D"3" align=3D"center">
+<tbody><tr class=3D"index1"><th>n</th>
+  <td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td=
+>7</td>
+  <td>...</td><td>n</td></tr>
+<tr><th>a</th>
+  <td>1</td><td>0</td><td>1</td><td>1</td><td>2</td><td>3</td><td>5</td><td=
+>8</td>
+  <td>...</td><td>F(n=E2=80=931)</td></tr>
+<tr><th>b</th>
+  <td>0</td><td>1</td><td>1</td><td>2</td><td>3</td><td>5</td><td>8</td><td=
+>13</td>
+  <td>...</td><td>F(n)</td></tr>
+<tr><th>Sum</th>
+  <td>a</td><td>b</td><td>a+b</td><td>a+2b</td><td>2a+3b</td><td>3a+5b</td>=
+<td>5a+8b</td>
+  <td>8a+13b</td><td>...</td><td>F(n=E2=80=931)a+F(n)b</td></tr>
+</tbody></table>
+
+
+It is now clear that since we are adding a's and b's and each a and b term =
+is the sum=20
+of the previous 2 - <i>and we start from 0 and 1 at some point</i> then we =
+have=20
+<strong>Fibonacci</strong> multiples of a and b.  (This result is easy to p=
+rove by=20
+<i>mathematical induction</i>.)
+
+So our first main result is:
+</p><div class=3D"rulebox">
+              G(a, b, n) =3D a F(n=E2=80=931) + b F(n)    ...........  the =
+Reduction Rule
+</div>
+and so <b><i>all</i>  G series are just simple multiples of two Fibonacci s=
+eries</b>.
+We will call it the <b>Reduction Rule (for G series)</b> since it shows how=
+ we can reduce
+<i>any</i> G series to a sum of (simple multiples of) two Fibonacci series.=
+ <br>
+Below, we will see  how we can use this Rule to identify any G series autom=
+atically.
+
+<p>Two special cases are
+</p><div class=3D"center">
+G(0,1,n) is the Fibonacci series F(i)<br>
+G(2,1,n) is the Lucas series L(i)
+</div>
+
+Incidentally, putting this into (G1) gives us a more complex Fibonacci form=
+ula:
+<div class=3D"rule">
+       F(k)F(i=E2=80=931) + F(k+1)F(i) =3D F(i+k)
+</div>
+
+
+<a name=3D"zeroIndexRules"></a>
+<h3 id=3D"section1.4">1.4                                   The Zero Rules
+</h3>
+
+
+Let's look at two simple cases of G series, where one of the starting value=
+s is zero.<br>
+We'll start with a few examples.  Can you spot the  relationship between th=
+e examples and either
+the Fibonacci series?  For reference, we include the Fibonacci series as th=
+e first one:
+
+<table border=3D"1" cellspacing=3D"0" cellpadding=3D"5" align=3D"center">
+<tbody><tr class=3D"index1"><th>i=3D</th><th>0</th><th>1</th><th>2</th><th>=
+3</th><th>4</th><th>5</th>
+    <th>6</th><th>7</th><th>8</th><th>9</th></tr>
+<tr><th>G(0,1,i)</th><td>0</td><td>1</td><td>1</td><td>2</td><td>3</td><td>=
+5</td>
+   <td>8</td><td>13</td><td>21</td><td>34</td></tr>
+<tr><th>G(0,2,i)</th><td>0</td><td>2</td><td>2</td><td>4</td><td>6</td><td>=
+10</td><td>16</td>
+   <td>26</td><td>42</td><td>68</td></tr>
+<tr><th>G(0,3,i)</th><td>0</td><td>3</td><td>3</td><td>6</td><td>9</td><td>=
+15</td><td>24</td>
+   <td>39</td><td>63</td><td>102</td></tr>
+</tbody></table>
+
+Again, it is fairly easy to see that:
+<div class=3D"rule">
+                     G(0, c, i) =3D c F(i)  ..... the First Zero  Rule
+</div>
+ =20
+How about these with the <i>b</i> value  zero?
+
+<table border=3D"1" cellspacing=3D"0" cellpadding=3D"5" align=3D"center">
+<tbody><tr class=3D"index1"><th>i=3D</th><th>0</th><th>1</th><th>2</th><th>=
+3</th><th>4</th><th>5</th>
+    <th>6</th><th>7</th><th>8</th><th>9</th></tr>
+<tr><th>G(1,0,i)</th><td>1</td><td>0</td><td>1</td><td>1</td><td>2</td><td>=
+3</td><td>5</td>
+   <td>8</td><td>13</td><td>21</td></tr>
+<tr><th>G(2,0,i)</th><td>2</td><td>0</td><td>2</td><td>2</td><td>4</td><td>=
+6</td><td>10</td>
+   <td>16</td><td>26</td><td>42</td></tr>=20
+<tr><th>G(3,0,i)</th><td>3</td><td>0</td><td>3</td><td>3</td><td>6</td><td>=
+9</td><td>15</td><td>24</td>
+   <td>39</td><td>63</td></tr>
+</tbody></table>
+
+Here we again have multiples of the Fibonacci series, but the indices are s=
+hifted by one place:
+<div class=3D"rule">
+                G(d, 0, i) =3D d F(i=E2=80=931) ..... the Second Zero  Rule
+</div>
+
+
+<a name=3D"addingG"></a>
+<h3 id=3D"section1.5">1.5                            Adding two G series to=
+gether
+</h3>
+Now we come to another simple property of the G series.  Suppose we add cor=
+responding
+terms from <i>two different G series</i>.  Let's take G(a,b,i) and G(A,B,i)=
+.
+Can we predict what the new series with i<sup>th</sup> term G(a,b,i)+G(A,B,=
+i) is?
+Here is a closer look:
+<table border=3D"1" cellspacing=3D"0" cellpadding=3D"5" align=3D"center">
+<tbody><tr><th>G(a,b)</th>
+  <td>a</td><td>b</td><td>a+b</td><td>a+2b</td><td>2a+3b</td><td>3a+5b</td>=
+<td>5a+8b</td>
+  <td>...</td><td>F(n=E2=80=931)a+F(n)b</td></tr>
+<tr><th>G(A,B)</th>
+  <td>A</td><td>B</td><td>A+B</td><td>A+2B</td><td>2A+3B</td><td>3A+5B</td>=
+<td>5A+8B</td>
+  <td>...</td><td>F(n=E2=80=931)A+F(n)B</td></tr>
+<tr><th>G(a,b)+<br>G(A,B)</th>
+  <td>a+A</td><td>b+B</td><td>(a+A)+(b+B)</td><td>(a+A)+2(b+B)</td><td>2(a+=
+A)+3(b+B)</td><td>3(a+A)+5(b+B)</td><td>5(a+A)+8(b+B)</td>
+  <td>...</td><td>F(n=E2=80=931)(a+A)+F(n)(b+B)</td></tr>
+</tbody></table>
+
+but the final row is identical to G(a+A, b+B)!<br>
+
+This is called the Addition Rule of the G series, that by adding two G seri=
+es <i>with the same index</i>
+then we get the G series with the starting values separately added. =20
+To put this more precisely, in mathematical notation, we have:
+<div class=3D"rule">
+  G(a, b, i) + G(A, B, i) =3D G(a+A, b+B, i)   .....  the Addition Rule for=
+ G series
+</div>
+
+
+Putting this Addition Rule together with the two Zero  Rules (G(0,c,i)=3D c=
+F(i) and G(d,0,i)=3DdF(i=E2=80=931):
+<div align=3D"center">
+G(c,d,i) =3D G(0,c,i) + G(d,0,i) =3D  c F(i) + d F(i=E2=80=931)
+</div>=20
+which is just the Reduction Rule above.
+
+<a name=3D"multiplyinhRule"></a>
+<h3 id=3D"section1.6">1.6                                 Multiplying a G s=
+eries by a number
+</h3>
+The same simplification about adding two G series applies to multiplying al=
+l the terms of a
+G series by a constant number.  Multiplying all the terms by k is the same =
+series as the one with
+starting values ka and kb because<br>
+ G(ka, kb, i) =3D (ka)F(i=E2=80=931) + (kb)F(i) =3D k [aF(i=E2=80=931) + bF=
+(i)] =3D k G(a,b,i)
+
+<div class=3D"rule">
+  G(ka, kb, i) =3D k G(a, b, i) ..... the Multiple Rule for G series
+</div>
+
+The Addition Rule and the Multiple Rule for G series we will call <b>the Li=
+near Property of the G series</b>.
+
+<a name=3D"ident"></a>
+<h2 id=3D"section2">2                  G series  as a sum of multiples of 2=
+ Fibonacci numbers=20
+</h2>
+
+First we show how, knowing the two starting values a and b of a G series we=
+ can find an equivalent in terms
+of two Fibonacci series.  Then we will show how to express any Fibonacci-ty=
+pe series in such a form.
+
+<a name=3D"G2Fib"></a>
+<h3 id=3D"section2.1">2.1             G(a,b,i) as a sum of two Fibonacci mu=
+ltiples
+</h3>
+
+In the section above we found this convenient formula for G(a,b,n) in terms=
+ of the Fibonacci numbers and a and b:
+<div class=3D"rule">
+   G( a, b, n ) =3D F( n =E2=80=93 1 ) a + F( n ) b
+</div>
+The Addition Rule, the Multiple Rule and the Reduction Rule give us a metho=
+d of finding a description of
+any G series in terms of two Fibonacci series.<br>
+We have already seen that if one of the starting values is zero, the G seri=
+es is the Fibonacci series.<br>
+Now we tackle the more general case of any two starting values.
+<br>Can you spot how this G series, with starting values 3 and 2 is related=
+ to the Fibonacci series?
+
+<div>
+<table border=3D"1" cellspacing=3D"0" cellpadding=3D"5" align=3D"center">
+<tbody><tr><th>i=3D</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th><=
+th>5</th>
+    <th>6</th><th>7</th><th>8</th><th>9</th></tr>
+<tr><th>G(3,2,i)</th><td>3</td><td>2</td><td>5</td><td>7</td><td>12</td><td=
+>19</td><td>31</td>
+   <td>50</td><td>81</td><td>131</td></tr>
+</tbody></table>
+</div>
+
+This time, the connection is not straightforward.  However, you might have =
+noticed that 7, 12, 19 and 31=20
+are not all that far away from the Fibonacci numbers 8, 13, 21 and 34.  In =
+fact the differences are -1, -1, -2 and -3.
+So this immediately suggests the following:
+<table border=3D"1" cellspacing=3D"0" cellpadding=3D"5" align=3D"center">
+<tbody><tr><th>i=3D</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th><=
+th>5</th>
+    <th>6</th><th>7</th><th>8</th><th>9</th></tr>
+<tr><th>Fib(i+3)</th><td>2</td><td>3</td><td>5</td>
+   <td>8</td><td>13</td><td>21</td><td>34</td><td>55</td><td>89</td><td>144=
+</td></tr>
+<tr><th>G(3,2,i)</th><td>3</td><td>2</td><td>5</td><td>7</td><td>12</td><td=
+>19</td><td>31</td>
+   <td>50</td><td>81</td><td>131</td></tr>
+<tr><th>difference</th><td>-1</td><td>1</td><td>0</td><td>1</td><td>1</td><=
+td>2</td><td>3</td>
+   <td>5</td><td>8</td><td>13</td></tr>
+</tbody></table>
+
+The final row of differences is clearly the Fibonacci series. =20
+Since it starts with the 0 term when i=3D2 then it is F(i=E2=80=932). So we=
+ have:
+<pre>             G(3,2,i) =3D F(i+3) =E2=80=93 F(i=E2=80=932)</pre>
+The above process depended on spotting that the G series was close to the F=
+ibonacci series at some point.
+But we could have got to this result directly using the Reduction rule as f=
+ollows:
+<pre>             G(3,2,i) =3D 3 F(i=E2=80=931) + 2 F(i)
+</pre>
+<blockquote>
+Alternatively, we could have obtained this from the Addition and Multiplica=
+tion rules as follows:
+<pre>            =20
+             G(3,2,i) =3D G(3,0,i) + G(0,2,i) </pre>
+then apply the Multiplication Rule
+<pre>  =20
+             G(3,2,i) =3D G(3,0,i) + G(0,2,i)=20
+                      =3D 3 G(1,0,i) + 2 G(0,1,i)</pre>
+and we can now write this directly in terms of the Fibonacci series using t=
+he Zero Index Rules:
+<pre> =20
+             G(3,2,i) =3D 3 G(1,0,i) + 2 G(0,1,i)=20
+                      =3D 3 F(i=E2=80=931) + 2 F(i)</pre>
+</blockquote>
+But this is not the formula we "spotted" above:  G(3,2,i)=3DF(i+3)=E2=80=93=
+F(i=E2=80=932).
+We can however rearrange the Reduction Rule formula 3F(i=E2=80=931) + 2 F(i=
+) into this form and=20
+also find several other formula for G(3,2,i) along the way. All we  need is=
+ the basic Fibonacci Rule
+F(k+1)+F(k) is F(k+2) which we could also use in an alternative form as F(k=
++1) is F(k+2)=E2=80=93F(k):-<br>
+First replace 2F(i=E2=80=931)+2F(i) by 2F(i+1):
+<pre>             G(3,2,i) =3D 3 F(i=E2=80=931)          + 2 F(i)
+                      =3D F(i=E2=80=931) + 2 F(i=E2=80=931) + 2 F(i)    spl=
+itting up 3 F(i=E2=80=931)
+                      =3D F(i=E2=80=931)     + 2 F(i+1)         replacing t=
+he final two terms
+</pre>
+At this point,  since F(i=E2=80=931)+F(i+1) =3D L(i), we could introduce Lu=
+cas numbers too:
+<pre>            =20
+             G(3,2,i) =3D F(i=E2=80=931) + 2 F(i+1)
+                      =3D F(i=E2=80=931) + F(i+1) + F(i+1)     splitting up=
+ 2 F(i+1)
+                      =3D       L(i)      + F(i+1)     using the L(i) repla=
+cement above
+</pre>
+
+But instead of introducing the Lucas numbers, we will use the Fibonacci Rul=
+e,
+ this time replacing F(i=E2=80=931) by F(i)=E2=80=93F(i=E2=80=932):=E2=80=
+=93
+<pre>             G(3,2,i) =3D    F(i=E2=80=931)     + 2 F(i+1)
+                      =3D F(i) =E2=80=93 F(i=E2=80=932) + 2 F(i+1)
+                      =3D F(i) + F(i+1) + F(i+1) =E2=80=93 F(i=E2=80=932)  =
+  by rearranging the terms
+                      =3D     F(i+2)    + F(i+1) =E2=80=93 F(i=E2=80=932)  =
+  since F(i)+F(i+1) is F(i+2)
+                      =3D            F(i+3)      =E2=80=93 F(i=E2=80=932)  =
+  since F(i+1)+F(i+2) is F(i+3)
+</pre>
+and there we have it - our original formula for G(3,2,i) but  we have found=
+ it by simple=20
+manipulation of the Reduction Rule formula for G(3,2,i).
+<br>
+So you can choose whichever formula you like for G(3,2,i) from those above!=
+ =20
+
+<p>
+What we have seen here is that it is easier to use the Reduction Rule on a =
+G series
+and then perhaps to transform the resulting formula  into=20
+many other Fibonacci forms using just the basic Fibonacci Rule.
+<br>
+ Try these for yourself:
+=20
+</p><div class=3D"ttd">  <h4><img src=3D"http://www.maths.surrey.ac.uk/host=
+ed-sites/R.Knott/Fibonacci/ttdIcon.gif" width=3D"25" height=3D"14" alt=3D"/=
+">
+                           Things to do  =20
+<img src=3D"http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/Fibonacci/tt=
+dIcon.gif" width=3D"25" height=3D"14" alt=3D"/"></h4>
+<ol class=3D"ttd">=20
+<li> What if a=3Db?  e.g.  G(1,1) or G(2,2)?  Find a formula for G(a,a,i). =
+</li>
+<li> Find a simpler form for G(1,3,i)=20
+      <ol type=3D"a">
+      <li> solely in terms of Fibonacci numbers</li>  <!-- 2F(i)+F(i+1) -->
+      <li> in terms of Lucas numbers</li>  <!-- L(i+1) -->
+      </ol></li>
+<li>  Make a table of a values (rows) against b values (columns), each from=
+ 0 to 4,=20
+      and fill in the entries in the table with a simple formula
+      for G(a,b,i).  </li>
+   <!--  =20
+      b=3D0     b=3D1         b=3D2          b=3D3          b=3D4
+a=3D0    0      F(i)        2F(i)        3F(i)        4F(i)=20
+a=3D1   F(i-1)  F(i+1)       F(i+2)       L(i+1)       F(i)+L(i+1)
+a=3D2  2F(i-1)  L(i)        2F(i+1)       F(i+2)      2F(i+1)
+a=3D3  3F(i-1)  F(i)+L(i)    F(i+1)+L(i)  F(i+1)       L(i+1)
+a=3D4  4F(i-1) 2F(i-1)+L(i) 2L(i)        2F(i+1)+L(i) 4F(i+1)
+   -->
+   <li> What is special about G(0,0)?   </li>  <!-- it is the only G series=
+ with constant values -->
+=20
+</ol>
+</div>
+
+
+
+<a name=3D"simplifyG"></a>
+<h2 id=3D"section3">3                              Simplifying a descriptio=
+n of a G series
+</h2>
+
+The last section showed there are several ways to write a G series as a sum=
+ of two Fibonacci terms. =20
+How do we find the simplest?<br>
+For example, =20
+<div class=3D"question">
+                  What is a simpler description of G(18,28,i) than 18 F(i-1=
+) + 28 F(i)?
+</div>
+First we notice that 18 and 28 are even numbers, so G(18,28)=3D2 G(9,14) by=
+ the Multiple Rule.
+9 and 14 have no factors in common now, so G(9,14) is the simplest form we =
+can get using that Rule.<p>
+
+So to start reducing the constants 9 and 14, we make a G series by applying=
+ the Fibonacci Rule backwards
+from <b>9, 14</b> and continue so long as the numbers are getting smaller:
+</p><div align=3D"center">
+    3 =E2=86=90 1 =E2=86=90 4 =E2=86=90 5 =E2=86=90 <b>9 14</b>
+</div>
+The series G(9,14) is the same as G(3,1) but starts 4 places later - so
+G(3, 1, i+4) =3D G(9, 14, i).
+<br>
+We can now do with G(3,1,i) what we did with G(3,2) in the previous section=
+:<br>
+<pre>         G(3,1,i) =3D 3 F(i=E2=80=931) + 1 F(i)        by the Reductio=
+n Rule
+                  =3D 2 F(i=E2=80=931) + F(i+1)        since F(i=E2=80=931)=
++F(i) is F(i+1)
+</pre>
+ So a simpler description of G(9, 14, i) is
+ <pre>      G(9, 14, i) =3D G(3, 1, i+4)
+                  =3D 2 F(i+3) + F(i+5).</pre>
+ Finally we have:
+ <pre>     G(18, 28, i) =3D 2 G(9, 14, i)=20
+                  =3D 4 F(i+3) + 2 F(i+5) or, using the Lucas numbers:
+                  =3D 2 F(i+3) + 2 L(i+4) </pre>
+ We have exchanged the simpler indices and larger multipliers of the origin=
+al form: 18 F(i-1) + 28 F(i)
+  for simpler multiples of the later forms: 2 F(i+3) + F(i+5) or F(i+3) + L=
+(i+4).<br>
+ What form is "the simplest form" is therefore really a matter of taste. =
+=20
+ Usually we choose the form "with the smaller numbers", be they indices or =
+multipliers but this can be=20
+ a trade-off of one against the other sometimes as we see here.
+<p>
+Here is a calculator to produce a formula for G(a,b,i) where you can input =
+your own values for a and b.
+The formula found will be one of the simplified forms and a few terms of th=
+e series will be calculated too.
+Note that <i>a</i> and <i>b</i> need not be whole numbers for the methods a=
+bove to apply!
+
+
+
+<a name=3D"CALC2"></a>
+</p><h3 id=3D"section3.1">3.1 <img src=3D"http://www.maths.surrey.ac.uk/hos=
+ted-sites/R.Knott/Fibonacci/calcicon.gif" width=3D"34" height=3D"13" alt=3D=
+"calculator">
+   G(a,b) Formula Calculator
+</h3>
+ <div class=3D"calc"> G(a,b) Formula C A L C U L A T O R <br>
+=20
+ <form name=3D"g2F" action=3D"http://www.maths.surrey.ac.uk/hosted-sites/R.=
+Knott/Fibonacci/fibGen.html">
+ <div align=3D"center" class=3D"norm">
+ <span style=3D"background-color:#9C6;padding:8px">
+  <input type=3D"button" value=3D"Find a formula" onclick=3D"outF=3Dthis.fo=
+rm.name;g2()">
+    for G(<input type=3D"text" size=3D"6" id=3D"g2Fa" value=3D"0">,
+     <input type=3D"text" id=3D"g2Fb" size=3D"6" value=3D"1">, i ) </span>
+ </div>
+ <br>
+=20
+R E S U L T S=20
+	<input type=3D"button" class=3D"clear" value=3D"Clear" onclick=3D"clearmsg=
+('g2F');document.getElementById('msgg2Fdepth').value=3D'15'">
+	<input type=3D"hidden" id=3D"msgg2Fdepth" value=3D"15">
+	<input type=3D"button" class=3D"resSPACEbtn" value=3D"Show more space" onc=
+lick=3D"showMoreOrLess('msgg2F',15)">
+	<input type=3D"button" class=3D"resSPACEbtn" value=3D"Show less space" onc=
+lick=3D"showMoreOrLess('msgg2F',-15)"><br>
+	<div id=3D"msgg2F" class=3D"res" style=3D"height:15em;"></div>
+ <b>Infinity</b> means the number has become too big for this calculator
+=20
+</form>
+</div><p>
+=20
+<a name=3D"Gformula"></a>
+</p><h2 id=3D"section4">4                                    A Phi Formula =
+for G(a,b,n)
+</h2>
+<a href=3D"http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/Fibonacci/Fib=
+Formula.html">An earlier page</a> gives a formula for Fib(i), often called =
+Binet's Formula:<br>
+
+ <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" align=3D"center">
+<tbody><tr><td rowspan=3D"3">Fib(n) =3D&nbsp;</td><td align=3D"CENTER">Phi<=
+sup>n</sup> =E2=80=93 (=E2=80=93Phi)<sup>=E2=80=93n</sup></td>
+<td rowspan=3D"3">&nbsp;=3D&nbsp; </td><td align=3D"CENTER">Phi<sup>n</sup>=
+ =E2=80=93 (=E2=80=93phi)<sup>n</sup></td>
+<td rowspan=3D"3"></td></tr>
+<tr><td height=3D"1" bgcolor=3D"black"><img src=3D"http://www.maths.surrey.=
+ac.uk/hosted-sites/R.Knott/Fibonacci/empty.gif" alt=3D""></td>
+<td height=3D"1" bgcolor=3D"black"><img src=3D"http://www.maths.surrey.ac.u=
+k/hosted-sites/R.Knott/Fibonacci/empty.gif" alt=3D""></td></tr>
+<tr><td align=3D"CENTER"><img src=3D"http://www.maths.surrey.ac.uk/hosted-s=
+ites/R.Knott/Fibonacci/empty.gif" alt=3D"" height=3D"2"><br><img src=3D"htt=
+p://www.maths.surrey.ac.uk/hosted-sites/R.Knott/Fibonacci/sqrt.gif" width=
+=3D"8" height=3D"13" alt=3D"sqrt">5</td>
+<td align=3D"CENTER"><img src=3D"http://www.maths.surrey.ac.uk/hosted-sites=
+/R.Knott/Fibonacci/empty.gif" alt=3D"" height=3D"2"><br><img src=3D"http://=
+www.maths.surrey.ac.uk/hosted-sites/R.Knott/Fibonacci/sqrt.gif" width=3D"8"=
+ height=3D"13" alt=3D"sqrt">5</td></tr>
+</tbody></table>
+
+Phi=3D1.61803... and =E2=80=93phi=3D=E2=80=930.618033...  are, as usual on =
+these pages, the two roots of the equation x<sup>2</sup> =3D x + 1.<br>
+This equation is derived from the Recurrence Relation which we called the F=
+ibonacci Rule:
+<div align=3D"center">
+  F(n+2) =3D F(n+1) + F(n)
+</div> but we replace F(i) by x<sup>i</sup> and solve it for x:<br>
+
+x<sup>n+2</sup> =3D x<sup>n+1</sup> + x<sup>n</sup> but we can divide by x<=
+sup>n</sup>:<br>
+x<sup>2</sup> =3D x + 1<p>
+Without going into the theory, the roots of this equation  are=20
+Phi =3D (1 + =E2=88=9A5)/2 and =E2=80=93phi =3D (1 =E2=80=93 =E2=88=9A5)/2.=
+ =20
+Powers of these two numbers are involved in the formula for G(a,b,n),=20
+each being multiplied by a constant specific to each particular G series.
+<br>
+Every Fibonacci-type series (i.e. any G series since they all satisfy the F=
+ibonacci Rule)=20
+has the same kind of formula for its elements:
+</p><div class=3D"rule">
+                    G(a,b,n) =3D P Phi<sup>n</sup> + Q (=E2=80=93phi)<sup>n=
+</sup> ..... the G Formula
+</div>
+<br>
+The constants P and Q are now chosen so that G(a,b,0) gives a and G(a,b,1) =
+is b, called=20
+<b>the starting (or boundary) conditions</b>.<br>
+From the G formula we have, for n=3D0 and n=3D1:=20
+<div align=3D"center">
+      G(a,b,0) =3D a =3D P + Q and<br>
+      G(a,b,1) =3D b =3D P Phi =E2=80=93 Q phi
+</div>
+When we are given a and b for a particular G series,
+we can then solve these two equations simultaneously to find the specific P=
+ and Q=20
+values for the G Formula for that series.<br>
+For example, the Fibonacci series itself has a=3D0 and b=3D1 so we have<br>
+<div align=3D"center">     P + Q =3D 0<br>     P Phi =E2=80=93 Q phi =3D 1<=
+/div>
+From the first equation, Q =3D =E2=80=93P which we substitute in the second=
+ to get:<br>
+P Phi =E2=80=93 (=E2=80=93P) phi =3D 1 or P (Phi+phi)=3D1 but Phi+phi =3D =
+=E2=88=9A5 so P=3D1/=E2=88=9A5 and Q is therefore
+=E2=80=931/=E2=88=9A5.<br>
+Putting these in the general formula we have<br>
+<div align=3D"center">
+G(0,1,n) =3D F(n) =3D (Phi<sup>n</sup> =E2=80=93 (=E2=80=93phi)<sup>n</sup>=
+))/=E2=88=9A5
+</div>
+which is Binet's Formula that we saw at the start of this section.
+<p>
+If we solve the general equations a =3D P + Q and b =3D P Phi =E2=80=93 Q p=
+hi then we will have found a=20
+general formula for G(a,b,n).  It is an easy exercise to show that:
+</p><div class=3D"centered">
+								Q =3D (a Phi =E2=80=93 b) / =E2=88=9A5<br>
+								P =3D (a phi + b) / =E2=88=9A5
+</div>
+so we then have:
+<div class=3D"rule">
+                G(a, b, n) =3D (  (a phi + b) Phi<sup>n</sup> + (a Phi =E2=
+=80=93 b) ( =E2=80=93phi )<sup>n</sup> )/ =E2=88=9A5<br>
+                G(a, b, n) =3D (  (a(=E2=88=9A5 =E2=80=93 1) + 2b) Phi<sup>=
+n</sup> + (a(=E2=88=9A5 + 1) =E2=80=93 2b) ( =E2=80=93phi)<sup>n</sup> ) / =
+(2=E2=88=9A5)
+</div>
+
+<div class=3D"ttd">  <h4><img src=3D"http://www.maths.surrey.ac.uk/hosted-s=
+ites/R.Knott/Fibonacci/ttdIcon.gif" width=3D"25" height=3D"14" alt=3D"/">
+                           Things to do  =20
+<img src=3D"http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/Fibonacci/tt=
+dIcon.gif" width=3D"25" height=3D"14" alt=3D"/"></h4>
+<ol class=3D"ttd">=20
+<li> Verify the formula for the Lucas series L(n) =3D G(2,1,n) =3D Phi<sup>=
+n</sup> + phi<sup>n</sup>. </li>
+<li> Earlier we noticed that G(0,0,i) =3D 0 for all i.  Does the G formula =
+work in this case? </li>
+</ol>
+</div>
+
+<p>
+=20
+<a name=3D"CALC3"></a>=20
+</p><h3 id=3D"section4.1">4.1 <img src=3D"http://www.maths.surrey.ac.uk/hos=
+ted-sites/R.Knott/Fibonacci/calcicon.gif" width=3D"34" height=3D"13" alt=3D=
+"calculator">
+   A G(a,b) Table Calculator
+</h3>
+
+ <div class=3D"calc"> C A L C U L A T O R <br>
+  <form name=3D"g3F" action=3D"http://www.maths.surrey.ac.uk/hosted-sites/R=
+.Knott/Fibonacci/fibGen.html">
+	 <table border=3D"0" style=3D"background-color:#F96" cellpadding=3D"5" ali=
+gn=3D"center">
+	 <tbody><tr><td rowspan=3D"2" valign=3D"middle"><input type=3D"button" val=
+ue=3D"Calculate" onclick=3D"outF=3Dthis.form.name;g3()">=20
+	   G(<input type=3D"text" size=3D"6" id=3D"g3Fa" value=3D"0">,<input type=
+=3D"text" id=3D"g3Fb" size=3D"6" value=3D"1">, i ) =20
+		</td>
+		<td rowspan=3D"2" valign=3D"middle">for </td>
+		<td class=3D"right"> i from <input type=3D"text" size=3D"4" id=3D"g3Fista=
+rt" value=3D"-3"> </td></tr>
+	  <tr><td class=3D"right">
+	      <i> i to   <input type=3D"text" size=3D"4" id=3D"g3Fiend" value=3D""=
+></i></td></tr>
+	 </tbody></table>
+
+<br>
+=20
+R E S U L T S=20
+	<input type=3D"button" class=3D"clear" value=3D"Clear" onclick=3D"clearmsg=
+('g3F');document.getElementById('msgg3Fdepth').value=3D'15'">
+	<input type=3D"hidden" id=3D"msgg3Fdepth" value=3D"15">
+	<input type=3D"button" class=3D"resSPACEbtn" value=3D"Show more space" onc=
+lick=3D"showMoreOrLess('msgg3F',15)">
+	<input type=3D"button" class=3D"resSPACEbtn" value=3D"Show less space" onc=
+lick=3D"showMoreOrLess('msgg3F',-15)"><br>
+	<div id=3D"msgg3F" class=3D"res" style=3D"height:15em;"></div>
+</form>
+</div>
+
+<a name=3D"Gratio"></a>
+<h2 id=3D"section5">5                          The ratio of two neighbourin=
+g G terms
+</h2>
+Now that we have a formula for G(a,b,n) we can see what happens to the rati=
+o of two consecutive terms in a G series and
+compare it to <a href=3D"http://www.maths.surrey.ac.uk/hosted-sites/R.Knott=
+/Fibonacci/phi.html#fibratio">what happens in the Fibonacci series</a>.  Fo=
+r the Fibonacci series, the further along the series
+that we go,
+the ratio of two neighbouring numbers F(n+1)/F(n) gets closer and closer to=
+ Phi=3D1=C2=B761803 39887 49894 84820 ... .
+The larger the Fibonacci numbers, the closer the value gets to Phi whose ex=
+act value is (=E2=88=9A5+1)/2.
+If we took the other ratio:  F(n)/F(n+1) then this  gets closer and closer =
+to 1/Phi, that is, phi=3D0=C2=B761803 39887 49894 84820 ... .
+whose exact value is (=E2=88=9A5-1)/2.  <br>
+Since the Fibonacci series is two-sided, that is we can extend it "to the l=
+eft" as well as "to the right",
+then  with n getting more and more negative, the ratio of F(n) to the next =
+in the series: F(n+1),
+ gets closer and closer to
+-Phi =3D -1.618033... and the other ratio, F(n+1)/F(n) tends towards -phi:<=
+br>
+<div align=3D"center">  =20
+<table border=3D"1" cellpadding=3D"5" cellspacing=3D"0"><tbody><tr class=3D=
+"index1"><th>n</th><td>...</td><td>-15</td><td>-14</td>
+   <td>-13</td><td>...</td><td>-3</td><td>-2</td><td>-1</td><td>0</td><td>1=
+</td><td>2</td><td>3</td><td>...</td>
+   <td>13</td><td>14</td><td>15</td><td>...</td></tr>
+<tr><th>Fib(n)</th><td>...</td><td>610</td><td>-377</td><td>233</td><td>...=
+</td>
+  <td>2</td><td>-1</td><td>1</td><td>0</td><td>1</td><td>1</td><td>2</td><t=
+d>...</td>
+  <td>233</td><td>377</td><td>610</td><td>...</td></tr>
+<tr style=3D"font-size:smaller"><th><table cellspacing=3D"0" cellpadding=3D=
+"0"><tbody><tr><th>Fib(n+1)</th></tr>
+       <tr><td><img src=3D"http://www.maths.surrey.ac.uk/hosted-sites/R.Kno=
+tt/Fibonacci/black.gif" width=3D"100%" height=3D"1" alt=3D"/"></td></tr>
+         <tr><th>Fib(n)</th></tr></tbody></table></th>
+     <td>...</td><td>-0.6180327..</td><td>-0.6180371..</td><td>-0.6180257..=
+</td><td>...</td>
+     <td>-0.5</td><td>-1</td><td>0</td><td>?</td><td>0</td><td>1</td><td>2<=
+/td><td>...</td>
+     <td>1.6180257..</td><td>1.6180371..</td><td>1.6180327..</td><td>...</t=
+d></tr>
+ </tbody></table>
+ </div>
+
+We can now show that the property of the Fibonacci series, that the ratio o=
+f neighbouring terms get closer to Phi=20
+is also true of <i>any G series too</i> in the following proof steps:
+
+<ol type=3D"a">
+<li> G(a,b,n) is P Phi<sup>n</sup> + Q (-phi)<sup>n</sup> for some numbers =
+P and Q which will depend upon a and b.<br>
+  For this proof it does not matter what P and Q actually  are since they a=
+re just constant numbers that do not change with n.</li>
+<li> (-phi)<sup>n</sup> will get smaller and smaller as n gets larger (sinc=
+e phi&lt;1)</li>
+<li> so the Q (-phi)<sup>n</sup> term gets smaller and smaller as n gets la=
+rger</li>
+<li> Phi<sup>n</sup> gets larger and larger as n gets larger (since Phi&gt;=
+1)</li>
+<li> so P Phi<sup>n</sup> gets larger too
+</li><li> For "large" n, G(a,b,n) becomes almost exactly P Phi<sup>n</sup> =
+because the -phi terms get so small that they are insignificant</li>
+<li> so the <i>ratio</i> of G(a,b,n+1) to G(a,b,n) becomes closer and close=
+r to (P Phi<sup>n+1</sup>)/(P Phi<sup>n</sup>)
+   which is just Phi.</li>
+</ol>
+
+  <div class=3D"rule">
+  No matter what two starting values we choose for a and b,<br>
+  the ratio G(a,b,n+1)/G(a,b,n) gets closer and closer to Phi as n gets lar=
+ger.
+  </div>
+  <br>
+  Actually, there is one exception to the above that we have ignored which =
+makes the proof steps listed above wrong. One special
+  G series is the exception where the ratio does <i>not</i> get closer and =
+closer to Phi as n gets larger:
+ <div class=3D"question">
+  What is the exception (special starting values for a and b) and where hav=
+e we overlooked it in the proof steps above?
+ </div>
+ =20
+  If we go further along the (two-sided) list of numbers in a G series, goi=
+ng to the left, a similar argument to the one above
+  will prove that G(a,b,n+1)/G(a,b,n) gets closer and closer to (-phi), aga=
+in with the one exceptional G series excluded from this.
+ =20
+<a name=3D"wythoff"></a>
+<h2 id=3D"section6">6                                 All numbers are in th=
+e Wythoff Array of G series
+</h2>
+
+There is something rather special about the collection of G series G(n, flo=
+or( (n+1)Phi ) )
+which, if we list them all in  a table, is called <em>The Wythoff Array</em=
+>.
+<h3 id=3D"section6.1">6.1   Rounding, Floors and Ceilings
+</h3>
+	If you are asking "What's the <b>floor</b> function?", it is just the func=
+tion that finds the
+	nearest integer below any number.  Of course, if the number is already a w=
+hole number, it
+	doesn't change it.  Think of holding a lead weight  at height x in a build=
+ing with floors at heights=20
+	0 (ground level), 1, 2, 3, etc. If you let the object go, which floor will=
+ it land on?  If it is already on a floor,
+	it doesn't move, otherwise it falls to the nearest integer below.  Floors =
+can be below ground level
+	also, at heights -1, -2, -3, etc.  If an object is -3.1 (the units don't m=
+atter) below the ground level, it will fall onto
+	which floor?  -3?  No!  It'll land on floor -4!
+	<pre> Examples are:
+	  floor( 3.1) =3D 3;    floor( 3.9) =3D 3;    floor(3) =3D 3
+	  floor(-3.1) =3D-4;    floor(-3.9) =3D-4;    floor(-4)=3D-4</pre>
+<p>
+ =20
+
+
+This function is sometimes denoted <b>trunc(x)</b> on calculators or in pro=
+gramming
+languages but note that <i>it is only the same as <b>floor(x)</b> if x
+is not a negative number!</i>  This is because <b>trunc(x)</b>  truncates a=
+  number by
+erasing anything after its decimal point: trunc(3.1) is 3  which the same a=
+s floor(3.1)
+but trunc(-3.1) is just -3 whereas floor(-3.1) is -4.<br>
+Trunc(x) is also denoted by a variation of the brackets [x] where only the =
+bottom
+horizontal parts are used for <b>floor</b> and only the top horizontal part=
+s for the companion function
+<b>ceiling</b>:
+
+</p><p align=3D"center">
+floor(x) is written <img src=3D"http://www.maths.surrey.ac.uk/hosted-sites/=
+R.Knott/images/lfloor.gif" width=3D"8" height=3D"12" alt=3D"["> x
+<img src=3D"http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/images/rfloo=
+r.gif" width=3D"8" height=3D"12" alt=3D"]">
+</p><p>
+
+There is a similar function called <b> ceiling</b> and this time think of a=
+ (very tiny) balloon at height x
+floating <i>up</i> to a ceiling where the floors/ceilings are again at inte=
+ger unit heights. =20
+</p><p align=3D"center">
+ceiling(x) is written <img src=3D"http://www.maths.surrey.ac.uk/hosted-site=
+s/R.Knott/images/lceiling.gif" width=3D"8" height=3D"12" alt=3D"["> x <img =
+src=3D"http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/images/rceiling.g=
+if" width=3D"8" height=3D"12" alt=3D"]">
+</p><p>
+but we do not use the ceiling function on this page.</p><p>
+You can think of <b>floor(x)</b> and <b>ceiling(x)</b> as other types of ro=
+unding function so that
+floor is the <b>round-down</b> function (take any non-integer value down to=
+ the next integer below)
+and ceiling as the <b>round-up</b> function whereas <b>round</b> itself rou=
+nds to the <i>nearest</i>
+integer so may take values up or down.  This is reflected in the square bra=
+cket symbols used for each of these
+functions.
+</p><p align=3D"center">
+round(x) is written [ x ]
+
+</p><h3 id=3D"section6.2">6.2          The Wythoff Array
+</h3>
+
+Here is a table of the floor function applied to multiples of Phi  =3D1.618=
+0339... =3D (=E2=88=9A5+1)/2:
+<table border=3D"1" cellspacing=3D"0" cellpadding=3D"5" align=3D"center" cl=
+ass=3D"centered">
+<tbody><tr><th>n</th><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>=
+6</td><td>7</td></tr>
+<tr><th>n Phi</th><td>1.6180</td><td>3.2361</td><td>4.8541</td><td>6.4721</=
+td><td>8.0902</td>
+  <td>9.7082</td><td>11.3262</td></tr>
+<tr><th><img src=3D"http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/imag=
+es/lfloor.gif" width=3D"8" height=3D"12" alt=3D"[">n Phi<img src=3D"http://=
+www.maths.surrey.ac.uk/hosted-sites/R.Knott/images/rfloor.gif" width=3D"8" =
+height=3D"12" alt=3D"]"></th>
+  <td>1</td><td>3</td><td>4</td><td>6</td><td>8</td><td>9</td><td>11</td></=
+tr>
+</tbody></table>
+
+An interesting thing happens when we pair n with floor( (n+1)Phi ) as start=
+ing values for G series.
+The part in black is called <em>The Wythoff Array</em> in which each row is=
+ formed by the Fibonacci Rule from
+the two coloured starting values. We show the first few rows and columns he=
+re:
+<table border=3D"1" cellspacing=3D"0" cellpadding=3D"3" align=3D"center" cl=
+ass=3D"centered">
+<tbody><tr><th>n</th><th><img src=3D"http://www.maths.surrey.ac.uk/hosted-s=
+ites/R.Knott/images/lfloor.gif" width=3D"8" height=3D"12" alt=3D"[">(n+1)Ph=
+i<img src=3D"http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/images/rflo=
+or.gif" width=3D"8" height=3D"12" alt=3D"]"></th>
+   <th colspan=3D"11">G(n,<img src=3D"http://www.maths.surrey.ac.uk/hosted-=
+sites/R.Knott/images/lfloor.gif" width=3D"8" height=3D"12" alt=3D"[">(n+1)P=
+hi<img src=3D"http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/images/rfl=
+oor.gif" width=3D"8" height=3D"12" alt=3D"]">)<br>
+     Wythoff Array</th></tr>
+<tr><td class=3D"rowi">0</td><td class=3D"col1">1</td><td>1</td><td>2</td><=
+td>3</td><td>5</td><td>8</td><td>13</td><td>21</td><td>34</td><td>55</td><t=
+d>89</td><td>144</td></tr>
+<tr><td class=3D"rowi">1</td><td class=3D"col1">3</td><td>4</td><td>7</td><=
+td>11</td><td>18</td><td>29</td><td>47</td><td>76</td><td>123</td></tr>
+<tr><td class=3D"rowi">2</td><td class=3D"col1">4</td><td>6</td><td>10</td>=
+<td>16</td><td>26</td><td>42</td><td>68</td><td>110</td></tr>
+<tr><td class=3D"rowi">3</td><td class=3D"col1">6</td><td>9</td><td>15</td>=
+<td>24</td><td>39</td><td>63</td><td>102</td></tr>
+<tr><td class=3D"rowi">4</td><td class=3D"col1">8</td><td>12</td><td>20</td=
+><td>32</td><td>52</td><td>84</td><td>136</td></tr>
+<tr><td class=3D"rowi">5</td><td class=3D"col1">9</td><td>14</td><td>23</td=
+><td>37</td><td>60</td><td>97</td><td>157</td></tr>
+<tr><td class=3D"rowi">6</td><td class=3D"col1">11</td><td>17</td><td>28</t=
+d><td>45</td><td>73</td><td>118</td><td>191</td></tr>
+<tr><td class=3D"rowi">7</td><td class=3D"col1">12</td><td>19</td><td>31</t=
+d><td>50</td><td>81</td><td>131</td><td>212</td></tr>
+<tr><td class=3D"rowi">8</td><td class=3D"col1">14</td><td>22</td><td>36</t=
+d><td>58</td><td>94</td><td>152</td><td>246</td></tr>
+<tr><td class=3D"rowi">9</td><td class=3D"col1">16</td><td>25</td><td>41</t=
+d><td>66</td><td>107</td><td>173</td><td>280</td></tr>
+<tr><td class=3D"rowi">10</td><td class=3D"col1">17</td><td>27</td><td>44</=
+td><td>71</td><td>115</td><td>186</td><td>301</td></tr>
+<tr><td class=3D"rowi">11</td><td class=3D"col1">19</td><td>30</td><td>49</=
+td><td>79</td><td>128</td><td>207</td><td>335</td></tr>
+<tr><td class=3D"rowi">12</td><td class=3D"col1">21</td><td>33</td><td>54</=
+td><td>87</td><td>141</td><td>296</td><td>479</td></tr>
+<tr><td class=3D"rowi">13</td><td class=3D"col1">22</td><td>35</td><td>57</=
+td><td>92</td><td>149</td><td>241</td><td>390</td></tr>
+<tr><td class=3D"rowi">14</td><td class=3D"col1">24</td><td>38</td><td>62</=
+td><td>100</td><td>162</td><td>262</td><td>424</td></tr>
+<tr><td class=3D"rowi">15</td><td class=3D"col1">25</td><td>40</td><td>65</=
+td><td>105</td><td>170</td><td>275</td><td>445</td></tr>
+<tr><td class=3D"rowi">16</td><td class=3D"col1">27</td><td>43</td><td>70</=
+td><td>113</td><td>183</td><td>296</td><td>479</td></tr>
+</tbody></table>
+
+<a name=3D"wythoffprops"></a>
+<h3 id=3D"section6.3">6.3                                    Interesting Wy=
+thoff Array facts
+</h3>
+
+Some interesting facts and figures about the Wythoff Array (the black numbe=
+rs) from Neil Sloane's
+<a href=3D"http://www.research.att.com/~njas/sequences/classic.html"> Class=
+ic Sequences</a> page
+and the work of John Conway are:
+<ul>
+<li> Every row and every column is in increasing order.</li>
+<li> <b>Every number from 1 upwards appears once and once only in the array=
+.</b></li>
+<li> The first row is the Fibonacci sequence.</li>
+<li> The second row is the Lucas sequence.</li>
+<li> Any and every G sequence  which eventually has only positive numbers o=
+ccurs as a row in this array.
+</li><li> Row n and column c in the Wythoff Array is  <span class=3D"red">f=
+loor( (n+1)Phi )F(c+2) + nF(c+1)</span>
+  where the first column in black is column c=3D0.</li>
+<li> The first number on each row (in black) is the smallest number not in =
+any previous row.</li>
+<li> if one number in a row R appears between two numbers in  row S then <i=
+>all</i> numbers in row R do so too.<br>
+    This is called an <a href=3D"http://faculty.evansville.edu/ck6/integer/=
+intersp.html">interspersion</a>  by
+    Clark Kimberling (see the link).</li>
+</ul>
+
+The whole array is Sloane's <a href=3D"http://oeis.org/A035513">A035513</a>=
+ and the
+first column (1, 4, 6, 9, 12,...) is <a href=3D"http://oeis.org/A003622">A0=
+03622</a>
+
+<a name=3D"wythoffzeck"></a>
+<h3 id=3D"section6.4">6.4                          The Zeckendorf Represent=
+ations and the Wythoff Array
+</h3>
+The Zeckendorf Representation of a number is one of the <a href=3D"http://w=
+ww.maths.surrey.ac.uk/hosted-sites/R.Knott/Fibonacci/fibrep.html">Fibonacci=
+ Representations</a>
+of numbers.  The Zeckendorf Representation is that unique set of <i>non-con=
+secutive</i> Fibonacci numbers that add up to n.
+Strictly, the Zeckendorf Representation of a number n is when we write the =
+number in Base Fibonacci,=20
+that is, label the columns from right to left not with
+powers of 10 as in the ordinary decimal number system but with the Fibonacc=
+i numbers (using 1 only once).<br>
+E.g. 12 is 8+3+1 as a sum of (non-consecutive) Fibonacci numbers so it is w=
+ritten as 10101 (since the column headings are
+...8 5 3 2 1).
+
+Some further Wythoff Array facts:
+<ul>
+<li> Each number in column 0 has a <a href=3D"http://www.maths.surrey.ac.uk=
+/hosted-sites/R.Knott/Fibonacci/fibrep.html">Zeckendorf representation</a> =
+ending in 1 and all such numbers
+    are in that column.</li>
+<li> The Zeckendorf representation of every number after the first in a row=
+ is formed by appending "0" to =20
+  the Zeckendorf representation of the previous number in that row.</li>
+</ul>
+
+To illustrate the Zeckendorf properties, here is part of the array (the bla=
+ck numbers only) in their
+Zeckendorf representation form:
+<table border=3D"1" cellspacing=3D"0" cellpadding=3D"5" align=3D"center" cl=
+ass=3D"centered">
+ <tbody><tr><td class=3D"rowi">0</td><td class=3D"red">1</td><td><span clas=
+s=3D"red">1</span>0</td>
+ <td><span class=3D"red">1</span>00</td><td><span class=3D"red">1</span>000=
+</td><td>...</td></tr>
+ <tr><td class=3D"rowi">1</td><td class=3D"red">101</td><td><span class=3D"=
+red">101</span>0</td>
+ <td><span class=3D"red">101</span>00</td><td><span class=3D"red">101</span=
+>000</td><td>...</td></tr>
+ <tr><td class=3D"rowi">2</td><td class=3D"red">1001</td><td><span class=3D=
+"red">1001</span>0</td>
+ <td><span class=3D"red">1001</span>00</td><td><span class=3D"red">1001</sp=
+an>000</td><td>...</td></tr>
+ <tr><td class=3D"rowi">3</td><td class=3D"red">10001</td><td><span class=
+=3D"red">10001</span>0</td>
+ <td><span class=3D"red">10001</span>00</td><td><span class=3D"red">10001</=
+span>000</td><td>...</td></tr>
+ <tr><td class=3D"rowi">4</td><td class=3D"red">10101</td><td><span class=
+=3D"red">10101</span>0</td>
+ <td><span class=3D"red">10101</span>00</td><td><span class=3D"red">10101</=
+span>000</td><td>...</td></tr>
+ <tr><td class=3D"rowi">5</td><td class=3D"red">100001</td><td><span class=
+=3D"red">100001</span>0</td>
+ <td><span class=3D"red">100001</span>00</td><td><span class=3D"red">100001=
+</span>000</td><td>...</td></tr>
+ <tr><td class=3D"rowi">6</td><td class=3D"red">100101</td><td><span class=
+=3D"red">100101</span>0</td>
+ <td><span class=3D"red">100101</span>00</td><td><span class=3D"red">100101=
+</span>000</td><td>...</td></tr>
+</tbody></table>
+<p>
+
+<a name=3D"Wythoffrownb"></a>
+</p><h3 id=3D"section6.5">6.5                               In which row is=
+ number n in the Wythoff Array?
+</h3>
+
+Here is a table of the row numbers of the Wythoff Array where numbers 1 to =
+40 occur:
+<table border=3D"1" cellspacing=3D"0" cellpadding=3D"5" align=3D"center" cl=
+ass=3D"centered">
+<tbody><tr class=3D"index1"><th>n</th><td>1</td><td>2</td><td>3</td><td>4</=
+td><td>5</td><td>6</td><td>7</td>
+    <td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td><td>14<=
+/td><td>15</td><td>16</td>
+    <td>17</td><td>18</td><td>19</td><td>20</td></tr>
+<tr class=3D"rowi"><th>row</th><td>0</td><td>0</td><td>0</td><td>1</td><td>=
+0</td><td>2</td><td>1</td><td>0</td><td>3</td>
+<td>2</td><td>1</td><td>4</td><td>0</td><td>5</td><td>3</td><td>2</td><td>6=
+</td><td>1</td><td>7</td>
+<td>4</td></tr>
+<tr><td colspan=3D"22"><img src=3D"http://www.maths.surrey.ac.uk/hosted-sit=
+es/R.Knott/Fibonacci/empty.gif" height=3D"2" alt=3D""></td></tr>
+<tr class=3D"index1"><th>n</th><td>21</td><td>22</td><td>23</td><td>24</td>=
+<td>25</td><td>26</td>
+   <td>27</td><td>28</td><td>29</td><td>30</td><td>31</td><td>32</td><td>33=
+</td><td>34</td>
+   <td>35</td><td>36</td><td>37</td><td>38</td><td>39</td><td>40</td></tr>
+<tr class=3D"rowi"><th>row</th><td>0</td><td>8</td><td>5</td><td>3</td><td>=
+9</td><td>2</td><td>10</td><td>6</td>
+    <td>1</td><td>11</td><td>7</td><td>4</td><td>12</td><td>0</td><td>13</t=
+d><td>8</td><td>5</td>
+    <td>14</td><td>3</td><td>15</td></tr>
+</tbody></table>
+<div class=3D"rule">
+0, 0, 0, 1, 0, 2, 1, 0, 3, 2, 1, 4, 0, ...<br>
+John H Conway calls this sequence <b>the Vertical Para-Fibonacci Sequence <=
+/b>.<br>
+It is "vertical" because it relates each integer 1,2,3,... to its row (vert=
+ically)in Wythoff's array.<br>
+(<a href=3D"http://oeis.org/A019586">A019586 in Sloane's=20
+<i>Encyclopaedia of Integer Sequences</i></a>).
+</div>
+
+You'll have noticed that the Fibonacci numbers occur on row 0.<br>
+What do you notice about the numbers <i>between</i> the zeroes?<br>
+They each contain all the numbers from 1 upwards, each set containing one m=
+ore number in order.
+Each set between the zeroes is a permutation of the first k numbers each pe=
+rmutation=20
+containing one more number than the previous one.<br>
+This means that=20
+<div class=3D"rule">
+the k numbers between two Fibonacci numbers
+each occur on a different row of the first k rows of the Wythoff array
+</div>
+<p>
+The sequence  0, 0, 0, 1, 0, 2, 1, 0, 3, 2, 1, 4, 0, 5, 3, 2, 6, 1, 7, 4, 0=
+, 8, 5, ...=20
+has a further self-reproducing property.  Delete from the sequence
+the <i>first occurrence of 1, 2, 3, 4, ... </i> as shown in green here:
+</p><div align=3D"center">
+<span class=3D"green">0</span>, 0, 0, <span class=3D"green">1</span>, 0, <s=
+pan class=3D"green">2</span>, 1, 0, <span class=3D"green">3</span>, 2, 1,=
+=20
+  <span class=3D"green">4</span>, 0, <span class=3D"green">5</span>, 3, 2, =
+<span class=3D"green">6</span>, 1, <span class=3D"green">7</span>, 4, 0,=20
+    <span class=3D"green">8</span>, 5, ...=20
+</div>=20
+and we get:
+<div align=3D"center">
+ 0, 0, 0, 1, 0, 2, 1, 0, 3, 2, 1, 4, 0, 5,
+ </div>
+ <i>exactly the same sequence!</i>
+=20
+Looking at the permutations themselves reveals some further interesting pat=
+terns.=20
+Here is the same sequence with the permutations shown individually:=20
+<pre>0
+0
+0 1
+0 2 1
+0 3 2 1 4
+0 5 3 2 6 1 7 4
+0 8 5 3 9 2 10 6 1 11 7 4 12
+0 13 8 5 14 3 15 9 2 16 10 6 17 1 18 11 7 19 4 20 12
+0 21 13 8 22 5 23 14 3 24 15 9 25 2 26 16 10 27 6 28 17 1 29 18 11 30 7 31 =
+19 4 32 20 12 33=20
+0 ...
+</pre>
+The third one:  3 2 1 4, if we delete 3 and 4 gives the second one:2 1.
+We can delete numbers bigger than 2 from any permutation and we will always=
+ get 2 1.<br>
+Similarly, if we delete any numbers bigger than 4 we will always obtain the=
+ permutation 3 2 1 4.
+<br>This applies to each and every between-zeroes permutation in the sequen=
+ce.
+<p>
+We can show this by vertically aligning each of the numbers in the permutat=
+ions as follows:
+</p><pre>0
+0
+0                                                       1
+0                                 2                     1
+0                    3            2                     1                  =
+   4
+0            5       3            2             6       1             7    =
+   4
+0       8    5       3       9    2       10    6       1       11    7    =
+   4       12
+0    13 8    5    14 3    15 9    2    16 10    6    17 1    18 11    7    =
+19 4    20 12
+0 21 13 8 22 5 23 14 3 24 15 9 25 2 26 16 10 27 6 28 17 1 29 18 11 30 7 31 =
+19 4 32 20 12 33
+</pre>
+Later permutations insert the extra numbers in between the earlier permutat=
+ions numbers.
+Which numbers are inserted?  The next set between two Fibonacci numbers.<br=
+>
+Where are they inserted?  Row n+1 is made by inserting F(n-1) to up F(n)-1 =
+into
+row n after each number that appeared in row n-1.  For example:
+<ul>
+<li> the row 0 5 3 2 6 1 7 4 will have
+ the 5 numbers 8 9 10 11 12  inserted into it  after each the numbers that =
+were in the row 0,3,2,1,4:<br>
+
+<span class=3D"blue">0</span> 5 <span class=3D"blue">3</span> <span class=
+=3D"blue">2</span> 6 <span class=3D"blue">1</span> 7 <span class=3D"blue">4=
+</span>=20
+ has <span class=3D"red">8 9 10 11 12</span> inserted after each of <span c=
+lass=3D"blue">0 3 2 1 4</span> to give:<br>
+<span class=3D"blue">0</span> <span class=3D"red">8</span> 5 <span class=3D=
+"blue">3</span> <span class=3D"red">9</span> <span class=3D"blue">2</span> =
+<span class=3D"red">10</span> 6 <span class=3D"blue">1</span> <span class=
+=3D"red">11</span> 7 <span class=3D"blue">4</span> <span class=3D"red">12</=
+span>
+</li>
+<li>
+The row 0 8 5 3 9 2 10 6 1 11 7 4 12
+ has the 8 numbers from 13 up to 20 inserted after each occurrence of the 8=
+ numbers <span class=3D"blue">0 5 3 2 6 1 7 4</span>
+to give:<br>
+<span class=3D"blue">0</span> <span class=3D"red">13</span> 8 <span class=
+=3D"blue">5</span> <span class=3D"red">14</span> <span class=3D"blue">3</sp=
+an>=20
+<span class=3D"red">15</span> 9 <span class=3D"blue">2</span> <span class=
+=3D"red">16</span> 10 <span class=3D"blue">6</span> <span class=3D"red">17<=
+/span>
+ <span class=3D"blue">1</span>
+<span class=3D"red">18</span> 11 <span class=3D"blue">7</span> <span class=
+=3D"red">19</span> <span class=3D"blue">4</span> <span class=3D"red">20</sp=
+an> 12
+</li>
+</ul>
+<p>
+
+So this enables us to quickly build a table of the row number that  n appea=
+rs in Wythoff's Array.</p><p>
+
+
+</p><p>
+What about the column number where n appears?
+
+<a name=3D"Wythoffcolnb"></a>
+</p><h3 id=3D"section6.6">6.6                               In which column=
+ is number n in the Wythoff Array?
+</h3>
+
+Because the first number in each row has a Zeckendorf representation that e=
+nds in 1 and each
+subsequent number in the row has one extra zero appended to it, the number =
+of trailing zeroes in the
+Zeckendorf representation of n tells us the column number of n in Wythoff's=
+ Array.
+
+<table border=3D"1" cellspacing=3D"0" cellpadding=3D"5" align=3D"center" cl=
+ass=3D"centered">
+<tbody><tr class=3D"index1"><th>n</th><td>1</td><td>2</td><td>3</td><td>4</=
+td><td>5</td><td>6</td><td>7</td>
+    <td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td><td>14<=
+/td><td>15</td><td>16</td>
+    <td>17</td><td>18</td><td>19</td><td>20</td></tr>
+<tr class=3D"coli"><th>col</th><td>0</td><td>1</td><td>2</td><td>0</td><td>=
+3</td><td>0</td><td>1</td><td>4</td>
+   <td>0</td><td>1</td><td>2</td><td>0</td><td>5</td><td>0</td><td>1</td><t=
+d>2</td><td>0</td>
+   <td>3</td><td>0</td><td>1</td></tr>
+<tr><td colspan=3D"22"></td></tr>
+<tr class=3D"index1"><th>n</th><td>21</td><td>22</td><td>23</td><td>24</td>=
+<td>25</td><td>26</td>
+   <td>27</td><td>28</td><td>29</td><td>30</td><td>31</td><td>32</td><td>33=
+</td><td>34</td>
+   <td>35</td><td>36</td><td>37</td><td>38</td><td>39</td><td>40</td></tr>
+<tr class=3D"coli"><th>col</th><td>6</td><td>0</td><td>1</td><td>2</td><td>=
+0</td><td>3</td><td>0</td>
+  <td>1</td><td>4</td><td>0</td><td>1</td><td>2</td><td>0</td><td>7</td><td=
+>0</td>
+  <td>1</td><td>2</td><td>0</td><td>3</td><td>0</td></tr>
+</tbody></table>
+
+
+
+This sequence also has a self-reproducing property:<br>
+ if we remove all (green) zeroes and decrease all non-zero numbers by 1
+ we obtain the original sequence:<br>
+ <div align=3D"center">
+ <table>
+ <tbody><tr><td class=3D"green">0</td><td>1</td><td>2</td><td class=3D"gree=
+n">0</td><td>3</td><td class=3D"green">0</td><td>1</td><td>4</td><td class=
+=3D"green">0</td><td>1</td><td>2</td><td class=3D"green">0</td><td>5</td><t=
+d class=3D"green">0</td><td>1</td><td>2</td><td class=3D"green">0</td><td>3=
+</td><td class=3D"green">0</td><td>1</td><td>...</td></tr>
+<tr><td></td><td>0</td><td>1</td><td></td><td>2</td><td></td><td>0</td><td>=
+3</td><td></td><td>0</td><td>1</td><td></td><td>4</td><td></td><td>0</td><t=
+d>1</td><td></td><td>2</td><td></td><td>0</td><td>...</td></tr>
+</tbody></table>
+</div>
+
+In Sloane's <a href=3D"http://oeis.org/A035612">A035612</a>=20
+the columns start at 1 instead of 0 so
+his numbers are one more than that we show here.<br>=20
+This series is called the <b>horizontal para-Fibonacci sequence</b>;
+"horizontal" because it relates each number 1,2,3... to its horizontal posi=
+tion (its column)
+in Wythoff's array.<br>
+Sloane's Integer Sequence reference gives another fractal (self-reproducing=
+) property of this series:<br>
+<div align=3D"center">0 1 2 0 3 0 1 4 0 1 2 0 5 0 1 2 0 3 0 1 6</div>
+The first occurrence of each number marks out sections of the series.  The =
+first occurrences are shown here in red:
+
+<div align=3D"center"><span class=3D"red">0</span> <span class=3D"red">1</s=
+pan> <span class=3D"red">2</span> 0 <span class=3D"red">3</span> 0 1=20
+<span class=3D"red">4</span> 0 1 2 0 <span class=3D"red">5</span> 0 1 2 0 3=
+ 0 1 <span class=3D"red">6</span>
+</div>
+
+ Did you notice that the section between <span class=3D"red">n</span> and <=
+span class=3D"red">n+1</span> is a repeat of the section from the
+ start up to <span class=3D"red">n-1</span>.  E.g. the section between <spa=
+n class=3D"red">4</span> and <span class=3D"red">5</span> is
+ 0 1 2 0 which is the starting section of the whole sequence up to <span cl=
+ass=3D"red">3</span>. =20
+ <br>
+ This gives a constructive way to write the sequence:
+ <br>
+ <ul>
+ <li> Start with 0 1 2 </li>
+ <li> To insert the next new number n (initially n is 3), continue the sequ=
+ence by copying it out from the beginning
+    until you meet n-2 (which is not copied) and then write down the new nu=
+mber (n).</li>
+ <li> Repeat the above step on successive values of n.</li>
+ </ul>
+ Here is the sequence being constructed by this method:<br>
+ <ul>
+ <li> Start with <br>
+      0 1 2</li>
+ <li> To continue the sequence up to <span class=3D"red">3</span>:<br>
+     Copy out the sequence from the start up to <span class=3D"red">1</span=
+> and then write the new number <span class=3D"red">3</span>:<br>
+     <span class=3D"green">0</span> <span class=3D"red">1</span> 2 <span cl=
+ass=3D"green">0</span> <span class=3D"red">3</span></li>
+ <li> To continue the sequence up to <span class=3D"red">4</span>:<br>
+     Copy out the sequence from the start up to <span class=3D"red">2</span=
+> and then write the new number <span class=3D"red">4</span>:<br>
+     <span class=3D"green">0 1</span> <span class=3D"red">2</span> 0 3 <spa=
+n class=3D"green">0 1</span> <span class=3D"red">4</span></li>
+  <li> To continue the sequence up to <span class=3D"red">5</span>:<br>
+     Copy out the sequence from the start up to <span class=3D"red">3</span=
+> and then write the new number <span class=3D"red">5</span>:<br>
+     <span class=3D"green">0 1 2 0</span> <span class=3D"red">3</span> 0 1 =
+4 <span class=3D"green">0 1 2 0</span> <span class=3D"red">5</span></li>
+ <li>...</li>
+ </ul>
+
+
+<a name=3D"CALC5"></a>
+
+<div class=3D"calc"> C A L C U L A T O R <br>
+ <form name=3D"g4F" action=3D"http://www.maths.surrey.ac.uk/hosted-sites/R.=
+Knott/Fibonacci/fibGen.html">
+	<table border=3D"1" style=3D"border-color:#CCC" cellpadding=3D"5" cellspac=
+ing=3D"0" align=3D"center">
+     <tbody><tr><td style=3D"background-color:#CC9"><table align=3D"center"=
+><tbody><tr><td>
+        <input type=3D"button" value=3D"Find" onclick=3D"outF=3Dthis.form.n=
+ame;g4z()"> the Zeckendorf representation of=20
+         <input type=3D"text" id=3D"g4Fzfrom" value=3D"" size=3D"16">
+         <span class=3D"optional">up to</span>
+         <input type=3D"text" id=3D"g4Fzto" value=3D"" size=3D"16">
+         </td></tr></tbody></table>
+      </td></tr>
+     <tr><td style=3D"background-color:#CFC">
+          <table align=3D"center"><tbody><tr><td>
+          <input type=3D"button" value=3D"Find" onclick=3D"outF=3Dthis.form=
+.name;g4fromz()"> the number with Fibonacci representation:<br>
+         <input type=3D"text" id=3D"g4Fzz" value=3D"11001" size=3D"72"><br>
+         <span class=3D"footnote">Fibonacci representations allow two conse=
+cutive 1's but Zeck. reps do not.</span>
+         </td></tr></tbody></table>
+         </td></tr>
+	<tr style=3D"background-color:#CFF"><td>
+        <table align=3D"center"><tbody><tr><td rowspan=3D"2">
+           <input type=3D"button" value=3D"Show" onclick=3D"outF=3Dthis.for=
+m.name;g4w()">=20
+           the Wythoff array entries for </td>
+         <td style=3D"text-align:right" valign=3D"baseline">row </td>
+           <td style=3D"text-align:right" valign=3D"baseline"><input type=
+=3D"text" size=3D"4" id=3D"g4Frow0" value=3D"0">=20
+                <span class=3D"optional">to  <input type=3D"text" size=3D"4=
+" id=3D"g4Frow1" value=3D"10"></span>
+			 </td></tr>
+	      <tr>
+	      <td style=3D"text-align:right" valign=3D"baseline">column =20
+			 </td><td style=3D"text-align:right" valign=3D"baseline"><input type=3D"=
+text" size=3D"4" id=3D"g4Fcol0" value=3D"0">
+			 <span class=3D"optional">to  <input type=3D"text" size=3D"4" id=3D"g4Fc=
+ol1" value=3D"6"></span>
+			 </td></tr>
+		</tbody></table></td></tr>
+     <tr style=3D"background-color:#CCF"><td>
+        <table align=3D"right"><tbody><tr><td style=3D"text-align:right">
+        <input type=3D"button" value=3D"Find the row number" onclick=3D"out=
+F=3Dthis.form.name;g4('r')"><br>
+			<input type=3D"button" value=3D"Find the column number" onclick=3D"outF=
+=3Dthis.form.name;g4('c')">
+		</td><td align=3D"left">=20
+			 of entries
+			 </td><td colspan=3D"2"><input type=3D"text" size=3D"4" id=3D"g4Fn0" val=
+ue=3D"1">=20
+			 <span class=3D"optional">up to <input type=3D"text" size=3D"4" id=3D"g4=
+Fn1" value=3D"10"></span>
+			 </td><td>in the Wythoff array
+	    </td></tr></tbody></table>
+	  </td></tr>
+	<!-- tr style=3D"background-color=3D#C9C"><td>
+	  <input type=3Dbutton value=3D"Show series for" onClick=3D" -->
+=09
+	</tbody></table>
+	<br>
+   R E S U L T S:=20
+<input type=3D"button" class=3D"clear" value=3D"Clear" onclick=3D"clearmsg(=
+'g4F');document.getElementById('msgg4Fdepth').value=3D'15'">
+<input type=3D"hidden" id=3D"msgg4Fdepth" value=3D"15">
+<input type=3D"button" value=3D"Show more space" class=3D"resSPACEbtn" oncl=
+ick=3D"showMoreOrLess('msgg4F',15)">
+<input type=3D"button" value=3D"Show less space" class=3D"resSPACEbtn" oncl=
+ick=3D"showMoreOrLess('msgg4F',-15)"><br>
+<div id=3D"msgg4F" class=3D"res" style=3D"height:15em;"></div>
+  <b>Infinity</b> means the number has become too big for this calculator
+  </form>
+
+ </div>
+
+
+ <a name=3D"Stolarray"></a>
+ <h2 id=3D"section7">7                           The Stolarsky Array is sim=
+ilar
+ </h2>
+You might suppose that the Wythoff array has so many special properties tha=
+t it is unique, but you'd be wrong!
+D Morrison (see References below) has shown that there are an infinite numb=
+er of=20
+arrays where each row is a Fibonacci-type series and the array contain all =
+the positive numbers
+once and once only as.  However, the Stolarsky array here does not contain
+every positive (general) Fibonacci sequence. <br>
+   Let's look at another example - the <em><strong>Stolarsky Array</strong>=
+</em> - which was the first =20
+   array to be discovered (in 1977) with all these properties. =20
+   In fact, all such arrays are still referred to as Stolarsky arrays.
+
+ <a name=3D"stolarsky"></a>
+ <h3 id=3D"section7.1">7.1                      The Stolarsky Array
+ </h3>
+=20
+
+In the Wythoff array, we used the <i>floor</i> (round-down) of multiples of=
+ Phi. <br>
+In Stolarsky's array we <i>round</i>=20
+the multiples of Phi, that is, use the <i>nearest integer</i> to each multi=
+ple of Phi.=20
+The round function is written as round(x) and also
+[x]=20
+to contrast with the "round-down" or <i>floor</i> function
+<img src=3D"http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/images/lfloo=
+r.gif" width=3D"8" height=3D"12" alt=3D"|_"> x <img src=3D"http://www.maths=
+.surrey.ac.uk/hosted-sites/R.Knott/images/rfloor.gif" width=3D"8" height=3D=
+"12" alt=3D"_|">:
+
+<table border=3D"1" cellspacing=3D"0" cellpadding=3D"5" align=3D"center" cl=
+ass=3D"centered">
+<tbody><tr><th>n</th><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>=
+6</td><td>7</td></tr>
+<tr><th>n Phi</th><td>1.6180</td><td>3.2361</td><td>4.8541</td><td>6.4721</=
+td><td>8.0902</td>
+  <td>9.7082</td><td>11.3262</td></tr>
+<tr><th><img src=3D"http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/imag=
+es/lfloor.gif" width=3D"8" height=3D"12" alt=3D"|_"> n Phi <img src=3D"http=
+://www.maths.surrey.ac.uk/hosted-sites/R.Knott/images/rfloor.gif" width=3D"=
+8" height=3D"12" alt=3D"_|"></th>
+  <td>1</td><td>3</td><td>4</td><td>6</td><td>8</td><td>9</td><td>11</td></=
+tr>
+<tr><th>[ n Phi ]</th><td>2</td><td>3</td><td>5</td><td>6</td><td>8</td><td=
+>10</td><td>11</td></tr>
+</tbody></table>
+
+<h3 id=3D"section7.2">7.2 <img src=3D"http://www.maths.surrey.ac.uk/hosted-=
+sites/R.Knott/Fibonacci/calcicon.gif" width=3D"34" height=3D"13" alt=3D"cal=
+culator">
+  Wythoff Array Calculator
+</h3>
+
+<div class=3D"calc"> C A L C U L A T O R <br>
+<div align=3D"center">
+<form name=3D"stolCalcF" action=3D"http://www.maths.surrey.ac.uk/hosted-sit=
+es/R.Knott/Fibonacci/fibGen.html">
+	<table style=3D"background-color:#CC6">
+	<tbody><tr class=3D"norm"><td rowspan=3D"2">
+	     <input type=3D"button" value=3D"Find" onclick=3D"outF=3D'stolCalcF';s=
+tolCALC()">=20
+	</td><td rowspan=3D"2">
+	  <table cellspacing=3D"0" cellpadding=3D"0"><tbody><tr><td style=3D"text-=
+align:right">
+		Floor:</td><td><input type=3D"checkbox" name=3D"stolFsel" value=3D"Floor"=
+></td></tr><tr><td style=3D"text-align:right">
+		Fractional:</td><td><input type=3D"checkbox" name=3D"stolDsel" value=3D"F=
+rac"></td></tr><tr><td style=3D"text-align:right">
+		Round:</td><td><input type=3D"checkbox" name=3D"stolRsel" value=3D"Round"=
+></td></tr><tr><td style=3D"text-align:right">
+		Ceiling:</td><td><input type=3D"checkbox" name=3D"stolCsel" value=3D"Ceil=
+ing"></td></tr>
+		</tbody></table>
+	</td><td rowspan=3D"2">of </td><td rowspan=3D"4">
+		<select id=3D"stolPp">
+		<option value=3D"Phi">Phi=3D1.618...</option>
+		<option value=3D"phi">phi=3D0.618...</option>
+		</select>
+	</td><td rowspan=3D"2"> multiples&nbsp;</td>
+	<td valign=3D"bottom"> from <input type=3D"text" id=3D"stolLO" size=3D"16"=
+ value=3D"">
+	</td></tr>
+	<tr><td valign=3D"top"><span class=3D"dim">up to  </span>
+	<input type=3D"text" id=3D"stolHI" value=3D"" size=3D"16"></td>
+	</tr>
+	</tbody></table>
+<br>
+   R E S U L T S:=20
+<input type=3D"button" class=3D"clear" value=3D"Clear" onclick=3D"clearmsg(=
+'stolCalcF');document.getElementById('msgstolCalcFdepth').value=3D'15'">
+<input type=3D"hidden" id=3D"msgstolCalcFdepth" value=3D"15">
+<input type=3D"button" value=3D"Show more space" class=3D"resSPACEbtn" oncl=
+ick=3D"showMoreOrLess('msgstolCalcF',15)">
+<input type=3D"button" value=3D"Show less space" class=3D"resSPACEbtn" oncl=
+ick=3D"showMoreOrLess('msgstolCalcF',-15)"><br>
+<div id=3D"msgstolCalcF" class=3D"res" style=3D"height:15em;"></div>
+</form>
+</div>
+</div>
+
+ <div style=3D"float:right">
+<table border=3D"1" cellspacing=3D"0" cellpadding=3D"2" style=3D"font-size:=
+80%" align=3D"center" class=3D"centered">
+<caption><em>Stolarsky Array entries up to 100</em></caption>
+<tbody><tr class=3D"coli"><th> </th><td>0</td><td>1</td><td>2</td><td>3</td=
+><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td></tr>
+<tr><td class=3D"rowi">0</td><td class=3D"col1">1</td><td>2</td><td>3</td><=
+td>5</td><td>8</td><td>13</td><td>21</td><td>34</td><td>55</td><td>89</td><=
+/tr>
+<tr><td class=3D"rowi">1</td><td class=3D"col1">4</td><td>6</td><td>10</td>=
+<td>16</td><td>26</td><td>42</td><td>68</td></tr>
+<tr><td class=3D"rowi">2</td><td class=3D"col1">7</td><td>11</td><td>18</td=
+><td>29</td><td>47</td><td>76</td></tr>
+<tr><td class=3D"rowi">3</td><td class=3D"col1">9</td><td>15</td><td>24</td=
+><td>39</td><td>63</td></tr>
+<tr><td class=3D"rowi">4</td><td class=3D"col1">12</td><td>19</td><td>31</t=
+d><td>50</td><td>81</td></tr>
+<tr><td class=3D"rowi">5</td><td class=3D"col1">14</td><td>23</td><td>37</t=
+d><td>60</td><td>97</td></tr>
+<tr><td class=3D"rowi">6</td><td class=3D"col1">17</td><td>28</td><td>45</t=
+d><td>73</td></tr>
+<tr><td class=3D"rowi">7</td><td class=3D"col1">20</td><td>32</td><td>52</t=
+d><td>84</td></tr>
+<tr><td class=3D"rowi">8</td><td class=3D"col1">22</td><td>36</td><td>58</t=
+d><td>94</td></tr>
+<tr><td class=3D"rowi">9</td><td class=3D"col1">25</td><td>40</td><td>65</t=
+d></tr>
+<tr><td class=3D"rowi">10</td><td class=3D"col1">27</td><td>44</td><td>71</=
+td></tr>
+<tr><td class=3D"rowi">11</td><td class=3D"col1">30</td><td>49</td><td>79</=
+td></tr>
+<tr><td class=3D"rowi">12</td><td class=3D"col1">33</td><td>53</td><td>86</=
+td></tr>
+<tr><td class=3D"rowi">13</td><td class=3D"col1">35</td><td>57</td><td>92</=
+td></tr>
+<tr><td class=3D"rowi">14</td><td class=3D"col1">38</td><td>61</td><td>99</=
+td></tr>
+<tr><td class=3D"rowi">15</td><td class=3D"col1">41</td><td>66</td></tr>
+<tr><td class=3D"rowi">16</td><td class=3D"col1">43</td><td>70</td></tr>
+<tr><td class=3D"rowi">17</td><td class=3D"col1">46</td><td>74</td></tr>
+<tr><td class=3D"rowi">18</td><td class=3D"col1">48</td><td>78</td></tr>
+<tr><td class=3D"rowi">19</td><td class=3D"col1">51</td><td>83</td></tr>
+<tr><td class=3D"rowi">20</td><td class=3D"col1">54</td><td>87</td></tr>
+<tr><td class=3D"rowi">21</td><td class=3D"col1">56</td><td>91</td></tr>
+<tr><td class=3D"rowi">22</td><td class=3D"col1">59</td><td>95</td></tr>
+<tr><td class=3D"rowi">23</td><td class=3D"col1">62</td><td>100</td></tr>
+<tr><td class=3D"rowi">24</td><td class=3D"col1">64</td></tr>
+<tr><td class=3D"rowi">25</td><td class=3D"col1">67</td></tr>
+<tr><td class=3D"rowi">26</td><td class=3D"col1">69</td></tr>
+<tr><td class=3D"rowi">27</td><td class=3D"col1">72</td></tr>
+<tr><td class=3D"rowi">28</td><td class=3D"col1">75</td></tr>
+<tr><td class=3D"rowi">29</td><td class=3D"col1">77</td></tr>
+<tr><td class=3D"rowi">30</td><td class=3D"col1">80</td></tr>
+<tr><td class=3D"rowi">31</td><td class=3D"col1">82</td></tr>
+<tr><td class=3D"rowi">32</td><td class=3D"col1">85</td></tr>
+<tr><td class=3D"rowi">33</td><td class=3D"col1">88</td></tr>
+<tr><td class=3D"rowi">34</td><td class=3D"col1">90</td></tr>
+<tr><td class=3D"rowi">35</td><td class=3D"col1">93</td></tr>
+<tr><td class=3D"rowi">36</td><td class=3D"col1">96</td></tr>
+<tr><td class=3D"rowi">37</td><td class=3D"col1">98</td></tr>
+</tbody></table>
+
+</div>
+
+
+
+<ul>
+<li> The first row of Stolarsky's array is again <i>the</i> Fibonacci seque=
+nce.  </li>
+<li> Each subsequent row begins with the smallest number
+missing from all the rows above.  </li>
+<li> Thereafter on any row, the entry to the right of number k is=20
+<b>[</b>k Phi<b>]</b>, Round(k Phi), the nearest integer to k Phi. </li>
+</ul>
+
+Since the Fibonacci numbers are 1,2,3,5,8,... then row 2 begins with 4, the=
+ smallest number=20
+missing from the Fibonacci series.
+Using our table of rounded multiples of Phi above, 4 is followed by [ 4 Phi=
+ ] =3D 6=20
+and 6 by [ 6 Phi ] =3D 10. The first two rows are now:
+
+<table border=3D"1" cellspacing=3D"0" cellpadding=3D"5" align=3D"center" cl=
+ass=3D"centered">
+<tbody><tr><td class=3D"red">1</td><td>2</td><td>3</td><td>5</td><td>8</td>=
+<td>13</td><td>21</td><td>...</td></tr>
+<tr><td class=3D"red">4</td><td>6</td><td>10</td><td>16</td><td>26</td><td>=
+42</td><td>68</td><td>...</td></tr>
+</tbody></table>
+
+The smallest number missing from these two rows is 7 so 7 starts row 3. =20
+The Stolarsky array begins as follows:
+
+<p>
+This whole table (read by diagonals) is sequence <a href=3D"http://oeis.org=
+/A035506">A035506</a> in Sloane's Encyclopaedia.
+<br>
+The article by Morrison (see References below) proves that each row uses th=
+e Fibonacci Rule so that each row is
+a G series.
+</p><p>
+
+There is also a formula for the number in row <span class=3D"rowi">r</span>=
+ in the
+first column:  <span class=3D"rowi">r</span> + 1 + <img src=3D"http://www.m=
+aths.surrey.ac.uk/hosted-sites/R.Knott/images/lfloor.gif" width=3D"8" heigh=
+t=3D"12" alt=3D"|_"> (<span class=3D"rowi">r</span>+0.5) Phi <img src=3D"ht=
+tp://www.maths.surrey.ac.uk/hosted-sites/R.Knott/images/rfloor.gif" width=
+=3D"8" height=3D"12" alt=3D"_|">
+where <span class=3D"rowi">r</span> is the <span class=3D"rowi">row number<=
+/span>.<br>
+So the Stolarsky array entry in row <span class=3D"rowi">r</span> and colum=
+n <span class=3D"coli">c</span> is g<sup><span class=3D"coli">c</span>+1</s=
+up>( [<span class=3D"rowi">r</span>+0.5]Phi] )where g(x) is [ x Phi ] and
+g<sup>p</sup> means "g is applied p times" e.g. the first entry in row numb=
+ered 3=20
+is  3+1+<img src=3D"http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/imag=
+es/lfloor.gif" width=3D"8" height=3D"12" alt=3D"|_"> 3.5 Phi <img src=3D"ht=
+tp://www.maths.surrey.ac.uk/hosted-sites/R.Knott/images/rfloor.gif" width=
+=3D"8" height=3D"12" alt=3D"_|"> or 9 and the 4th entry
+on that row (in column 3) will contain g(g(g(g(9)))) =3D 63.
+</p><p>
+We now ask the same two questions of the Stolarsky array that we asked of t=
+he Wythoff array:
+
+<a name=3D"Stolarskyrownb"></a>
+</p><h3 id=3D"section7.3">7.3                               In which row is=
+ number n in the Stolarsky Array?
+</h3>
+
+Here is a table of the row numbers of the Stolarsky Array where numbers 1 t=
+o 40 occur:
+
+<table border=3D"1" cellspacing=3D"0" cellpadding=3D"5" align=3D"center" cl=
+ass=3D"centered">
+<tbody><tr class=3D"index1"><th>n</th><td>1</td><td>2</td><td>3</td><td>4</=
+td><td>5</td><td>6</td><td>7</td>
+    <td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td><td>14<=
+/td><td>15</td><td>16</td>
+    <td>17</td><td>18</td><td>19</td><td>20</td></tr>
+<tr class=3D"rowi"><th>row</th><td>0</td><td>0</td><td>0</td><td>1</td><td>=
+0</td><td>1</td><td>2</td><td>0</td><td>3</td>
+   <td>1</td><td>2</td><td>4</td><td>0</td><td>5</td><td>3</td><td>1</td><t=
+d>6</td><td>2</td><td>4</td>
+   <td>7</td></tr>
+<tr><td colspan=3D"22"></td></tr>
+<tr class=3D"index1"><th>n</th><td>21</td><td>22</td><td>23</td><td>24</td>=
+<td>25</td><td>26</td>
+   <td>27</td><td>28</td><td>29</td><td>30</td><td>31</td><td>32</td><td>33=
+</td><td>34</td>
+   <td>35</td><td>36</td><td>37</td><td>38</td><td>39</td><td>40</td></tr>
+<tr class=3D"rowi"><th>row</th><td>0</td><td>8</td><td>5</td><td>3</td><td>=
+9</td><td>1</td><td>10</td><td>6</td>
+   <td>2</td><td>11</td><td>4</td><td>7</td><td>12</td><td>0</td><td>13</td=
+><td>8</td><td>5</td>
+   <td>14</td><td>3</td><td>9</td></tr>
+<tr><td colspan=3D"22"></td></tr>  =20
+<tr class=3D"index1"><th>n</th><td>41</td> <td>42</td> <td>43</td> <td>44</=
+td> <td>45</td> <td>46</td> <td>47</td> <td>48</td> <td>49</td> <td>50</td>=
+ <td>51</td> <td>52</td> <td>53</td> <td>54</td> <td>55</td> <td>56</td> <t=
+d>57</td> <td>58</td> <td>59</td> <td>60</td> </tr>
+<tr class=3D"rowi"><th>row</th><td>15</td> <td>1</td> <td>16</td> <td>10</t=
+d> <td>6</td> <td>17</td> <td>2</td> <td>18</td> <td>11</td> <td>4</td> <td=
+>19</td> <td>7</td> <td>12</td> <td>20</td> <td>0</td> <td>21</td> <td>13</=
+td> <td>8</td> <td>22</td> <td>5</td></tr>
+    =20
+</tbody></table>
+
+Again we can lay these out with the 0s starting each new section as follows=
+:
+<pre> 0
+ 0
+ 0                       1
+ 0                       1              2
+ 0              3        1              2        4
+ 0        5     3        1        6     2        4     7
+ 0     8  5     3  9     1    10  6     2    11  4     7 12
+ 0 13  8  5 14  3  9 15  1 16 10  6 17  2 18 11  4 19  7 12 20
+ ...
+</pre>
+
+What rule governs the placing of the new number in the section now?
+<p>
+
+
+
+<a name=3D"Stolarskycolnb"></a>
+</p><h3 id=3D"section7.4">7.4                               In which column=
+ is number n in the Stolarsky Array?
+</h3>
+
+Here is the sequence of column numbers for each i from 1 to 40:<br>
+<table border=3D"1" cellspacing=3D"0" cellpadding=3D"5" align=3D"center" cl=
+ass=3D"centered">
+<tbody><tr class=3D"index1"><th>n</th><td>1</td><td>2</td><td>3</td><td>4</=
+td><td>5</td><td>6</td><td>7</td>
+    <td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td><td>14<=
+/td><td>15</td><td>16</td>
+    <td>17</td><td>18</td><td>19</td><td>20</td></tr>
+<tr class=3D"coli"><th>col</th><td>0</td><td>1</td><td>2</td><td>0</td><td>=
+3</td><td>1</td><td>0</td><td>4</td>
+   <td>0</td><td>2</td><td>1</td><td>0</td><td>5</td><td>0</td><td>1</td><t=
+d>3</td><td>0</td>
+   <td>2</td><td>1</td><td>0</td></tr>
+<tr><td colspan=3D"22"></td></tr>
+<tr class=3D"index1"><th>n</th><td>21</td><td>22</td><td>23</td><td>24</td>=
+<td>25</td><td>26</td>
+   <td>27</td><td>28</td><td>29</td><td>30</td><td>31</td><td>32</td><td>33=
+</td><td>34</td>
+   <td>35</td><td>36</td><td>37</td><td>38</td><td>39</td><td>40</td></tr>
+<tr class=3D"coli"><th>col</th><td>6</td><td>0</td><td>1</td><td>2</td><td>=
+0</td><td>4</td><td>0</td><td>1</td>
+   <td>3</td><td>0</td><td>2</td><td>1</td><td>0</td><td>7</td><td>0</td><t=
+d>1</td><td>2</td>
+   <td>0</td><td>3</td><td>1</td></tr>
+<tr><td colspan=3D"22"></td></tr>  =20
+<tr class=3D"index1"><th>n</th><td>41</td> <td>42</td> <td>43</td> <td>44</=
+td> <td>45</td> <td>46</td> <td>47</td> <td>48</td> <td>49</td> <td>50</td>=
+ <td>51</td> <td>52</td> <td>53</td> <td>54</td> <td>55</td> <td>56</td> <t=
+d>57</td> <td>58</td> <td>59</td> <td>60</td> </tr>
+<tr class=3D"coli"><th>col</th><td>0</td> <td>5</td> <td>0</td> <td>1</td> =
+<td>2</td> <td>0</td> <td>4</td> <td>0</td> <td>1</td> <td>3</td> <td>0</td=
+> <td>2</td> <td>1</td> <td>0</td> <td>8</td> <td>0</td> <td>1</td> <td>2</=
+td> <td>0</td> <td>3</td>
+
+
+</tr></tbody></table>
+
+ You can check that this sequence also has the same self-reproducing proper=
+ty of
+ column numbers for the Wythoff array.<br>
+ Can you find the rule that governs the section-copying rule here of the sa=
+me kind that
+ we discovered for Wythoff columns?
+=20
+ <br clear=3D"all">
+=20
+=20
+
+<a name=3D"CALC6"></a>
+<h3 id=3D"section7.5">7.5 <img src=3D"http://www.maths.surrey.ac.uk/hosted-=
+sites/R.Knott/Fibonacci/calcicon.gif" width=3D"34" height=3D"13" alt=3D"cal=
+culator">
+  Stolarsky Array Calculator
+</h3>
+<div class=3D"calc"> C A L C U L A T O R <br>
+	<form name=3D"g5F" action=3D"http://www.maths.surrey.ac.uk/hosted-sites/R.=
+Knott/Fibonacci/fibGen.html">
+	<table border=3D"0" rules=3D"rows" cellpadding=3D"5" cellspacing=3D"0" ali=
+gn=3D"center">
+    <tbody><tr style=3D"background-color:#CFC;"><td colspan=3D"2">
+        <table align=3D"center">
+        <tbody><tr><td rowspan=3D"2">
+             <input type=3D"button" value=3D"Show" onclick=3D"outF=3Dthis.f=
+orm.name;g5s()">
+             the Stolarsky array
+              of </td>
+          <td style=3D"text-align:right"> row <input type=3D"text" size=3D"=
+4" id=3D"g5Frow0" value=3D"0"> </td>
+          <td class=3D"optional">to  <input type=3D"text" size=3D"4" id=3D"=
+g5Frow1" value=3D"10"></td>
+          </tr>
+        <tr><td>  column <input type=3D"text" size=3D"4" id=3D"g5Fcol0" val=
+ue=3D"0"> </td>
+            <td class=3D"optional">to  <input type=3D"text" size=3D"4" id=
+=3D"g5Fcol1" value=3D"6"></td>
+         </tr>
+         </tbody></table>
+         </td></tr>
+
+       <tr style=3D"background-color:#CCF;"><td style=3D"text-align:right;"=
+>
+            <input type=3D"button" value=3D"Find the row number" onclick=3D=
+"outF=3Dthis.form.name;g5('r')"><br>
+			<input type=3D"button" value=3D"Find the column number" onclick=3D"outF=
+=3Dthis.form.name;g5('c')">
+		</td><td align=3D"left"> in the Stolarsky array
+			 of <input type=3D"text" size=3D"4" id=3D"g5Fn0" value=3D"1">=20
+			 <span class=3D"optional">up to <input type=3D"text" size=3D"4" id=3D"g5=
+Fn1" value=3D"10"></span>
+	</td></tr>
+    </tbody></table><br>
+    R E S U L T S
+		  <input type=3D"hidden" id=3D"msgg5Fdepth" value=3D"15">
+          <input type=3D"button" class=3D"clear" value=3D"Clear" onclick=3D=
+"clearmsg('g5F');document.getElementById('msgg5Fdepth').value=3D'15'">
+           <input type=3D"button" value=3D"Show more space" class=3D"resSPA=
+CEbtn" onclick=3D"showMoreOrLess('msgg5F',15)">
+          <input type=3D"button" value=3D"Show less space" class=3D"resSPAC=
+Ebtn" onclick=3D"showMoreOrLess('msgg5F',-15)"><br>
+	<div id=3D"msgg5F" class=3D"res" style=3D"height:15em;"></div><br>
+	=09
+	</form>
+</div>
+
+<!--=20
+<a name=3D"genreps"></a>
+<h2>                  Integer Representations using G series
+</h2>
+
+
+
+<a name=3D"CALC7"></a>
+<div class=3Dcalc> C A L C U L A T O R <br>
+   <form name=3D"g7F" action=3D"">
+   <div class=3Dnorm align=3Dcenter>
+   <table align=3Dcenter style=3D"background-color:#C96;"><tr><td>
+		Using G series starting
+		a:<input type=3Dtext id=3D"g5Fa" value=3D"" size=3D16>
+		b:<input type=3Dtext id=3D"g5Fb" value=3D"" size=3D16>
+     </td></tr><tr><td>
+		<input type=3Dbutton value=3D"find" onClick=3D"outF=3D'g7F';grep()">=20
+		the number of reps of
+		<input type=3Dtext id=3D"g5Fn0" value=3D"" size=3D16> <i>up to </i>
+		<input type=3Dtext id=3D"g5Fnx" value=3D"" size=3D16>=20
+	</td></tr></table>
+	</div><br>
+
+R E S U L T S=20
+	<input type=3Dbutton class=3Dclear value=3D"Clear" onClick=3D"clearmsg('g7=
+F');document.getElementById('msgg7Fdepth').value=3D'15'">
+	<input type=3Dhidden id=3D"msgg7Fdepth" value=3D"15">
+	<input type=3Dbutton value=3D"Show more space" onClick=3D"showMoreOrLess('=
+msgg7F',15)">
+	<input type=3Dbutton value=3D"Show less space" onClick=3D"showMoreOrLess('=
+msgg7F',-15)"><br>
+	<div id=3D"msgg7F" class=3Dres style=3D"height:15em;"></div>
+</form>
+</div>
+</div>
+
+
+-->
+
+<h2 id=3D"section8">8  Primes and G Series
+</h2>
+
+<h3 id=3D"section8.1">8.1 G series with no primes
+</h3>
+  If the starting values a and b have a common factor then,=20
+  since G( a, b, n ) =3D F( n =E2=80=93 1 ) a + F( n ) b, all the following=
+ terms will have that factor and so the
+  series will never contain any primes.<br>
+  Surprisingly, in 1962, Ronald Graham found a pair of starting values that=
+ have no factor in common and
+  yet no number following them in the G series is ever prime:<br>
+
+  a =3D 331635635998274737472200656430763 and b =3D 15100289110884019711895=
+90305498785<br>
+  Since then, smaller pairs numbers have been found but the current smalles=
+t (found in 2004) still have 12 digits each:<br>
+  a =3D 106276436867 and b =3D 35256392432.<br>
+  It is not known if there are any smaller pairs.
+
+ <a name=3D"refs"></a>
+ <h2 id=3D"section9">9                    Links and Bibliography
+ </h2>
+ <a href=3D"http://faculty.evansville.edu/ck6/">Prof. Clark Kimberling</a> =
+of Evansville University (USA)
+  has added much to our knowledge of the Wythoff Array and its recursive pr=
+operties.  Neil Sloane
+  calls the Wythoff Array a <a href=3D"http://www.research.att.com/~njas/se=
+quences/classic.html">Classic Sequence</a>
+  and much on this page expands on the properties he mentions on his page.
+ =20
+=20
+ <ul class=3D"biblio">
+ <li class=3D"paper">=20
+    <b>Generalised Wythoff Arrays, Shuffles and Interspersions</b><br>
+     A Fraenkel, C Kimberling <i>Discrete Math.</i> vol 126
+          (1994), pages 137-149.</li>
+ <li class=3D"paper">=20
+       <b>Orderings of the set of all positive Fibonacci Sequences</b>=20
+       C Kimberling in=20
+       <a href=3D"http://www.amazon.com/exec/obidos/ASIN/0792324919/fibonac=
+numbersan">Applications of the Fibonacci Numbers <b>5</b></a>
+        editors: A N Philippou, A F Horodam, G E Bergum;
+       Kluwer (1993), pages 405-416.</li>
+  <li class=3D"link">=20
+     <a href=3D"http://faculty.evansville.edu/ck6/integer/intersp.html">Int=
+erspersions and Dispersions</a><br>
+   Prof. Clark Kimberling's web page on the Wythoff Array's interspersions =
+and dispersions with more references.</li>
+ <li class=3D"book">=20
+      <b>A Stolarsky Array of Wythoff Pairs</b>=20
+        D R Morrison in=20
+        <a href=3D"http://www.engineering.sdstate.edu/~fib/fibbooks.html">A=
+ Collection of Manuscripts Related to the
+        Fibonacci Sequence</a>  editors: V E Hoggatt Jr., M Bicknell-Johnso=
+n, published by The Fibonacci Association, (1980)
+        pages 134 - 136.</li>
+ <li class=3D"paper">=20
+    <b>A Set of Generalised Fibonacci Sequences such that Each natural Numb=
+er Belongs to Exactly One</b><br>
+      K B Stolarsky <i>Fibonacci Quarterly</i>, vol 15 (1977), page 224.</l=
+i>
+  <li class=3D"paper">
+    <b>The Fibonacci Numbers: Exposed</b> D Kalman, R Mena=20
+    <i>Mathematics Magazine</i> 76 (2003), pages 167-181.<br>
+    This is an excellent article to examine extensions of the Fibonacci Num=
+bers to the
+    General Fibonacci series covered on this page.  Their aim is to show th=
+at=20
+    many Fibonacci properties extend to the second-oder recurrences of the =
+kind
+    A(n+2) =3D a A(n+1) + b(A(n) for some numbers a and b.  Also we need to=
+ decide on
+    A(0) and A(1) too.  </li>
+  <li class=3D"paper">
+     <b>The Fibonacci Numbers: Exposed More Discretely</b> A T Benjamin, J =
+J Quinn
+     <i>Mathematics Magazine</i> 76 (2003),pages 182-192<br>
+     extends the Kalman and Mena article using nice counting arguments.</li=
+>
+<li class=3D"paper">
+<b>A Fibonacci-like sequence of composite numbers</b> Ronald L. Graham, <i>=
+ Mathematics
+Magazine 37</i> (1964), 322-324.</li>
+<li class=3D"paper">
+<b>A New Fibonacci-like Sequence of Composite Numbers</b>=20
+   M Vsemirnov
+  <i>Journal of Integer Sequences </i> vol 7, (2004)  Article 04.3.7
+  <a href=3D"http://www.emis.ams.org/journals/JIS/VOL7/Vsemirnov/vsem5.pdf"=
+>(pdf)</a>
+  </li>
+</ul>
+
+<p>
+<table width=3D"100%" class=3D"nav">
+<tbody><tr>
+<td width=3D"33%"> <img src=3D"http://www.maths.surrey.ac.uk/hosted-sites/R=
+.Knott/images/goLEFT.gif" width=3D"16" height=3D"13" alt=3D"Previous Topic"=
+>
+    <a href=3D"http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/Fibonacci=
+/fibBio.html">Fibonacci - the man and His Times</a>
+ </td>
+<td width=3D"33%">
+<img src=3D"http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/images/goHOM=
+E.gif" width=3D"16" height=3D"16" alt=3D"Fibonacci HOME">
+  <a href=3D"http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/Fibonacci/f=
+ib.html">=20
+  Fibonacci Home Page </a> <br>
+
+  <img src=3D"http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/images/goU=
+P.gif" width=3D"13" height=3D"16" alt=3D"Previous page">
+        <a href=3D"http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/Fibon=
+acci/Fibonomials.html">The Fibonomials</a><p>
+ </p><p class=3D"wtn">
+  WHERE TO NOW???</p><p>
+
+ <img src=3D"http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/images/goDO=
+WN.gif" width=3D"13" height=3D"16" alt=3D"Next page on this Topic">
+      <a href=3D"http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/Fibonac=
+ci/fibInArt.html">The Golden Section In Art, Architecture and Music</a>
+
+</p></td><td width=3D"33%">
+  <img src=3D"http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/images/goR=
+IGHT.gif" width=3D"16" height=3D"13" alt=3D"NEXT TOPIC">=20
+   <a href=3D"http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/Fibonacci/=
+fibFormulae.html">Fibonacci, Phi and Lucas numbers Formulae</a><br>
+
+  <img src=3D"http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/images/goR=
+IGHT.gif" width=3D"16" height=3D"13" alt=3D"NEXT TOPIC">
+   <a href=3D"http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/Fibonacci/=
+fibrefs.html">Links and References</a>
+
+</td>
+</tr>
+</tbody></table>
+</p><p>=20
+=20
+</p><address>
+<a href=3D"http://validator.w3.org/check/referer"><img border=3D"0" src=3D"=
+http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/Fibonacci/valid-html401.=
+gif" align=3D"right" alt=3D"Valid HTML 4.01!" height=3D"31" width=3D"88"></=
+a>=20
+<a href=3D"http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/Fibonacci/cop=
+yright.html">=C2=A9</a> 2003-2015 <a href=3D"http://www.maths.surrey.ac.uk/=
+hosted-sites/R.Knott/contactron.html">Dr Ron Knott</a>
+<img src=3D"http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/Fibonacci/my=
+email.gif" width=3D"180" height=3D"13" alt=3D"email"><br>
+created 14 August 2003; updated 19 June 2015<br>
+=20
+
+
+</address>=20
+
+=20
+</body></html>
+------MultipartBoundary--UxjdjIMnY5KNvsYOcECDC1B007hdarJeqQ2nKjbTnX----
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/images/book.gif
+
+R0lGODlhFgAOAPMAMf//////a/9mM8wzM/+ZMwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAACH5BAEAAAAALAAAAAAWAA4AAAQ3EMhJq50i652vHAMnCh4YjttlnmhXrWxrwa02r7VL4XA/
+3ANCYEgsBkoDo/JYEi6Jno8PFq1SIgA7
+------MultipartBoundary--UxjdjIMnY5KNvsYOcECDC1B007hdarJeqQ2nKjbTnX----
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/images/paper.gif
+
+R0lGODlhGQAXAPUAMZp4/5p5/5+fn6KS/6KT/6WlpaeB/7B8/7KZ/7Kysre3t7mV/7mW/7yl/8ay
+/8zMzM8P/8/Pz9Ic/9Ie/9If/9LS0tjY2NnZ2dul/9xX/97B/+Hb/+Hc/+Xl5eaH/+bm5ueH/+zm
+/+zs7O6o//Ly8vPA//PE//Xy//ng//n5+fr6+vv7+/z8/P///92R/38AANVsEP/VbBD/1WwQ/9Vs
+EP+Q90yUMc8AATy3v1//fwAA79C/X/9/AADotr9f/38AACwAAAAAGQAXAAAGucCWcEgsGo9CEGTJ
+bC4nSGGDMZKgrlisCRIFIE4lShTFPQYcoVZ4lWi3L0Ly0bNIqymsh17/iZeLEBocHBsYYi0fiSlD
+ckYQBgQEAwcZQm4ijH9EEChRRY2AKCoppKRIoJsoCgKsAgWnmkOcnkSosp0RrbqtES22QrMspcOl
+LL6xwJ0VBczNzhXHR7MkidXWHyTRjp0Wbt5uFtqhLR175nsd4qm0mdKd7OqyJln09FtHE076TlDw
+/kNBADs=
+------MultipartBoundary--UxjdjIMnY5KNvsYOcECDC1B007hdarJeqQ2nKjbTnX----
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/images/click.gif
+
+R0lGODlhGgAUAPQAMTPMmWYzzHJr/5CJ/qih/7mx/720/8O7/8nB/8vD/83E/8/G/9HJ/tXN/t7V
+/uLZ/+Tb/+bd/+jf/+rh/+zj/+7k//Lp//ft//vx//3z///0///2///5///7///9/////ywAAAAA
+GgAUAAAFkOBXAWRpnqjzfRnqvuTzUcBqr9Kt3+QMeDpHwLDb9WjAWyMQUBR5NaQOwgwsnqvjT2ep
+NrHapA3jDSSeYV2nHEAU0zp24GCMbuPyiA5+KzMUBBd7dmI2ZXRvhDtMa0xoijoCVwVMbnU+hYtM
+mR98RQNMG5cjTx0rGgAYiR8cMK4mFisdErQTtre2Eri3tBorIQA7
+------MultipartBoundary--UxjdjIMnY5KNvsYOcECDC1B007hdarJeqQ2nKjbTnX----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/global.css
+
+@charset "utf-8";
+
+body { font-family: Verdana, "Trebuchet MS", Lucida, Arial, Helvetica, sans=
+-serif; background-color: white; }
+
+h1, h2, h3, h4, h5 { color: rgb(204, 0, 0); text-align: center; }
+
+.hTOC { color: rgb(204, 0, 0); text-align: center; font-size: 120%; margin:=
+ 2em 0px; }
+
+sup { vertical-align: 50%; font-size: 70%; }
+
+.supx { vertical-align: 35%; font-size: 70%; }
+
+sub { vertical-align: -40%; font-size: 70%; }
+
+.normal { color: black; font-weight: normal; font-style: normal; font-famil=
+y: Verdana, "Trebuchet MS", Lucida, Arial, Helvetica, sans-serif; backgroun=
+d-color: white; }
+
+.norm { font-style: normal; color: rgb(0, 0, 0); font-weight: normal; font-=
+size: inherit; font-family: Verdana, "Trebuchet MS", Lucida, Arial, Helveti=
+ca, sans-serif; }
+
+.symb { font-family: Times, "Times New Roman", serif; font-size: 130%; }
+
+.fracsym { font-size: 120%; }
+
+.implies { line-height: 100%; position: relative; bottom: -0.1em; font-size=
+: 180%; }
+
+.arrsym { line-height: 120%; position: relative; bottom: 0.6em; font-size: =
+180%; }
+
+.nobg { background-image: none; }
+
+.res { border: 1px solid rgb(153, 153, 153); overflow: scroll; text-align: =
+left; font-family: Verdana, Monaco, Courier, monospace; padding: 2px; color=
+: mediumblue; white-space: pre; background-color: white; }
+
+.restext { font-family: Courier, "Courier New", Monaco, monospace; color: m=
+aroon; background-color: ivory; }
+
+.resbg { color: maroon; background-color: ivory; }
+
+table.resTBL { color: inherit; overflow: auto; white-space: nowrap; border-=
+spacing: 0px; border-collapse: collapse; font-size: inherit; }
+
+table.resTBL tr th { padding-right: 2px; }
+
+table.resTBL tr td:first-of-type { padding-left: 2px; border-left-width: 1p=
+x; border-left-style: solid; border-left-color: silver; }
+
+table.resTBL tr td { padding: 0px; }
+
+.hideoflow { overflow: hidden; }
+
+.fareySTY { background-color: linen; }
+
+.sbSTY { background-color: bisque; }
+
+.fractSTY { background-color: moccasin; }
+
+.fractLabelSTY { color: rgb(204, 102, 51); text-align: center; }
+
+.inputSTY { background-color: rgb(255, 204, 102); }
+
+.cfSTY { background-color: lavender; }
+
+.decSTY { background-color: pink; }
+
+.LRpathSTY { color: red; font-weight: bolder; }
+
+.partcombSTY { background-color: aquamarine; }
+
+.showhidebtn { color: rgb(153, 85, 68); border: 2px solid rgb(221, 170, 119=
+); font-family: Courier, Monaco, monospace; margin: 0em 0px 0px 3em; font-s=
+ize: 100%; text-align: center; font-stretch: expanded; background-color: rg=
+b(255, 238, 238); }
+
+.showhidebtnsmall { color: rgb(136, 136, 136); font-family: Courier, Monaco=
+, monospace; padding: 1px; border: 2px outset rgb(153, 136, 119); font-size=
+: 80%; text-align: center; font-stretch: expanded; box-shadow: rgb(153, 136=
+, 119) 2px 2px 2px; margin: 0px; background-color: rgb(250, 243, 228); }
+
+input[type=3D"text"] { border: 2px solid silver; font-size: inherit; }
+
+input[type=3D"button"].showhidebtnsmall:active { color: orange; box-shadow:=
+ rgb(238, 238, 238) 2px 2px 2px; border-style: inset; background-color: rgb=
+(250, 243, 228); }
+
+input[type=3D"button"].showhidebtnsmall:hover { color: rgb(250, 243, 228); =
+background-color: orange; }
+
+button, input[type=3D"button"] { font-family: Verdana, Arial, "Andale Mono"=
+, Monaco, monospace; border: 2px outset rgb(204, 153, 0); border-radius: 8p=
+x; margin: 0px; padding: 1px; background-color: seashell; }
+
+select { border-style: outset; background-color: rgb(221, 221, 221); }
+
+select:hover, button:hover, input[type=3D"button"]:hover { cursor: pointer;=
+ border-style: inset; background-color: white; }
+
+button.pushme { color: magenta; border: 2px solid magenta; background-color=
+: yellow; }
+
+.clear, input[type=3D"button"].clear, input[type=3D"reset"] { color: inheri=
+t; font-size: 90%; border: 1px solid rgb(238, 238, 238); box-shadow: black =
+1px 1px 1px; background-color: inherit; }
+
+.clear:hover, input[type=3D"button"].clear:hover, input[type=3D"reset"]:hov=
+er { color: black; background-color: white; }
+
+input.btn { color: blue; }
+
+input.infobtn { text-shadow: white -1px -1px, rgb(51, 51, 51) 1px 1px; colo=
+r: rgb(204, 204, 204); font-style: normal; font-variant: normal; font-weigh=
+t: normal; font-stretch: normal; font-size: 100%; line-height: normal; font=
+-family: "Times New Roman", Times, Palatino, serif; padding: 0px; width: 1.=
+5em; background-color: rgb(51, 51, 255); }
+
+input.action { padding: 3px; color: rgb(153, 153, 51); background-color: rg=
+b(255, 255, 153); }
+
+left, input.left { text-align: left; }
+
+right, input.right { text-align: right; }
+
+center, input.center { text-align: center; }
+
+.showhidebtntxt { color: darkred; padding: 1px; border: 2px solid darkred; =
+margin: 0px; font-family: Courier, Monaco, monospace; font-size: 80%; text-=
+align: center; }
+
+.hiddeninfo { border: 1px dotted silver; color: darkred; padding: 0px 5px; =
+margin: 0px auto 8px 8px; display: none; background-color: seashell; }
+
+.hiddeninfo0 { border: 1px dashed silver; color: darkred; padding: 0px 5px;=
+ margin: 0px 8px 8px; display: none; background-color: inherit; }
+
+.hiddeninfo1 { border: 1px dashed silver; color: rgb(106, 90, 205); padding=
+: 5px; margin: 3px 0px 3px 10px; display: none; background-color: rgb(240, =
+248, 255); }
+
+.hiddeninfo2 { color: darkred; padding: 2px 5px; margin: 0px 0px 8px 8px; d=
+isplay: none; background-color: rgb(255, 255, 238); }
+
+.hiddeninfoplain { border: 1px dotted silver; display: none; }
+
+.info1 { background-color: rgb(240, 248, 255); }
+
+.displaynone { display: none; }
+
+.hiliteRADSTY { color: black; }
+
+.loliteRADSTY { color: white; }
+
+div.narrow { margin-left: auto; margin-right: auto; }
+
+div.narrowR { margin-right: auto; }
+
+div.pre { white-space: pre; font-family: "Verdana Monaco", monospace; }
+
+#helpDIV { display: none; position: fixed; top: 0px; height: auto; left: 25=
+%; right: 25%; border: 2px solid orange; padding: 4px; z-index: 2; backgrou=
+nd-color: lightyellow; }
+
+#helpDIV table td { border: 0px; }
+
+.floatR { float: right; }
+
+.floatL { float: left; }
+
+.clearall { clear: both; }
+
+.clearR { clear: right; }
+
+.clearL { clear: left; }
+
+form textarea { font-family: Courier, monospace; font-size: inherit; color:=
+ rgb(0, 0, 0); }
+
+a:link { color: rgb(0, 0, 238); }
+
+a:visited { color: rgb(136, 0, 136); }
+
+a:hover { color: orange; }
+
+a:active { color: red; }
+
+a.pale { color: rgb(204, 204, 204); }
+
+ul.contentsl1 a:link { font-weight: bolder; }
+
+ul.contentsl1 a:visited { font-weight: bolder; color: navy; background-colo=
+r: white; }
+
+ul.contentsl1 { list-style-image: url("images/redsq.gif"); list-style-type:=
+ disc; color: rgb(102, 102, 102); padding: 0px; margin-left: 3em; line-heig=
+ht: 140%; }
+
+ul.contentsl2 a:link { font-weight: normal; }
+
+ul.contentsl2 a:visited { font-weight: normal; color: navy; }
+
+ul.contentsl2 { list-style-image: url("images/goldsq.gif"); list-style-type=
+: square; color: rgb(102, 102, 102); padding: 0px; margin-left: 3em; line-h=
+eight: 140%; }
+
+ul.contentsl3 a:link { }
+
+ul.contentsl3 a:visited { color: navy; background-color: white; }
+
+ul.contentsl3 { list-style-image: url("images/greensq.gif"); list-style-typ=
+e: circle; font-size: 95%; color: rgb(102, 102, 102); padding: 0px; margin-=
+left: 3em; line-height: 140%; }
+
+ul.contentsl4 a:link { }
+
+ul.contentsl4 a:visited { color: navy; }
+
+ul.contentsl4 { list-style-image: url("images/bluesq.gif"); list-style-type=
+: circle; font-size: 95%; color: rgb(102, 102, 102); padding: 0px; margin-l=
+eft: 3em; line-height: 140%; }
+
+ul.contentsCalc { list-style-image: url("images/calcicon.gif"); list-style-=
+type: circle; font-size: 95%; color: rgb(102, 102, 102); font-style: italic=
+; }
+
+blockquote { font-family: Palatino, "Palatino Linotype", "Times New Roman",=
+ serif; border-top-width: 1px; border-top-style: solid; border-top-color: r=
+gb(225, 204, 137); border-bottom-width: 1px; border-bottom-style: solid; bo=
+rder-bottom-color: rgb(225, 204, 137); padding: 8px; margin: 2% 12% 2% 5%; =
+background-color: linen; }
+
+blockquote.lit { font-family: Palatino, "Palatino Linotype", "Times New Rom=
+an", serif; font-style: italic; line-height: 130%; padding: 8px; border-top=
+-width: 1px; border-top-style: solid; border-top-color: rgb(225, 204, 137);=
+ border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color:=
+ rgb(225, 204, 137); margin: 2% 12% 2% 5%; background-color: linen; }
+
+.spaced { letter-spacing: 0.7em; }
+
+.center, .centered { text-align: center; }
+
+.radic { font-family: Arial, sans-serif; font-size: 110%; }
+
+.underline, .u { border-bottom-width: 1px; border-bottom-style: solid; bord=
+er-color: currentcolor; }
+
+.uline { border-bottom-width: 1px; border-bottom-style: solid; border-color=
+: black; }
+
+.uu, .doubleunderline { border-style: none none double; border-color: black=
+; }
+
+.u2 { border-bottom-width: 3px; border-bottom-style: solid; border-bottom-c=
+olor: black; }
+
+.l { border-left-width: 1px; border-left-style: solid; border-left-color: b=
+lack; }
+
+.overline, .overbar, .celloverline { border-top-width: 1px; border-top-styl=
+e: solid; border-top-color: currentcolor; margin-left: 0px; padding-left: 0=
+px; }
+
+.inline { display: inline-block; }
+
+u { }
+
+.floorSTY { font-style: normal; font-size: 170%; color: currentcolor; }
+
+.question { text-align: center; color: rgb(153, 102, 0); font-style: italic=
+; margin-bottom: 10pt; margin-top: 10pt; background-color: white; }
+
+.Zbagfreq { color: red; }
+
+ul { margin-left: 0px; }
+
+ol.typelowera { list-style-type: lower-alpha; }
+
+ol.typeupperA { list-style-type: upper-alpha; }
+
+ol.type1 { list-style-type: decimal; }
+
+ol.typeloweri { list-style-type: lower-roman; }
+
+ol.typeupperi { list-style-type: upper-roman; }
+
+dl.list dt { font-weight: bolder; color: rgb(153, 153, 153); padding-top: 1=
+em; }
+
+dl.greenbead dt { color: rgb(0, 102, 0); }
+
+dl.greenbead dt::before { content: url("images/beadgreen.gif"); }
+
+dl.greenbead dd { padding-left: 15px; }
+
+dl.redbead dt { color: rgb(153, 0, 0); font-weight: bolder; }
+
+dl.redbead dt::before { content: url("images/beadred1.gif"); }
+
+.ttl { color: red; text-align: center; font-weight: bolder; font-size: larg=
+er; background-color: transparent; }
+
+.big { font-size: 170%; }
+
+.nonb { font-weight: normal; }
+
+.popup { text-align: left; border: 2px solid black; padding: 5px; position:=
+ relative; z-index: 13; display: none; font-size: 70%; color: rgb(0, 0, 102=
+); background-color: rgb(51, 204, 255); }
+
+.popupwin { text-align: left; font-size: 90%; color: rgb(255, 255, 255); ba=
+ckground-color: rgb(51, 51, 204); }
+
+.newprime { color: rgb(0, 204, 0); background-color: white; }
+
+.prime { color: rgb(255, 51, 51); background-color: white; }
+
+.comp { color: rgb(51, 51, 204); font-family: Arial, Verdana, sans-serif; }
+
+.cancel, .strike, .xout { text-decoration: line-through; }
+
+.orange { color: rgb(255, 204, 0); font-weight: bolder; }
+
+.red { color: rgb(255, 51, 0); font-weight: bolder; }
+
+.magenta { color: rgb(255, 0, 255); font-weight: bolder; }
+
+.purple { color: rgb(153, 51, 153); font-weight: bolder; }
+
+.brown { color: rgb(153, 0, 0); font-weight: bolder; }
+
+.blue { color: rgb(102, 0, 255); font-weight: bolder; }
+
+.green { color: rgb(51, 204, 0); font-weight: bolder; }
+
+.cyan { color: rgb(0, 255, 255); font-weight: bolder; }
+
+.jade { color: rgb(51, 204, 102); font-weight: bolder; }
+
+.plum { color: rgb(204, 51, 102); font-weight: bolder; }
+
+.skyblue { color: rgb(51, 102, 204); font-weight: bolder; }
+
+.yellow, .gold { color: rgb(255, 255, 51); font-weight: bolder; }
+
+.black { color: rgb(0, 0, 0); }
+
+.silver { color: rgb(204, 204, 204); }
+
+.grey, .gray { color: rgb(153, 153, 153); }
+
+.darkgrey, .darkgray { color: rgb(102, 102, 102); }
+
+.black { color: black; }
+
+.white { color: white; }
+
+.redyell { color: red; font-weight: bolder; background-color: yellow; }
+
+.tt { font-family: Courier, monospace; }
+
+.ttblue { color: blue; font-family: Courier, monospace; }
+
+.ttmagenta { color: rgb(255, 0, 255); font-family: Courier, monospace; }
+
+.ttred { color: red; font-family: Courier, monospace; }
+
+.ttgreen { color: green; font-family: Courier, monospace; }
+
+.nbHR { color: rgb(153, 0, 0); font-family: Courier, Monaco, monospace; bac=
+kground-color: rgb(255, 255, 153); }
+
+.index { font-style: italic; }
+
+.paleindex { font-style: italic; color: rgb(153, 153, 153); }
+
+.index1 { font-style: italic; font-size: smaller; }
+
+.center, .centre { text-align: center; }
+
+.centerPage, .centrePage { margin-left: auto; margin-right: auto; }
+
+.box { border: 1px solid rgb(153, 153, 255); text-align: center; padding: 3=
+px; }
+
+.boxblk { border: 1px solid rgb(204, 204, 204); margin: 10px 6%; padding: 1=
+0px; }
+
+.boxblkcol { margin: 10px 6%; padding: 10px; color: rgb(51, 51, 51); backgr=
+ound-color: rgb(255, 238, 238); }
+
+.aside { margin: 10px 6%; padding: 10px; color: rgb(51, 51, 51); font-size:=
+ 90%; border: 1px dotted silver; }
+
+.bold { font-weight: bolder; }
+
+.coords { font-family: monospace; font-size: smaller; }
+
+.eulerstats { font-weight: bolder; }
+
+.bkt { font-size: 250%; font-family: Baskerville, "MMa Textbook", MMTextboo=
+k, Optima, sans-serif; padding: 1px; font-style: normal; }
+
+.rulebg { background-color: rgb(255, 228, 225); }
+
+.rule { text-align: center; color: firebrick; display: table; margin: 0px a=
+uto; padding: 4px 15px; font-family: Verdana, Arial, sans-serif; font-size:=
+ 100%; background-color: rgb(255, 228, 225); }
+
+.rulebox { text-align: center; padding: 12px; color: rgb(0, 153, 51); margi=
+n-bottom: 14pt; margin-top: 14pt; font-family: Verdana, Arial, sans-serif; =
+font-size: 130%; border: 2px solid rgb(0, 153, 51); background-color: rgb(5=
+1, 255, 255); }
+
+.indentrule { color: rgb(0, 153, 51); font-family: Verdana, Arial, sans-ser=
+if; margin: 3% 3% 3% 5%; font-size: 100%; }
+
+.indent { margin-left: 5%; }
+
+.indenttt { margin: 1% 1% 1% 5%; font-family: Courier, monospace; }
+
+.small { font-size: 80%; }
+
+.equnname { color: rgb(143, 19, 255); font-family: "Courier New", Courier, =
+Monaco, monospace; font-weight: bold; }
+
+.m { color: blue; font-family: Verdana, Monaco, Courier, monospace; }
+
+.m1 { color: blue; font-family: Verdana, Monaco, Courier, monospace; font-s=
+ize: 90%; }
+
+.mathcol { color: blue; }
+
+.mathbg { background-color: rgb(0, 0, 255); }
+
+.math, .maths { font-family: Palatino, "Palatino Linotype", "Times New Roma=
+n", serif; color: mediumblue; border-color: darkslateblue; }
+
+.math0, .maths0 { font-family: Palatino, "Palatino Linotype", "Times New Ro=
+man", serif; color: darkslateblue; border-color: rgb(0, 0, 255); }
+
+.mathnocol { font-family: Palatino, "Palatino Linotype", "Times New Roman",=
+ serif; }
+
+.math1 { font-family: Palatino, "Palatino Linotype", "Times New Roman", ser=
+if; color: darkslateblue; border-color: rgb(0, 0, 255); }
+
+.nomaths, .nomath { font-size: 90%; color: black; font-family: Verdana, "Tr=
+ebuchet MS", Lucida, Arial, Helvetica, sans-serif; font-style: normal; }
+
+.mathsym { font-family: Palatino, "Palatino Linotype", "Times New Roman", s=
+erif; color: inherit; font-style: normal; }
+
+.mathsymbig { font-family: Palatino, "Palatino Linotype", "Times New Roman"=
+, serif; font-style: normal; font-size: 240%; line-height: 90%; color: medi=
+umblue; }
+
+.num { vertical-align: super; font-family: "Times New Roman", Palatino, ser=
+if; color: rgb(0, 0, 255); }
+
+.den { vertical-align: sub; font-family: "Times New Roman", Palatino, serif=
+; color: rgb(0, 0, 255); }
+
+.calcborder { border: 2px solid rgb(204, 153, 0); }
+
+.calc { color: rgb(204, 102, 51); border: 2px solid rgb(204, 153, 0); max-w=
+idth: 100%; overflow: auto; font-family: Verdana, Helvetica, sans-serif; ma=
+rgin: 5px; padding-left: 3px; padding-right: 3px; background-color: lemonch=
+iffon; }
+
+.calcbg { background-color: lemonchiffon; }
+
+.calcbgtext { color: rgb(204, 102, 51); }
+
+.calctxt { font-family: Verdana, Helvetica, sans-serif; color: rgb(204, 102=
+, 51); }
+
+.resSPACEbtn, .calcinner { color: rgb(204, 102, 51); font-family: Verdana, =
+Helvetica, sans-serif; background-color: rgb(255, 255, 221); }
+
+.calccolor { color: rgb(204, 102, 51); }
+
+.fromrat, .calcorange { background-color: rgb(255, 204, 102); }
+
+.calcrose { background-color: indianred; }
+
+.calcplum { background-color: plum; }
+
+.calcorchid { background-color: orchid; }
+
+.calcsalmon { background-color: salmon; }
+
+.calcdarksalmon { background-color: darksalmon; }
+
+.calclightrose { background-color: lightcoral; }
+
+.calclightsalmon { background-color: lightsalmon; }
+
+.calcbrown { background-color: rgb(204, 153, 102); }
+
+.calcchocolate { background-color: chocolate; }
+
+.calcred { background-color: rgb(255, 102, 102); }
+
+.fromdec, .calcpeach { background-color: rgb(255, 102, 102); }
+
+.calcorange { background-color: orange; }
+
+.calccyangreeny { background-color: rgb(153, 255, 204); }
+
+.calccyan { background-color: rgb(0, 255, 255); }
+
+.calccyandark { background-color: rgb(0, 204, 204); }
+
+.calcjade { background-color: rgb(102, 255, 153); }
+
+.calclavender { background-color: lavender; }
+
+.calcolive { background-color: olive; }
+
+.calckhaki { background-color: darkkhaki; }
+
+.calckhakilite, .calclightkhaki { background-color: khaki; }
+
+.calcsandybrown { background-color: sandybrown; }
+
+.calclightgreen { background-color: lightgreen; }
+
+.calcolivelite { background-color: rgb(204, 204, 153); }
+
+.calcquartz { background-color: rgb(204, 204, 255); }
+
+.calcturquoise { background-color: rgb(204, 255, 255); }
+
+.calcgreen { background-color: rgb(102, 0, 0); }
+
+.calcgold { background-color: rgb(255, 221, 68); }
+
+.calcpink { background-color: rgb(230, 142, 163); }
+
+.fontpink { color: rgb(255, 102, 153); }
+
+.calcmauve { background-color: rgb(204, 102, 255); }
+
+.calcblue { background-color: cornflowerblue; }
+
+.calclightblue { background-color: rgb(102, 204, 255); }
+
+.calcskyblue { background-color: rgb(51, 153, 204); }
+
+.calcsteelblue { background-color: rgb(51, 102, 255); }
+
+.calccornflowerblue { background-color: rgb(102, 153, 255); }
+
+.calclightmagenta { background-color: rgb(255, 102, 255); }
+
+.fontblue { color: rgb(102, 153, 255); }
+
+table.calcnav { border-collapse: collapse; margin-left: auto; margin-right:=
+ auto; font-family: Verdana, Helvetica, sans-serif; font-size: 50%; border:=
+ 1px solid rgb(204, 153, 0); background-color: moccasin; }
+
+table.calcnav tr { line-height: 160%; border-top-width: 1px; border-top-sty=
+le: dotted; border-top-color: rgb(204, 102, 51); }
+
+table.calcnav td, table.calcnav th { border-right-width: 1px; border-right-=
+style: solid; border-right-color: rgb(204, 102, 51); border-left-width: 1px=
+; border-left-style: solid; border-left-color: black; padding: 0px 6px 6px;=
+ }
+
+table.calcnav a:link { color: rgb(204, 102, 51); }
+
+table.calcnav a:visited { color: rgb(204, 102, 51); }
+
+table.calcnav a:hover { color: lemonchiffon; background-color: rgb(204, 102=
+, 51); }
+
+table.calcnav a:active { color: green; }
+
+table.calcnav a.pale:link, table.calcnav a.pale:visited, table.calcnav a.pa=
+le:active, table.calcnav a.pale:hover { color: rgb(204, 204, 204); backgrou=
+nd-color: inherit; }
+
+table.cellpad tr th, table.cellpad tr td { padding: 3px; }
+
+table td.icon { text-align: center; vertical-align: top; }
+
+table.addr { width: 100%; }
+
+table.lalign, table.lalign tr td { text-align: left; }
+
+table.ralign tr td, table tr.ralign td, table tr td.ralign { text-align: ri=
+ght; }
+
+table.calign tr td, table tr.calign td, table tr td.calign { text-align: ce=
+nter; }
+
+table tr th.rowline, td.rowline { border-bottom-width: 1px; border-bottom-s=
+tyle: solid; border-bottom-color: gray; }
+
+table.slim td { padding: 0px 3px; }
+
+table.vtop tr td, table tr.vtop td, table tr td.vtop { vertical-align: top;=
+ }
+
+table.vmid tr td, table tr.vmid td, table tr td.vmid { vertical-align: midd=
+le; }
+
+table.vbot, table.vbot tr { vertical-align: bottom; }
+
+table.vbot tr td { vertical-align: bottom; }
+
+table tr td.hcent { text-align: center; }
+
+table.colborders { border-collapse: collapse; }
+
+table.colborders td, table.colborders th { border-right-width: 1px; border-=
+right-style: solid; border-right-color: silver; border-left-width: 1px; bor=
+der-left-style: solid; border-left-color: silver; }
+
+table.nocolborders td, th { border-right-width: 0px; border-left-width: 0px=
+; }
+
+table.colRborder { border-collapse: collapse; }
+
+table.colRborder td, table.colRborder th { border-right-width: 1px; border-=
+right-style: solid; border-right-color: black; border-left-width: 1px; bord=
+er-left-style: solid; border-left-color: black; padding: 0px 6px; }
+
+table.rowborders { border-collapse: collapse; }
+
+table tr.rowborders, table tr td.rowborders, table.rowborders tr { border-b=
+ottom-width: 1px; border-bottom-style: solid; border-bottom-color: silver; =
+border-top-width: 1px; border-top-style: solid; border-top-color: silver; }
+
+table.paleBorder, table.paleBorders { border: 1px solid rgb(221, 221, 221);=
+ border-spacing: 0px; border-collapse: collapse; }
+
+table.paleBorder tr.u td, table.paleBorders tr.u td { border-bottom-width: =
+1px; border-bottom-style: solid; border-bottom-color: black; }
+
+table.paleBorder th, table.paleBorder caption, table.paleBorders th, table.=
+paleBorders caption { border: 1px solid rgb(187, 187, 187); border-collapse=
+: collapse; empty-cells: show; }
+
+table.paleBorder td, table.paleBorders td { border: 1px solid rgb(221, 221,=
+ 221); border-collapse: collapse; empty-cells: show; }
+
+table.paleBorder tr td table { border: 0px; }
+
+table.noborder, table.noborders { border: 0px; }
+
+table.collapse { border-collapse: collapse; }
+
+table.border { border: 1px solid black; border-collapse: collapse; }
+
+table.border td, table.border th { border: 1px solid black; }
+
+table.borderlight, table tr td.borderlight, table.borderlight caption { bor=
+der: 1px solid silver; border-collapse: collapse; }
+
+table.seprows td { border-style: solid; border-width: 2px 0px; border-color=
+: white; }
+
+table.fracTBL { display: inline-table; border-spacing: 0px; border-collapse=
+: collapse; padding: 0px; vertical-align: baseline; white-space: nowrap; }
+
+table.fracTBL tr.vmid, table.fracTBL tr td.vmid { text-align: center; verti=
+cal-align: middle; }
+
+table.fracTBL tr td { text-align: center; vertical-align: baseline; }
+
+table.fracTBL tr td.top, table.fracTBL tr td.num { border-bottom-width: 1px=
+; border-bottom-style: solid; border-color: currentcolor; text-align: cente=
+r; }
+
+table.fracTBL1 { display: inline-table; border-spacing: 6px 0px; }
+
+table.fracTBL1 td { text-align: center; }
+
+table.fracTBL1 td.top { border-bottom-width: 1px; border-bottom-style: soli=
+d; border-color: currentcolor; text-align: center; }
+
+table tr td.borderR, table th.borderR { border-right-width: 1px; border-rig=
+ht-style: solid; border-right-color: silver; }
+
+table tr.urow { border-bottom-width: 1px; border-bottom-style: solid; borde=
+r-color: black; }
+
+table.thborderR tr th { border-right-width: 1px; border-right-style: solid;=
+ border-right-color: silver; padding-right: 3px; }
+
+table tr.hilite { background-color: rgb(255, 204, 51); }
+
+table tr.lolite { color: silver; }
+
+table.matrix { border-collapse: separate; border-spacing: 3px; border-radiu=
+s: 7px; border-left-style: solid; border-right-style: solid; border-left-wi=
+dth: 2px; border-right-width: 2px; }
+
+table.matrix tr td { padding: 4px; }
+
+table.cellpadded td, table.cellpadded th { padding: 2px; border-spacing: 2p=
+x; border-collapse: separate; }
+
+table.right, table.right th, table.right td { text-align: right; }
+
+table.left, table.left th, table.left td { text-align: left; }
+
+table.mono { font-family: Courier, monospace; }
+
+table.ref { text-align: left; }
+
+.astable { display: table; }
+
+.ttdtitle { color: rgb(102, 153, 51); font-family: Helvetica, Arial, "Lucid=
+a Grande", "Trebuchet MS", "Comic Sans MS", sans-serif; margin: 5px 0px 0px=
+; padding: 5px; background-color: rgb(204, 255, 204); }
+
+.ttdbgB { background-color: white; }
+
+.ttd { color: black; margin: 0px 0px 5px; border: 2px solid rgb(187, 255, 1=
+87); padding: 5px 2%; line-height: 120%; font-family: Helvetica, Arial, "Lu=
+cida Grande", "Trebuchet MS", "Comic Sans MS", sans-serif; background-color=
+: mintcream; }
+
+.ttd ol { margin: 0px 0% 8px; list-style-type: decimal; border: 0px; }
+
+.ttd ol li { margin: 0px 0% 8px; }
+
+.ttd ol li ol { margin: 0px 0% 8px; list-style-type: lower-latin; }
+
+.ttd ol li ol li ol { list-style-type: lower-roman; }
+
+ul.ttd li { text-align: left; font-weight: normal; margin: 0px 0% 8px; back=
+ground-color: rgb(255, 221, 153); }
+
+ul.biblio { }
+
+a.ttd:link { color: rgb(153, 51, 0); }
+
+a.ttd:active { color: rgb(255, 153, 51); }
+
+a.ttd:visited { color: rgb(204, 51, 51); }
+
+a.ttd:hover { color: rgb(153, 102, 51); }
+
+ul li.book { list-style-image: url("images/book.gif"); margin: 0px 0px 3px;=
+ }
+
+ul li.paper, ul li.article { list-style-image: url("images/paper.gif"); mar=
+gin: 0px 0px 3px; }
+
+ul li.link { list-style-image: url("images/click.gif"); margin: 0px 0px 3px=
+; }
+
+ul li.calc { list-style-image: url("images/calc.gif"); margin: 0px 0px 3px;=
+ }
+
+ul li.dvd, ul li.cd { list-style-image: url("images/cd.gif"); margin: 0px 0=
+px 3px; }
+
+ul.redbead { list-style-image: url("images/beadred1.gif"); }
+
+ul.jadebead { list-style-image: url("images/beadjade.gif"); }
+
+ul.bluebead { list-style-image: url("images/beadblue.gif"); }
+
+ul.greenbead { list-style-image: url("images/beadgreen.gif"); }
+
+ul.goldbead { list-style-image: url("images/beadgold.gif"); }
+
+ul.ulsquare { list-style: square; }
+
+ul.ulcircle { list-style: circle; }
+
+ul.uldisc { list-style: disc; }
+
+dl.defn dt::after { content: ":"; }
+
+dl.defn dt { font-weight: bolder; color: forestgreen; }
+
+dl.defn dd { color: darkcyan; }
+
+.orangebg { background-color: rgb(255, 204, 102); }
+
+.F99bg { background-color: rgb(255, 153, 153); }
+
+.brownbg { background-color: rgb(204, 102, 0); }
+
+.yellowbg { background-color: rgb(255, 255, 0); }
+
+.lemonbg { background-color: rgb(255, 255, 102); }
+
+.redbg { background-color: red; }
+
+.whitebg { background-color: rgb(255, 255, 255); }
+
+.greybg { background-color: rgb(204, 204, 204); }
+
+.blackbg { background-color: black; }
+
+.transpbg { font-family: inherit; font-size: inherit; background-color: inh=
+erit; }
+
+.cfPER { color: red; font-weight: bolder; }
+
+.qq { color: rgb(238, 136, 0); }
+
+.qq0 { color: rgb(238, 136, 0); font-size: 120%; font-weight: bolder; }
+
+.question { text-align: center; color: rgb(51, 0, 153); font-style: italic;=
+ margin-bottom: 10pt; margin-top: 10pt; }
+
+.def { color: rgb(153, 51, 102); margin-bottom: 14pt; margin-top: 14pt; mar=
+gin-left: 20px; }
+
+.tri { color: rgb(204, 0, 0); font-family: Verdana, "Courier New Italic", "=
+Courier New", monospace; }
+
+.paletri { color: rgb(255, 102, 153); font-family: Verdana, "Courier New It=
+alic", "Courier New", monospace; }
+
+.newtri { color: rgb(255, 51, 51); font-style: italic; font-family: Verdana=
+, "Courier New Italic", "Courier New", monospace; }
+
+.outline { border: 1px solid rgb(204, 204, 0); }
+
+.outlineB { border: 1px solid black; }
+
+.quote { font-family: "Lucida Grande", Arial, sans-serif; color: rgb(204, 5=
+1, 102); }
+
+.footnote { font-family: "Lucida Grande", Arial, sans-serif; font-size: sma=
+ller; }
+
+.shade { padding: 10px; margin: 10px; background-color: rgb(204, 204, 204);=
+ }
+
+.border { border: 2px solid gray; padding: 3px; }
+
+.right { text-align: right; }
+
+.left { text-align: left; }
+
+.top { vertical-align: top; }
+
+.middle { vertical-align: middle; }
+
+.bottom { vertical-align: bottom; }
+
+.hr { height: 1px; background-color: rgb(153, 153, 0); }
+
+.small { font-size: smaller; }
+
+.vsmall { font-size: 30%; }
+
+.dim { color: rgb(153, 153, 153); }
+
+.pale { color: rgb(204, 204, 204); }
+
+.mono { font-family: monospace; }
+
+.green { color: rgb(0, 153, 0); }
+
+.greenHilite { color: white; background-color: rgb(0, 153, 0); }
+
+.orange { color: rgb(255, 102, 51); }
+
+.mauve { color: rgb(255, 0, 204); }
+
+.p { color: rgb(51, 51, 255); }
+
+.a { color: rgb(255, 0, 204); }
+
+table.nav { border: 1px solid; font-family: Verdana, "Trebuchet MS", Lucida=
+, Arial, Helvetica, sans-serif; background-color: rgb(204, 204, 204); }
+
+.wtn { color: rgb(204, 51, 102); font-weight: bolder; text-align: center; b=
+ackground-color: white; }
+
+.icanhide { position: relative; visibility: hidden; }
+
+.icanhideSHOW { position: relative; visibility: visible; }
+
+.contentsCalc { list-style-image: url("images/calcicon.gif"); list-style-ty=
+pe: circle; font-size: 95%; color: rgb(102, 102, 102); font-style: italic; =
+}
+
+.divsq { position: absolute; border: 1px solid black; text-align: center; }
+
+.divsqlabel { font-family: Verdana, Trebucket, Courier, sans-serif; positio=
+n: absolute; top: 50%; left: 50%; margin-right: -50%; transform: translate(=
+-50%, -50%); }
+
+.divsqsz { font-size: 40%; font-style: italic; }
+
+.rod1 { background-color: red; }
+
+.rod2 { background-color: gold; }
+
+.rod3 { color: white; background-color: blue; }
+
+.rod4 { background-color: lime; }
+
+.rod5 { color: white; background-color: magenta; }
+
+.rod6 { background-color: cyan; }
+
+.rod7 { background-color: silver; }
+------MultipartBoundary--UxjdjIMnY5KNvsYOcECDC1B007hdarJeqQ2nKjbTnX----
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/images/redsq.gif
+
+R0lGODlhCQAJAPMAMf////9mM/8zM/8AZswzM/+ZAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAACwAAAAACQAJAAAEG7DIKUkJOA8bhPfb9YHcKITdiJrh4L4bIc9zBAA7
+------MultipartBoundary--UxjdjIMnY5KNvsYOcECDC1B007hdarJeqQ2nKjbTnX----
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/images/goldsq.gif
+
+R0lGODlhCQAJAPMAMf//////mf//Zv/MAP//AP+ZAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAACwAAAAACQAJAAAEHDDISYW9ogRBeh8a5xHgNpLhWYreOrywVsz0HAEAOw==
+------MultipartBoundary--UxjdjIMnY5KNvsYOcECDC1B007hdarJeqQ2nKjbTnX----
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/images/jadesq.gif
+
+R0lGODlhCQAJAPMAAP///2b/zGb/mTNmmQCZmQBmzAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAACH5BAEAAAAALAAAAAAJAAkAQAQcMMg5h703CMJ5GVrngZv4aUKqkiJxlt1ZzPQXAQA7
+------MultipartBoundary--UxjdjIMnY5KNvsYOcECDC1B007hdarJeqQ2nKjbTnX----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/tocgen.css
+
+@charset "utf-8";
+
+div#toc ul { list-style-image: url("images/redsq.gif"); list-style-type: di=
+sc; color: rgb(102, 102, 102); padding: 0px; margin-left: 3em; line-height:=
+ 150%; font-size: 100%; }
+
+div#toc ul li a:link { color: rgb(51, 0, 255); font-weight: 600; }
+
+div#toc ul li a:visited { color: rgb(0, 0, 153); background-color: white; }
+
+div#toc ul li ul { list-style-image: url("images/goldsq.gif"); list-style-t=
+ype: square; font-size: 95%; color: rgb(102, 102, 102); padding: 0px; margi=
+n-left: 3em; line-height: 150%; }
+
+div#toc ul li ul li a:link { color: rgb(51, 0, 255); font-weight: normal; }
+
+div#toc ul li ul li a:visited { font-weight: normal; color: navy; backgroun=
+d-color: white; }
+
+div#toc ul li ul li ul { list-style-image: url("images/jadesq.gif"); list-s=
+tyle-type: circle; font-size: 90%; color: rgb(102, 102, 102); padding: 0px;=
+ margin-left: 3em; line-height: 180%; }
+
+div#toc ul li ul li ul li a:link { color: rgb(51, 0, 255); font-weight: nor=
+mal; }
+
+div#toc ul li ul li lu li a:visited { font-weight: normal; color: navy; bac=
+kground-color: white; }
+
+div#toc { border: 1px solid silver; }
+------MultipartBoundary--UxjdjIMnY5KNvsYOcECDC1B007hdarJeqQ2nKjbTnX----
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/images/ttdIcon.gif
+
+R0lGODlhGQAOAPMAMf//////zv//nP//Sv//AMyZzP/MmcxmM//OAP+1Y/+1Mf+cADExMQAA/8zM
+zAAAACwAAAAAGQAOAAAEVNDJSSkAJV97u/8MkxVfaQIHQYjaeabqwXpVdcHEsSwiMLk3VW7HA35w
+ut3B6DkMYsRlqea4GA7Y6MZmMnivSiboq5OKOyGykQN4PNId6q/EeJwvEQA7
+------MultipartBoundary--UxjdjIMnY5KNvsYOcECDC1B007hdarJeqQ2nKjbTnX----
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/images/calcicon.gif
+
+R0lGODlhIgANAPEAMf////9mZszMzAAAACwAAAAAIgANAAACXJSPqbvhD6OccIgwst68U2dhzGgA
+AQBc6CWKgoXAr5GV53sP4GXVh1yDWUwvXXHn6hWBNJjpExL+aFSpaXVKIaU/ZtGW0oW3pBExEzi2
+Bqi2+w3/tOR0eeeOz3MKADs=
+------MultipartBoundary--UxjdjIMnY5KNvsYOcECDC1B007hdarJeqQ2nKjbTnX----
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/Fibonacci/calcicon.gif
+
+R0lGODlhIgANAPEAMf////9mZszMzAAAACwAAAAAIgANAAACXJSPqbvhD6OccIgwst68U2dhzGgA
+AQBc6CWKgoXAr5GV53sP4GXVh1yDWUwvXXHn6hWBNJjpExL+aFSpaXVKIaU/ZtGW0oW3pBExEzi2
+Bqi2+w3/tOR0eeeOz3MKADs=
+------MultipartBoundary--UxjdjIMnY5KNvsYOcECDC1B007hdarJeqQ2nKjbTnX----
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/Fibonacci/ttdIcon.gif
+
+R0lGODlhGQAOAPMAMf//////zv//nP//Sv//AMyZzP/MmcxmM//OAP+1Y/+1Mf+cADExMQAA/8zM
+zAAAACwAAAAAGQAOAAAEVNDJSSkAJV97u/8MkxVfaQIHQYjaeabqwXpVdcHEsSwiMLk3VW7HA35w
+ut3B6DkMYsRlqea4GA7Y6MZmMnivSiboq5OKOyGykQN4PNId6q/EeJwvEQA7
+------MultipartBoundary--UxjdjIMnY5KNvsYOcECDC1B007hdarJeqQ2nKjbTnX----
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/Fibonacci/empty.gif
+
+R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==
+------MultipartBoundary--UxjdjIMnY5KNvsYOcECDC1B007hdarJeqQ2nKjbTnX----
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/Fibonacci/sqrt.gif
+
+R0lGODlhCAANAIAAAP///wAAACH5BAEAAAAALAAAAAAIAA0AQAIShA9hmoh8oGuJyXbfzJhelUEF
+ACH/C01BQ0dDb24gBAMQMQAAAAFXcml0dGVuIGJ5IEdJRkNvbnZlcnRlciAyLjMuNyBvZiBKYW4g
+MjksIDE5OTQAOw==
+------MultipartBoundary--UxjdjIMnY5KNvsYOcECDC1B007hdarJeqQ2nKjbTnX----
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/Fibonacci/black.gif
+
+R0lGODlhAQABAPAAAP///wAAACwAAAAAAQABAAACAkwBADs=
+------MultipartBoundary--UxjdjIMnY5KNvsYOcECDC1B007hdarJeqQ2nKjbTnX----
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/images/lfloor.gif
+
+R0lGODlhCAAMAPAAMf///wAAACH5BAEAAAAALAAAAAAIAAwAAAISBBKml8v+HIJTtlXxVZmj/TUF
+ADs=
+------MultipartBoundary--UxjdjIMnY5KNvsYOcECDC1B007hdarJeqQ2nKjbTnX----
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/images/rfloor.gif
+
+R0lGODlhCAAMAPAAMf///wAAACH5BAEAAAAALAAAAAAIAAwAAAIShBFxl2vt4JJMRTtxdUgn+lkF
+ADs=
+------MultipartBoundary--UxjdjIMnY5KNvsYOcECDC1B007hdarJeqQ2nKjbTnX----
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/images/lceiling.gif
+
+R0lGODlhCAAMAPAAMf///wAAACH5BAEAAAAALAAAAAAIAAwAAAITBIJhlrq4noswnint1ZVi9m1L
+AQA7
+------MultipartBoundary--UxjdjIMnY5KNvsYOcECDC1B007hdarJeqQ2nKjbTnX----
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/images/rceiling.gif
+
+R0lGODlhCAAMAPAAMf///wAAACH5BAEAAAAALAAAAAAIAAwAAAITBIJhlrrsHnqQnrgm1RLX7V1G
+AQA7
+------MultipartBoundary--UxjdjIMnY5KNvsYOcECDC1B007hdarJeqQ2nKjbTnX----
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/images/goLEFT.gif
+
+R0lGODlhEAANAPAAAP///8wzZiH5BAEAAAAALAAAAAAQAA0AQAIehB8Zx6Db4osUqWomfbzDfGFW
+ImqVhzpoN36iSkYFADs=
+------MultipartBoundary--UxjdjIMnY5KNvsYOcECDC1B007hdarJeqQ2nKjbTnX----
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/images/goHOME.gif
+
+R0lGODlhEAAQAPEAAP////pklsgzZnkASyH5BAEAAAAALAAAAAAQABAAAAI5hC+jkOcskmoPjjhH
+xSJw7XCRJ4FWhJKKJqIjlkFu4q3IXJoGnj/8qrMMVLaQhLgwKpBBGNN3hCULADs=
+------MultipartBoundary--UxjdjIMnY5KNvsYOcECDC1B007hdarJeqQ2nKjbTnX----
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/images/goUP.gif
+
+R0lGODlhDQAQAPAAAP///8wzZiH5BAEAAAAALAAAAAANABAAQAIjhB+HaeHbnJRqsRqpTXRWjWWh
+NU4gYKboszIeiXxsOYcnUAAAOw==
+------MultipartBoundary--UxjdjIMnY5KNvsYOcECDC1B007hdarJeqQ2nKjbTnX----
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/images/goDOWN.gif
+
+R0lGODlhDQAQAPAAAP///8wzZiH5BAEAAAAALAAAAAANABAAQAIkhB15qJDB4HprPlpjlfrACzYW
+lzliiZUmaXpiuK5SmLp1xgIFADs=
+------MultipartBoundary--UxjdjIMnY5KNvsYOcECDC1B007hdarJeqQ2nKjbTnX----
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/images/goRIGHT.gif
+
+R0lGODlhEAANAPAAAP///8wzZiH5BAEAAAAALAAAAAAQAA0AQAIdhB8Zx826XIMS0DrVg7zXi4GY
+AXZmYp1eqLEoUwAAOw==
+------MultipartBoundary--UxjdjIMnY5KNvsYOcECDC1B007hdarJeqQ2nKjbTnX----
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/Fibonacci/valid-html401.gif
+
+R0lGODlhWAAfAPf/AP///wgICBAQEBgYGCkpKTExMTk5OUJCQkpKSlJSUlpaWmNjY2tra3Nzc3t7
+e8DAwIyMjJSUlK2trbW1tb29vcbGxs7OztbW1t7e3u/v7/f3996trc57e8Zzc8Zra71aWpwICJQA
+AJwAAJwIAK1rY60hEIQ5KbU5GIwpCLVKIb1KIc5jMcZaKaVSKdZzOc5rMd6EQs57OWNaUueUSt6M
+Qntza1pSSjkpGBgQCHtaMVpCIe+tUq2MWoRjMUIxGP/v1ntrUpR7UnNaMee1Y2tSKdalUq2EQve9
+WmNKIZRrKZyEWrWUWtatY86lWsacUu+9Y72USue1Wv/GY5RzOd6tUiEYCIRzUqWMWr2cWt61Y9at
+Wv/Oa1JCIaWEQvfGY3tjMc6lUu+9WsacSpx7OXNaKZRzMUo5GGtSIZSMe2tjUq2UWs6tY8alWue9
+Y4xzObWUSt61WikhEOe9Wv/OY62MQoRrMYx7UrWcWta1Y//Wa2NSKe/GY/fOY72cSpR7OVpKIZyE
+Qv/WY2taKb21nJyUe5SMc3NrUpyMWpSEUr2lWjkxGDEpECkhCP/ea//31ntzUv/nc//vc87OxlJS
+SpSUewgIAO/39/f//97n573GxkJKStbn787e57XO3r3W55S1zhBalIStznOcvWOUvUJ7rTlzpRha
+lN7n773O3q3G3jlCSgBKjOfv98bW56W91oytzoSlxnOcxmuUvVKEtUp7rTFrpSljnBBSlAhKjABC
+hFqEtTlrpSFanBBKjAhKlABCjHucxmOMvUJzrZy11iFSlAA5hAAxewAxhAApe9be787W5+/v9/f3
+/0JCSjk5SgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAAA8ALAAAAABYAB8A
+QAj/AC0IHEiwoMGDCC1IWsiwocOHECNGrPCgokULAAAsW8UrI4BkxUp5BNCpWLFfKHMdEwmAwbOX
+FRxMyPhjTh4ozxZ9+cLl2RdIebw8M9MoTx4kz3BUmRMlAI5nPSJ9eWYkz5w5W7Bq3bIFTplCFiti
+HLlr1axisgAIM1vs1UgAwIrZAqDh7ciaWrFusXp1K1arVrNqDXx1b1bBXPPAEBEiBOMQHcTanUy5
+8lu8a5qsWXNIFRAmea44U5LHirM0atKosoI1EBZnQPrudcH4sQgXRb2CDTvWsu/fjgpz3XqYq3G9
+h5EXT85cr+6wD3oDKPVrEwBOv3L5OkXy2CwAl2oV/0uVUUOBC5SDbwHjY0yeLU58dLH6xMyXv27M
+PPHCRUieIvJB0oUZitywCBmIbQXHGCYw5oFkbwFjDHkZvWLMMNMhIwszp9hiTCwaMIBeRhMEQEFG
+wdmEhWdsNBMEYYG0KAMfQcmgyRpZ3KFEM48o1pgIjIEwAw211YYCJdBJ99uSdqUoxRxPSiHYk4IV
+ZmVfeUG5xZOF8aXVc7wxKaZdeGFp5plopqkmVnAksdtFHl0y0iVy2kXnnXT6VlMeYuDQg1FQ4DAG
+GDgoVSgOWtSBwyJP7EVFHDhMAYkbOLxBWHNdfZWkR64YA4tHsRjziUe0HONKRqIYM0pGEAyQQUYL
+GP/g0Z44EbHHFkb41MgWbTzjw196PANHHHFUwYUTPkn1zBtAXapgGWhs6lFJwgBgCy+pFEOLtbhY
+AsAovfxijDCWaABBZTUlWCVxeVXprmxXJjdHIzE4Zm8IGyjJySrFmOJtMrjkcgsrb6HyCy6YTFYX
+AGXatIQmztjh1xZsTNLMJKokwMYcT+BhB2xX5bFCCCXsEFgeM9TmGAgchPmWJcCMpAEwdXZiSy6/
+2OKJRxMI8JICr9KUlQyqBJEIIs0YgoWUKjaTxnBpNINFIHlg0Uxs76nwo232rgAmnGOGzfCZW3gh
+G5dY7TGEF+tuwQeXiDUywwghuPAem5qGVUEDCyj/4HffgCsQ+OCCF054337L8IceizfO+OOORw75
+5JJH/scfXDBSg7Rii/mDcaCHLvropJfe1RSEcN75kg2v6frrZ3oVrcurs36VFF6YDWXuc+Se+xFe
+4B68bL7vjjaaW1ABrbScECPKtMS45RErtdhi/fXb0hWBAxhdkDAAweXxxjNCQAIJTl/sAYgbz1QB
+CCB7BPuMG0YJ8tIXys63rpmyc65LMa3wCCl+wR1UGWMWm9iEKw6mDABkIAAEcMABBiCAETlCCuJ7
+iQahYpQw+CoredBDJerwDDqwj4Q/mYr+0pS85dGOFatgCQBIcYzsXcIUuCBYMn4xsIwc4FweGdHY
+/zJIBEg0gg7PyMGu5PAMRYBQB8+IAiBeAgZk5UBZ9skBILLUF68giXYAEAUy3AKMXIhnVLKYEABg
+YYxVyMJbGUjAwsgEr74QhouI2UtrtATCBMmmKy241weiMxJL4MIUrfgFKZZxyERmjy6p8IUx3FKB
+Ob4lRXjkYh2z9K52yUYxQHIMYyKjJFicJBenCkUxcIaKgmmHGZa54JWasAQm7G8LQ7iCHa4whMF4
+YQlr0MscXGCyvPhIlI2JDIRGUotjBMMjpfAOAFwxClgC4BXHqAUFKvCWCEiAJl3igdM08SLi2aAZ
+atjCEpqRAC8EoRnwfMReRtYYIRkFBj+yFwlUl/URVPjCWxkBmHVagYt+3aIYoHjVBQzAAAco4BkJ
+mNVVmoCANMyBCaogTZdWZIi+GMIZWMhDI9jgmTwc4QRbQ6bKUuCH2YFtTtb0iCWX4YkAvkUDF8DA
+JXsnAwQgAJ4I0AQC9sCHJ/AhCz4dQiOG4NMsNA0Ih8kDCxojyse8IA/9A2PtYtmleWlBBlfIQyCW
+MImwzkEJFpuEEvhwGDbIABHuagSR7IWbrGT1pVu1TLr8wld5eUlegMWK3OwmmDwoz6UVuYAGLECB
+xjr2sZCNrGQdm4lMDAIKfcAsZjO7WSh49rOgDe1nM8vZznJWDGLowhkQ+4CAAAA7
+------MultipartBoundary--UxjdjIMnY5KNvsYOcECDC1B007hdarJeqQ2nKjbTnX----
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/Fibonacci/myemail.gif
+
+R0lGODlhtAANAPcAMf///wEBAQICAgMDAwQEBAUFBQYGBgcHBwgICAkJCQoKCgsLCwwMDA0NDQ4O
+DhAQEBERERISEhMTExQUFBUVFRYWFhcXFxgYGBkZGRoaGhsbGxwcHB0dHR4eHh8fHyAgICEhISIi
+IiMjIyUlJSYmJicnJygoKCkpKSoqKisrKywsLC0tLS4uLi8vLzAwMDMzMzQ0NDU1NTY2Njc3Nzg4
+ODk5OTo6Oj09PT4+Pj8/P0BAQEFBQUJCQkREREVFRUZGRkhISElJSUpKSktLS01NTU5OTk9PT1BQ
+UFFRUVJSUlRUVFVVVVZWVldXV1hYWFlZWVpaWltbW1xcXF1dXV5eXl9fX2BgYGFhYWJiYmNjY2Rk
+ZGVlZWZmZmdnZ2hoaGlpaWtra2xsbG1tbW5ubm9vb3FxcXJycnNzc3R0dHV1dXd3d3h4eHl5eXp6
+ent7e3x8fH5+foCAgIGBgYKCgoODg4SEhIWFhYaGhoeHh4iIiImJiYqKio2NjY6Ojo+Pj5CQkJKS
+kpOTk5WVlZiYmJmZmZubm5ycnJ2dnZ6enqCgoKOjo6SkpKampqenp6ioqKqqqqurq6ysrK2tra6u
+rq+vr7CwsLGxsbKysrOzs7S0tLW1tba2tre3t7i4uLm5ubq6ury8vL29vb6+vr+/v8DAwMHBwcLC
+wsPDw8TExMXFxcbGxsfHx8jIyMvLy8zMzM/Pz9DQ0NHR0dLS0tPT09TU1NXV1dbW1tfX19nZ2dra
+2tzc3N7e3t/f3+Dg4OHh4eLi4uPj4+Tk5OXl5ebm5ufn5+jo6Onp6erq6uvr6+zs7O3t7e7u7u/v
+7/Dw8PHx8fLy8vPz8/T09PX19fb29vf39/j4+Pn5+fr6+vv7+/z8/P39/f7+/gAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAAAAALAAAAAC0AA0A
+AAj/AAEIHEiwoMGDCBMqXMiwocOHECNKnEixosWLGDNqrPjvHwCPHy+CPDhyYEmTHU9aVLmxpUuB
+I0GyhDgzZEGVJWtG1Jkw58ufBnGK7MnQY0eTGXki9Am0acqUMKFGjSl1qsyqT6PeRGqToNGrVI/C
+HPuxalmwX8U2NIv1qdKJMcl2JRu3q0yudU9elYuSq828dvEK9rt28F+6LwHLlar4MOLHSI3y5dt4
+r9+7kOcWDToYc8vKj0EHHq03pGfCoiUvXj33LWHWmF3TNBwbNm3bXs+qzX0Zt+fflJeSvO1Y9sO8
+bMXW1W21t+bnnL2qBb08ed+tJHdjzdx0o/GbZruLCh9PXnj58+ghBgQAOw==
+------MultipartBoundary--UxjdjIMnY5KNvsYOcECDC1B007hdarJeqQ2nKjbTnX------

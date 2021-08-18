@@ -1,0 +1,34 @@
+Subset Sum:
+UVa: 562,574,10482,10664,11137,11658
+Baking Cake: 2D SubSet Sum Stanford Local Contest 07(Baking Cakes)
+Coin Change: 
+UVa: 147,166,357,674,11517 TCHS SRM 23 1000
+LightOJ:  1231,1232,1233
+Longest Path: 
+http://www.codechef.com/IOPC2012/problems/IOPC1214
+Triangle GraphConcept + DP:
+http://www.codechef.com/problems/SUMTRIAN
+http://www.codechef.com/problems/E1/
+TJU: 3457
+LightOJ: 1004, 1169
+
+
+Here is the list of Dynamic Programming Problems. Very Very Important Problems. Everyone tries to solve all of them. It's very Helpful in Programming Contest....
+ 
+LOJ 1044-Palindrome PartitionLOJ 
+1064-Throwing DiceWord Parts : 
+SRM 156 Div 2 1000
+Expressions UVa 10157
+Easy:-Drive Car: TCHS SRM 44 500
+Medium:- CsCourses: SRM 340 Div 2 1000
+Easy DP: TJU 1746
+HoneyComb Walk: TJU 2489
+LOJ 1033 Generating Palindrome
+LOJ 1125 Divisible Group Sums
+Easy SRM 253 Div 1 500 Alphabetic Count
+Medium: SRM 418 Div 2 1000
+LOJ 1159 (3D LCS)
+Easy: Decreasing Number: TCHS SRM 45 500
+LOJ 1110: An Easy LCS
+Medium:Elective System: TCHS SRM 21 1000
+Very Good Medium: SRM 349 Div 1 500

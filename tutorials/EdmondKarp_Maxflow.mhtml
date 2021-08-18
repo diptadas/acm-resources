@@ -1,0 +1,257 @@
+From: <Saved by Blink>
+Subject: Algorithms and beyond: Max-flow algorithm with sample C++ code
+Date: Fri, 7 Jul 2016 15:30:49 -0000
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--ZSjG5KWeGwb0aZQMVYeSqCF7vB3CbQbfsE9Of8MPzY----"
+
+------MultipartBoundary--ZSjG5KWeGwb0aZQMVYeSqCF7vB3CbQbfsE9Of8MPzY----
+Content-Type: text/html
+Content-ID: <frame-32-5ABE567C-6FC8-46B1-AD80-9A725F5C1EA2@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://backtrack-it.blogspot.com/2013/03/max-flow-algorithm-with-sample-c-code.html
+
+<!DOCTYPE html><html class=3D"v2" dir=3D"ltr"><head><meta http-equiv=3D"Con=
+tent-Type" content=3D"text/html; charset=3DUTF-8">
+
+
+<meta content=3D"blogger" name=3D"generator">
+<link href=3D"http://backtrack-it.blogspot.com/favicon.ico" rel=3D"icon" ty=
+pe=3D"image/x-icon">
+<link href=3D"http://backtrack-it.blogspot.com/2013/03/max-flow-algorithm-w=
+ith-sample-c-code.html" rel=3D"canonical">
+<link rel=3D"alternate" type=3D"application/atom+xml" title=3D"Algorithms a=
+nd beyond - Atom" href=3D"http://backtrack-it.blogspot.com/feeds/posts/defa=
+ult">
+<link rel=3D"alternate" type=3D"application/rss+xml" title=3D"Algorithms an=
+d beyond - RSS" href=3D"http://backtrack-it.blogspot.com/feeds/posts/defaul=
+t?alt=3Drss">
+<link rel=3D"service.post" type=3D"application/atom+xml" title=3D"Algorithm=
+s and beyond - Atom" href=3D"https://www.blogger.com/feeds/3550427177263178=
+751/posts/default">
+
+<link rel=3D"alternate" type=3D"application/atom+xml" title=3D"Algorithms a=
+nd beyond - Atom" href=3D"http://backtrack-it.blogspot.com/feeds/4309415805=
+62940634/comments/default">
+<!--[if IE]><script type=3D"text/javascript" src=3D"https://www.blogger.com=
+/static/v1/jsbin/2193475453-ieretrofit.js"></script>
+<![endif]-->
+<link href=3D"https://plus.google.com/106269336213963336435" rel=3D"publish=
+er">
+<meta content=3D"http://backtrack-it.blogspot.com/2013/03/max-flow-algorith=
+m-with-sample-c-code.html" property=3D"og:url">
+<!--[if IE]> <script> (function() { var html5 =3D ("abbr,article,aside,audi=
+o,canvas,datalist,details," + "figure,footer,header,hgroup,mark,menu,meter,=
+nav,output," + "progress,section,time,video").split(','); for (var i =3D 0;=
+ i < html5.length; i++) { document.createElement(html5[i]); } try { documen=
+t.execCommand('BackgroundImageCache', false, true); } catch(e) {} })(); </s=
+cript> <![endif]-->
+<title>Algorithms and beyond: Max-flow algorithm with sample C++ code</titl=
+e>
+<meta content=3D"!" name=3D"fragment">
+<meta content=3D"dynamic" name=3D"blogger-template">
+<meta content=3D"IE=3D9,chrome=3D1" http-equiv=3D"X-UA-Compatible">
+<meta content=3D"initial-scale=3D1.0, maximum-scale=3D1.0, user-scalable=3D=
+no, width=3Ddevice-width" name=3D"viewport">
+<link type=3D"text/css" rel=3D"stylesheet" href=3D"https://www.blogger.com/=
+static/v1/widgets/2901518656-css_bundle_v2.css">
+<link type=3D"text/css" rel=3D"stylesheet" href=3D"https://www.blogger.com/=
+dyn-css/authorization.css?targetBlogID=3D3550427177263178751&amp;zx=3Db7424=
+ea1-a16a-4b48-a813-a169cf1ddc54">
+<style id=3D"page-skin-1" type=3D"text/css"><!--
+/*-----------------------------------------------
+Blogger Template Style
+Name: Dynamic Views
+----------------------------------------------- */
+/* Variable definitions
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
+<Variable name=3D"keycolor" description=3D"Main Color" type=3D"color" defau=
+lt=3D"#ffffff"
+variants=3D"#2b256f,#00b2b4,#4ba976,#696f00,#b38f00,#f07300,#d0422c,#f37a86=
+,#7b5341"/>
+<Group description=3D"Page">
+<Variable name=3D"page.text.font" description=3D"Font" type=3D"font"
+default=3D"'Helvetica Neue Light', HelveticaNeue-Light, 'Helvetica Neue', H=
+elvetica, Arial, sans-serif"/>
+<Variable name=3D"page.text.color" description=3D"Text Color" type=3D"color=
+"
+default=3D"#333333" variants=3D"#333333"/>
+<Variable name=3D"body.background.color" description=3D"Background Color" t=
+ype=3D"color"
+default=3D"#EEEEEE"
+variants=3D"#dfdfea,#d9f4f4,#e4f2eb,#e9ead9,#f4eed9,#fdead9,#f8e3e0,#fdebed=
+,#ebe5e3"/>
+</Group>
+<Variable name=3D"body.background" description=3D"Body Background" type=3D"=
+background"
+color=3D"#EEEEEE" default=3D"$(color) none repeat scroll top left"/>
+<Group description=3D"Header">
+<Variable name=3D"header.background.color" description=3D"Background Color"=
+ type=3D"color"
+default=3D"#F3F3F3" variants=3D"#F3F3F3"/>
+</Group>
+<Group description=3D"Header Bar">
+<Variable name=3D"primary.color" description=3D"Background Color" type=3D"c=
+olor"
+default=3D"#333333" variants=3D"#2b256f,#00b2b4,#4ba976,#696f00,#b38f00,#f0=
+7300,#d0422c,#f37a86,#7b5341"/>
+<Variable name=3D"menu.font" description=3D"Font" type=3D"font"
+default=3D"'Helvetica Neue Light', HelveticaNeue-Light, 'Helvetica Neue', H=
+elvetica, Arial, sans-serif"/>
+<Variable name=3D"menu.text.color" description=3D"Text Color" type=3D"color=
+"
+default=3D"#FFFFFF" variants=3D"#FFFFFF"/>
+</Group>
+<Group description=3D"Links">
+<Variable name=3D"link.font" description=3D"Link Text" type=3D"font"
+default=3D"'Helvetica Neue Light', HelveticaNeue-Light, 'Helvetica Neue', H=
+elvetica, Arial, sans-serif"/>
+<Variable name=3D"link.color" description=3D"Link Color" type=3D"color"
+default=3D"#009EB8"
+variants=3D"#2b256f,#00b2b4,#4ba976,#696f00,#b38f00,#f07300,#d0422c,#f37a86=
+,#7b5341"/>
+<Variable name=3D"link.hover.color" description=3D"Link Hover Color" type=
+=3D"color"
+default=3D"#009EB8"
+variants=3D"#2b256f,#00b2b4,#4ba976,#696f00,#b38f00,#f07300,#d0422c,#f37a86=
+,#7b5341"/>
+<Variable name=3D"link.visited.color" description=3D"Link Visited Color" ty=
+pe=3D"color"
+default=3D"#009EB8"
+variants=3D"#2b256f,#00b2b4,#4ba976,#696f00,#b38f00,#f07300,#d0422c,#f37a86=
+,#7b5341"/>
+</Group>
+<Group description=3D"Blog Title">
+<Variable name=3D"blog.title.font" description=3D"Font" type=3D"font"
+default=3D"'Helvetica Neue Light', HelveticaNeue-Light, 'Helvetica Neue', H=
+elvetica, Arial, sans-serif"/>
+<Variable name=3D"blog.title.color" description=3D"Color" type=3D"color"
+default=3D"#555555" variants=3D"#555555"/>
+</Group>
+<Group description=3D"Blog Description">
+<Variable name=3D"blog.description.font" description=3D"Font" type=3D"font"
+default=3D"'Helvetica Neue Light', HelveticaNeue-Light, 'Helvetica Neue', H=
+elvetica, Arial, sans-serif"/>
+<Variable name=3D"blog.description.color" description=3D"Color" type=3D"col=
+or"
+default=3D"#555555" variants=3D"#555555"/>
+</Group>
+<Group description=3D"Post Title">
+<Variable name=3D"post.title.font" description=3D"Font" type=3D"font"
+default=3D"'Helvetica Neue Light', HelveticaNeue-Light, 'Helvetica Neue', H=
+elvetica, Arial, sans-serif"/>
+<Variable name=3D"post.title.color" description=3D"Color" type=3D"color"
+default=3D"#333333" variants=3D"#333333"/>
+</Group>
+<Group description=3D"Date Ribbon">
+<Variable name=3D"ribbon.color" description=3D"Color" type=3D"color"
+default=3D"#666666" variants=3D"#2b256f,#00b2b4,#4ba976,#696f00,#b38f00,#f0=
+7300,#d0422c,#f37a86,#7b5341"/>
+<Variable name=3D"ribbon.hover.color" description=3D"Hover Color" type=3D"c=
+olor"
+default=3D"#AD3A2B" variants=3D"#AD3A2B"/>
+</Group>
+<Variable name=3D"blitzview" description=3D"Initial view type"
+type=3D"automatic" default=3D"sidebar"/>
+*/
+/* BEGIN CUT */
+{
+"font:Text": "'Helvetica Neue Light', HelveticaNeue-Light, 'Helvetica Neue'=
+, Helvetica, Arial, sans-serif",
+"color:Text": "#333333",
+"image:Background": "#EEEEEE none repeat scroll top left",
+"color:Background": "#EEEEEE",
+"color:Header Background": "#F3F3F3",
+"color:Primary": "#333333",
+"color:Menu Text": "#FFFFFF",
+"font:Menu": "'Helvetica Neue Light', HelveticaNeue-Light, 'Helvetica Neue'=
+, Helvetica, Arial, sans-serif",
+"font:Link": "'Helvetica Neue Light', HelveticaNeue-Light, 'Helvetica Neue'=
+, Helvetica, Arial, sans-serif",
+"color:Link": "#009EB8",
+"color:Link Visited": "#009EB8",
+"color:Link Hover": "#009EB8",
+"font:Blog Title": "'Helvetica Neue Light', HelveticaNeue-Light, 'Helvetica=
+ Neue', Helvetica, Arial, sans-serif",
+"color:Blog Title": "#555555",
+"font:Blog Description": "'Helvetica Neue Light', HelveticaNeue-Light, 'Hel=
+vetica Neue', Helvetica, Arial, sans-serif",
+"color:Blog Description": "#555555",
+"font:Post Title": "'Helvetica Neue Light', HelveticaNeue-Light, 'Helvetica=
+ Neue', Helvetica, Arial, sans-serif",
+"color:Post Title": "#333333",
+"color:Ribbon": "#666666",
+"color:Ribbon Hover": "#AD3A2B",
+"view": "classic"
+}
+/* END CUT */
+
+--></style>
+<style id=3D"template-skin-1" type=3D"text/css"><!--
+body {
+min-width: 960px;
+}
+.column-center-outer {
+margin-top: 46px;
+}
+.content-outer, .content-fauxcolumn-outer, .region-inner {
+min-width: 960px;
+max-width: 960px;
+_width: 960px;
+}
+.main-inner .columns {
+padding-left: 0;
+padding-right: 310px;
+}
+.main-inner .fauxcolumn-center-outer {
+left: 0;
+right: 310px;
+/* IE6 does not respect left and right together */
+_width: expression(this.parentNode.offsetWidth -
+parseInt("0") -
+parseInt("310px") + 'px');
+}
+.main-inner .fauxcolumn-left-outer {
+width: 0;
+}
+.main-inner .fauxcolumn-right-outer {
+width: 310px;
+}
+.main-inner .column-left-outer {
+width: 0;
+right: 100%;
+margin-left: -0;
+}
+.main-inner .column-right-outer {
+width: 310px;
+margin-right: -310px;
+}
+#layout {
+min-width: 0;
+}
+#layout .content-outer {
+min-width: 0;
+width: 800px;
+}
+#layout .region-inner {
+min-width: 0;
+width: auto;
+}
+--></style>
+</head></html>
+------MultipartBoundary--ZSjG5KWeGwb0aZQMVYeSqCF7vB3CbQbfsE9Of8MPzY----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://www.blogger.com/static/v1/widgets/2901518656-css_bundle_v2.css
+
+@charset "utf-8";
+=0A
+------MultipartBoundary--ZSjG5KWeGwb0aZQMVYeSqCF7vB3CbQbfsE9Of8MPzY----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://www.blogger.com/dyn-css/authorization.css?targetBlogID=3550427177263178751&zx=b7424ea1-a16a-4b48-a813-a169cf1ddc54
+
+@charset "utf-8";
+=0A
+------MultipartBoundary--ZSjG5KWeGwb0aZQMVYeSqCF7vB3CbQbfsE9Of8MPzY------
